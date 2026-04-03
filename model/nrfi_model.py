@@ -34,6 +34,7 @@ from fetchers.mlb_api import (
     lineups_confirmed,
     get_venues,
     get_player_info,
+    get_first_inning_result,
 )
 from scoring.pitcher_score  import score_pitcher
 from scoring.batter_score   import score_top_of_lineup
@@ -159,24 +160,38 @@ def _score_game(game: dict, venues: dict, require_confirmed: bool) -> dict | Non
     nrfi_prob = round(top_half["half_inning_prob"] * bot_half["half_inning_prob"], 4)
     yrfi_prob = round(1.0 - nrfi_prob, 4)
 
-    # Bet filter
-    bet_rec = _apply_bet_filter(nrfi_prob, top_half, bot_half, confirmed)
+    # ── Actual first-inning result (live / final games) ───────────────────────
+    fi_result = get_first_inning_result(game_pk)
+
+    # Game state: "pregame" | "live" | "final"
+    status_code = game.get("status", fi_result.get("game_status", "S"))
+    if status_code == "F":
+        game_state = "final"
+    elif status_code in ("I", "MA", "MF"):   # In Progress / Manager challenge
+        game_state = "live"
+    else:
+        game_state = "pregame"
+
+    # Bet filter — only meaningful for pre-game
+    bet_rec = _apply_bet_filter(nrfi_prob, top_half, bot_half, confirmed, game_state)
 
     return {
-        "game_pk":       game_pk,
-        "game_date":     game.get("game_date"),
-        "game_time":     game.get("game_time"),
-        "venue_name":    venue_name,
-        "away_team":     game["away_team_name"],
-        "home_team":     game["home_team_name"],
-        "away_pitcher":  away_prob,
-        "home_pitcher":  home_prob,
+        "game_pk":           game_pk,
+        "game_date":         game.get("game_date"),
+        "game_time":         game.get("game_time"),
+        "venue_name":        venue_name,
+        "away_team":         game["away_team_name"],
+        "home_team":         game["home_team_name"],
+        "away_pitcher":      away_prob,
+        "home_pitcher":      home_prob,
         "lineups_confirmed": confirmed,
-        "top_half":      top_half,
-        "bot_half":      bot_half,
-        "nrfi_prob":     nrfi_prob,
-        "yrfi_prob":     yrfi_prob,
-        "bet_recommendation": bet_rec,
+        "game_state":        game_state,
+        "first_inning":      fi_result,
+        "top_half":          top_half,
+        "bot_half":          bot_half,
+        "nrfi_prob":         nrfi_prob,
+        "yrfi_prob":         yrfi_prob,
+        "bet_recommendation":bet_rec,
     }
 
 
@@ -296,6 +311,7 @@ def _apply_bet_filter(
     top_half: dict,
     bot_half: dict,
     confirmed: bool,
+    game_state: str = "pregame",
 ) -> dict:
     """
     Apply the strict bet filter and return a recommendation dict.
@@ -309,6 +325,24 @@ def _apply_bet_filter(
     """
     bf = BET_FILTER
     reasons_pass, reasons_fail = [], []
+
+    # 0. Game state — can't bet on a game already in progress or finished
+    if game_state == "final":
+        return {
+            "recommended": False,
+            "reasons_pass": [],
+            "reasons_fail": ["Game is final — betting window closed"],
+            "nrfi_prob": nrfi_prob,
+            "confirmed": confirmed,
+        }
+    if game_state == "live":
+        return {
+            "recommended": False,
+            "reasons_pass": [],
+            "reasons_fail": ["Game is in progress — betting window closed"],
+            "nrfi_prob": nrfi_prob,
+            "confirmed": confirmed,
+        }
 
     # 1. Pitcher quality
     top_p_score = top_half["scores"]["pitcher"]["score"]

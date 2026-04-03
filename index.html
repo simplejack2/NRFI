@@ -114,6 +114,35 @@
     .nrfi-pill.mid { background: #2a2210; border-color: var(--yellow); color: var(--yellow); }
     .nrfi-pill.low { background: #2a1010; border-color: var(--red);    color: var(--red);    }
 
+    /* ── Game state badges ── */
+    .state-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-left: 6px;
+    }
+    .state-live   { background: #2a1a00; border: 1px solid #f0a500; color: #f0a500; }
+    .state-final  { background: #1a1a1a; border: 1px solid var(--muted); color: var(--muted); }
+    .state-pregame{ background: #0f1f2a; border: 1px solid var(--blue); color: var(--blue); }
+
+    /* ── First-inning result banner ── */
+    .fi-result {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      border-top: 1px solid var(--border);
+    }
+    .fi-nrfi { background: #0f1f0f; color: var(--green); }
+    .fi-yrfi { background: #1f0f0f; color: var(--red); }
+    .fi-live { background: #1a1500; color: #f0a500; }
+
     .game-card-body { padding: 14px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     @media (max-width: 640px) { .game-card-body { grid-template-columns: 1fr; } }
 
@@ -254,28 +283,39 @@ const REPORT_DATA = {"date":"2026-04-03","games":[{"game_pk":823240,"game_date":
   html += `<div class="section-title">All Games — Ranked by NRFI Probability</div>`;
   html += `<table><thead><tr>
     <th>#</th><th>Matchup</th><th>Away SP</th><th>Home SP</th>
-    <th>NRFI %</th><th>Top 1st</th><th>Bot 1st</th><th>Confirmed</th><th>Play</th>
+    <th>NRFI %</th><th>1st Inn Result</th><th>Lineups</th><th>Status</th><th>Play</th>
   </tr></thead><tbody>`;
   games.forEach((g, i) => {
     const nPct = pct(g.nrfi_prob);
     const rec  = g.bet_recommendation.recommended;
+    const fi   = g.first_inning || {};
+    const fiCell = fiResultCell(fi, g.game_state);
+    const stateBadge = gameStateBadge(g.game_state);
+    const lineupCell = g.lineups_confirmed
+      ? '<span style="color:var(--green)">✓ Confirmed</span>'
+      : '<span style="color:var(--yellow)">Pending</span>';
     html += `<tr>
       <td>${i+1}</td>
       <td><strong>${g.away_team}</strong> <span style="color:var(--muted)">@</span> <strong>${g.home_team}</strong></td>
       <td>${g.away_pitcher.name || 'TBD'} <span class="grade ${gradeClass(g.bot_half.scores.pitcher.grade)}">${g.bot_half.scores.pitcher.grade}</span></td>
       <td>${g.home_pitcher.name || 'TBD'} <span class="grade ${gradeClass(g.top_half.scores.pitcher.grade)}">${g.top_half.scores.pitcher.grade}</span></td>
       <td><strong ${nrfiColor(g.nrfi_prob)}>${nPct}</strong></td>
-      <td>${pct(g.top_half.half_inning_prob)}</td>
-      <td>${pct(g.bot_half.half_inning_prob)}</td>
-      <td>${g.lineups_confirmed ? '✓' : '—'}</td>
+      <td>${fiCell}</td>
+      <td>${lineupCell}</td>
+      <td>${stateBadge}</td>
       <td class="${rec ? 'tag-rec' : 'tag-none'}">${rec ? '✅ NRFI' : '—'}</td>
     </tr>`;
   });
   html += `</tbody></table><br>`;
 
-  // ── Detailed cards (top 5) ──────────────────────────────────────────────────
-  html += `<div class="section-title">Detailed Breakdown — Top 5</div>`;
-  games.slice(0, 5).forEach(g => { html += gameCard(g, g.bet_recommendation.recommended); });
+  // ── Detailed cards — pregame first, then live, then final ──────────────────
+  const pregames = games.filter(g => g.game_state === 'pregame');
+  const liveGames = games.filter(g => g.game_state === 'live');
+  const finalGames = games.filter(g => g.game_state === 'final');
+  const orderedGames = [...pregames, ...liveGames, ...finalGames];
+
+  html += `<div class="section-title">Detailed Breakdown</div>`;
+  orderedGames.slice(0, 7).forEach(g => { html += gameCard(g, g.bet_recommendation.recommended); });
 
   app.innerHTML = html;
 })();
@@ -348,6 +388,45 @@ function halfBlock(half, label) {
   </div>`;
 }
 
+function gameStateBadge(state) {
+  if (state === 'live')    return '<span class="state-badge state-live">● Live</span>';
+  if (state === 'final')   return '<span class="state-badge state-final">Final</span>';
+  return '<span class="state-badge state-pregame">Pre-Game</span>';
+}
+
+function fiResultCell(fi, state) {
+  if (!fi || state === 'pregame') return '<span style="color:var(--muted)">—</span>';
+  const nr  = fi.nrfi_result;
+  const a   = fi.away_runs_1st;
+  const h   = fi.home_runs_1st;
+  const score = (a != null ? a : '?') + ' / ' + (h != null ? h : '?');
+  if (nr === 'NRFI') return `<strong style="color:var(--green)">✅ NRFI (${score})</strong>`;
+  if (nr === 'YRFI') return `<strong style="color:var(--red)">❌ YRFI (${score})</strong>`;
+  if (nr === 'bot_pending') return `<span style="color:#f0a500">Top done (${a} R) · Bot live</span>`;
+  if (nr === 'top_pending') return `<span style="color:#f0a500">In progress</span>`;
+  return '<span style="color:var(--muted)">—</span>';
+}
+
+function fiResultBanner(fi, state) {
+  if (!fi || state === 'pregame') return '';
+  const nr = fi.nrfi_result;
+  const a  = fi.away_runs_1st;
+  const h  = fi.home_runs_1st;
+  if (nr === 'NRFI') {
+    return `<div class="fi-result fi-nrfi">✅ NRFI — No run in the 1st inning (Away: ${a}, Home: ${h})</div>`;
+  }
+  if (nr === 'YRFI') {
+    return `<div class="fi-result fi-yrfi">❌ YRFI — Run(s) scored in the 1st inning (Away: ${a}, Home: ${h})</div>`;
+  }
+  if (nr === 'bot_pending') {
+    return `<div class="fi-result fi-live">⏳ Top half complete — Away scored ${a} run(s). Bottom half in progress.</div>`;
+  }
+  if (nr === 'top_pending') {
+    return `<div class="fi-result fi-live">⏳ 1st inning in progress…</div>`;
+  }
+  return '';
+}
+
 function gameCard(g, rec) {
   const bet = g.bet_recommendation;
   const chips = [
@@ -359,21 +438,26 @@ function gameCard(g, rec) {
     ? new Date(g.game_time).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit', timeZone:'America/New_York'}) + ' ET'
     : '';
 
+  const lineupStr = g.lineups_confirmed
+    ? '<span style="color:var(--green)">✓ Lineups confirmed</span>'
+    : '<span style="color:var(--yellow)">⚠ Lineups pending</span>';
+
   return `
   <div class="game-card ${rec ? 'recommended' : ''}">
     <div class="game-card-header">
       <div>
         <span class="matchup">
           ${g.away_team} <span class="at">@</span> ${g.home_team}
+          ${gameStateBadge(g.game_state)}
           ${rec ? '<span class="rec-badge">★ PLAY</span>' : ''}
         </span>
         <div style="font-size:12px;color:var(--muted);margin-top:2px">
-          ${g.venue_name}  ${time}
-          ${g.lineups_confirmed ? ' · <span style="color:var(--green)">Lineups confirmed</span>' : ' · <span style="color:var(--yellow)">Lineups pending</span>'}
+          ${g.venue_name} · ${time} · ${lineupStr}
         </div>
       </div>
       <div class="nrfi-pill ${pillClass(g.nrfi_prob)}">${pct(g.nrfi_prob)} NRFI</div>
     </div>
+    ${fiResultBanner(g.first_inning, g.game_state)}
     <div class="game-card-body">
       ${halfBlock(g.top_half, 'TOP 1st — ' + (g.away_pitcher.name || 'TBD') + ' pitching')}
       ${halfBlock(g.bot_half, 'BOT 1st — ' + (g.home_pitcher.name || 'TBD') + ' pitching')}

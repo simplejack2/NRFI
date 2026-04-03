@@ -121,15 +121,60 @@ def _extract_probable(prob: dict | None) -> dict | None:
 def get_lineups(game_pk: int) -> dict:
     """
     Return confirmed lineups for a game.
-    Returns dict with 'home' and 'away' keys, each a list of player dicts
-    (batting order position, player_id, name, bat_side).
+    Strategy:
+      1. Try /game/{pk}/lineups  — official pre-game / in-game lineup endpoint
+      2. Fall back to /game/{pk}/boxscore battingOrder  — populated once game starts
+    Returns dict with 'home' and 'away' keys, each a list of player dicts.
     Empty lists if lineups not yet posted.
     """
     cache_key = f"mlb_lineups_{game_pk}"
     cached = cache_get(cache_key)
     if cached is not None:
-        return cached
+        # Don't serve a cached "empty" result — always re-try if unconfirmed
+        if lineups_confirmed(cached):
+            return cached
 
+    result = _fetch_lineups_endpoint(game_pk)
+
+    # If the dedicated endpoint came back empty, try boxscore (works for started/final games)
+    if not lineups_confirmed(result):
+        result = _fetch_lineups_boxscore(game_pk) or result
+
+    ttl = CACHE_TTL["lineups"] * 4 if lineups_confirmed(result) else CACHE_TTL["lineups"]
+    cache_set(cache_key, result, ttl=ttl)
+    return result
+
+
+def _fetch_lineups_endpoint(game_pk: int) -> dict:
+    """Use the dedicated /game/{pk}/lineups endpoint (pre-game lineups)."""
+    try:
+        data = _get(f"/game/{game_pk}/lineups")
+    except Exception:
+        return {"home": [], "away": []}
+
+    result = {"home": [], "away": []}
+    for api_key, side in [("homePlayers", "home"), ("awayPlayers", "away")]:
+        players = data.get(api_key, [])
+        lineup = []
+        for pos, p in enumerate(players, start=1):
+            person = p.get("person", p)  # some responses wrap, some don't
+            bat_side = p.get("batSide", {}).get("code") or \
+                       person.get("batSide", {}).get("code", "R")
+            player_id = person.get("id") or p.get("id")
+            if not player_id:
+                continue
+            lineup.append({
+                "order":     pos,
+                "player_id": player_id,
+                "name":      person.get("fullName", ""),
+                "bat_side":  bat_side,
+            })
+        result[side] = lineup
+    return result
+
+
+def _fetch_lineups_boxscore(game_pk: int) -> dict:
+    """Fall back to boxscore battingOrder (only populated once game starts)."""
     try:
         data = _get(f"/game/{game_pk}/boxscore")
     except Exception:
@@ -142,8 +187,7 @@ def get_lineups(game_pk: int) -> dict:
         players = team_data.get("players", {})
         lineup = []
         for pos, player_id in enumerate(batting_order, start=1):
-            key = f"ID{player_id}"
-            p = players.get(key, {})
+            p = players.get(f"ID{player_id}", {})
             person = p.get("person", {})
             bat_side = p.get("batSide", {}).get("code", "R")
             lineup.append({
@@ -153,16 +197,96 @@ def get_lineups(game_pk: int) -> dict:
                 "bat_side":  bat_side,
             })
         result[side] = lineup
-
-    # Cache with short TTL before confirmed, longer after
-    ttl = CACHE_TTL["lineups"] if not result["home"] else CACHE_TTL["lineups"] * 2
-    cache_set(cache_key, result, ttl=ttl)
     return result
 
 
 def lineups_confirmed(lineups: dict) -> bool:
     """Return True if both sides have at least 9 batters posted."""
     return len(lineups.get("home", [])) >= 9 and len(lineups.get("away", [])) >= 9
+
+
+# ── Linescore / first-inning result ──────────────────────────────────────────
+
+def get_first_inning_result(game_pk: int) -> dict:
+    """
+    Fetch the linescore and return the actual first-inning run totals.
+    Returns dict with:
+        away_runs_1st   - int or None (None = inning not yet complete)
+        home_runs_1st   - int or None
+        top_complete    - bool
+        bot_complete    - bool
+        nrfi_result     - 'NRFI' | 'YRFI' | 'top_pending' | 'bot_pending' | 'pending'
+        game_status     - status code string ('S', 'P', 'I', 'F', etc.)
+    """
+    cache_key = f"mlb_linescore_{game_pk}"
+    cached = cache_get(cache_key)
+    # Only use cache if game is final (status F) — live games need fresh data
+    if cached is not None and cached.get("game_status") == "F":
+        return cached
+
+    try:
+        data = _get(f"/game/{game_pk}/linescore")
+    except Exception:
+        return _pending_result()
+
+    innings   = data.get("innings", [])
+    status    = data.get("currentInning", 0)
+    inning_state = data.get("inningState", "")   # "Top", "Middle", "Bottom", "End"
+    current_inning = data.get("currentInning", 0)
+
+    # Try to get game status from the linescore itself
+    game_status_code = "I" if innings else "S"
+
+    away_1st = None
+    home_1st = None
+
+    if innings:
+        first = innings[0]
+        away_1st = first.get("away", {}).get("runs")
+        home_1st = first.get("home", {}).get("runs")
+
+    # Determine completion
+    top_complete = away_1st is not None
+    # Bottom complete if: inning > 1, OR (inning == 1 and state is "End"/"Middle")
+    bot_complete = (
+        home_1st is not None and
+        (current_inning > 1 or inning_state in ("End", "Middle"))
+    )
+
+    # Derive NRFI result
+    if top_complete and bot_complete:
+        nrfi = "NRFI" if (away_1st == 0 and home_1st == 0) else "YRFI"
+        game_status_code = "F" if current_inning > 1 else "I"
+    elif top_complete:
+        nrfi = "bot_pending"
+        game_status_code = "I"
+    elif not innings:
+        nrfi = "pending"
+        game_status_code = "S"
+    else:
+        nrfi = "top_pending"
+        game_status_code = "I"
+
+    result = {
+        "away_runs_1st":  away_1st,
+        "home_runs_1st":  home_1st,
+        "top_complete":   top_complete,
+        "bot_complete":   bot_complete,
+        "nrfi_result":    nrfi,
+        "game_status":    game_status_code,
+    }
+
+    ttl = CACHE_TTL["schedule"] if game_status_code == "F" else 120  # 2 min for live
+    cache_set(cache_key, result, ttl=ttl)
+    return result
+
+
+def _pending_result() -> dict:
+    return {
+        "away_runs_1st": None, "home_runs_1st": None,
+        "top_complete": False, "bot_complete": False,
+        "nrfi_result": "pending", "game_status": "S",
+    }
 
 
 # ── Player stats ──────────────────────────────────────────────────────────────
