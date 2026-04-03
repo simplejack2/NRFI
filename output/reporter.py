@@ -226,6 +226,32 @@ def _format_game_time(game_time: str) -> str:
         return game_time[:16]
 
 
+def save_report_html(results: list[dict], game_date: str,
+                     template_path: str = "/home/user/NRFI/index.html") -> str:
+    """
+    Inject the report JSON into index.html so GitHub Pages serves a live report.
+    Replaces the placeholder line `const REPORT_DATA = null;` with real data.
+    """
+    import json
+
+    safe_results = _make_serializable(results)
+    payload = json.dumps({"date": game_date, "games": safe_results}, separators=(",", ":"))
+
+    with open(template_path, "r") as f:
+        html = f.read()
+
+    injected = html.replace(
+        "const REPORT_DATA = null; // INJECTED_BY_REPORTER",
+        f"const REPORT_DATA = {payload}; // generated {game_date}",
+    )
+
+    with open(template_path, "w") as f:
+        f.write(injected)
+
+    logger.info("Injected report data into %s", template_path)
+    return template_path
+
+
 def save_report_json(results: list[dict], game_date: str, output_dir: str = "/home/user/NRFI/data") -> str:
     """Save model results to a JSON file for archival."""
     import json

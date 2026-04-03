@@ -33,7 +33,7 @@ from datetime import date
 sys.path.insert(0, os.path.dirname(__file__))
 
 from model.nrfi_model import run_daily_model
-from output.reporter  import print_daily_report, save_report_json
+from output.reporter  import print_daily_report, save_report_json, save_report_html
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -81,6 +81,12 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         default=False,
         help="Save JSON report to data/nrfi_<date>.json",
+    )
+    parser.add_argument(
+        "--html",
+        action="store_true",
+        default=False,
+        help="Inject report data into index.html for GitHub Pages",
     )
     parser.add_argument(
         "--top", "-t",
@@ -144,6 +150,11 @@ def main() -> int:
     if args.save:
         path = save_report_json(results, game_date)
         print(f"  Report saved to: {path}\n")
+
+    if args.html:
+        path = save_report_html(results, game_date)
+        print(f"  index.html updated: {path}\n")
+        print("  Commit and push index.html to publish on GitHub Pages.\n")
 
     # Exit code: 0 = at least one recommended play, 2 = no recommended plays
     has_rec = any(r["bet_recommendation"]["recommended"] for r in results)

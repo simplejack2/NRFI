@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NRFI Predictor</title>
+  <style>
+    :root {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --border:   #30363d;
+      --text:     #e6edf3;
+      --muted:    #8b949e;
+      --green:    #3fb950;
+      --yellow:   #d29922;
+      --red:      #f85149;
+      --blue:     #58a6ff;
+      --purple:   #bc8cff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    header h1 { font-size: 18px; font-weight: 700; }
+    header .meta { color: var(--muted); font-size: 13px; }
+    main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+    /* ── Summary bar ── */
+    .summary-bar {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 20px;
+      min-width: 140px;
+      flex: 1;
+    }
+    .stat-card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .stat-card .value { font-size: 26px; font-weight: 700; margin-top: 2px; }
+
+    /* ── Recommended plays ── */
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .rec-badge {
+      display: inline-block;
+      background: #1a3a1a;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 8px;
+    }
+
+    /* ── Game cards ── */
+    .game-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .game-card.recommended { border-color: var(--green); }
+    .game-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 14px 18px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .matchup { font-size: 15px; font-weight: 600; }
+    .matchup .at { color: var(--muted); margin: 0 6px; }
+    .nrfi-pill {
+      font-size: 20px;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      background: #1a2a1a;
+      border: 2px solid var(--green);
+      color: var(--green);
+    }
+    .nrfi-pill.mid { background: #2a2210; border-color: var(--yellow); color: var(--yellow); }
+    .nrfi-pill.low { background: #2a1010; border-color: var(--red);    color: var(--red);    }
+
+    .game-card-body { padding: 14px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .game-card-body { grid-template-columns: 1fr; } }
+
+    .half-block h4 { font-size: 12px; font-weight: 700; text-transform: uppercase;
+                     color: var(--muted); letter-spacing: .05em; margin-bottom: 10px; }
+    .pitcher-line { display: flex; justify-content: space-between; margin-bottom: 6px; }
+    .pitcher-name { font-weight: 600; }
+    .pitcher-hand { color: var(--muted); font-size: 12px; }
+    .half-prob { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+
+    /* ── Score bars ── */
+    .score-rows { display: flex; flex-direction: column; gap: 5px; }
+    .score-row { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+    .score-row .label { width: 130px; color: var(--muted); flex-shrink: 0; }
+    .bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width .3s; }
+    .bar-green  { background: var(--green); }
+    .bar-yellow { background: var(--yellow); }
+    .bar-red    { background: var(--red); }
+    .score-val { width: 36px; text-align: right; color: var(--text); }
+
+    /* ── Bet filter chips ── */
+    .filter-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .chip {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      border: 1px solid;
+    }
+    .chip.pass { color: var(--green); border-color: #2d4a2d; background: #0f1f0f; }
+    .chip.fail { color: var(--red);   border-color: #4a1f1f; background: #1f0a0a; }
+
+    /* ── All games table ── */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
+         padding: 8px 10px; border-bottom: 2px solid var(--border); text-align: left; }
+    td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(255,255,255,.03); }
+    .tag-rec  { color: var(--green); font-weight: 700; }
+    .tag-none { color: var(--muted); }
+    .grade { display: inline-block; font-size: 11px; font-weight: 700;
+             padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
+    .grade-a  { background: #1a3a1a; color: var(--green); }
+    .grade-b  { background: #1a2a3a; color: var(--blue);  }
+    .grade-c  { background: #2a2a1a; color: var(--yellow);}
+    .grade-d  { background: #2a1a1a; color: var(--red);   }
+
+    /* ── Weather ── */
+    .wx-line { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    /* ── No data state ── */
+    .no-data {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+    .no-data h2 { font-size: 20px; margin-bottom: 8px; color: var(--text); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>⚾ NRFI Predictor</h1>
+    <div class="meta" id="run-meta">Run <code>python main.py --save --html</code> to generate today's report</div>
+  </div>
+  <a href="https://github.com/simplejack2/nrfi" id="gh-link">View on GitHub →</a>
+</header>
+
+<main id="app">
+  <div class="no-data">
+    <h2>No report generated yet</h2>
+    <p>Run <code>python main.py --save --html</code> to produce today's picks.</p>
+  </div>
+</main>
+
+<footer>
+  Model weights: Pitcher (40%) · Top-4 Lineup vs hand (30%) · Park/Weather (15%) · Damage/Speed (10%) · Lineup (5%)<br>
+  Data: MLB Stats API · Baseball Savant · FanGraphs · wttr.in
+</footer>
+
+<script>
+// The Python reporter writes report data into this script tag as JSON.
+// If the tag is empty, the "no data" state above is shown.
+const REPORT_DATA = null; // INJECTED_BY_REPORTER
+
+(function () {
+  if (!REPORT_DATA) return;
+
+  const { date, games } = REPORT_DATA;
+  const app  = document.getElementById('app');
+  const meta = document.getElementById('run-meta');
+  meta.textContent = `Generated for ${date} · ${games.length} games scored`;
+
+  const recommended = games.filter(g => g.bet_recommendation.recommended);
+
+  let html = '';
+
+  // ── Summary bar ────────────────────────────────────────────────────────────
+  const avgNrfi = games.length
+    ? (games.reduce((s, g) => s + g.nrfi_prob, 0) / games.length * 100).toFixed(1)
+    : '—';
+  html += `
+  <div class="summary-bar">
+    <div class="stat-card">
+      <div class="label">Games</div>
+      <div class="value">${games.length}</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Avg NRFI %</div>
+      <div class="value">${avgNrfi}%</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Recommended Plays</div>
+      <div class="value" style="color:var(--green)">${recommended.length}</div>
+    </div>
+  </div>`;
+
+  // ── Recommended plays ───────────────────────────────────────────────────────
+  if (recommended.length > 0) {
+    html += `<div class="section-title">★ Recommended NRFI Plays</div>`;
+    recommended.forEach(g => { html += gameCard(g, true); });
+    html += `<br>`;
+  }
+
+  // ── All games ───────────────────────────────────────────────────────────────
+  html += `<div class="section-title">All Games — Ranked by NRFI Probability</div>`;
+  html += `<table><thead><tr>
+    <th>#</th><th>Matchup</th><th>Away SP</th><th>Home SP</th>
+    <th>NRFI %</th><th>Top 1st</th><th>Bot 1st</th><th>Confirmed</th><th>Play</th>
+  </tr></thead><tbody>`;
+  games.forEach((g, i) => {
+    const nPct = pct(g.nrfi_prob);
+    const rec  = g.bet_recommendation.recommended;
+    html += `<tr>
+      <td>${i+1}</td>
+      <td><strong>${g.away_team}</strong> <span style="color:var(--muted)">@</span> <strong>${g.home_team}</strong></td>
+      <td>${g.away_pitcher.name || 'TBD'} <span class="grade ${gradeClass(g.bot_half.scores.pitcher.grade)}">${g.bot_half.scores.pitcher.grade}</span></td>
+      <td>${g.home_pitcher.name || 'TBD'} <span class="grade ${gradeClass(g.top_half.scores.pitcher.grade)}">${g.top_half.scores.pitcher.grade}</span></td>
+      <td><strong ${nrfiColor(g.nrfi_prob)}>${nPct}</strong></td>
+      <td>${pct(g.top_half.half_inning_prob)}</td>
+      <td>${pct(g.bot_half.half_inning_prob)}</td>
+      <td>${g.lineups_confirmed ? '✓' : '—'}</td>
+      <td class="${rec ? 'tag-rec' : 'tag-none'}">${rec ? '✅ NRFI' : '—'}</td>
+    </tr>`;
+  });
+  html += `</tbody></table><br>`;
+
+  // ── Detailed cards (top 5) ──────────────────────────────────────────────────
+  html += `<div class="section-title">Detailed Breakdown — Top 5</div>`;
+  games.slice(0, 5).forEach(g => { html += gameCard(g, g.bet_recommendation.recommended); });
+
+  app.innerHTML = html;
+})();
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function pct(v) { return v != null ? (v * 100).toFixed(1) + '%' : '—'; }
+
+function nrfiColor(p) {
+  if (p >= 0.65) return 'style="color:var(--green)"';
+  if (p >= 0.58) return 'style="color:var(--yellow)"';
+  return 'style="color:var(--red)"';
+}
+
+function pillClass(p) {
+  if (p >= 0.65) return '';
+  if (p >= 0.58) return 'mid';
+  return 'low';
+}
+
+function gradeClass(g) {
+  if (!g) return 'grade-c';
+  if (g.startsWith('A')) return 'grade-a';
+  if (g.startsWith('B')) return 'grade-b';
+  if (g.startsWith('C')) return 'grade-c';
+  return 'grade-d';
+}
+
+function barColor(score) {
+  if (score >= 0.65) return 'bar-green';
+  if (score >= 0.50) return 'bar-yellow';
+  return 'bar-red';
+}
+
+function scoreRow(label, score, weight) {
+  const pctW = Math.round((score || 0) * 100);
+  const col   = barColor(score || 0);
+  const val   = score != null ? score.toFixed(3) : '—';
+  return `
+  <div class="score-row">
+    <span class="label">${label} <span style="color:var(--muted);font-size:10px">(${weight})</span></span>
+    <div class="bar-track"><div class="bar-fill ${col}" style="width:${pctW}%"></div></div>
+    <span class="score-val">${val}</span>
+  </div>`;
+}
+
+function halfBlock(half, label) {
+  const s = half.scores;
+  const prob = half.half_inning_prob;
+  const wx = s.park_weather && s.park_weather.weather_detail;
+  const wxLine = (wx && wx.conditions !== 'Dome')
+    ? `<div class="wx-line">🌡 ${wx.temperature_f}°F · 💨 ${wx.wind_mph} mph ${wx.wind_direction_str} · ${wx.conditions}</div>`
+    : (wx && wx.conditions === 'Dome' ? `<div class="wx-line">🏟 Dome — climate controlled</div>` : '');
+
+  return `
+  <div class="half-block">
+    <h4>${label}</h4>
+    <div class="half-prob" ${nrfiColor(prob)}>${pct(prob)} P(no run)</div>
+    <div class="pitcher-line">
+      <span class="pitcher-name">${half.pitcher_name || '—'}</span>
+      <span class="pitcher-hand">${half.pitcher_hand}HP</span>
+    </div>
+    ${wxLine}
+    <div class="score-rows" style="margin-top:10px">
+      ${scoreRow('Pitcher suppression', s.pitcher && s.pitcher.score, '40%')}
+      ${scoreRow('Top-4 offense', s.batter && s.batter.score, '30%')}
+      ${scoreRow('Park / weather', s.park_weather && s.park_weather.score, '15%')}
+      ${scoreRow('Damage / speed', s.damage_speed && s.damage_speed.score, '10%')}
+    </div>
+  </div>`;
+}
+
+function gameCard(g, rec) {
+  const bet = g.bet_recommendation;
+  const chips = [
+    ...bet.reasons_pass.map(r => `<span class="chip pass">✓ ${r}</span>`),
+    ...bet.reasons_fail.map(r => `<span class="chip fail">✗ ${r}</span>`),
+  ].join('');
+
+  const time = g.game_time
+    ? new Date(g.game_time).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit', timeZone:'America/New_York'}) + ' ET'
+    : '';
+
+  return `
+  <div class="game-card ${rec ? 'recommended' : ''}">
+    <div class="game-card-header">
+      <div>
+        <span class="matchup">
+          ${g.away_team} <span class="at">@</span> ${g.home_team}
+          ${rec ? '<span class="rec-badge">★ PLAY</span>' : ''}
+        </span>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">
+          ${g.venue_name}  ${time}
+          ${g.lineups_confirmed ? ' · <span style="color:var(--green)">Lineups confirmed</span>' : ' · <span style="color:var(--yellow)">Lineups pending</span>'}
+        </div>
+      </div>
+      <div class="nrfi-pill ${pillClass(g.nrfi_prob)}">${pct(g.nrfi_prob)} NRFI</div>
+    </div>
+    <div class="game-card-body">
+      ${halfBlock(g.top_half, 'TOP 1st — ' + (g.away_pitcher.name || 'TBD') + ' pitching')}
+      ${halfBlock(g.bot_half, 'BOT 1st — ' + (g.home_pitcher.name || 'TBD') + ' pitching')}
+    </div>
+    <div class="filter-row" style="padding:0 18px 14px">${chips}</div>
+  </div>`;
+}
+</script>
+</body>
+</html>
