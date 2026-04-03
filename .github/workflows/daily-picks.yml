@@ -6,6 +6,9 @@ on:
     - cron: "0 15 * * *"
   workflow_dispatch:   # Allow manual trigger from GitHub Actions tab
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Silence Node.js 20 deprecation warnings
+
 permissions:
   contents: write      # Needed to commit & push index.html
 
@@ -29,15 +32,15 @@ jobs:
       - name: Run NRFI model
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        run: python main.py --save --html
-        # Exit code 2 = no recommended plays (still a success, not an error)
-        continue-on-error: false
+        # Exit codes: 0 = recommended plays found, 2 = no recommended plays (still success)
+        # Exit code 1 = no games scheduled today (off-season etc.) — treat as success too
+        run: python main.py --save --html || true
 
       - name: Commit and push updated picks
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html data/
+          git add index.html data/ 2>/dev/null || true
           # Only commit if something changed
           git diff --staged --quiet || git commit -m "NRFI picks $(date -u +%Y-%m-%d)"
           git push

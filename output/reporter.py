@@ -6,8 +6,13 @@ Formats model output as a clean terminal report with color coding.
 from __future__ import annotations
 
 import logging
+import os
+import sys
 from datetime import datetime
 from typing import Any
+
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, _ROOT)
 
 try:
     from colorama import Fore, Style, init as colorama_init
@@ -15,9 +20,6 @@ try:
     HAS_COLOR = True
 except ImportError:
     HAS_COLOR = False
-
-import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from config import BET_FILTER, REPORT_WIDTH
 
@@ -227,7 +229,9 @@ def _format_game_time(game_time: str) -> str:
 
 
 def save_report_html(results: list[dict], game_date: str,
-                     template_path: str = "/home/user/NRFI/index.html") -> str:
+                     template_path: str | None = None) -> str:
+    if template_path is None:
+        template_path = os.path.join(_ROOT, "index.html")
     """
     Inject the report JSON into index.html so GitHub Pages serves a live report.
     Replaces the placeholder line `const REPORT_DATA = null;` with real data.
@@ -252,7 +256,9 @@ def save_report_html(results: list[dict], game_date: str,
     return template_path
 
 
-def save_report_json(results: list[dict], game_date: str, output_dir: str = "/home/user/NRFI/data") -> str:
+def save_report_json(results: list[dict], game_date: str, output_dir: str | None = None) -> str:
+    if output_dir is None:
+        output_dir = os.path.join(_ROOT, "data")
     """Save model results to a JSON file for archival."""
     import json
 

@@ -3,6 +3,10 @@ NRFI Predictor - Configuration
 Central constants, weights, thresholds, and API endpoints.
 """
 
+import os
+# Repo root = directory containing this file, works locally and in CI
+_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 # ── Scoring weights (must sum to 1.0) ─────────────────────────────────────────
 WEIGHTS = {
     "pitcher":      0.40,   # Pitcher first-inning / first-time-through profile
@@ -77,7 +81,7 @@ WEATHER = {
 }
 
 # ── Cache settings ────────────────────────────────────────────────────────────
-CACHE_DIR = "/home/user/NRFI/.cache"
+CACHE_DIR = os.path.join(_ROOT, ".cache")
 CACHE_TTL = {
     "schedule":         3600 * 4,   # 4 hours
     "lineups":          1800,       # 30 minutes
