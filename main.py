@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+"""
+NRFI Predictor - Daily Runner
+==============================
+Usage:
+    python main.py                          # Run for today
+    python main.py --date 2026-04-15        # Run for a specific date
+    python main.py --confirmed              # Only score games with confirmed lineups
+    python main.py --save                   # Also save JSON report to data/
+    python main.py --top 3                  # Show detailed breakdown for top N games
+    python main.py --game <game_pk>         # Show breakdown for a single game
+    python main.py --clear-cache            # Clear cached data and re-fetch
+
+Environment variables:
+    OPENWEATHER_API_KEY   OpenWeatherMap API key (optional; falls back to wttr.in)
+
+Data sources (all public, no API key required by default):
+    MLB Stats API         https://statsapi.mlb.com
+    Baseball Savant       https://baseballsavant.mlb.com
+    FanGraphs             https://www.fangraphs.com
+    wttr.in               https://wttr.in (weather fallback)
+"""
+
+from __future__ import annotations
+
+import argparse
+import logging
+import os
+import sys
+from datetime import date
+
+# Ensure package root is on path
+sys.path.insert(0, os.path.dirname(__file__))
+
+from model.nrfi_model import run_daily_model
+from output.reporter  import print_daily_report, save_report_json
+
+
+def setup_logging(verbose: bool = False) -> None:
+    level = logging.DEBUG if verbose else logging.INFO
+    logging.basicConfig(
+        level=level,
+        format="%(asctime)s  %(levelname)-8s  %(name)s  %(message)s",
+        datefmt="%H:%M:%S",
+    )
+    # Quiet down noisy third-party loggers
+    for noisy in ("urllib3", "requests", "diskcache"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
+
+
+def clear_cache() -> None:
+    from fetchers._cache import _get_cache
+    c = _get_cache()
+    if hasattr(c, "clear"):
+        c.clear()
+        print("Cache cleared.")
+    else:
+        print("Cache is in-memory; nothing to clear.")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="NRFI Predictor - daily no-run-first-inning probability model",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=__doc__,
+    )
+    parser.add_argument(
+        "--date", "-d",
+        default=None,
+        metavar="YYYY-MM-DD",
+        help="Game date (default: today)",
+    )
+    parser.add_argument(
+        "--confirmed", "-c",
+        action="store_true",
+        default=False,
+        help="Only score games with confirmed lineups",
+    )
+    parser.add_argument(
+        "--save", "-s",
+        action="store_true",
+        default=False,
+        help="Save JSON report to data/nrfi_<date>.json",
+    )
+    parser.add_argument(
+        "--top", "-t",
+        type=int,
+        default=5,
+        metavar="N",
+        help="Number of games to show in detailed breakdown (default: 5)",
+    )
+    parser.add_argument(
+        "--game", "-g",
+        type=int,
+        default=None,
+        metavar="GAME_PK",
+        help="Show detailed breakdown for a single game",
+    )
+    parser.add_argument(
+        "--clear-cache",
+        action="store_true",
+        default=False,
+        help="Clear cached data before running",
+    )
+    parser.add_argument(
+        "--verbose", "-v",
+        action="store_true",
+        default=False,
+        help="Enable verbose debug logging",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    setup_logging(args.verbose)
+    logger = logging.getLogger("nrfi.main")
+
+    if args.clear_cache:
+        clear_cache()
+
+    game_date = args.date or date.today().isoformat()
+
+    logger.info("NRFI Predictor starting for %s", game_date)
+
+    results = run_daily_model(
+        game_date=game_date,
+        require_confirmed=args.confirmed,
+    )
+
+    if not results:
+        print(f"\nNo results for {game_date}. Check if the season is active and games are scheduled.\n")
+        return 1
+
+    # Filter to specific game if requested
+    if args.game:
+        results = [r for r in results if r["game_pk"] == args.game]
+        if not results:
+            print(f"\nGame {args.game} not found in results for {game_date}.\n")
+            return 1
+
+    print_daily_report(results, game_date)
+
+    if args.save:
+        path = save_report_json(results, game_date)
+        print(f"  Report saved to: {path}\n")
+
+    # Exit code: 0 = at least one recommended play, 2 = no recommended plays
+    has_rec = any(r["bet_recommendation"]["recommended"] for r in results)
+    return 0 if has_rec else 2
+
+
+if __name__ == "__main__":
+    sys.exit(main())
