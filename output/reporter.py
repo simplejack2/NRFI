@@ -230,13 +230,16 @@ def _format_game_time(game_time: str) -> str:
 
 def save_report_html(results: list[dict], game_date: str,
                      template_path: str | None = None) -> str:
-    if template_path is None:
-        template_path = os.path.join(_ROOT, "index.html")
     """
     Inject the report JSON into index.html so GitHub Pages serves a live report.
-    Replaces the placeholder line `const REPORT_DATA = null;` with real data.
+    Uses a regex so it overwrites any previously-injected data, not just the
+    initial null placeholder.
     """
     import json
+    import re
+
+    if template_path is None:
+        template_path = os.path.join(_ROOT, "index.html")
 
     safe_results = _make_serializable(results)
     payload = json.dumps({"date": game_date, "games": safe_results}, separators=(",", ":"))
@@ -244,10 +247,17 @@ def save_report_html(results: list[dict], game_date: str,
     with open(template_path, "r") as f:
         html = f.read()
 
-    injected = html.replace(
-        "const REPORT_DATA = null; // INJECTED_BY_REPORTER",
-        f"const REPORT_DATA = {payload}; // generated {game_date}",
+    # Match the REPORT_DATA line regardless of what's currently assigned to it
+    new_line = f"const REPORT_DATA = {payload}; // generated {game_date}"
+    injected, count = re.subn(
+        r"const REPORT_DATA = .*?; // .*",
+        new_line,
+        html,
     )
+
+    if count == 0:
+        logger.error("REPORT_DATA placeholder not found in %s — data not injected", template_path)
+        return template_path
 
     with open(template_path, "w") as f:
         f.write(injected)

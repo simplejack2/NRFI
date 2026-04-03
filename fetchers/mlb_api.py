@@ -153,13 +153,23 @@ def _fetch_lineups_endpoint(game_pk: int) -> dict:
         return {"home": [], "away": []}
 
     result = {"home": [], "away": []}
-    for api_key, side in [("homePlayers", "home"), ("awayPlayers", "away")]:
+    # MLB API uses homeTeamLineup/awayTeamLineup; some versions use homePlayers/awayPlayers
+    key_pairs = [
+        ("homeTeamLineup", "home"), ("awayTeamLineup", "away"),
+        ("homePlayers",    "home"), ("awayPlayers",    "away"),
+    ]
+    filled = {"home": False, "away": False}
+    for api_key, side in key_pairs:
+        if filled[side]:
+            continue
         players = data.get(api_key, [])
+        if not players:
+            continue
         lineup = []
         for pos, p in enumerate(players, start=1):
-            person = p.get("person", p)  # some responses wrap, some don't
-            bat_side = p.get("batSide", {}).get("code") or \
-                       person.get("batSide", {}).get("code", "R")
+            person = p.get("person", p)
+            bat_side = (p.get("batSide") or {}).get("code") or \
+                       (person.get("batSide") or {}).get("code", "R")
             player_id = person.get("id") or p.get("id")
             if not player_id:
                 continue
@@ -169,7 +179,9 @@ def _fetch_lineups_endpoint(game_pk: int) -> dict:
                 "name":      person.get("fullName", ""),
                 "bat_side":  bat_side,
             })
-        result[side] = lineup
+        if lineup:
+            result[side] = lineup
+            filled[side] = True
     return result
 
 
