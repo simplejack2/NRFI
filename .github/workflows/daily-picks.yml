@@ -2,15 +2,25 @@ name: Daily NRFI Picks
 
 on:
   schedule:
-    # 11:00 AM EDT (UTC-4) = 15:00 UTC — covers the full MLB season (Apr–Oct)
+    # Every hour 11 AM – 7 PM EDT (15:00–23:00 UTC)
     - cron: "0 15 * * *"
+    - cron: "0 16 * * *"
+    - cron: "0 17 * * *"
+    - cron: "0 18 * * *"
+    - cron: "0 19 * * *"
+    - cron: "0 20 * * *"
+    - cron: "0 21 * * *"
+    - cron: "0 22 * * *"
+    - cron: "0 23 * * *"
+    # 8 PM EDT = 00:00 UTC (next calendar day)
+    - cron: "0 0 * * *"
   workflow_dispatch:   # Allow manual trigger from GitHub Actions tab
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Silence Node.js 20 deprecation warnings
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
-  contents: write      # Needed to commit & push index.html
+  contents: write
 
 jobs:
   generate-picks:
@@ -32,8 +42,7 @@ jobs:
       - name: Run NRFI model
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        # Exit codes: 0 = recommended plays found, 2 = no recommended plays (still success)
-        # Exit code 1 = no games scheduled today (off-season etc.) — treat as success too
+        # Exit 0 = recommended plays found, 2 = no recommended plays, 1 = no games today
         run: python main.py --save --html || true
 
       - name: Commit and push updated picks
@@ -41,6 +50,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html data/ 2>/dev/null || true
-          # Only commit if something changed
-          git diff --staged --quiet || git commit -m "NRFI picks $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "NRFI picks $(date -u +%Y-%m-%d\ %H:%M\ UTC)"
           git push
