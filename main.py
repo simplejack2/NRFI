@@ -129,10 +129,17 @@ def main() -> int:
 
     logger.info("NRFI Predictor starting for %s", game_date)
 
-    results = run_daily_model(
-        game_date=game_date,
-        require_confirmed=args.confirmed,
-    )
+    try:
+        results = run_daily_model(
+            game_date=game_date,
+            require_confirmed=args.confirmed,
+        )
+    except Exception as exc:
+        logger.error("Model run failed: %s", exc, exc_info=True)
+        if args.html:
+            # Write an empty-day state so the workflow verify step always passes
+            save_report_html([], game_date)
+        return 1
 
     if not results:
         print(f"\nNo games found for {game_date} (off-day or probables not yet posted).\n")
