@@ -110,13 +110,9 @@ def _score_game(game: dict, venues: dict, require_confirmed: bool) -> dict | Non
     lat = venue_info.get("lat")
     lon = venue_info.get("lon")
 
-    # Probable pitchers
-    home_prob = game.get("home_probable")
-    away_prob = game.get("away_probable")
-
-    if not home_prob or not away_prob:
-        logger.debug("Missing probable pitcher(s) for game %s, skipping", game_pk)
-        return None
+    # Probable pitchers — use TBD placeholder if not yet announced
+    home_prob = game.get("home_probable") or {"id": None, "name": "TBD", "hand": "R"}
+    away_prob = game.get("away_probable") or {"id": None, "name": "TBD", "hand": "R"}
 
     # Lineups
     lineups = get_lineups(game_pk)

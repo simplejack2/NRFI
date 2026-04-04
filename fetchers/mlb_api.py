@@ -109,10 +109,13 @@ def get_schedule(game_date: str | None = None) -> list[dict]:
 def _extract_probable(prob: dict | None) -> dict | None:
     if not prob:
         return None
+    pid = prob.get("id")
+    if not pid:
+        return None
     return {
-        "id":        prob.get("id"),
-        "name":      prob.get("fullName"),
-        "hand":      prob.get("pitchHand", {}).get("code", "R"),
+        "id":   pid,
+        "name": prob.get("fullName", "TBD"),
+        "hand": prob.get("pitchHand", {}).get("code", "R"),
     }
 
 

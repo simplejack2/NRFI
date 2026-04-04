@@ -135,8 +135,11 @@ def main() -> int:
     )
 
     if not results:
-        print(f"\nNo results for {game_date}. Check if the season is active and games are scheduled.\n")
-        return 1
+        print(f"\nNo games found for {game_date} (off-day or probables not yet posted).\n")
+        if args.html:
+            # Write an empty-day state to index.html so the workflow verify step passes
+            save_report_html([], game_date)
+        return 0
 
     # Filter to specific game if requested
     if args.game:

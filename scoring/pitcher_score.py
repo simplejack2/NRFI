@@ -48,7 +48,7 @@ logger = logging.getLogger(__name__)
 
 # ── Public entry point ────────────────────────────────────────────────────────
 
-def score_pitcher(pitcher_id: int, vs_hand: str | None = None) -> dict:
+def score_pitcher(pitcher_id: int | None, vs_hand: str | None = None) -> dict:
     """
     Compute the full pitcher suppression score for a given starter.
 
@@ -68,6 +68,13 @@ def score_pitcher(pitcher_id: int, vs_hand: str | None = None) -> dict:
         blended_metrics  - the blended stat line used for scoring
         sample_warning   - bool, True if sample size is thin
     """
+    # Unknown pitcher — return league-average score
+    if not pitcher_id:
+        return {
+            "pitcher_id": None, "score": 0.5, "grade": "C",
+            "components": {}, "blended_metrics": {}, "sample_warning": True,
+            "vs_hand": vs_hand,
+        }
     season = date.today().year
     blended = _blend_pitcher_metrics(pitcher_id, season, vs_hand)
     components = _score_components(blended)

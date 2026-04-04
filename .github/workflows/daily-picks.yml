@@ -56,21 +56,22 @@ jobs:
         run: |
           if grep -q 'INJECTED_BY_REPORTER' index.html; then
             echo "ERROR: index.html still has null placeholder — script did not inject data"
-            echo "--- Last 5 lines of any error output ---"
             exit 1
-          else
-            echo "index.html updated successfully"
-            python -c "
+          fi
+          echo "index.html updated successfully"
+          python -c "
           import re, json
           html = open('index.html').read()
-          m = re.search(r'const REPORT_DATA = (\{.*?\}); //', html)
+          m = re.search(r'const REPORT_DATA = (.*?); // generated', html)
           if m:
               d = json.loads(m.group(1))
-              print(f'Date: {d[\"date\"]}  Games: {len(d[\"games\"])}')
-              for g in d['games'][:3]:
-                  print(f'  {g[\"away_team\"]} @ {g[\"home_team\"]}  NRFI={g[\"nrfi_prob\"]:.1%}  state={g[\"game_state\"]}')
-            "
-          fi
+              games = d.get('games', [])
+              print(f'Date: {d[\"date\"]}  Games: {len(games)}')
+              for g in games[:5]:
+                  print(f'  {g[\"away_team\"]} @ {g[\"home_team\"]}  NRFI={g[\"nrfi_prob\"]:.1%}  state={g[\"game_state\"]}  lineups={g[\"lineups_confirmed\"]}')
+              if not games:
+                  print('  (no games scheduled today)')
+          "
 
       - name: Commit and push updated picks
         run: |
