@@ -14,7 +14,7 @@ on:
     - cron: "0 23 * * *"
     # 8 PM EDT = 00:00 UTC (next calendar day)
     - cron: "0 0 * * *"
-  workflow_dispatch:   # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -39,16 +39,43 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Ensure data directory exists
+        run: mkdir -p data
+
       - name: Run NRFI model
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        # Exit 0 = recommended plays found, 2 = no recommended plays, 1 = no games today
-        run: python main.py --save --html || true
+        run: |
+          python main.py --save --html
+          echo "Exit code: $?"
+        # Exit 0 = plays found, 2 = no plays (still success), 1 = no games today
+        # We catch all of these — let the next step show us what happened
+        continue-on-error: true
+
+      - name: Verify index.html was updated
+        run: |
+          if grep -q 'INJECTED_BY_REPORTER' index.html; then
+            echo "ERROR: index.html still has null placeholder — script did not inject data"
+            echo "--- Last 5 lines of any error output ---"
+            exit 1
+          else
+            echo "index.html updated successfully"
+            python -c "
+          import re, json
+          html = open('index.html').read()
+          m = re.search(r'const REPORT_DATA = (\{.*?\}); //', html)
+          if m:
+              d = json.loads(m.group(1))
+              print(f'Date: {d[\"date\"]}  Games: {len(d[\"games\"])}')
+              for g in d['games'][:3]:
+                  print(f'  {g[\"away_team\"]} @ {g[\"home_team\"]}  NRFI={g[\"nrfi_prob\"]:.1%}  state={g[\"game_state\"]}')
+            "
+          fi
 
       - name: Commit and push updated picks
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html data/ 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "NRFI picks $(date -u +%Y-%m-%d\ %H:%M\ UTC)"
+          git add index.html
+          git diff --staged --quiet || git commit -m "NRFI picks $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
