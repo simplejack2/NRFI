@@ -126,49 +126,49 @@ def main() -> int:
         clear_cache()
 
     game_date = args.date or date.today().isoformat()
-
     logger.info("NRFI Predictor starting for %s", game_date)
+
+    results = None
+    exit_code = 0
 
     try:
         results = run_daily_model(
             game_date=game_date,
             require_confirmed=args.confirmed,
         )
+
+        if not results:
+            print(f"\nNo games found for {game_date} (off-day or probables not yet posted).\n")
+        else:
+            # Filter to specific game if requested
+            if args.game:
+                results = [r for r in results if r["game_pk"] == args.game]
+                if not results:
+                    print(f"\nGame {args.game} not found in results for {game_date}.\n")
+
+            if results:
+                print_daily_report(results, game_date)
+
+                if args.save:
+                    path = save_report_json(results, game_date)
+                    print(f"  Report saved to: {path}\n")
+
     except Exception as exc:
         logger.error("Model run failed: %s", exc, exc_info=True)
+        exit_code = 1
+
+    finally:
+        # Always write index.html when --html is requested, even on failure.
+        # This ensures the verify step in CI never sees the raw placeholder.
         if args.html:
-            # Write an empty-day state so the workflow verify step always passes
-            save_report_html([], game_date)
-        return 1
+            try:
+                path = save_report_html(results or [], game_date)
+                print(f"  index.html updated: {path}\n")
+            except Exception as exc2:
+                logger.error("Failed to write index.html: %s", exc2, exc_info=True)
+                exit_code = 1
 
-    if not results:
-        print(f"\nNo games found for {game_date} (off-day or probables not yet posted).\n")
-        if args.html:
-            # Write an empty-day state to index.html so the workflow verify step passes
-            save_report_html([], game_date)
-        return 0
-
-    # Filter to specific game if requested
-    if args.game:
-        results = [r for r in results if r["game_pk"] == args.game]
-        if not results:
-            print(f"\nGame {args.game} not found in results for {game_date}.\n")
-            return 1
-
-    print_daily_report(results, game_date)
-
-    if args.save:
-        path = save_report_json(results, game_date)
-        print(f"  Report saved to: {path}\n")
-
-    if args.html:
-        path = save_report_html(results, game_date)
-        print(f"  index.html updated: {path}\n")
-        print("  Commit and push index.html to publish on GitHub Pages.\n")
-
-    # Exit code: 0 = at least one recommended play, 2 = no recommended plays
-    has_rec = any(r["bet_recommendation"]["recommended"] for r in results)
-    return 0 if has_rec else 2
+    return exit_code
 
 
 if __name__ == "__main__":

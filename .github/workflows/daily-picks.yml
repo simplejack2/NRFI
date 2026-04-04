@@ -45,11 +45,9 @@ jobs:
       - name: Run NRFI model
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        run: |
-          python main.py --save --html
-          echo "Exit code: $?"
-        # Exit 0 = plays found, 2 = no plays (still success), 1 = no games today
-        # We catch all of these — let the next step show us what happened
+        # main.py always writes index.html and exits 0 on expected outcomes.
+        # continue-on-error is a safety net for truly unexpected crashes.
+        run: python main.py --save --html
         continue-on-error: true
 
       - name: Verify index.html was updated
