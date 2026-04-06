@@ -16,7 +16,6 @@ import argparse
 import json
 import logging
 import os
-import re
 import sys
 from datetime import date, datetime, timezone
 
@@ -127,19 +126,25 @@ def _write_html(results: list[dict], game_date: str) -> None:
         with open(_HTML_PATH) as f:
             html = f.read()
 
-        injected, n = re.subn(
-            r"const REPORT_DATA = .*?; // .*",
-            new_line,
-            html,
-        )
-        if n == 0:
+        lines = html.split("\n")
+        new_lines = []
+        found = False
+        for line in lines:
+            stripped = line.strip()
+            if stripped.startswith("const REPORT_DATA = ") and "//" in stripped:
+                new_lines.append(new_line)
+                found = True
+            else:
+                new_lines.append(line)
+        if not found:
+            print("ERROR: REPORT_DATA line not found in index.html", flush=True)
             logging.getLogger(__name__).error(
                 "REPORT_DATA placeholder not found in index.html"
             )
             return
 
         with open(_HTML_PATH, "w") as f:
-            f.write(injected)
+            f.write("\n".join(new_lines))
 
         logging.getLogger(__name__).info("index.html updated (%d games)", len(results))
     except Exception as exc:
