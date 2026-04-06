@@ -38,14 +38,40 @@ jobs:
       - name: Generate picks
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        run: python main.py --html
+        run: python main.py --html --verbose
+
+      - name: Verify injection
+        run: |
+          echo "--- index.html REPORT_DATA line ---"
+          grep "REPORT_DATA" index.html | head -1
+          echo "---"
+          if grep -q "INJECTED_BY_REPORTER" index.html; then
+            echo "ERROR: index.html was not updated by main.py"
+            exit 1
+          fi
+          python -c "
+          import re, json
+          html = open('index.html').read()
+          m = re.search(r'REPORT_DATA = (.*?); // generated', html)
+          if not m:
+            print('ERROR: could not parse injected data')
+            exit(1)
+          d = json.loads(m.group(1))
+          games = d.get('games', [])
+          print(f'Date: {d[\"date\"]}  Games: {len(games)}')
+          for g in games[:3]:
+            rec = g['bet_recommendation']['recommended']
+            print(f'  {g[\"away_team\"]} @ {g[\"home_team\"]}  NRFI={g[\"nrfi_prob\"]:.1%}  rec={rec}')
+          if not games:
+            print('  (no games today or API returned empty)')
+          "
 
       - name: Publish to GitHub Pages
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git diff --staged --quiet && echo "No changes." || (
+          git diff --staged --quiet && echo "index.html unchanged (already up to date)" || (
             git commit -m "NRFI picks $(date -u '+%Y-%m-%d %H:%M UTC')" &&
             git push
           )
