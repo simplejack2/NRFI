@@ -111,6 +111,41 @@ RETRACTABLE_VENUES = {
     "loandepot park", "t-mobile park", "globe life field", "rogers centre",
 }
 
+# ── Venue coordinates (for weather lookups) ───────────────────────────────────
+# Keys are lowercase venue names matching the MLB Stats API
+VENUE_COORDS: dict[str, dict] = {
+    "angel stadium":              {"lat": 33.8003, "lon": -117.8827},
+    "busch stadium":              {"lat": 38.6226, "lon": -90.1928},
+    "camden yards":               {"lat": 39.2838, "lon": -76.6218},
+    "chase field":                {"lat": 33.4453, "lon": -112.0667},
+    "citi field":                 {"lat": 40.7571, "lon": -73.8458},
+    "citizens bank park":         {"lat": 39.9061, "lon": -75.1665},
+    "comerica park":              {"lat": 42.3390, "lon": -83.0485},
+    "coors field":                {"lat": 39.7559, "lon": -104.9942},
+    "dodger stadium":             {"lat": 34.0739, "lon": -118.2400},
+    "fenway park":                {"lat": 42.3467, "lon": -71.0972},
+    "globe life field":           {"lat": 32.7473, "lon": -97.0822},
+    "great american ball park":   {"lat": 39.0974, "lon": -84.5082},
+    "guaranteed rate field":      {"lat": 41.8299, "lon": -87.6338},
+    "kauffman stadium":           {"lat": 39.0517, "lon": -94.4803},
+    "loandepot park":             {"lat": 25.7781, "lon": -80.2197},
+    "minute maid park":           {"lat": 29.7573, "lon": -95.3555},
+    "nationals park":             {"lat": 38.8731, "lon": -77.0075},
+    "oracle park":                {"lat": 37.7786, "lon": -122.3893},
+    "petco park":                 {"lat": 32.7076, "lon": -117.1570},
+    "pnc park":                   {"lat": 40.4469, "lon": -80.0057},
+    "progressive field":          {"lat": 41.4962, "lon": -81.6852},
+    "rogers centre":              {"lat": 43.6414, "lon": -79.3894},
+    "t-mobile park":              {"lat": 47.5914, "lon": -122.3325},
+    "target field":               {"lat": 44.9817, "lon": -93.2781},
+    "tropicana field":            {"lat": 27.7683, "lon": -82.6534},
+    "truist park":                {"lat": 33.8908, "lon": -84.4678},
+    "wrigley field":              {"lat": 41.9484, "lon": -87.6553},
+    "yankee stadium":             {"lat": 40.8296, "lon": -73.9262},
+    "american family field":      {"lat": 43.0280, "lon": -87.9712},
+    "pnc park":                   {"lat": 40.4469, "lon": -80.0057},
+}
+
 # ── API endpoints ─────────────────────────────────────────────────────────────
 MLB_API = "https://statsapi.mlb.com/api/v1"
 SAVANT  = "https://baseballsavant.mlb.com"

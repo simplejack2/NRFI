@@ -88,20 +88,23 @@ def schedule(game_date: str) -> list[dict]:
 
 
 def _fetch_schedule(game_date: str) -> list[dict]:
+    # Use only the fields that the schedule endpoint reliably returns.
+    # Venue coordinates come from the hardcoded VENUE_COORDS table in config.
     data = _get("/schedule", params={
         "sportId": 1,
         "date": game_date,
-        "hydrate": "team,venue,probablePitcher(note),linescore",
+        "hydrate": "team,venue,probablePitcher(note)",
         "fields": (
             "dates,date,games,gamePk,gameDate,status,statusCode,"
             "teams,home,away,team,id,name,"
             "probablePitcher,id,fullName,pitchHand,"
-            "venue,id,name,location,defaultCoordinates,fieldInfo"
+            "venue,id,name"
         ),
     })
     if not data:
         return []
 
+    from config import VENUE_COORDS
     games = []
     for de in data.get("dates", []):
         for g in de.get("games", []):
@@ -110,10 +113,9 @@ def _fetch_schedule(game_date: str) -> list[dict]:
                 continue
             home = g["teams"]["home"]
             away = g["teams"]["away"]
-            venue = g.get("venue", {})
-            loc   = venue.get("location", {})
-            coord = loc.get("defaultCoordinates", {})
-            fi    = venue.get("fieldInfo", {})
+            venue      = g.get("venue", {})
+            venue_name = venue.get("name", "")
+            coords     = VENUE_COORDS.get(venue_name.lower(), {})
 
             games.append({
                 "game_pk":        g["gamePk"],
@@ -121,10 +123,9 @@ def _fetch_schedule(game_date: str) -> list[dict]:
                 "game_time":      g.get("gameDate", ""),
                 "status":         sc,
                 "venue_id":       venue.get("id"),
-                "venue_name":     venue.get("name", ""),
-                "lat":            coord.get("latitude"),
-                "lon":            coord.get("longitude"),
-                "roof_type":      fi.get("roofType", "Open"),
+                "venue_name":     venue_name,
+                "lat":            coords.get("lat"),
+                "lon":            coords.get("lon"),
                 "home_team_id":   home["team"]["id"],
                 "home_team_name": home["team"]["name"],
                 "away_team_id":   away["team"]["id"],
@@ -570,23 +571,33 @@ def weather(lat: float | None, lon: float | None,
             venue_name: str = "") -> dict:
     """
     Return {temp_f, wind_mph, wind_deg, conditions, source}.
-    Falls back to neutral defaults on failure.
+    Uses lat/lon when available, otherwise falls back to venue name for wttr.in.
+    Returns neutral defaults only as a last resort.
     """
     _neutral = {"temp_f": 65.0, "wind_mph": 5.0, "wind_deg": 270.0,
                 "conditions": "Unknown", "source": "default"}
 
-    if lat is None or lon is None:
-        return _neutral
-
-    # Try OpenWeatherMap if key is set
+    # Try OpenWeatherMap if key is set and we have coordinates
     api_key = os.environ.get("OPENWEATHER_API_KEY")
-    if api_key:
+    if api_key and lat is not None and lon is not None:
         result = _fetch_openweather(lat, lon, api_key)
         if result:
             return result
 
-    return _cached(f"wx_{lat:.3f}_{lon:.3f}", 1800,
-                   lambda: _fetch_wttr(lat, lon) or _neutral)
+    # wttr.in: prefer lat/lon, fall back to venue city name
+    if lat is not None and lon is not None:
+        cache_key = f"wx_{lat:.3f}_{lon:.3f}"
+        query_arg = (lat, lon)
+    elif venue_name:
+        safe = venue_name.lower().replace(" ", "+")
+        cache_key = f"wx_name_{safe}"
+        query_arg = venue_name
+    else:
+        return _neutral
+
+    return _cached(cache_key, 1800,
+                   lambda: _fetch_wttr(*query_arg) if isinstance(query_arg, tuple)
+                           else _fetch_wttr_city(query_arg) or _neutral)
 
 
 def _fetch_openweather(lat: float, lon: float, api_key: str) -> dict | None:
@@ -611,8 +622,17 @@ def _fetch_openweather(lat: float, lon: float, api_key: str) -> dict | None:
 
 
 def _fetch_wttr(lat: float, lon: float) -> dict | None:
+    return _wttr_query(f"{lat},{lon}")
+
+
+def _fetch_wttr_city(city: str) -> dict | None:
+    safe = city.replace(" ", "+")
+    return _wttr_query(safe)
+
+
+def _wttr_query(location: str) -> dict | None:
     try:
-        r = _S.get(f"https://wttr.in/{lat},{lon}",
+        r = _S.get(f"https://wttr.in/{location}",
                    params={"format": "j1"}, timeout=10)
         r.raise_for_status()
         d = r.json()
@@ -625,7 +645,7 @@ def _fetch_wttr(lat: float, lon: float) -> dict | None:
             "source":     "wttr.in",
         }
     except Exception as exc:
-        log.warning("wttr.in failed: %s", exc)
+        log.warning("wttr.in failed for %s: %s", location, exc)
         return None
 
 
