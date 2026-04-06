@@ -1,174 +1,207 @@
 #!/usr/bin/env python3
 """
-NRFI Predictor - Daily Runner
-==============================
+NRFI Predictor — daily runner.
+
 Usage:
-    python main.py                          # Run for today
-    python main.py --date 2026-04-15        # Run for a specific date
-    python main.py --confirmed              # Only score games with confirmed lineups
-    python main.py --save                   # Also save JSON report to data/
-    python main.py --top 3                  # Show detailed breakdown for top N games
-    python main.py --game <game_pk>         # Show breakdown for a single game
-    python main.py --clear-cache            # Clear cached data and re-fetch
-
-Environment variables:
-    OPENWEATHER_API_KEY   OpenWeatherMap API key (optional; falls back to wttr.in)
-
-Data sources (all public, no API key required by default):
-    MLB Stats API         https://statsapi.mlb.com
-    Baseball Savant       https://baseballsavant.mlb.com
-    FanGraphs             https://www.fangraphs.com
-    wttr.in               https://wttr.in (weather fallback)
+  python main.py                   # run for today, print to terminal
+  python main.py --date 2026-04-15 # specific date
+  python main.py --html            # inject results into index.html
+  python main.py --save            # also save JSON to data/
+  python main.py --confirmed       # only score games with confirmed lineups
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 import os
+import re
 import sys
-from datetime import date
+from datetime import date, datetime, timezone
 
-# Ensure package root is on path
-sys.path.insert(0, os.path.dirname(__file__))
+# Repo root on path so config / fetcher / model resolve without sub-packages
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from model.nrfi_model import run_daily_model
-from output.reporter  import print_daily_report, save_report_json, save_report_html
+import model
 
 
-def setup_logging(verbose: bool = False) -> None:
-    level = logging.DEBUG if verbose else logging.INFO
+# ── Logging ───────────────────────────────────────────────────────────────────
+
+def _setup_logging(verbose: bool) -> None:
     logging.basicConfig(
-        level=level,
+        level=logging.DEBUG if verbose else logging.INFO,
         format="%(asctime)s  %(levelname)-8s  %(name)s  %(message)s",
         datefmt="%H:%M:%S",
     )
-    # Quiet down noisy third-party loggers
-    for noisy in ("urllib3", "requests", "diskcache"):
+    for noisy in ("urllib3", "requests", "charset_normalizer"):
         logging.getLogger(noisy).setLevel(logging.WARNING)
 
 
-def clear_cache() -> None:
-    from fetchers._cache import _get_cache
-    c = _get_cache()
-    if hasattr(c, "clear"):
-        c.clear()
-        print("Cache cleared.")
+# ── CLI ───────────────────────────────────────────────────────────────────────
+
+def _parse_args() -> argparse.Namespace:
+    p = argparse.ArgumentParser(description="NRFI daily predictor")
+    p.add_argument("--date",      default=None, metavar="YYYY-MM-DD")
+    p.add_argument("--confirmed", action="store_true",
+                   help="Only show games with confirmed lineups")
+    p.add_argument("--html",      action="store_true",
+                   help="Inject results into index.html for GitHub Pages")
+    p.add_argument("--save",      action="store_true",
+                   help="Save JSON report to data/")
+    p.add_argument("--verbose",   action="store_true")
+    return p.parse_args()
+
+
+# ── Terminal report ───────────────────────────────────────────────────────────
+
+def _print_report(results: list[dict], game_date: str) -> None:
+    W = 100
+    print()
+    print("=" * W)
+    print(f"  NRFI PREDICTOR  |  {game_date}  |  {len(results)} games scored")
+    print("=" * W)
+
+    if not results:
+        print("  No games found for this date.")
+        return
+
+    recs = [r for r in results if r["bet_recommendation"]["recommended"]]
+    if recs:
+        print(f"\n  ★  RECOMMENDED PLAYS ({len(recs)})  ★\n")
+        for r in recs:
+            _print_card(r)
     else:
-        print("Cache is in-memory; nothing to clear.")
+        print("\n  No games cleared the full bet filter today.\n")
+
+    print("  ALL GAMES (ranked by NRFI probability)")
+    print("-" * W)
+    print(f"  {'#':>2}  {'Matchup':<34}  {'Pitchers':<30}  "
+          f"{'NRFI%':>6}  {'Top':>5}  {'Bot':>5}  {'LU':>3}  {'Rec':>3}")
+    print("-" * W)
+    for i, r in enumerate(results, 1):
+        matchup  = f"{r['away_team'][:15]} @ {r['home_team'][:15]}"
+        ap = r["away_pitcher"].get("name", "TBD")[:14]
+        hp = r["home_pitcher"].get("name", "TBD")[:14]
+        pitchers = f"{ap}/{hp}"
+        nrfi     = f"{r['nrfi_prob']:.1%}"
+        top1     = f"{r['top_half']['half_prob']:.1%}"
+        bot1     = f"{r['bot_half']['half_prob']:.1%}"
+        lu       = "Y" if r["lineups_confirmed"] else "n"
+        rec      = "YES" if r["bet_recommendation"]["recommended"] else "no"
+        print(f"  {i:>2}  {matchup:<34}  {pitchers:<30}  "
+              f"{nrfi:>6}  {top1:>5}  {bot1:>5}  {lu:>3}  {rec:>3}")
+    print()
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(
-        description="NRFI Predictor - daily no-run-first-inning probability model",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__,
-    )
-    parser.add_argument(
-        "--date", "-d",
-        default=None,
-        metavar="YYYY-MM-DD",
-        help="Game date (default: today)",
-    )
-    parser.add_argument(
-        "--confirmed", "-c",
-        action="store_true",
-        default=False,
-        help="Only score games with confirmed lineups",
-    )
-    parser.add_argument(
-        "--save", "-s",
-        action="store_true",
-        default=False,
-        help="Save JSON report to data/nrfi_<date>.json",
-    )
-    parser.add_argument(
-        "--html",
-        action="store_true",
-        default=False,
-        help="Inject report data into index.html for GitHub Pages",
-    )
-    parser.add_argument(
-        "--top", "-t",
-        type=int,
-        default=5,
-        metavar="N",
-        help="Number of games to show in detailed breakdown (default: 5)",
-    )
-    parser.add_argument(
-        "--game", "-g",
-        type=int,
-        default=None,
-        metavar="GAME_PK",
-        help="Show detailed breakdown for a single game",
-    )
-    parser.add_argument(
-        "--clear-cache",
-        action="store_true",
-        default=False,
-        help="Clear cached data before running",
-    )
-    parser.add_argument(
-        "--verbose", "-v",
-        action="store_true",
-        default=False,
-        help="Enable verbose debug logging",
-    )
-    return parser.parse_args()
+def _print_card(r: dict) -> None:
+    away = r["away_team"]; home = r["home_team"]
+    ap   = r["away_pitcher"].get("name", "TBD")
+    hp   = r["home_pitcher"].get("name", "TBD")
+    print(f"  {away} @ {home}  |  NRFI: {r['nrfi_prob']:.1%}")
+    print(f"  {ap} ({r['away_pitcher'].get('hand','?')}) vs "
+          f"{hp} ({r['home_pitcher'].get('hand','?')})")
+    top = r["top_half"]; bot = r["bot_half"]
+    print(f"  Top 1st P={top['half_prob']:.1%}  |  Bot 1st P={bot['half_prob']:.1%}")
+    bet = r["bet_recommendation"]
+    for msg in bet["reasons_pass"]: print(f"    ✓ {msg}")
+    for msg in bet["reasons_fail"]: print(f"    ✗ {msg}")
+    print()
 
+
+# ── HTML injection ────────────────────────────────────────────────────────────
+
+_ROOT = os.path.dirname(os.path.abspath(__file__))
+_HTML_PATH = os.path.join(_ROOT, "index.html")
+
+
+def _write_html(results: list[dict], game_date: str) -> None:
+    """Inject report JSON into index.html. Always succeeds or logs the error."""
+    try:
+        payload = json.dumps(
+            {"date": game_date, "games": _serializable(results)},
+            separators=(",", ":"),
+        )
+        new_line = f"const REPORT_DATA = {payload}; // generated {game_date}"
+
+        with open(_HTML_PATH) as f:
+            html = f.read()
+
+        injected, n = re.subn(
+            r"const REPORT_DATA = .*?; // .*",
+            new_line,
+            html,
+        )
+        if n == 0:
+            logging.getLogger(__name__).error(
+                "REPORT_DATA placeholder not found in index.html"
+            )
+            return
+
+        with open(_HTML_PATH, "w") as f:
+            f.write(injected)
+
+        logging.getLogger(__name__).info("index.html updated (%d games)", len(results))
+    except Exception as exc:
+        logging.getLogger(__name__).error("Failed to write index.html: %s", exc)
+
+
+def _serializable(obj):
+    if isinstance(obj, dict):
+        return {k: _serializable(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_serializable(v) for v in obj]
+    if isinstance(obj, float):
+        return round(obj, 6)
+    return obj
+
+
+# ── JSON save ─────────────────────────────────────────────────────────────────
+
+def _save_json(results: list[dict], game_date: str) -> str:
+    out_dir = os.path.join(_ROOT, "data")
+    os.makedirs(out_dir, exist_ok=True)
+    path = os.path.join(out_dir, f"nrfi_{game_date}.json")
+    with open(path, "w") as f:
+        json.dump({"date": game_date, "games": _serializable(results)}, f, indent=2)
+    return path
+
+
+# ── Entry point ───────────────────────────────────────────────────────────────
 
 def main() -> int:
-    args = parse_args()
-    setup_logging(args.verbose)
-    logger = logging.getLogger("nrfi.main")
-
-    if args.clear_cache:
-        clear_cache()
+    args = _parse_args()
+    _setup_logging(args.verbose)
+    log = logging.getLogger("nrfi.main")
 
     game_date = args.date or date.today().isoformat()
-    logger.info("NRFI Predictor starting for %s", game_date)
+    log.info("NRFI Predictor — %s", game_date)
 
     results = None
-    exit_code = 0
-
     try:
-        results = run_daily_model(
-            game_date=game_date,
-            require_confirmed=args.confirmed,
-        )
+        results = model.run(game_date)
+
+        if args.confirmed:
+            results = [r for r in results if r["lineups_confirmed"]]
 
         if not results:
-            print(f"\nNo games found for {game_date} (off-day or probables not yet posted).\n")
+            print(f"\nNo games found for {game_date}.\n")
         else:
-            # Filter to specific game if requested
-            if args.game:
-                results = [r for r in results if r["game_pk"] == args.game]
-                if not results:
-                    print(f"\nGame {args.game} not found in results for {game_date}.\n")
+            _print_report(results, game_date)
 
-            if results:
-                print_daily_report(results, game_date)
-
-                if args.save:
-                    path = save_report_json(results, game_date)
-                    print(f"  Report saved to: {path}\n")
+        if args.save and results:
+            path = _save_json(results, game_date)
+            print(f"  Saved → {path}\n")
 
     except Exception as exc:
-        logger.error("Model run failed: %s", exc, exc_info=True)
-        exit_code = 1
+        log.error("Model error: %s", exc, exc_info=True)
 
     finally:
-        # Always write index.html when --html is requested, even on failure.
-        # This ensures the verify step in CI never sees the raw placeholder.
+        # Always write index.html when requested — even on model failure.
         if args.html:
-            try:
-                path = save_report_html(results or [], game_date)
-                print(f"  index.html updated: {path}\n")
-            except Exception as exc2:
-                logger.error("Failed to write index.html: %s", exc2, exc_info=True)
-                exit_code = 1
+            _write_html(results or [], game_date)
 
-    return exit_code
+    return 0
 
 
 if __name__ == "__main__":

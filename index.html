@@ -1,477 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NRFI Predictor</title>
-  <style>
-    :root {
-      --bg:       #0d1117;
-      --surface:  #161b22;
-      --border:   #30363d;
-      --text:     #e6edf3;
-      --muted:    #8b949e;
-      --green:    #3fb950;
-      --yellow:   #d29922;
-      --red:      #f85149;
-      --blue:     #58a6ff;
-      --purple:   #bc8cff;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NRFI Predictor — Daily Picks</title>
+<style>
+  :root {
+    --bg:      #0d1117; --surface: #161b22; --border:  #30363d;
+    --text:    #e6edf3; --muted:   #8b949e;
+    --green:   #3fb950; --yellow:  #d29922; --red:     #f85149; --blue: #58a6ff;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:14px; line-height:1.5; padding:24px 16px; }
+  header { max-width:960px; margin:0 auto 24px;
+    border-bottom:1px solid var(--border); padding-bottom:16px; }
+  header h1 { font-size:22px; font-weight:600; }
+  header .sub { color:var(--muted); font-size:13px; margin-top:4px; }
+  #app { max-width:960px; margin:0 auto; }
 
-    /* ── Layout ── */
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 18px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    header h1 { font-size: 18px; font-weight: 700; }
-    header .meta { color: var(--muted); font-size: 13px; }
-    main { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+  .no-data { text-align:center; padding:80px 24px; color:var(--muted); }
+  .no-data h2 { font-size:20px; margin-bottom:8px; color:var(--text); }
+  code { background:rgba(255,255,255,.07); padding:2px 6px; border-radius:4px; font-size:12px; }
 
-    /* ── Summary bar ── */
-    .summary-bar {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-    .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 14px 20px;
-      min-width: 140px;
-      flex: 1;
-    }
-    .stat-card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-    .stat-card .value { font-size: 26px; font-weight: 700; margin-top: 2px; }
+  .sec { font-size:12px; font-weight:600; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--muted); margin:24px 0 10px; }
 
-    /* ── Recommended plays ── */
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-    .rec-badge {
-      display: inline-block;
-      background: #1a3a1a;
-      border: 1px solid var(--green);
-      color: var(--green);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 12px;
-      margin-left: 8px;
-    }
+  .card { background:var(--surface); border:1px solid var(--border);
+    border-radius:8px; padding:16px; margin-bottom:10px; }
+  .card.rec   { border-color:var(--green); }
+  .card.live  { border-color:var(--yellow); }
+  .card.final { opacity:.7; }
 
-    /* ── Game cards ── */
-    .game-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      margin-bottom: 16px;
-      overflow: hidden;
-    }
-    .game-card.recommended { border-color: var(--green); }
-    .game-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 14px 18px 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .matchup { font-size: 15px; font-weight: 600; }
-    .matchup .at { color: var(--muted); margin: 0 6px; }
-    .nrfi-pill {
-      font-size: 20px;
-      font-weight: 700;
-      padding: 4px 14px;
-      border-radius: 20px;
-      background: #1a2a1a;
-      border: 2px solid var(--green);
-      color: var(--green);
-    }
-    .nrfi-pill.mid { background: #2a2210; border-color: var(--yellow); color: var(--yellow); }
-    .nrfi-pill.low { background: #2a1010; border-color: var(--red);    color: var(--red);    }
+  .ch { display:flex; justify-content:space-between; align-items:flex-start;
+    gap:12px; margin-bottom:12px; }
+  .mu { font-size:16px; font-weight:600; }
+  .mus { font-size:12px; color:var(--muted); margin-top:2px; }
+  .bdgs { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+  .bdg { font-size:11px; font-weight:600; border-radius:12px; padding:2px 8px; }
+  .bg { background:rgba(63,185,80,.15);  color:var(--green);  border:1px solid rgba(63,185,80,.3);}
+  .by { background:rgba(210,153,34,.15); color:var(--yellow); border:1px solid rgba(210,153,34,.3);}
+  .bb { background:rgba(88,166,255,.15); color:var(--blue);   border:1px solid rgba(88,166,255,.3);}
+  .bm { background:rgba(139,148,158,.1); color:var(--muted);  border:1px solid rgba(139,148,158,.2);}
 
-    /* ── Game state badges ── */
-    .state-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 10px;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-left: 6px;
-    }
-    .state-live   { background: #2a1a00; border: 1px solid #f0a500; color: #f0a500; }
-    .state-final  { background: #1a1a1a; border: 1px solid var(--muted); color: var(--muted); }
-    .state-pregame{ background: #0f1f2a; border: 1px solid var(--blue); color: var(--blue); }
+  .fib { border-radius:6px; padding:8px 12px; margin-bottom:12px;
+    font-size:13px; font-weight:600; }
+  .fib-g { background:rgba(63,185,80,.1);  color:var(--green);  border:1px solid rgba(63,185,80,.3);}
+  .fib-r { background:rgba(248,81,73,.1);  color:var(--red);    border:1px solid rgba(248,81,73,.3);}
+  .fib-y { background:rgba(210,153,34,.1); color:var(--yellow); border:1px solid rgba(210,153,34,.3);}
 
-    /* ── First-inning result banner ── */
-    .fi-result {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 600;
-      border-top: 1px solid var(--border);
-    }
-    .fi-nrfi { background: #0f1f0f; color: var(--green); }
-    .fi-yrfi { background: #1f0f0f; color: var(--red); }
-    .fi-live { background: #1a1500; color: #f0a500; }
+  .hvs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px; }
+  @media(max-width:520px){ .hvs { grid-template-columns:1fr; } }
+  .hv { background:rgba(255,255,255,.03); border-radius:6px; padding:10px 12px; }
+  .hl { font-size:11px; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .hp { font-size:22px; font-weight:700; margin:4px 0; }
+  .hpit { font-size:12px; color:var(--muted); }
+  .br-row { display:flex; align-items:center; gap:8px; margin-top:6px; }
+  .bw { flex:1; background:rgba(255,255,255,.08); border-radius:4px; height:6px; overflow:hidden; }
+  .bbar { height:100%; border-radius:4px; }
+  .bbl { font-size:11px; color:var(--muted); min-width:36px; text-align:right; }
 
-    .game-card-body { padding: 14px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 640px) { .game-card-body { grid-template-columns: 1fr; } }
+  .chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+  .chip { background:rgba(255,255,255,.05); border-radius:4px; padding:3px 8px;
+    font-size:11px; color:var(--muted); }
+  .chip b { font-weight:600; }
+  .cg { color:var(--green); } .cy { color:var(--yellow); } .cr { color:var(--red); }
 
-    .half-block h4 { font-size: 12px; font-weight: 700; text-transform: uppercase;
-                     color: var(--muted); letter-spacing: .05em; margin-bottom: 10px; }
-    .pitcher-line { display: flex; justify-content: space-between; margin-bottom: 6px; }
-    .pitcher-name { font-weight: 600; }
-    .pitcher-hand { color: var(--muted); font-size: 12px; }
-    .half-prob { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+  .filt { display:flex; flex-wrap:wrap; gap:4px; margin-top:10px; }
+  .fp { font-size:11px; color:var(--green); }
+  .ff { font-size:11px; color:var(--red); }
 
-    /* ── Score bars ── */
-    .score-rows { display: flex; flex-direction: column; gap: 5px; }
-    .score-row { display: flex; align-items: center; gap: 8px; font-size: 12px; }
-    .score-row .label { width: 130px; color: var(--muted); flex-shrink: 0; }
-    .bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 6px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 4px; transition: width .3s; }
-    .bar-green  { background: var(--green); }
-    .bar-yellow { background: var(--yellow); }
-    .bar-red    { background: var(--red); }
-    .score-val { width: 36px; text-align: right; color: var(--text); }
+  .tw { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { text-align:left; padding:6px 10px; color:var(--muted); font-weight:600;
+    font-size:11px; text-transform:uppercase; border-bottom:1px solid var(--border); }
+  td { padding:8px 10px; border-bottom:1px solid rgba(48,54,61,.5); }
+  tr:hover td { background:rgba(255,255,255,.02); }
+  .tr { text-align:right; font-variant-numeric:tabular-nums; }
+  .tm { color:var(--muted); }
 
-    /* ── Bet filter chips ── */
-    .filter-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
-    .chip {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      border: 1px solid;
-    }
-    .chip.pass { color: var(--green); border-color: #2d4a2d; background: #0f1f0f; }
-    .chip.fail { color: var(--red);   border-color: #4a1f1f; background: #1f0a0a; }
-
-    /* ── All games table ── */
-    table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
-         padding: 8px 10px; border-bottom: 2px solid var(--border); text-align: left; }
-    td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(255,255,255,.03); }
-    .tag-rec  { color: var(--green); font-weight: 700; }
-    .tag-none { color: var(--muted); }
-    .grade { display: inline-block; font-size: 11px; font-weight: 700;
-             padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
-    .grade-a  { background: #1a3a1a; color: var(--green); }
-    .grade-b  { background: #1a2a3a; color: var(--blue);  }
-    .grade-c  { background: #2a2a1a; color: var(--yellow);}
-    .grade-d  { background: #2a1a1a; color: var(--red);   }
-
-    /* ── Weather ── */
-    .wx-line { font-size: 12px; color: var(--muted); margin-top: 4px; }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 32px 16px;
-      color: var(--muted);
-      font-size: 12px;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
-    }
-
-    /* ── No data state ── */
-    .no-data {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--muted);
-    }
-    .no-data h2 { font-size: 20px; margin-bottom: 8px; color: var(--text); }
-  </style>
+  footer { max-width:960px; margin:40px auto 0;
+    border-top:1px solid var(--border); padding-top:12px;
+    font-size:12px; color:var(--muted); }
+</style>
 </head>
 <body>
-
 <header>
-  <div>
-    <h1>⚾ NRFI Predictor</h1>
-    <div class="meta" id="run-meta">Run <code>python main.py --save --html</code> to generate today's report</div>
-  </div>
-  <a href="https://github.com/simplejack2/nrfi" id="gh-link">View on GitHub →</a>
+  <h1>⚾ NRFI Predictor</h1>
+  <div class="sub" id="sub">No Run First Inning — Daily Model</div>
 </header>
-
-<main id="app">
+<div id="app">
   <div class="no-data">
     <h2>No report generated yet</h2>
-    <p>Run <code>python main.py --save --html</code> to produce today's picks.</p>
+    <p>Run <code>python main.py --html</code> to produce today's picks.</p>
   </div>
-</main>
-
-<footer>
-  Model weights: Pitcher (40%) · Top-4 Lineup vs hand (30%) · Park/Weather (15%) · Damage/Speed (10%) · Lineup (5%)<br>
-  Data: MLB Stats API · Baseball Savant · FanGraphs · wttr.in
-</footer>
+</div>
+<footer id="foot"></footer>
 
 <script>
-// The Python reporter writes report data into this script tag as JSON.
-// If the tag is empty, the "no data" state above is shown.
-const REPORT_DATA = {"date":"2026-04-04","games":[]}; // generated 2026-04-04
+const REPORT_DATA = {"date":"2026-04-06","games":[]}; // generated 2026-04-06
 
-(function () {
-  if (!REPORT_DATA) return;
-
-  const { date, games } = REPORT_DATA;
-  const app  = document.getElementById('app');
-  const meta = document.getElementById('run-meta');
-  meta.textContent = `Generated for ${date} · ${games.length} games scored`;
-
-  if (!games.length) {
-    app.innerHTML = `<div class="no-data"><h2>No games today</h2>
-      <p>No MLB games are scheduled for ${date}, or probable pitchers have not been posted yet.</p>
-      <p style="margin-top:8px;font-size:12px;color:var(--muted)">The model will update automatically when games are scheduled.</p>
-    </div>`;
+(function(){
+  const app=document.getElementById("app"),sub=document.getElementById("sub"),foot=document.getElementById("foot");
+  if(!REPORT_DATA)return;
+  const{date,games}=REPORT_DATA;
+  sub.textContent=`${date}  ·  ${games.length} game${games.length!==1?"s":""} scored`;
+  foot.textContent=`Model last updated: ${date}  ·  Data: MLB Stats API & Baseball Savant`;
+  if(!games.length){
+    app.innerHTML=`<div class="no-data"><h2>No games today</h2><p>Off-day or schedule not yet posted.</p></div>`;
     return;
   }
-
-  const recommended = games.filter(g => g.bet_recommendation.recommended);
-
-  let html = '';
-
-  // ── Summary bar ────────────────────────────────────────────────────────────
-  const avgNrfi = games.length
-    ? (games.reduce((s, g) => s + g.nrfi_prob, 0) / games.length * 100).toFixed(1)
-    : '—';
-  html += `
-  <div class="summary-bar">
-    <div class="stat-card">
-      <div class="label">Games</div>
-      <div class="value">${games.length}</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Avg NRFI %</div>
-      <div class="value">${avgNrfi}%</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Recommended Plays</div>
-      <div class="value" style="color:var(--green)">${recommended.length}</div>
-    </div>
-  </div>`;
-
-  // ── Recommended plays ───────────────────────────────────────────────────────
-  if (recommended.length > 0) {
-    html += `<div class="section-title">★ Recommended NRFI Plays</div>`;
-    recommended.forEach(g => { html += gameCard(g, true); });
-    html += `<br>`;
+  let html="";
+  const recs=games.filter(g=>g.bet_recommendation.recommended);
+  if(recs.length){
+    html+=`<div class="sec">★ Recommended Plays (${recs.length})</div>`;
+    recs.slice(0,2).forEach(g=>{html+=card(g);});
+  } else {
+    html+=`<div class="sec" style="margin-top:0">No games cleared the full bet filter today</div>`;
   }
-
-  // ── All games ───────────────────────────────────────────────────────────────
-  html += `<div class="section-title">All Games — Ranked by NRFI Probability</div>`;
-  html += `<table><thead><tr>
-    <th>#</th><th>Matchup</th><th>Away SP</th><th>Home SP</th>
-    <th>NRFI %</th><th>1st Inn Result</th><th>Lineups</th><th>Status</th><th>Play</th>
+  html+=`<div class="sec">All Games — ranked by NRFI probability</div>`;
+  html+=`<div class="tw"><table><thead><tr>
+    <th>#</th><th>Matchup</th><th>Pitchers</th>
+    <th class="tr">NRFI%</th><th class="tr">Top</th><th class="tr">Bot</th>
+    <th>LU</th><th>State</th><th>Rec</th>
   </tr></thead><tbody>`;
-  games.forEach((g, i) => {
-    const nPct = pct(g.nrfi_prob);
-    const rec  = g.bet_recommendation.recommended;
-    const fi   = g.first_inning || {};
-    const fiCell = fiResultCell(fi, g.game_state);
-    const stateBadge = gameStateBadge(g.game_state);
-    const lineupCell = g.lineups_confirmed
-      ? '<span style="color:var(--green)">✓ Confirmed</span>'
-      : '<span style="color:var(--yellow)">Pending</span>';
-    html += `<tr>
-      <td>${i+1}</td>
-      <td><strong>${g.away_team}</strong> <span style="color:var(--muted)">@</span> <strong>${g.home_team}</strong></td>
-      <td>${g.away_pitcher.name || 'TBD'} <span class="grade ${gradeClass(g.bot_half.scores.pitcher.grade)}">${g.bot_half.scores.pitcher.grade}</span></td>
-      <td>${g.home_pitcher.name || 'TBD'} <span class="grade ${gradeClass(g.top_half.scores.pitcher.grade)}">${g.top_half.scores.pitcher.grade}</span></td>
-      <td><strong ${nrfiColor(g.nrfi_prob)}>${nPct}</strong></td>
-      <td>${fiCell}</td>
-      <td>${lineupCell}</td>
-      <td>${stateBadge}</td>
-      <td class="${rec ? 'tag-rec' : 'tag-none'}">${rec ? '✅ NRFI' : '—'}</td>
+  games.forEach((g,i)=>{
+    html+=`<tr>
+      <td class="tm">${i+1}</td>
+      <td><b>${g.away_team}</b> @ <b>${g.home_team}</b></td>
+      <td class="tm">${ln(g.away_pitcher)} / ${ln(g.home_pitcher)}</td>
+      <td class="tr ${cl(g.nrfi_prob,.62,.55)}">${pct(g.nrfi_prob)}</td>
+      <td class="tr tm">${pct(g.top_half.half_prob)}</td>
+      <td class="tr tm">${pct(g.bot_half.half_prob)}</td>
+      <td>${g.lineups_confirmed?"✓":"<span class='tm'>—</span>"}</td>
+      <td>${std(g.game_state)}</td>
+      <td>${g.bet_recommendation.recommended?"<b style='color:var(--green)'>YES</b>":"<span class='tm'>no</span>"}</td>
     </tr>`;
   });
-  html += `</tbody></table><br>`;
-
-  // ── Detailed cards — pregame first, then live, then final ──────────────────
-  const pregames = games.filter(g => g.game_state === 'pregame');
-  const liveGames = games.filter(g => g.game_state === 'live');
-  const finalGames = games.filter(g => g.game_state === 'final');
-  const orderedGames = [...pregames, ...liveGames, ...finalGames];
-
-  html += `<div class="section-title">Detailed Breakdown</div>`;
-  orderedGames.slice(0, 7).forEach(g => { html += gameCard(g, g.bet_recommendation.recommended); });
-
-  app.innerHTML = html;
+  html+="</tbody></table></div>";
+  html+=`<div class="sec">Detailed Breakdown — top 5</div>`;
+  games.slice(0,5).forEach(g=>{html+=card(g);});
+  app.innerHTML=html;
 })();
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
-
-function pct(v) { return v != null ? (v * 100).toFixed(1) + '%' : '—'; }
-
-function nrfiColor(p) {
-  if (p >= 0.65) return 'style="color:var(--green)"';
-  if (p >= 0.58) return 'style="color:var(--yellow)"';
-  return 'style="color:var(--red)"';
-}
-
-function pillClass(p) {
-  if (p >= 0.65) return '';
-  if (p >= 0.58) return 'mid';
-  return 'low';
-}
-
-function gradeClass(g) {
-  if (!g) return 'grade-c';
-  if (g.startsWith('A')) return 'grade-a';
-  if (g.startsWith('B')) return 'grade-b';
-  if (g.startsWith('C')) return 'grade-c';
-  return 'grade-d';
-}
-
-function barColor(score) {
-  if (score >= 0.65) return 'bar-green';
-  if (score >= 0.50) return 'bar-yellow';
-  return 'bar-red';
-}
-
-function scoreRow(label, score, weight) {
-  const pctW = Math.round((score || 0) * 100);
-  const col   = barColor(score || 0);
-  const val   = score != null ? score.toFixed(3) : '—';
-  return `
-  <div class="score-row">
-    <span class="label">${label} <span style="color:var(--muted);font-size:10px">(${weight})</span></span>
-    <div class="bar-track"><div class="bar-fill ${col}" style="width:${pctW}%"></div></div>
-    <span class="score-val">${val}</span>
+function card(g){
+  const rec=g.bet_recommendation,fi=g.first_inning||{},st=g.game_state||"pregame";
+  let cls="card";
+  if(rec.recommended)cls+=" rec";
+  else if(st==="live")cls+=" live";
+  else if(st==="final")cls+=" final";
+  let fib="";
+  const fr=fi.nrfi_result;
+  if(fr==="NRFI")fib=`<div class="fib fib-g">✓ NRFI — No run scored in the 1st inning</div>`;
+  else if(fr==="YRFI")fib=`<div class="fib fib-r">✗ YRFI — ${g.away_team} ${fi.away_r??0}, ${g.home_team} ${fi.home_r??0}</div>`;
+  else if(fr==="bot_pending")fib=`<div class="fib fib-y">⏳ Top complete · Bottom in progress</div>`;
+  else if(fr==="top_pending")fib=`<div class="fib fib-y">⏳ 1st inning in progress</div>`;
+  const sc=st==="live"?"by":st==="final"?"bm":"bm",stx=st==="live"?"Live":st==="final"?"Final":"Pre-Game";
+  let bdg=`<span class="bdg ${sc}">${stx}</span>`;
+  if(rec.recommended)bdg+=`<span class="bdg bg">✓ Bet</span>`;
+  bdg+=g.lineups_confirmed?`<span class="bdg bb">Lineups ✓</span>`:`<span class="bdg bm">Lineups pending</span>`;
+  const hv=`<div class="hvs">${half("TOP 1st",g.away_pitcher,g.top_half)}${half("BOT 1st",g.home_pitcher,g.bot_half)}</div>`;
+  const filt=`<div class="filt">
+    ${rec.reasons_pass.map(r=>`<span class="fp">✓ ${r}</span>`).join("")}
+    ${rec.reasons_fail.map(r=>`<span class="ff">✗ ${r}</span>`).join("")}
+  </div>`;
+  return `<div class="${cls}">
+    <div class="ch">
+      <div><div class="mu">${g.away_team} @ ${g.home_team}</div>
+        <div class="mus">${g.venue_name}${g.game_time?" · "+fmt(g.game_time):""}</div></div>
+      <div class="bdgs">${bdg}</div>
+    </div>
+    ${fib}${hv}
+    <div class="chips"><span class="chip">NRFI <b class="${cl(g.nrfi_prob,.62,.55)}">${pct(g.nrfi_prob)}</b></span></div>
+    ${filt}
   </div>`;
 }
 
-function halfBlock(half, label) {
-  const s = half.scores;
-  const prob = half.half_inning_prob;
-  const wx = s.park_weather && s.park_weather.weather_detail;
-  const wxLine = (wx && wx.conditions !== 'Dome')
-    ? `<div class="wx-line">🌡 ${wx.temperature_f}°F · 💨 ${wx.wind_mph} mph ${wx.wind_direction_str} · ${wx.conditions}</div>`
-    : (wx && wx.conditions === 'Dome' ? `<div class="wx-line">🏟 Dome — climate controlled</div>` : '');
-
-  return `
-  <div class="half-block">
-    <h4>${label}</h4>
-    <div class="half-prob" ${nrfiColor(prob)}>${pct(prob)} P(no run)</div>
-    <div class="pitcher-line">
-      <span class="pitcher-name">${half.pitcher_name || '—'}</span>
-      <span class="pitcher-hand">${half.pitcher_hand}HP</span>
+function half(lbl,pitcher,h){
+  const prob=h.half_prob,w=Math.min(100,Math.round((prob-.60)/.35*100));
+  const bc=prob>=.78?"var(--green)":prob>=.70?"var(--yellow)":"var(--red)";
+  const s=h.scores||{};
+  const sc=(n,v)=>v!=null?`<span class="chip">${n} <b class="${cl(v,.55,.45)}">${v.toFixed(3)}</b></span>`:"";
+  return `<div class="hv">
+    <div class="hl">${lbl}</div>
+    <div class="hp ${cl(prob,.78,.70)}">${pct(prob)}</div>
+    <div class="hpit">${ln(pitcher)} (${(pitcher&&pitcher.hand)||"?"}HP)</div>
+    <div class="br-row">
+      <div class="bw"><div class="bbar" style="width:${w}%;background:${bc}"></div></div>
+      <div class="bbl">${pct(prob)}</div>
     </div>
-    ${wxLine}
-    <div class="score-rows" style="margin-top:10px">
-      ${scoreRow('Pitcher suppression', s.pitcher && s.pitcher.score, '40%')}
-      ${scoreRow('Top-4 offense', s.batter && s.batter.score, '30%')}
-      ${scoreRow('Park / weather', s.park_weather && s.park_weather.score, '15%')}
-      ${scoreRow('Damage / speed', s.damage_speed && s.damage_speed.score, '10%')}
+    <div class="chips" style="margin-top:6px">
+      ${sc("P",s.pitcher)}${sc("B",s.batter)}${sc("PW",s.park_weather)}${sc("DS",s.damage_speed)}
     </div>
   </div>`;
 }
 
-function gameStateBadge(state) {
-  if (state === 'live')    return '<span class="state-badge state-live">● Live</span>';
-  if (state === 'final')   return '<span class="state-badge state-final">Final</span>';
-  return '<span class="state-badge state-pregame">Pre-Game</span>';
+function pct(v){return v!=null?(v*100).toFixed(1)+"%":"—";}
+function ln(x){return(x&&x.name)?x.name.split(" ").pop():"TBD";}
+function cl(v,hi,mid){return v>=hi?"cg":v>=mid?"cy":"cr";}
+function std(s){
+  if(s==="live")return"<span style='color:var(--yellow)'>Live</span>";
+  if(s==="final")return"<span class='tm'>Final</span>";
+  return"<span class='tm'>Pre</span>";
 }
-
-function fiResultCell(fi, state) {
-  if (!fi || state === 'pregame') return '<span style="color:var(--muted)">—</span>';
-  const nr  = fi.nrfi_result;
-  const a   = fi.away_runs_1st;
-  const h   = fi.home_runs_1st;
-  const score = (a != null ? a : '?') + ' / ' + (h != null ? h : '?');
-  if (nr === 'NRFI') return `<strong style="color:var(--green)">✅ NRFI (${score})</strong>`;
-  if (nr === 'YRFI') return `<strong style="color:var(--red)">❌ YRFI (${score})</strong>`;
-  if (nr === 'bot_pending') return `<span style="color:#f0a500">Top done (${a} R) · Bot live</span>`;
-  if (nr === 'top_pending') return `<span style="color:#f0a500">In progress</span>`;
-  return '<span style="color:var(--muted)">—</span>';
-}
-
-function fiResultBanner(fi, state) {
-  if (!fi || state === 'pregame') return '';
-  const nr = fi.nrfi_result;
-  const a  = fi.away_runs_1st;
-  const h  = fi.home_runs_1st;
-  if (nr === 'NRFI') {
-    return `<div class="fi-result fi-nrfi">✅ NRFI — No run in the 1st inning (Away: ${a}, Home: ${h})</div>`;
-  }
-  if (nr === 'YRFI') {
-    return `<div class="fi-result fi-yrfi">❌ YRFI — Run(s) scored in the 1st inning (Away: ${a}, Home: ${h})</div>`;
-  }
-  if (nr === 'bot_pending') {
-    return `<div class="fi-result fi-live">⏳ Top half complete — Away scored ${a} run(s). Bottom half in progress.</div>`;
-  }
-  if (nr === 'top_pending') {
-    return `<div class="fi-result fi-live">⏳ 1st inning in progress…</div>`;
-  }
-  return '';
-}
-
-function gameCard(g, rec) {
-  const bet = g.bet_recommendation;
-  const chips = [
-    ...bet.reasons_pass.map(r => `<span class="chip pass">✓ ${r}</span>`),
-    ...bet.reasons_fail.map(r => `<span class="chip fail">✗ ${r}</span>`),
-  ].join('');
-
-  const time = g.game_time
-    ? new Date(g.game_time).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit', timeZone:'America/New_York'}) + ' ET'
-    : '';
-
-  const lineupStr = g.lineups_confirmed
-    ? '<span style="color:var(--green)">✓ Lineups confirmed</span>'
-    : '<span style="color:var(--yellow)">⚠ Lineups pending</span>';
-
-  return `
-  <div class="game-card ${rec ? 'recommended' : ''}">
-    <div class="game-card-header">
-      <div>
-        <span class="matchup">
-          ${g.away_team} <span class="at">@</span> ${g.home_team}
-          ${gameStateBadge(g.game_state)}
-          ${rec ? '<span class="rec-badge">★ PLAY</span>' : ''}
-        </span>
-        <div style="font-size:12px;color:var(--muted);margin-top:2px">
-          ${g.venue_name} · ${time} · ${lineupStr}
-        </div>
-      </div>
-      <div class="nrfi-pill ${pillClass(g.nrfi_prob)}">${pct(g.nrfi_prob)} NRFI</div>
-    </div>
-    ${fiResultBanner(g.first_inning, g.game_state)}
-    <div class="game-card-body">
-      ${halfBlock(g.top_half, 'TOP 1st — ' + (g.away_pitcher.name || 'TBD') + ' pitching')}
-      ${halfBlock(g.bot_half, 'BOT 1st — ' + (g.home_pitcher.name || 'TBD') + ' pitching')}
-    </div>
-    <div class="filter-row" style="padding:0 18px 14px">${chips}</div>
-  </div>`;
+function fmt(iso){
+  try{return new Date(iso).toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit",timeZone:"America/New_York",timeZoneName:"short"});}
+  catch{return"";}
 }
 </script>
 </body>

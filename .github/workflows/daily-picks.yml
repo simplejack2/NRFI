@@ -2,7 +2,7 @@ name: Daily NRFI Picks
 
 on:
   schedule:
-    # Every hour 11 AM – 7 PM EDT (15:00–23:00 UTC)
+    # 11 AM – 8 PM EDT = 15:00 – 00:00 UTC
     - cron: "0 15 * * *"
     - cron: "0 16 * * *"
     - cron: "0 17 * * *"
@@ -12,8 +12,7 @@ on:
     - cron: "0 21 * * *"
     - cron: "0 22 * * *"
     - cron: "0 23 * * *"
-    # 8 PM EDT = 00:00 UTC (next calendar day)
-    - cron: "0 0 * * *"
+    - cron: "0 0  * * *"
   workflow_dispatch:
 
 env:
@@ -23,58 +22,30 @@ permissions:
   contents: write
 
 jobs:
-  generate-picks:
+  picks:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Ensure data directory exists
-        run: mkdir -p data
-
-      - name: Run NRFI model
+      - name: Generate picks
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
-        # main.py always writes index.html and exits 0 on expected outcomes.
-        # continue-on-error is a safety net for truly unexpected crashes.
-        run: python main.py --save --html
-        continue-on-error: true
+        run: python main.py --html
 
-      - name: Verify index.html was updated
-        run: |
-          if grep -q 'INJECTED_BY_REPORTER' index.html; then
-            echo "ERROR: index.html still has null placeholder — script did not inject data"
-            exit 1
-          fi
-          echo "index.html updated successfully"
-          python -c "
-          import re, json
-          html = open('index.html').read()
-          m = re.search(r'const REPORT_DATA = (.*?); // generated', html)
-          if m:
-              d = json.loads(m.group(1))
-              games = d.get('games', [])
-              print(f'Date: {d[\"date\"]}  Games: {len(games)}')
-              for g in games[:5]:
-                  print(f'  {g[\"away_team\"]} @ {g[\"home_team\"]}  NRFI={g[\"nrfi_prob\"]:.1%}  state={g[\"game_state\"]}  lineups={g[\"lineups_confirmed\"]}')
-              if not games:
-                  print('  (no games scheduled today)')
-          "
-
-      - name: Commit and push updated picks
+      - name: Publish to GitHub Pages
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git diff --staged --quiet || git commit -m "NRFI picks $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "NRFI picks $(date -u '+%Y-%m-%d %H:%M UTC')" &&
+            git push
+          )
