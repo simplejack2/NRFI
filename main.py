@@ -22,6 +22,7 @@ from datetime import date, datetime, timezone
 # Repo root on path so config / fetcher / model resolve without sub-packages
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import fetcher as F
 import model
 
 
@@ -108,35 +109,117 @@ def _print_card(r: dict) -> None:
     print()
 
 
-# ── HTML injection ────────────────────────────────────────────────────────────
+# ── History tracking ──────────────────────────────────────────────────────────
 
 _ROOT = os.path.dirname(os.path.abspath(__file__))
+_HISTORY_PATH = os.path.join(_ROOT, "data", "history.json")
+
+
+def _load_history() -> dict:
+    """Load history from disk; return empty structure if missing or corrupt."""
+    if os.path.exists(_HISTORY_PATH):
+        try:
+            with open(_HISTORY_PATH) as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"picks": []}
+
+
+def _update_history(results: list[dict], game_date: str, add_today: bool = True) -> dict:
+    """
+    Resolve any pending picks from past dates, then add today's top-3.
+    Saves data/history.json and returns the updated dict.
+    """
+    log = logging.getLogger("nrfi.history")
+    history = _load_history()
+
+    # Resolve pending picks from past dates
+    for pick in history["picks"]:
+        if pick.get("result") is None and pick.get("date") != game_date:
+            try:
+                ls = F.linescore(pick["game_pk"])
+                nr = ls.get("nrfi_result", "pending")
+                if nr in ("NRFI", "YRFI"):
+                    pick["result"] = nr
+                    pick["game_status"] = "F"
+                    log.info("Resolved %s %s @ %s → %s",
+                             pick["date"], pick["away_team"], pick["home_team"], nr)
+            except Exception as exc:
+                log.warning("Could not resolve pick %s: %s", pick.get("game_pk"), exc)
+
+    if add_today and results:
+        # Remove existing picks for today (idempotent re-run)
+        history["picks"] = [p for p in history["picks"] if p.get("date") != game_date]
+        # Add top-3 by nrfi_prob
+        top3 = sorted(results, key=lambda r: r["nrfi_prob"], reverse=True)[:3]
+        for rank, r in enumerate(top3, 1):
+            history["picks"].append({
+                "date":              game_date,
+                "game_pk":           r["game_pk"],
+                "away_team":         r["away_team"],
+                "home_team":         r["home_team"],
+                "away_pitcher":      r["away_pitcher"].get("name", "TBD"),
+                "home_pitcher":      r["home_pitcher"].get("name", "TBD"),
+                "nrfi_prob":         round(r["nrfi_prob"], 4),
+                "rank":              rank,
+                "lineups_confirmed": r["lineups_confirmed"],
+                "result":            None,
+                "game_status":       r.get("game_state", "pregame"),
+            })
+            log.info("Added pick #%d: %s @ %s  %.1f%%",
+                     rank, r["away_team"], r["home_team"], r["nrfi_prob"] * 100)
+
+    try:
+        os.makedirs(os.path.dirname(_HISTORY_PATH), exist_ok=True)
+        with open(_HISTORY_PATH, "w") as f:
+            json.dump(history, f, indent=2)
+        log.info("History saved: %d total picks", len(history["picks"]))
+    except Exception as exc:
+        log.error("Could not save history: %s", exc)
+
+    return history
+
+
+# ── HTML injection ────────────────────────────────────────────────────────────
+
 _HTML_PATH = os.path.join(_ROOT, "index.html")
 
 
-def _write_html(results: list[dict], game_date: str) -> None:
-    """Inject report JSON into index.html. Always succeeds or logs the error."""
+def _write_html(results: list[dict], game_date: str,
+                history: dict | None = None) -> None:
+    """Inject report JSON and history JSON into index.html."""
     try:
-        payload = json.dumps(
+        report_payload = json.dumps(
             {"date": game_date, "games": _serializable(results)},
             separators=(",", ":"),
         )
-        new_line = f"const REPORT_DATA = {payload}; // generated {game_date}"
+        new_report_line = f"const REPORT_DATA = {report_payload}; // generated {game_date}"
+
+        hist_payload = json.dumps(
+            _serializable(history or {"picks": []}),
+            separators=(",", ":"),
+        )
+        new_history_line = f"const HISTORY_DATA = {hist_payload}; // generated {game_date}"
 
         with open(_HTML_PATH) as f:
             html = f.read()
 
         lines = html.split("\n")
         new_lines = []
-        found = False
+        report_found = history_found = False
         for line in lines:
             stripped = line.strip()
             if stripped.startswith("const REPORT_DATA = ") and "//" in stripped:
-                new_lines.append(new_line)
-                found = True
+                new_lines.append(new_report_line)
+                report_found = True
+            elif stripped.startswith("const HISTORY_DATA = ") and "//" in stripped:
+                new_lines.append(new_history_line)
+                history_found = True
             else:
                 new_lines.append(line)
-        if not found:
+
+        if not report_found:
             print("ERROR: REPORT_DATA line not found in index.html", flush=True)
             logging.getLogger(__name__).error(
                 "REPORT_DATA placeholder not found in index.html"
@@ -146,7 +229,9 @@ def _write_html(results: list[dict], game_date: str) -> None:
         with open(_HTML_PATH, "w") as f:
             f.write("\n".join(new_lines))
 
-        logging.getLogger(__name__).info("index.html updated (%d games)", len(results))
+        logging.getLogger(__name__).info(
+            "index.html updated (%d games, history=%s)", len(results), history_found
+        )
     except Exception as exc:
         logging.getLogger(__name__).error("Failed to write index.html: %s", exc)
 
@@ -183,6 +268,7 @@ def main() -> int:
     log.info("NRFI Predictor — %s", game_date)
 
     results = None
+    history = None
     try:
         results = model.run(game_date)
 
@@ -204,7 +290,12 @@ def main() -> int:
     finally:
         # Always write index.html when requested — even on model failure.
         if args.html:
-            _write_html(results or [], game_date)
+            if results:
+                history = _update_history(results, game_date)
+            else:
+                # Load existing history (resolve pending) even when model failed
+                history = _update_history([], game_date, add_today=False)
+            _write_html(results or [], game_date, history)
 
     return 0
 
