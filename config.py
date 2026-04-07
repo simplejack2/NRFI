@@ -49,6 +49,7 @@ LG = {
     "whiff_pct":     0.245,
     "chase_rate":    0.310,  # MLB avg o-swing% ~30-31%
     "hard_hit":      0.370,
+    "barrel":        0.080,  # fallback default used in damage_score
     # batter metrics
     "xwoba":         0.315,
     "obp":           0.320,
