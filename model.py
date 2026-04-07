@@ -24,10 +24,14 @@ from config import (
     VENUE_COORDS,
 )
 
+
 log = logging.getLogger(__name__)
 
-# Batting-order position weights for top-4
-_POS_W = {1: 0.35, 2: 0.28, 3: 0.22, 4: 0.15}
+# Batting-order position weights derived from expected plate appearances in
+# the 1st inning.  Slot 1 always bats; each subsequent slot has a lower
+# probability of reaching the plate before 3 outs are recorded.
+# Empirical estimates: ~1.00, 0.95, 0.85, 0.68, 0.50 per inning.
+_POS_W = {1: 1.00, 2: 0.95, 3: 0.85, 4: 0.68, 5: 0.50}
 
 # Wind-out bearing (degrees) for known parks
 _WIND_OUT = {
@@ -174,9 +178,9 @@ def _score_half(
     phand  = pitcher.get("hand", "R")
 
     p_score  = _pitcher_score(pid, phand, season, ctx)
-    b_score  = _lineup_score(batters[:4], phand, season, ctx)
+    b_score  = _lineup_score(batters[:5], phand, season, ctx)
     pw_score = _park_weather_score(venue_name, lat, lon, game_time)
-    ds_score = _damage_speed_score(batters[:4], pid, defending_team_id, season, ctx)
+    ds_score = _damage_speed_score(batters[:5], pid, defending_team_id, season, ctx)
     lu_score = 0.55 if confirmed else 0.45   # small adjustment for lineup status
 
     composite = (
@@ -201,7 +205,7 @@ def _score_half(
             "damage_speed":round(ds_score, 4),
             "lineup":      round(lu_score, 4),
         },
-        "batters": _summarize_batters(batters[:4], phand, season, ctx),
+        "batters": _summarize_batters(batters[:5], phand, season, ctx),
     }
 
 
@@ -229,38 +233,36 @@ def _pitcher_score(pid: int | None, vs_hand: str, season: int, ctx: dict) -> flo
         return _blend3(cur, prior, career, lg_avg, bf, full_at=400)
 
     m = {
-        "xwoba":     blend(sv.get("xwoba_against"),
-                           sv_p.get("xwoba_against"), None, LG["xwoba_against"]),
-        "k_pct":     blend(sv.get("k_pct") or mlb.get("k_pct"),
-                           sv_p.get("k_pct"), car.get("k_pct"), LG["k_pct"]),
-        "bb_pct":    blend(sv.get("bb_pct") or mlb.get("bb_pct"),
-                           sv_p.get("bb_pct"), car.get("bb_pct"), LG["bb_pct"]),
-        "fps":       blend(sv.get("fps"), sv_p.get("fps"), None, LG["fps"]),
-        "whiff_pct": blend(sv.get("whiff_pct"), sv_p.get("whiff_pct"), None, LG["whiff_pct"]),
-        "hard_hit":  blend(sv.get("hard_hit"), sv_p.get("hard_hit"), None, LG["hard_hit"]),
-        "barrel":    blend(sv.get("barrel"), sv_p.get("barrel"), None, LG["barrel"]),
-        "gb":        blend(sv.get("gb") or mlb.get("gb_pct"),
-                           sv_p.get("gb"), car.get("gb_pct"), LG["gb"]),
+        "xera":       blend(sv.get("xera"),
+                            sv_p.get("xera"), None, LG["xera"]),
+        "k_pct":      blend(sv.get("k_pct") or mlb.get("k_pct"),
+                            sv_p.get("k_pct"), car.get("k_pct"), LG["k_pct"]),
+        "bb_pct":     blend(sv.get("bb_pct") or mlb.get("bb_pct"),
+                            sv_p.get("bb_pct"), car.get("bb_pct"), LG["bb_pct"]),
+        "fps":        blend(sv.get("fps"), sv_p.get("fps"), None, LG["fps"]),
+        "whiff_pct":  blend(sv.get("whiff_pct"), sv_p.get("whiff_pct"), None, LG["whiff_pct"]),
+        "chase_rate": blend(sv.get("chase_rate"), sv_p.get("chase_rate"), None, LG["chase_rate"]),
+        "hard_hit":   blend(sv.get("hard_hit"), sv_p.get("hard_hit"), None, LG["hard_hit"]),
     }
 
-    # First-inning split adjustment: ERA + K% together, weighted more heavily
+    # First-inning split: ERA + K% nudge when we have real first-inning data
     fi_adj = 0.0
     if fi.get("bf", 0) >= 15:
         if fi.get("era") is not None:
-            fi_era_per_inning = fi["era"] / 9.0
-            fi_adj += (_sig_inv(fi_era_per_inning, 0.50, 0.20, 0.80) - 0.5) * 0.12
+            # Convert first-inning ERA to a per-inning run rate for comparison
+            fi_era_per_inn = fi["era"] / 9.0
+            fi_adj += (_sig_inv(fi_era_per_inn, 0.50, 0.20, 0.80) - 0.5) * 0.12
         if fi.get("k_pct") is not None:
             fi_adj += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.05
 
     components = {
-        "fps":       _sig(m["fps"],           LG["fps"],           0.50,  0.75),
-        "k_pct":     _sig(m["k_pct"],         LG["k_pct"],         0.10,  0.40),
-        "xwoba":     _sig_inv(m["xwoba"],     LG["xwoba_against"], 0.200, 0.400) + fi_adj,
-        "whiff_pct": _sig(m["whiff_pct"],     LG["whiff_pct"],     0.15,  0.40),
-        "bb_pct":    _sig_inv(m["bb_pct"],    LG["bb_pct"],        0.03,  0.16),
-        "hard_hit":  _sig_inv(m["hard_hit"],  LG["hard_hit"],      0.25,  0.50),
-        "barrel":    _sig_inv(m["barrel"],    LG["barrel"],        0.02,  0.15),
-        "gb":        _sig(m["gb"],             LG["gb"],            0.30,  0.60),
+        "k_pct":      _sig(m["k_pct"],       LG["k_pct"],     0.10,  0.40),
+        "fps":        _sig(m["fps"],          LG["fps"],        0.50,  0.75),
+        "xera":       _sig_inv(m["xera"],     LG["xera"],       3.00,  5.80) + fi_adj,
+        "bb_pct":     _sig_inv(m["bb_pct"],   LG["bb_pct"],     0.03,  0.16),
+        "chase_rate": _sig(m["chase_rate"],   LG["chase_rate"], 0.22,  0.40),
+        "whiff_pct":  _sig(m["whiff_pct"],    LG["whiff_pct"],  0.15,  0.40),
+        "hard_hit":   _sig_inv(m["hard_hit"], LG["hard_hit"],   0.25,  0.50),
     }
 
     return _wsum(components, P_WEIGHTS)

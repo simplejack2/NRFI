@@ -13,15 +13,14 @@ WEIGHTS = {
 }
 
 # ── Sub-weights within each block ─────────────────────────────────────────────
-P_WEIGHTS = {           # pitcher block
-    "fps":       0.20,   # first-pitch strike rate — strongest leading indicator
-    "k_pct":     0.22,   # strikeouts = most reliable outs
-    "xwoba":     0.20,   # expected wOBA allowed — comprehensive contact quality
-    "whiff_pct": 0.10,   # swing-and-miss rate — distinct from K%, measures stuff
-    "bb_pct":    0.13,   # walks directly put runners on base
-    "hard_hit":  0.08,
-    "barrel":    0.05,
-    "gb":        0.02,
+P_WEIGHTS = {               # pitcher block
+    "k_pct":      0.22,   # strikeouts = most reliable outs, no contact risk
+    "fps":        0.20,   # first-pitch strike rate — strongest leading indicator
+    "xera":       0.20,   # park-neutral expected ERA — comprehensive quality signal
+    "bb_pct":     0.13,   # walks guarantee baserunners
+    "chase_rate": 0.12,   # o-swing% — batters chasing = weak contact / K's
+    "whiff_pct":  0.08,   # swing-and-miss rate per swing — measures raw stuff
+    "hard_hit":   0.05,   # hard contact rate (residual signal beyond xERA)
 }
 
 B_WEIGHTS = {           # batter block
@@ -43,14 +42,13 @@ BET_FILTER = {
 # ── League-average baselines (regression anchors) ──────────────────────────────
 LG = {
     # pitcher metrics (allow)
-    "xwoba_against": 0.315,
+    "xera":          4.25,   # MLB avg xERA ~4.20-4.35
     "k_pct":         0.228,
     "bb_pct":        0.085,
     "fps":           0.620,
-    "whiff_pct":     0.245,  # MLB avg swinging-strike rate ~24-25%
+    "whiff_pct":     0.245,
+    "chase_rate":    0.310,  # MLB avg o-swing% ~30-31%
     "hard_hit":      0.370,
-    "barrel":        0.080,
-    "gb":            0.440,
     # batter metrics
     "xwoba":         0.315,
     "obp":           0.320,

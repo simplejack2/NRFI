@@ -442,8 +442,7 @@ def _fetch_savant_pitchers(season: int) -> dict[int, dict]:
         "filter":     "",
         "selections": (
             "xwoba,xera,k_percent,bb_percent,whiff_percent,"
-            "hard_hit_percent,barrel_batted_rate,groundballs_percent,"
-            "f_strike_percent"
+            "hard_hit_percent,f_strike_percent,o_swing_percent"
         ),
         "chart":      "false",
         "x":          "xwoba",
@@ -457,15 +456,14 @@ def _fetch_savant_pitchers(season: int) -> dict[int, dict]:
         if not pid:
             continue
         result[pid] = {
-            "xwoba_against": _f(row.get("xwoba")),
-            "k_pct":         _pct(row.get("k_percent")),
-            "bb_pct":        _pct(row.get("bb_percent")),
-            "fps":           _pct(row.get("f_strike_percent")),
-            "whiff_pct":     _pct(row.get("whiff_percent")),
-            "hard_hit":      _pct(row.get("hard_hit_percent")),
-            "barrel":        _pct(row.get("barrel_batted_rate")),
-            "gb":            _pct(row.get("groundballs_percent")),
-            "pa":            _i(row.get("pa")) or 0,
+            "xera":       _f(row.get("xera")),
+            "k_pct":      _pct(row.get("k_percent")),
+            "bb_pct":     _pct(row.get("bb_percent")),
+            "fps":        _pct(row.get("f_strike_percent")),
+            "whiff_pct":  _pct(row.get("whiff_percent")),
+            "chase_rate": _pct(row.get("o_swing_percent")),
+            "hard_hit":   _pct(row.get("hard_hit_percent")),
+            "pa":         _i(row.get("pa")) or 0,
         }
     log.info("Savant pitchers: %d rows for %d", len(result), season)
     return result
