@@ -1,6 +1,12 @@
 name: Daily NRFI Picks
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "*.py"
+      - "requirements.txt"
+      - ".github/workflows/daily-picks.yml"
   schedule:
     # 11 AM – 8 PM EDT = 15:00 – 00:00 UTC
     - cron: "0 15 * * *"

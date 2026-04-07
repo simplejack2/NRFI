@@ -325,16 +325,22 @@ def _batter_score(pid: int, pitcher_hand: str, season: int, ctx: dict) -> float:
 def _summarize_batters(batters: list[dict], pitcher_hand: str,
                        season: int, ctx: dict) -> list[dict]:
     out = []
+    sv_prev = F.savant_batters(season - 1)
     for b in sorted(batters, key=lambda x: x.get("order", 99))[:4]:
-        sv = ctx["sv_bat"].get(b["player_id"], {})
-        mlb = F.batter_stats(b["player_id"], season)
+        pid = b["player_id"]
+        sv  = ctx["sv_bat"].get(pid, {})
+        sv_p = sv_prev.get(pid, {})
+        mlb  = F.batter_stats(pid, season)
+        # Show current xwoba; fall back to prior season when current is null (early season)
+        xwoba = sv.get("xwoba") or sv_p.get("xwoba")
+        k_pct = sv.get("k_pct") or sv_p.get("k_pct")
         out.append({
             "order":    b.get("order"),
             "name":     b.get("name", ""),
             "bat_side": b.get("bat_side", "R"),
-            "score":    round(_batter_score(b["player_id"], pitcher_hand, season, ctx), 3),
-            "xwoba":    sv.get("xwoba"),
-            "k_pct":    sv.get("k_pct"),
+            "score":    round(_batter_score(pid, pitcher_hand, season, ctx), 3),
+            "xwoba":    xwoba,
+            "k_pct":    k_pct,
             "obp":      mlb.get("obp"),
         })
     return out
