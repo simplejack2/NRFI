@@ -519,7 +519,13 @@ def _wsum(components: dict, weights: dict) -> float:
 
 
 def _blend3(cur, prior, career, lg_avg: float, bf: int, full_at: int = 400) -> float:
-    """Weighted blend of current/prior/career with regression to lg_avg."""
+    """
+    Weighted blend of current/prior/career with regression to lg_avg.
+
+    Key fix: when historical data (prior/career) exists, cap regression at 35%
+    so prior-year track record still matters at bf=0 (start of season).
+    Only fully regress to lg_avg when there is truly no data at all.
+    """
     vals, wts = [], []
     if cur     is not None: vals.append(cur);    wts.append(0.45)
     if prior   is not None: vals.append(prior);  wts.append(0.35)
@@ -527,7 +533,11 @@ def _blend3(cur, prior, career, lg_avg: float, bf: int, full_at: int = 400) -> f
     if not vals:
         return lg_avg
     blended = sum(v * w for v, w in zip(vals, wts)) / sum(wts)
-    reg = max(0.0, 1.0 - bf / full_at)
+    raw_reg = max(0.0, 1.0 - bf / full_at)
+    # With historical data available, cap regression: deGrom still looks like deGrom
+    # in April even with bf=0. Full regression only when current-season only.
+    has_history = (prior is not None or career is not None)
+    reg = raw_reg * (0.35 if has_history else 1.0)
     return blended * (1 - reg) + lg_avg * reg
 
 
@@ -539,7 +549,9 @@ def _blend_batter(cur, split, prior, lg_avg: float, pa: int) -> float:
     if not vals:
         return lg_avg
     blended = sum(v * w for v, w in zip(vals, wts)) / sum(wts)
-    reg = max(0.0, 1.0 - pa / 200.0)
+    raw_reg = max(0.0, 1.0 - pa / 200.0)
+    has_history = (prior is not None or split is not None)
+    reg = raw_reg * (0.35 if has_history else 1.0)
     return blended * (1 - reg) + lg_avg * reg
 
 
