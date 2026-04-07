@@ -8,17 +8,31 @@ on:
       - "requirements.txt"
       - ".github/workflows/daily-picks.yml"
   schedule:
-    # 11 AM – 8 PM EDT = 15:00 – 00:00 UTC
-    - cron: "0 15 * * *"
-    - cron: "0 16 * * *"
-    - cron: "0 17 * * *"
-    - cron: "0 18 * * *"
-    - cron: "0 19 * * *"
-    - cron: "0 20 * * *"
-    - cron: "0 21 * * *"
-    - cron: "0 22 * * *"
-    - cron: "0 23 * * *"
-    - cron: "0 0  * * *"
+    # 11 AM – 9:30 PM EDT = 15:00 – 01:30 UTC
+    # Hourly 11–12 PM (early lineup checks), then every 30 min through 9:30 PM
+    # to catch the lineup-confirmed → game-start window for all time zones.
+    # Late west coast games start ~10:05 PM ET; lineups post ~7 PM ET,
+    # so our 01:30 UTC run covers them before the 02:05 UTC first pitch.
+    - cron: "0  15 * * *"   # 11:00 AM EDT
+    - cron: "0  16 * * *"   # 12:00 PM EDT
+    - cron: "0  17 * * *"   # 01:00 PM EDT
+    - cron: "30 17 * * *"   # 01:30 PM EDT
+    - cron: "0  18 * * *"   # 02:00 PM EDT
+    - cron: "30 18 * * *"   # 02:30 PM EDT
+    - cron: "0  19 * * *"   # 03:00 PM EDT
+    - cron: "30 19 * * *"   # 03:30 PM EDT
+    - cron: "0  20 * * *"   # 04:00 PM EDT
+    - cron: "30 20 * * *"   # 04:30 PM EDT
+    - cron: "0  21 * * *"   # 05:00 PM EDT
+    - cron: "30 21 * * *"   # 05:30 PM EDT
+    - cron: "0  22 * * *"   # 06:00 PM EDT
+    - cron: "30 22 * * *"   # 06:30 PM EDT
+    - cron: "0  23 * * *"   # 07:00 PM EDT
+    - cron: "30 23 * * *"   # 07:30 PM EDT
+    - cron: "0   0 * * *"   # 08:00 PM EDT
+    - cron: "30  0 * * *"   # 08:30 PM EDT
+    - cron: "0   1 * * *"   # 09:00 PM EDT
+    - cron: "30  1 * * *"   # 09:30 PM EDT
   workflow_dispatch:
 
 env:
