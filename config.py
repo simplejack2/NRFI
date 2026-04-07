@@ -5,36 +5,38 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # ── Scoring weights (must sum to 1.0) ─────────────────────────────────────────
 WEIGHTS = {
-    "pitcher":      0.40,
-    "batter":       0.30,
-    "park_weather": 0.15,
+    "pitcher":      0.42,   # pitcher is the dominant factor in first-inning outcomes
+    "batter":       0.28,
+    "park_weather": 0.14,
     "damage_speed": 0.10,
-    "lineup":       0.05,
+    "lineup":       0.06,
 }
 
 # ── Sub-weights within each block ─────────────────────────────────────────────
 P_WEIGHTS = {           # pitcher block
-    "xwoba":    0.25,
-    "k_pct":    0.20,
-    "bb_pct":   0.15,
-    "fps":      0.15,   # first-pitch strike rate
-    "hard_hit": 0.10,
-    "barrel":   0.10,
-    "gb":       0.05,
+    "fps":       0.20,   # first-pitch strike rate — strongest leading indicator
+    "k_pct":     0.22,   # strikeouts = most reliable outs
+    "xwoba":     0.20,   # expected wOBA allowed — comprehensive contact quality
+    "whiff_pct": 0.10,   # swing-and-miss rate — distinct from K%, measures stuff
+    "bb_pct":    0.13,   # walks directly put runners on base
+    "hard_hit":  0.08,
+    "barrel":    0.05,
+    "gb":        0.02,
 }
 
 B_WEIGHTS = {           # batter block
-    "xwoba":    0.30,
-    "obp":      0.25,
-    "bb_pct":   0.20,
-    "hard_hit": 0.15,
-    "barrel":   0.10,
+    "xwoba":    0.25,
+    "k_pct":    0.20,   # high K% batters = easier outs = good for NRFI
+    "obp":      0.20,
+    "bb_pct":   0.15,
+    "hard_hit": 0.12,
+    "barrel":   0.08,
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
 BET_FILTER = {
-    "min_nrfi_prob":  0.62,
-    "min_half_prob":  0.78,
+    "min_nrfi_prob":  0.63,
+    "min_half_prob":  0.79,
     "max_plays":      2,
 }
 
@@ -45,6 +47,7 @@ LG = {
     "k_pct":         0.228,
     "bb_pct":        0.085,
     "fps":           0.620,
+    "whiff_pct":     0.245,  # MLB avg swinging-strike rate ~24-25%
     "hard_hit":      0.370,
     "barrel":        0.080,
     "gb":            0.440,
@@ -52,6 +55,7 @@ LG = {
     "xwoba":         0.315,
     "obp":           0.320,
     "batter_bb_pct": 0.085,
+    "batter_k_pct":  0.228,  # mirror of pitcher K% — symmetric
     "batter_hh":     0.370,
     "batter_barrel": 0.080,
     # speed/field
@@ -60,11 +64,12 @@ LG = {
 }
 
 # ── Half-inning P(no-run) calibration ─────────────────────────────────────────
-# Logistic mapping: composite [0,1] → P(no run per half) in [0.76, 0.93]
-# Anchored: score=0.5 → P≈0.848 so that P(NRFI) = 0.848² ≈ 0.72 (historical avg)
-HALF_P_LOW  = 0.76
-HALF_P_HIGH = 0.93
-LOGISTIC_K  = 6.0
+# Logistic mapping: composite [0,1] → P(no run per half) in [0.75, 0.94]
+# Anchored: score=0.5 → P≈0.845 so that P(NRFI) = 0.845² ≈ 0.714 (historical avg)
+# K=6.5 gives steeper sigmoid → more differentiation between good/bad matchups
+HALF_P_LOW  = 0.75
+HALF_P_HIGH = 0.94
+LOGISTIC_K  = 6.5
 
 # ── Park factors (FanGraphs 100-scale; 100 = neutral) ─────────────────────────
 # r=runs, lhb=vs left-handed batter, rhb=vs right-handed batter
@@ -143,7 +148,6 @@ VENUE_COORDS: dict[str, dict] = {
     "wrigley field":              {"lat": 41.9484, "lon": -87.6553},
     "yankee stadium":             {"lat": 40.8296, "lon": -73.9262},
     "american family field":      {"lat": 43.0280, "lon": -87.9712},
-    "pnc park":                   {"lat": 40.4469, "lon": -80.0057},
 }
 
 # ── API endpoints ─────────────────────────────────────────────────────────────

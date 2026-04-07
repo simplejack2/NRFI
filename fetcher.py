@@ -322,6 +322,8 @@ def _fetch_pitcher_stats(pid: int, season: int) -> dict:
         "gb_pct": _safe_pct(s.get("groundOuts"),
                             (s.get("groundOuts") or 0) + (s.get("airOuts") or 0)),
         "bf":     s.get("battersFaced") or 0,
+        "k_per_9": _safe_div((s.get("strikeOuts") or 0) * 9,
+                             _f(s.get("inningsPitched")) or None),
     }
 
 
@@ -389,6 +391,7 @@ def _fetch_batter_stats(pid: int, season: int) -> dict:
         "slg":    _f(s.get("slg")),
         "ops":    _f(s.get("ops")),
         "bb_pct": _safe_pct(s.get("baseOnBalls"), s.get("plateAppearances")),
+        "k_pct":  _safe_pct(s.get("strikeOuts"), s.get("plateAppearances")),
         "pa":     s.get("plateAppearances") or 0,
     }
 
@@ -415,6 +418,7 @@ def _fetch_batter_splits(pid: int, season: int) -> dict:
                     result[label] = {
                         "obp":    _f(s.get("obp")),
                         "bb_pct": _safe_pct(s.get("baseOnBalls"), s.get("plateAppearances")),
+                        "k_pct":  _safe_pct(s.get("strikeOuts"), s.get("plateAppearances")),
                         "pa":     s.get("plateAppearances") or 0,
                     }
     return result
@@ -457,6 +461,7 @@ def _fetch_savant_pitchers(season: int) -> dict[int, dict]:
             "k_pct":         _pct(row.get("k_percent")),
             "bb_pct":        _pct(row.get("bb_percent")),
             "fps":           _pct(row.get("f_strike_percent")),
+            "whiff_pct":     _pct(row.get("whiff_percent")),
             "hard_hit":      _pct(row.get("hard_hit_percent")),
             "barrel":        _pct(row.get("barrel_batted_rate")),
             "gb":            _pct(row.get("groundballs_percent")),
@@ -498,6 +503,7 @@ def _fetch_savant_batters(season: int) -> dict[int, dict]:
             continue
         result[pid] = {
             "xwoba":        _f(row.get("xwoba")),
+            "k_pct":        _pct(row.get("k_percent")),
             "bb_pct":       _pct(row.get("bb_percent")),
             "hard_hit":     _pct(row.get("hard_hit_percent")),
             "barrel":       _pct(row.get("barrel_batted_rate")),
@@ -681,6 +687,14 @@ def _pct(val) -> float | None:
 
 
 def _safe_pct(num, den) -> float | None:
+    try:
+        n, d = float(num), float(den)
+        return n / d if d > 0 else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _safe_div(num, den) -> float | None:
     try:
         n, d = float(num), float(den)
         return n / d if d > 0 else None

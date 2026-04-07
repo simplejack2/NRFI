@@ -21,6 +21,7 @@ from config import (
     WEIGHTS, P_WEIGHTS, B_WEIGHTS, BET_FILTER,
     LG, HALF_P_LOW, HALF_P_HIGH, LOGISTIC_K,
     PARK_FACTORS, DOME_VENUES, RETRACTABLE_VENUES,
+    VENUE_COORDS,
 )
 
 log = logging.getLogger(__name__)
@@ -228,33 +229,38 @@ def _pitcher_score(pid: int | None, vs_hand: str, season: int, ctx: dict) -> flo
         return _blend3(cur, prior, career, lg_avg, bf, full_at=400)
 
     m = {
-        "xwoba":    blend(sv.get("xwoba_against"),
-                          sv_p.get("xwoba_against"), None, LG["xwoba_against"]),
-        "k_pct":    blend(sv.get("k_pct") or mlb.get("k_pct"),
-                          sv_p.get("k_pct"), car.get("k_pct"), LG["k_pct"]),
-        "bb_pct":   blend(sv.get("bb_pct") or mlb.get("bb_pct"),
-                          sv_p.get("bb_pct"), car.get("bb_pct"), LG["bb_pct"]),
-        "fps":      blend(sv.get("fps"), sv_p.get("fps"), None, LG["fps"]),
-        "hard_hit": blend(sv.get("hard_hit"), sv_p.get("hard_hit"), None, LG["hard_hit"]),
-        "barrel":   blend(sv.get("barrel"), sv_p.get("barrel"), None, LG["barrel"]),
-        "gb":       blend(sv.get("gb") or mlb.get("gb_pct"),
-                          sv_p.get("gb"), car.get("gb_pct"), LG["gb"]),
+        "xwoba":     blend(sv.get("xwoba_against"),
+                           sv_p.get("xwoba_against"), None, LG["xwoba_against"]),
+        "k_pct":     blend(sv.get("k_pct") or mlb.get("k_pct"),
+                           sv_p.get("k_pct"), car.get("k_pct"), LG["k_pct"]),
+        "bb_pct":    blend(sv.get("bb_pct") or mlb.get("bb_pct"),
+                           sv_p.get("bb_pct"), car.get("bb_pct"), LG["bb_pct"]),
+        "fps":       blend(sv.get("fps"), sv_p.get("fps"), None, LG["fps"]),
+        "whiff_pct": blend(sv.get("whiff_pct"), sv_p.get("whiff_pct"), None, LG["whiff_pct"]),
+        "hard_hit":  blend(sv.get("hard_hit"), sv_p.get("hard_hit"), None, LG["hard_hit"]),
+        "barrel":    blend(sv.get("barrel"), sv_p.get("barrel"), None, LG["barrel"]),
+        "gb":        blend(sv.get("gb") or mlb.get("gb_pct"),
+                           sv_p.get("gb"), car.get("gb_pct"), LG["gb"]),
     }
 
-    # First-inning ERA nudge (small bonus/penalty if we have data)
+    # First-inning split adjustment: ERA + K% together, weighted more heavily
     fi_adj = 0.0
-    if fi.get("era") is not None and fi.get("bf", 0) >= 20:
-        fi_era_per_inning = fi["era"] / 9.0
-        fi_adj = (_sig_inv(fi_era_per_inning, 0.50, 0.20, 0.80) - 0.5) * 0.08
+    if fi.get("bf", 0) >= 15:
+        if fi.get("era") is not None:
+            fi_era_per_inning = fi["era"] / 9.0
+            fi_adj += (_sig_inv(fi_era_per_inning, 0.50, 0.20, 0.80) - 0.5) * 0.12
+        if fi.get("k_pct") is not None:
+            fi_adj += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.05
 
     components = {
-        "xwoba":    _sig_inv(m["xwoba"],    LG["xwoba_against"], 0.200, 0.400) + fi_adj,
-        "k_pct":    _sig(m["k_pct"],        LG["k_pct"],         0.10,  0.40),
-        "bb_pct":   _sig_inv(m["bb_pct"],   LG["bb_pct"],        0.03,  0.16),
-        "fps":      _sig(m["fps"],           LG["fps"],           0.50,  0.75),
-        "hard_hit": _sig_inv(m["hard_hit"], LG["hard_hit"],      0.25,  0.50),
-        "barrel":   _sig_inv(m["barrel"],   LG["barrel"],        0.02,  0.15),
-        "gb":       _sig(m["gb"],            LG["gb"],            0.30,  0.60),
+        "fps":       _sig(m["fps"],           LG["fps"],           0.50,  0.75),
+        "k_pct":     _sig(m["k_pct"],         LG["k_pct"],         0.10,  0.40),
+        "xwoba":     _sig_inv(m["xwoba"],     LG["xwoba_against"], 0.200, 0.400) + fi_adj,
+        "whiff_pct": _sig(m["whiff_pct"],     LG["whiff_pct"],     0.15,  0.40),
+        "bb_pct":    _sig_inv(m["bb_pct"],    LG["bb_pct"],        0.03,  0.16),
+        "hard_hit":  _sig_inv(m["hard_hit"],  LG["hard_hit"],      0.25,  0.50),
+        "barrel":    _sig_inv(m["barrel"],    LG["barrel"],        0.02,  0.15),
+        "gb":        _sig(m["gb"],             LG["gb"],            0.30,  0.60),
     }
 
     return _wsum(components, P_WEIGHTS)
@@ -295,6 +301,8 @@ def _batter_score(pid: int, pitcher_hand: str, season: int, ctx: dict) -> float:
 
     m = {
         "xwoba":    blend(sv.get("xwoba"),    None,              sv_p.get("xwoba"),    LG["xwoba"]),
+        "k_pct":    blend(sv.get("k_pct") or mlb.get("k_pct"),
+                          spl.get("k_pct"),   sv_p.get("k_pct"), LG["batter_k_pct"]),
         "obp":      blend(mlb.get("obp"),     spl.get("obp"),    None,                 LG["obp"]),
         "bb_pct":   blend(sv.get("bb_pct") or mlb.get("bb_pct"),
                           spl.get("bb_pct"),  sv_p.get("bb_pct"), LG["batter_bb_pct"]),
@@ -303,11 +311,12 @@ def _batter_score(pid: int, pitcher_hand: str, season: int, ctx: dict) -> float:
     }
 
     components = {
-        "xwoba":    _sig_inv(m["xwoba"],    LG["xwoba"],         0.220, 0.420),
-        "obp":      _sig_inv(m["obp"],      LG["obp"],           0.250, 0.430),
-        "bb_pct":   _sig_inv(m["bb_pct"],   LG["batter_bb_pct"],0.030, 0.180),
-        "hard_hit": _sig_inv(m["hard_hit"], LG["batter_hh"],     0.250, 0.550),
-        "barrel":   _sig_inv(m["barrel"],   LG["batter_barrel"], 0.020, 0.200),
+        "xwoba":    _sig_inv(m["xwoba"],    LG["xwoba"],          0.220, 0.420),
+        "k_pct":    _sig(m["k_pct"],        LG["batter_k_pct"],   0.100, 0.380),
+        "obp":      _sig_inv(m["obp"],      LG["obp"],            0.250, 0.430),
+        "bb_pct":   _sig_inv(m["bb_pct"],   LG["batter_bb_pct"],  0.030, 0.180),
+        "hard_hit": _sig_inv(m["hard_hit"], LG["batter_hh"],      0.250, 0.550),
+        "barrel":   _sig_inv(m["barrel"],   LG["batter_barrel"],  0.020, 0.200),
     }
 
     return _wsum(components, B_WEIGHTS)
@@ -325,6 +334,7 @@ def _summarize_batters(batters: list[dict], pitcher_hand: str,
             "bat_side": b.get("bat_side", "R"),
             "score":    round(_batter_score(b["player_id"], pitcher_hand, season, ctx), 3),
             "xwoba":    sv.get("xwoba"),
+            "k_pct":    sv.get("k_pct"),
             "obp":      mlb.get("obp"),
         })
     return out
@@ -339,11 +349,19 @@ def _park_weather_score(venue_name: str, lat, lon, game_time: str | None) -> flo
     pf = _lookup_park_factor(vn)
     park_adj = (pf - 100) / 100.0          # >0 = hitter-friendly
 
-    # Weather (skip for domes)
+    # Weather: skip domes; partial for retractable (roof likely closed in bad wx)
     wx_adj = 0.0
     if vn not in DOME_VENUES:
         wx = F.weather(lat, lon, venue_name)
-        wx_adj = _weather_adjustment(wx, vn)
+        if vn in RETRACTABLE_VENUES:
+            temp = wx.get("temp_f", 65)
+            cond = (wx.get("conditions") or "").lower()
+            if temp < 55 or any(w in cond for w in ("rain", "drizzle", "shower", "thunder")):
+                wx_adj = 0.0   # roof almost certainly closed
+            else:
+                wx_adj = _weather_adjustment(wx, vn) * 0.5  # roof may be open
+        else:
+            wx_adj = _weather_adjustment(wx, vn)
 
     combined = park_adj * (2.0 / 3.0) + wx_adj * (1.0 / 3.0)
     score = max(0.0, min(1.0, 0.5 - combined / 0.40))
