@@ -156,22 +156,28 @@ def _extract_probable(prob: dict | None) -> dict | None:
 def lineups(game_pk: int) -> dict:
     """
     Return {"home": [...], "away": [...]} for a game.
-    Tries the dedicated lineups endpoint first, then falls back to boxscore.
-    Always returns the dict even if empty.
+    Tries three sources in order of reliability for pre-game data:
+      1. /game/{pk}/lineups  — official lineup card endpoint
+      2. /schedule?gamePk=   — schedule with lineup hydration (most reliable pre-game)
+      3. /game/{pk}/boxscore — batting order (only available once game starts)
     """
     key = f"lineup_{game_pk}"
     cached = _CACHE.get(key)
     if cached and time.monotonic() < cached[0]:
-        # Re-use cache only if lineup is already confirmed (9+ per side)
         if _confirmed(cached[1]):
             return cached[1]
 
     result = _fetch_lineups_endpoint(game_pk)
     if not _confirmed(result):
+        result = _fetch_lineups_schedule_hydrate(game_pk)
+    if not _confirmed(result):
         result = _fetch_lineups_boxscore(game_pk)
 
-    ttl = 7200 if _confirmed(result) else 900
+    ttl = 7200 if _confirmed(result) else 300   # re-check every 5 min if unconfirmed
     _CACHE[key] = (time.monotonic() + ttl, result)
+    log.info("Lineup game=%s confirmed=%s home=%d away=%d",
+             game_pk, _confirmed(result),
+             len(result.get("home", [])), len(result.get("away", [])))
     return result
 
 
@@ -210,6 +216,50 @@ def _fetch_lineups_endpoint(game_pk: int) -> dict:
             })
         if lineup:
             result[side] = lineup
+    return result
+
+
+def _fetch_lineups_schedule_hydrate(game_pk: int) -> dict:
+    """
+    Fetch lineup via schedule endpoint with lineup hydration.
+    This is the most reliable pre-game source — MLB posts lineups here
+    as soon as the lineup card is submitted (~60-90 min before first pitch).
+    """
+    data = _get("/schedule", params={
+        "sportId": 1,
+        "gamePk":  game_pk,
+        "hydrate": "lineups",
+    })
+    if not data:
+        return {"home": [], "away": []}
+
+    result: dict[str, list] = {"home": [], "away": []}
+    for de in data.get("dates", []):
+        for g in de.get("games", []):
+            if g.get("gamePk") != game_pk:
+                continue
+            for api_key, side in [("homeTeamLineup", "home"), ("awayTeamLineup", "away")]:
+                players = g.get(api_key, [])
+                if not players:
+                    continue
+                lineup = []
+                for pos, p in enumerate(players, 1):
+                    person = p.get("person", p)
+                    pid = person.get("id") or p.get("id")
+                    if not pid:
+                        continue
+                    bat_side = (
+                        (p.get("batSide") or {}).get("code")
+                        or (person.get("batSide") or {}).get("code", "R")
+                    )
+                    lineup.append({
+                        "order":     pos,
+                        "player_id": pid,
+                        "name":      person.get("fullName", ""),
+                        "bat_side":  bat_side,
+                    })
+                if lineup:
+                    result[side] = lineup
     return result
 
 
