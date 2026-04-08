@@ -46,6 +46,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
@@ -94,5 +97,5 @@ jobs:
           [ -f data/history.json ] && git add data/history.json || true
           git diff --staged --quiet && echo "index.html unchanged (already up to date)" || (
             git commit -m "NRFI picks $(date -u '+%Y-%m-%d %H:%M UTC')" &&
-            git push
+            git push origin HEAD:main
           )
