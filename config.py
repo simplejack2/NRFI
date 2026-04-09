@@ -34,7 +34,7 @@ B_WEIGHTS = {           # batter block
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
 BET_FILTER = {
-    "min_nrfi_prob":  0.63,
+    "min_nrfi_prob":  0.725,
     "min_half_prob":  0.79,
     "max_plays":      2,
 }
