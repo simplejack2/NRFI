@@ -134,19 +134,23 @@ def _update_history(results: list[dict], game_date: str, add_today: bool = True)
     log = logging.getLogger("nrfi.history")
     history = _load_history()
 
-    # Resolve pending picks from past dates
+    # Resolve all pending picks (past dates AND same-day finals)
     for pick in history["picks"]:
-        if pick.get("result") is None and pick.get("date") != game_date:
-            try:
-                ls = F.linescore(pick["game_pk"])
-                nr = ls.get("nrfi_result", "pending")
-                if nr in ("NRFI", "YRFI"):
-                    pick["result"] = nr
-                    pick["game_status"] = "F"
-                    log.info("Resolved %s %s @ %s → %s",
-                             pick["date"], pick["away_team"], pick["home_team"], nr)
-            except Exception as exc:
-                log.warning("Could not resolve pick %s: %s", pick.get("game_pk"), exc)
+        if pick.get("result") is not None:
+            continue  # already resolved
+        try:
+            ls = F.linescore(pick["game_pk"])
+            nr = ls.get("nrfi_result", "pending")
+            gs = ls.get("game_status", "S")
+            if nr in ("NRFI", "YRFI"):
+                pick["result"] = nr
+                pick["game_status"] = "F"
+                log.info("Resolved %s %s @ %s → %s",
+                         pick["date"], pick["away_team"], pick["home_team"], nr)
+            elif gs == "I":
+                pick["game_status"] = "live"
+        except Exception as exc:
+            log.warning("Could not resolve pick %s: %s", pick.get("game_pk"), exc)
 
     if add_today and results:
         # Remove existing picks for today (idempotent re-run)
