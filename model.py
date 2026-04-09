@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import logging
 import math
-from datetime import date
+from datetime import date, datetime, timezone
 
 import fetcher as F
 from config import (
@@ -102,12 +102,22 @@ def _score_game(game: dict, ctx: dict) -> dict:
     confirmed = F._confirmed(lu)
     fi        = F.linescore(game_pk)
 
-    # Game state
+    # Game state — guard against linescore returning "I" before first pitch.
+    # The MLB API pre-populates innings with 0 runs before the game starts,
+    # which makes our linescore logic report "in progress" too early.
     gs = fi.get("game_status", "S")
     if gs == "F":
         game_state = "final"
     elif gs == "I":
-        game_state = "live"
+        # Only call it "live" if wall-clock time has reached the game time.
+        if game_time:
+            try:
+                gt = datetime.fromisoformat(game_time.replace("Z", "+00:00"))
+                game_state = "live" if datetime.now(timezone.utc) >= gt else "pregame"
+            except Exception:
+                game_state = "live"
+        else:
+            game_state = "live"
     else:
         game_state = "pregame"
 
