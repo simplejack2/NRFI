@@ -15,10 +15,18 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     font-size:14px; line-height:1.5; padding:24px 16px; }
   header { max-width:960px; margin:0 auto 24px;
-    border-bottom:1px solid var(--border); padding-bottom:16px; }
+    border-bottom:1px solid var(--border); padding-bottom:0; }
   header h1 { font-size:22px; font-weight:600; }
   header .sub { color:var(--muted); font-size:13px; margin-top:4px; }
-  #app { max-width:960px; margin:0 auto; }
+  #app,#tracker-app { max-width:960px; margin:0 auto; }
+
+  /* ── Tabs ── */
+  .tabs { display:flex; gap:0; margin-top:16px; }
+  .tab { background:none; border:none; border-bottom:2px solid transparent;
+    color:var(--muted); cursor:pointer; font-size:14px; font-weight:500;
+    padding:8px 16px; transition:color .15s,border-color .15s; }
+  .tab:hover { color:var(--text); }
+  .tab.active { color:var(--text); border-bottom-color:var(--blue); }
 
   .no-data { text-align:center; padding:80px 24px; color:var(--muted); }
   .no-data h2 { font-size:20px; margin-bottom:8px; color:var(--text); }
@@ -80,6 +88,24 @@
   .tr { text-align:right; font-variant-numeric:tabular-nums; }
   .tm { color:var(--muted); }
 
+  /* ── Season Tracker ── */
+  .record-bar { display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+    background:var(--surface); border:1px solid var(--border); border-radius:8px;
+    padding:16px 20px; margin-bottom:16px; }
+  .rec-stat { text-align:center; }
+  .rec-val { font-size:28px; font-weight:700; line-height:1; }
+  .rec-lbl { font-size:11px; text-transform:uppercase; color:var(--muted);
+    letter-spacing:.05em; margin-top:4px; }
+  .rec-divider { width:1px; height:40px; background:var(--border); }
+  .win-pct-bar { flex:1; min-width:160px; }
+  .win-pct-track { background:rgba(255,255,255,.08); border-radius:4px;
+    height:8px; overflow:hidden; margin-top:6px; }
+  .win-pct-fill { height:100%; border-radius:4px; background:var(--green); transition:width .4s; }
+
+  .result-w { color:var(--green); font-weight:700; }
+  .result-l { color:var(--red);   font-weight:700; }
+  .result-p { color:var(--muted); }
+
   footer { max-width:960px; margin:40px auto 0;
     border-top:1px solid var(--border); padding-top:12px;
     font-size:12px; color:var(--muted); }
@@ -89,6 +115,10 @@
 <header>
   <h1>⚾ NRFI Predictor</h1>
   <div class="sub" id="sub">No Run First Inning — Daily Model</div>
+  <nav class="tabs">
+    <button class="tab active" id="tab-today"   onclick="showTab('today')">Today's Picks</button>
+    <button class="tab"        id="tab-tracker" onclick="showTab('tracker')">Season Tracker</button>
+  </nav>
 </header>
 <div id="app">
   <div class="no-data">
@@ -96,11 +126,22 @@
     <p>Run <code>python main.py --html</code> to produce today's picks.</p>
   </div>
 </div>
+<div id="tracker-app" style="display:none"></div>
 <footer id="foot"></footer>
 
 <script>
 const REPORT_DATA = {"date":"2026-04-09","games":[]}; // generated 2026-04-09
+const HISTORY_DATA = {"picks":[{"date":"2026-04-08","game_pk":822915,"away_team":"Seattle Mariners","home_team":"Texas Rangers","away_pitcher":"Bryan Woo","home_pitcher":"MacKenzie Gore","nrfi_prob":0.734,"rank":1,"lineups_confirmed":true,"result":null,"game_status":"live"},{"date":"2026-04-08","game_pk":823000,"away_team":"Chicago Cubs","home_team":"Tampa Bay Rays","away_pitcher":"Colin Rea","home_pitcher":"Joe Boyle","nrfi_prob":0.7311,"rank":2,"lineups_confirmed":false,"result":null,"game_status":"pregame"},{"date":"2026-04-08","game_pk":823234,"away_team":"Philadelphia Phillies","home_team":"San Francisco Giants","away_pitcher":"Aaron Nola","home_pitcher":"Tyler Mahle","nrfi_prob":0.7296,"rank":3,"lineups_confirmed":false,"result":null,"game_status":"pregame"}]}; // generated 2026-04-08
 
+// ── Tab switching ─────────────────────────────────────────────────────────────
+function showTab(tab) {
+  document.getElementById("app").style.display         = tab==="today"   ? "" : "none";
+  document.getElementById("tracker-app").style.display = tab==="tracker" ? "" : "none";
+  document.getElementById("tab-today").classList.toggle("active",   tab==="today");
+  document.getElementById("tab-tracker").classList.toggle("active", tab==="tracker");
+}
+
+// ── Today's Picks ─────────────────────────────────────────────────────────────
 (function(){
   const app=document.getElementById("app"),sub=document.getElementById("sub"),foot=document.getElementById("foot");
   if(!REPORT_DATA)return;
@@ -144,6 +185,108 @@ const REPORT_DATA = {"date":"2026-04-09","games":[]}; // generated 2026-04-09
   app.innerHTML=html;
 })();
 
+// ── Season Tracker ────────────────────────────────────────────────────────────
+(function(){
+  const ta=document.getElementById("tracker-app");
+  const picks=(HISTORY_DATA&&HISTORY_DATA.picks)||[];
+  if(!picks.length){
+    ta.innerHTML=`<div class="no-data"><h2>No history yet</h2><p>Picks are recorded automatically each day.</p></div>`;
+    return;
+  }
+
+  // Aggregate stats
+  let wins=0,losses=0,pending=0;
+  const teamMap={};
+  picks.forEach(p=>{
+    if(p.result==="NRFI")wins++;
+    else if(p.result==="YRFI")losses++;
+    else pending++;
+
+    [p.away_team,p.home_team].forEach(t=>{
+      if(!teamMap[t])teamMap[t]={w:0,l:0};
+      if(p.result==="NRFI")teamMap[t].w++;
+      else if(p.result==="YRFI")teamMap[t].l++;
+    });
+  });
+  const decided=wins+losses;
+  const winPct=decided?wins/decided:0;
+
+  // Summary bar
+  let html=`<div class="sec" style="margin-top:8px">Season Record</div>
+  <div class="record-bar">
+    <div class="rec-stat"><div class="rec-val cg">${wins}</div><div class="rec-lbl">Wins</div></div>
+    <div class="rec-divider"></div>
+    <div class="rec-stat"><div class="rec-val cr">${losses}</div><div class="rec-lbl">Losses</div></div>
+    <div class="rec-divider"></div>
+    <div class="rec-stat"><div class="rec-val tm">${pending}</div><div class="rec-lbl">Pending</div></div>
+    <div class="rec-divider"></div>
+    <div class="win-pct-bar">
+      <div style="display:flex;justify-content:space-between">
+        <span style="font-size:12px;color:var(--muted)">Win %</span>
+        <span style="font-size:14px;font-weight:700;color:${decided?winPct>=.55?"var(--green)":winPct>=.45?"var(--yellow)":"var(--red)":"var(--muted)"}">${decided?(winPct*100).toFixed(1)+"%":"—"}</span>
+      </div>
+      <div class="win-pct-track"><div class="win-pct-fill" style="width:${(winPct*100).toFixed(1)}%"></div></div>
+    </div>
+  </div>`;
+
+  // Daily picks log (newest first)
+  const sorted=[...picks].sort((a,b)=>b.date.localeCompare(a.date)||a.rank-b.rank);
+  html+=`<div class="sec">Daily Picks Log</div>
+  <div class="tw"><table><thead><tr>
+    <th>Date</th><th>Rank</th><th>Matchup</th><th>Pitchers</th>
+    <th class="tr">NRFI%</th><th>LU</th><th>Result</th>
+  </tr></thead><tbody>`;
+  sorted.forEach(p=>{
+    const res=p.result==="NRFI"
+      ?`<span class="result-w">W — NRFI</span>`
+      :p.result==="YRFI"
+      ?`<span class="result-l">L — YRFI</span>`
+      :`<span class="result-p">Pending</span>`;
+    html+=`<tr>
+      <td class="tm">${p.date}</td>
+      <td class="tm">#${p.rank}</td>
+      <td><b>${p.away_team}</b> @ <b>${p.home_team}</b></td>
+      <td class="tm">${lastName(p.away_pitcher)} / ${lastName(p.home_pitcher)}</td>
+      <td class="tr ${clv(p.nrfi_prob,.62,.55)}">${(p.nrfi_prob*100).toFixed(1)}%</td>
+      <td>${p.lineups_confirmed?"✓":"<span class='tm'>—</span>"}</td>
+      <td>${res}</td>
+    </tr>`;
+  });
+  html+="</tbody></table></div>";
+
+  // Team standings (min 1 pick; sort by win%, then wins)
+  const teams=Object.entries(teamMap)
+    .map(([t,r])=>({team:t,w:r.w,l:r.l,pct:r.w+r.l?r.w/(r.w+r.l):null}))
+    .filter(r=>r.w+r.l>0)
+    .sort((a,b)=>{
+      if(a.pct==null&&b.pct==null)return 0;
+      if(a.pct==null)return 1;
+      if(b.pct==null)return -1;
+      return b.pct-a.pct||b.w-a.w;
+    });
+
+  if(teams.length){
+    html+=`<div class="sec">Team Standings</div>
+    <div class="tw"><table><thead><tr>
+      <th>Team</th><th class="tr">W</th><th class="tr">L</th><th class="tr">Win%</th>
+    </tr></thead><tbody>`;
+    teams.forEach(r=>{
+      const p=r.pct!=null?(r.pct*100).toFixed(1)+"%":"—";
+      const pc=r.pct!=null?clv(r.pct,.55,.45):"tm";
+      html+=`<tr>
+        <td>${r.team}</td>
+        <td class="tr cg">${r.w}</td>
+        <td class="tr cr">${r.l}</td>
+        <td class="tr ${pc}">${p}</td>
+      </tr>`;
+    });
+    html+="</tbody></table></div>";
+  }
+
+  ta.innerHTML=html;
+})();
+
+// ── Shared helpers ────────────────────────────────────────────────────────────
 function card(g){
   const rec=g.bet_recommendation,fi=g.first_inning||{},st=g.game_state||"pregame";
   let cls="card";
@@ -198,7 +341,9 @@ function half(lbl,pitcher,h){
 
 function pct(v){return v!=null?(v*100).toFixed(1)+"%":"—";}
 function ln(x){return(x&&x.name)?x.name.split(" ").pop():"TBD";}
+function lastName(s){return s?(s.split(" ").pop()||s):"TBD";}
 function cl(v,hi,mid){return v>=hi?"cg":v>=mid?"cy":"cr";}
+function clv(v,hi,mid){return v>=hi?"cg":v>=mid?"cy":"cr";}
 function std(s){
   if(s==="live")return"<span style='color:var(--yellow)'>Live</span>";
   if(s==="final")return"<span class='tm'>Final</span>";
