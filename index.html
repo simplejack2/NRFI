@@ -186,32 +186,49 @@ function showTab(tab) {
 })();
 
 // ── Season Tracker ────────────────────────────────────────────────────────────
-(function(){
+// Odds helpers — American odds stored in localStorage keyed by game_pk
+const _LS="nrfi_odds";
+function _lsOdds(){try{return JSON.parse(localStorage.getItem(_LS)||"{}");}catch{return{};}}
+function _saveOdds(pk,v){const o=_lsOdds();if(v==null)delete o[pk];else o[pk]=v;localStorage.setItem(_LS,JSON.stringify(o));}
+function _profit(o){return o<0?100/Math.abs(o):o/100;}  // units won per unit wagered
+function _calcU(o,r){if(o==null||!r||r==="pending")return null;return r==="NRFI"?_profit(o):-1;}
+function _fmtO(v){if(v==null)return"—";return v>0?"+"+v:String(v);}
+function _fmtU(u){if(u==null)return`<span class="tm">—</span>`;const s=(u>=0?"+":"")+u.toFixed(2)+"u";return`<span class="${u>=0?"cg":"cr"}">${s}</span>`;}
+
+function renderTracker(){
   const ta=document.getElementById("tracker-app");
   const picks=(HISTORY_DATA&&HISTORY_DATA.picks)||[];
   if(!picks.length){
     ta.innerHTML=`<div class="no-data"><h2>No history yet</h2><p>Picks are recorded automatically each day.</p></div>`;
     return;
   }
+  const allOdds=_lsOdds();
 
-  // Aggregate stats
-  let wins=0,losses=0,pending=0;
+  // Aggregate — wins/losses + unit P/L per pick, per team
+  let wins=0,losses=0,pending=0,totalU=0,oddsN=0;
   const teamMap={};
   picks.forEach(p=>{
+    const odds=allOdds[p.game_pk]??p.odds??null;
+    const u=_calcU(odds,p.result);
     if(p.result==="NRFI")wins++;
     else if(p.result==="YRFI")losses++;
     else pending++;
-
+    if(u!==null){totalU+=u;oddsN++;}
     [p.away_team,p.home_team].forEach(t=>{
-      if(!teamMap[t])teamMap[t]={w:0,l:0};
+      if(!teamMap[t])teamMap[t]={w:0,l:0,u:0,n:0};
       if(p.result==="NRFI")teamMap[t].w++;
       else if(p.result==="YRFI")teamMap[t].l++;
+      if(u!==null){teamMap[t].u+=u;teamMap[t].n++;}
     });
   });
   const decided=wins+losses;
   const winPct=decided?wins/decided:0;
+  const roi=oddsN>0?(totalU/oddsN*100):null;
 
-  // Summary bar
+  const roiStr=roi!=null?`<span style="color:${roi>=0?"var(--green)":"var(--red)"}">${roi>=0?"+":""}${roi.toFixed(1)}%</span>`:`<span class="tm">—</span>`;
+  const unitStr=oddsN>0?`<span style="color:${totalU>=0?"var(--green)":"var(--red)"}">${totalU>=0?"+":""}${totalU.toFixed(2)}u</span>`:`<span class="tm">—</span>`;
+
+  // Summary record bar
   let html=`<div class="sec" style="margin-top:8px">Season Record</div>
   <div class="record-bar">
     <div class="rec-stat"><div class="rec-val cg">${wins}</div><div class="rec-lbl">Wins</div></div>
@@ -220,6 +237,10 @@ function showTab(tab) {
     <div class="rec-divider"></div>
     <div class="rec-stat"><div class="rec-val tm">${pending}</div><div class="rec-lbl">Pending</div></div>
     <div class="rec-divider"></div>
+    <div class="rec-stat"><div class="rec-val">${unitStr}</div><div class="rec-lbl">Units P/L</div></div>
+    <div class="rec-divider"></div>
+    <div class="rec-stat"><div class="rec-val">${roiStr}</div><div class="rec-lbl">ROI</div></div>
+    <div class="rec-divider"></div>
     <div class="win-pct-bar">
       <div style="display:flex;justify-content:space-between">
         <span style="font-size:12px;color:var(--muted)">Win %</span>
@@ -227,21 +248,21 @@ function showTab(tab) {
       </div>
       <div class="win-pct-track"><div class="win-pct-fill" style="width:${(winPct*100).toFixed(1)}%"></div></div>
     </div>
-  </div>`;
+  </div>
+  <div style="font-size:11px;color:var(--muted);margin-bottom:16px">1 unit wagered per pick &nbsp;·&nbsp; Click any <b>Odds</b> cell to enter sportsbook price &nbsp;·&nbsp; ${oddsN} of ${decided} resolved picks have odds entered</div>`;
 
-  // Daily picks log (newest first)
+  // Daily picks log (newest first) — with Odds + Units columns
   const sorted=[...picks].sort((a,b)=>b.date.localeCompare(a.date)||a.rank-b.rank);
   html+=`<div class="sec">Daily Picks Log</div>
   <div class="tw"><table><thead><tr>
-    <th>Date</th><th>Rank</th><th>Matchup</th><th>Pitchers</th>
-    <th class="tr">NRFI%</th><th>LU</th><th>Result</th>
+    <th>Date</th><th>#</th><th>Matchup</th><th>Pitchers</th>
+    <th class="tr">NRFI%</th><th>LU</th><th class="tr">Odds</th><th class="tr">Units</th><th>Result</th>
   </tr></thead><tbody>`;
   sorted.forEach(p=>{
-    const res=p.result==="NRFI"
-      ?`<span class="result-w">W — NRFI</span>`
-      :p.result==="YRFI"
-      ?`<span class="result-l">L — YRFI</span>`
-      :`<span class="result-p">Pending</span>`;
+    const odds=allOdds[p.game_pk]??p.odds??null;
+    const u=_calcU(odds,p.result);
+    const res=p.result==="NRFI"?`<span class="result-w">W — NRFI</span>`:p.result==="YRFI"?`<span class="result-l">L — YRFI</span>`:`<span class="result-p">Pending</span>`;
+    const oddsStyle=`cursor:pointer;color:${odds!=null?"var(--text)":"var(--muted)"};text-decoration:${odds==null?"underline dotted":"none"}`;
     html+=`<tr>
       <td class="tm">${p.date}</td>
       <td class="tm">#${p.rank}</td>
@@ -249,14 +270,16 @@ function showTab(tab) {
       <td class="tm">${lastName(p.away_pitcher)} / ${lastName(p.home_pitcher)}</td>
       <td class="tr ${clv(p.nrfi_prob,.62,.55)}">${(p.nrfi_prob*100).toFixed(1)}%</td>
       <td>${p.lineups_confirmed?"✓":"<span class='tm'>—</span>"}</td>
+      <td class="tr odds-cell" data-pk="${p.game_pk}" onclick="editOdds(this)" style="${oddsStyle}" title="Click to enter sportsbook odds">${_fmtO(odds)}</td>
+      <td class="tr">${_fmtU(u)}</td>
       <td>${res}</td>
     </tr>`;
   });
   html+="</tbody></table></div>";
 
-  // Team standings (min 1 pick; sort by win%, then wins)
+  // Team standings — W/L/Win%/Units per team
   const teams=Object.entries(teamMap)
-    .map(([t,r])=>({team:t,w:r.w,l:r.l,pct:r.w+r.l?r.w/(r.w+r.l):null}))
+    .map(([t,r])=>({team:t,w:r.w,l:r.l,u:r.u,n:r.n,pct:r.w+r.l?r.w/(r.w+r.l):null}))
     .filter(r=>r.w+r.l>0)
     .sort((a,b)=>{
       if(a.pct==null&&b.pct==null)return 0;
@@ -264,11 +287,10 @@ function showTab(tab) {
       if(b.pct==null)return -1;
       return b.pct-a.pct||b.w-a.w;
     });
-
   if(teams.length){
     html+=`<div class="sec">Team Standings</div>
     <div class="tw"><table><thead><tr>
-      <th>Team</th><th class="tr">W</th><th class="tr">L</th><th class="tr">Win%</th>
+      <th>Team</th><th class="tr">W</th><th class="tr">L</th><th class="tr">Win%</th><th class="tr">Units</th>
     </tr></thead><tbody>`;
     teams.forEach(r=>{
       const p=r.pct!=null?(r.pct*100).toFixed(1)+"%":"—";
@@ -278,13 +300,46 @@ function showTab(tab) {
         <td class="tr cg">${r.w}</td>
         <td class="tr cr">${r.l}</td>
         <td class="tr ${pc}">${p}</td>
+        <td class="tr">${r.n>0?_fmtU(r.u):"<span class='tm'>—</span>"}</td>
       </tr>`;
     });
     html+="</tbody></table></div>";
   }
-
   ta.innerHTML=html;
-})();
+}
+renderTracker();
+
+// ── Odds inline editor ────────────────────────────────────────────────────────
+function editOdds(cell){
+  const pk=cell.dataset.pk;
+  const cur=_lsOdds()[pk]??null;
+  const inp=document.createElement("input");
+  inp.type="text";inp.value=cur!=null?String(cur):"";
+  inp.style.cssText="width:64px;background:var(--surface);color:var(--text);border:1px solid var(--blue);border-radius:4px;padding:2px 4px;font-size:13px;text-align:right;outline:none";
+  inp.placeholder="-120";
+  cell.innerHTML="";cell.appendChild(inp);inp.focus();inp.select();
+  let committed=false;
+  function commit(){
+    if(committed)return;committed=true;
+    const raw=inp.value.trim();
+    if(raw===""){_saveOdds(pk,null);renderTracker();return;}
+    const v=parseInt(raw,10);
+    if(isNaN(v)||Math.abs(v)<100){
+      // invalid — flash red, let user fix
+      committed=false;
+      inp.style.borderColor="var(--red)";
+      inp.title="Enter American odds (e.g. -150 or +110)";
+      inp.focus();
+      return;
+    }
+    _saveOdds(pk,v);renderTracker();
+  }
+  inp.addEventListener("keydown",e=>{
+    if(e.key==="Enter"){e.preventDefault();commit();}
+    if(e.key==="Escape"){committed=true;renderTracker();}
+  });
+  inp.addEventListener("blur",commit);
+}
 
 // ── Shared helpers ────────────────────────────────────────────────────────────
 function card(g){
