@@ -50,7 +50,7 @@
       "rank": 1,
       "lineups_confirmed": true,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-04-09",
@@ -62,8 +62,8 @@
       "nrfi_prob": 0.7204,
       "rank": 2,
       "lineups_confirmed": true,
-      "result": null,
-      "game_status": "final"
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-04-09",
@@ -75,8 +75,47 @@
       "nrfi_prob": 0.7134,
       "rank": 3,
       "lineups_confirmed": true,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-04-10",
+      "game_pk": 823156,
+      "away_team": "Houston Astros",
+      "home_team": "Seattle Mariners",
+      "away_pitcher": "Tatsuya Imai",
+      "home_pitcher": "Emerson Hancock",
+      "nrfi_prob": 0.7285,
+      "rank": 1,
+      "lineups_confirmed": false,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-10",
+      "game_pk": 823482,
+      "away_team": "Arizona Diamondbacks",
+      "home_team": "Philadelphia Phillies",
+      "away_pitcher": "Michael Soroka",
+      "home_pitcher": "Jes\u00fas Luzardo",
+      "nrfi_prob": 0.7245,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-10",
+      "game_pk": 823968,
+      "away_team": "Texas Rangers",
+      "home_team": "Los Angeles Dodgers",
+      "away_pitcher": "Kumar Rocker",
+      "home_pitcher": "Tyler Glasnow",
+      "nrfi_prob": 0.7203,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
