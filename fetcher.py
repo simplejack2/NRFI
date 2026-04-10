@@ -424,6 +424,104 @@ def _fetch_pitcher_fi(pid: int, season: int) -> dict:
     return {}
 
 
+def pitcher_recent_form(pid: int, season: int, n: int = 3) -> dict:
+    """Stats for pitcher's last N starts this season (game log)."""
+    return _cached(f"pform_{pid}_{season}_{n}", 3600,
+                   lambda: _fetch_pitcher_recent_form(pid, season, n))
+
+
+def _fetch_pitcher_recent_form(pid: int, season: int, n: int) -> dict:
+    data = _get(f"/people/{pid}/stats", params={
+        "stats": "gameLog", "group": "pitching", "season": season, "sportId": 1,
+    })
+    if not data:
+        return {}
+    splits = []
+    for block in data.get("stats", []):
+        splits.extend(block.get("splits", []))
+    # Sort by date descending, take last n
+    splits = sorted(splits, key=lambda s: s.get("date", ""), reverse=True)[:n]
+    if not splits:
+        return {}
+    total_er = total_ip = total_k = total_bb = total_bf = 0
+    for sp in splits:
+        s = sp.get("stat", {})
+        total_er += (s.get("earnedRuns") or 0)
+        total_k  += (s.get("strikeOuts") or 0)
+        total_bb += (s.get("baseOnBalls") or 0)
+        total_bf += (s.get("battersFaced") or 0)
+        # inningsPitched is "6.1" where decimal = thirds
+        ip_str = str(s.get("inningsPitched") or "0.0")
+        try:
+            parts = ip_str.split(".")
+            total_ip += int(parts[0]) + int(parts[1] if len(parts) > 1 else 0) / 3.0
+        except Exception:
+            pass
+    return {
+        "era":    round(total_er / total_ip * 9, 2) if total_ip > 0 else None,
+        "k_pct":  _safe_div(total_k, total_bf),
+        "bb_pct": _safe_div(total_bb, total_bf),
+        "n":      len(splits),
+        "bf":     total_bf,
+    }
+
+
+def pitcher_platoon_stats(pid: int, season: int) -> dict:
+    """Pitcher stats vs left-handed batters and vs right-handed batters."""
+    return _cached(f"pplat_{pid}_{season}", 86400,
+                   lambda: _fetch_pitcher_platoon(pid, season))
+
+
+def _fetch_pitcher_platoon(pid: int, season: int) -> dict:
+    result = {}
+    for sit, label in [("vl", "vs_lhb"), ("vr", "vs_rhb")]:
+        data = _get(f"/people/{pid}/stats", params={
+            "stats": "statSplits", "group": "pitching",
+            "season": season, "sitCodes": sit, "sportId": 1,
+        })
+        if not data:
+            continue
+        for block in data.get("stats", []):
+            for sp in block.get("splits", []):
+                if sp.get("split", {}).get("code") == sit:
+                    s = sp.get("stat", {})
+                    result[label] = {
+                        "era":    _f(s.get("era")),
+                        "k_pct":  _safe_pct(s.get("strikeOuts"), s.get("battersFaced")),
+                        "bb_pct": _safe_pct(s.get("baseOnBalls"), s.get("battersFaced")),
+                        "bf":     s.get("battersFaced") or 0,
+                    }
+    return result
+
+
+def pitcher_home_away(pid: int, season: int) -> dict:
+    """Pitcher stats at home and on the road."""
+    return _cached(f"pha_{pid}_{season}", 86400,
+                   lambda: _fetch_pitcher_home_away(pid, season))
+
+
+def _fetch_pitcher_home_away(pid: int, season: int) -> dict:
+    result = {}
+    for sit, label in [("h", "home"), ("a", "away")]:
+        data = _get(f"/people/{pid}/stats", params={
+            "stats": "statSplits", "group": "pitching",
+            "season": season, "sitCodes": sit, "sportId": 1,
+        })
+        if not data:
+            continue
+        for block in data.get("stats", []):
+            for sp in block.get("splits", []):
+                if sp.get("split", {}).get("code") == sit:
+                    s = sp.get("stat", {})
+                    result[label] = {
+                        "era":    _f(s.get("era")),
+                        "k_pct":  _safe_pct(s.get("strikeOuts"), s.get("battersFaced")),
+                        "bb_pct": _safe_pct(s.get("baseOnBalls"), s.get("battersFaced")),
+                        "bf":     s.get("battersFaced") or 0,
+                    }
+    return result
+
+
 def batter_stats(pid: int, season: int) -> dict:
     return _cached(f"bstats_{pid}_{season}", 86400,
                    lambda: _fetch_batter_stats(pid, season))

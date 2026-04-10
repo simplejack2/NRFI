@@ -149,6 +149,28 @@ VENUE_COORDS: dict[str, dict] = {
     "american family field":      {"lat": 43.0280, "lon": -87.9712},
 }
 
+# ── Venue timezone offsets (UTC offset during DST, April–October) ─────────────
+# Used for day/night detection. Arizona never observes DST (UTC-7 always).
+VENUE_TZ_OFFSET: dict[str, int] = {
+    # Eastern (UTC-4 during DST)
+    "yankee stadium": -4, "citi field": -4, "fenway park": -4,
+    "camden yards": -4, "nationals park": -4, "pnc park": -4,
+    "great american ball park": -4, "progressive field": -4,
+    "comerica park": -4, "truist park": -4, "loandepot park": -4,
+    "tropicana field": -4, "citizens bank park": -4, "rogers centre": -4,
+    # Central (UTC-5 during DST)
+    "guaranteed rate field": -5, "wrigley field": -5, "target field": -5,
+    "kauffman stadium": -5, "american family field": -5, "busch stadium": -5,
+    "minute maid park": -5, "globe life field": -5,
+    # Mountain (UTC-6 during DST)
+    "coors field": -6,
+    # Arizona — no DST (UTC-7 always)
+    "chase field": -7,
+    # Pacific (UTC-7 during DST)
+    "t-mobile park": -7, "oracle park": -7, "dodger stadium": -7,
+    "angel stadium": -7, "petco park": -7,
+}
+
 # ── API endpoints ─────────────────────────────────────────────────────────────
 MLB_API = "https://statsapi.mlb.com/api/v1"
 SAVANT  = "https://baseballsavant.mlb.com"

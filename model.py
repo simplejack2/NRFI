@@ -21,7 +21,7 @@ from config import (
     WEIGHTS, P_WEIGHTS, B_WEIGHTS, BET_FILTER,
     LG, HALF_P_LOW, HALF_P_HIGH, LOGISTIC_K,
     PARK_FACTORS, DOME_VENUES, RETRACTABLE_VENUES,
-    VENUE_COORDS,
+    VENUE_COORDS, VENUE_TZ_OFFSET,
 )
 
 
@@ -121,7 +121,7 @@ def _score_game(game: dict, ctx: dict) -> dict:
     else:
         game_state = "pregame"
 
-    # Top half: away bats vs home pitcher
+    # Top half: away bats vs home pitcher (home pitcher pitching at home)
     top = _score_half(
         pitcher=home_prob,
         batters=lu.get("away", []),
@@ -131,10 +131,11 @@ def _score_game(game: dict, ctx: dict) -> dict:
         lat=lat, lon=lon,
         game_time=game_time,
         confirmed=confirmed,
+        is_home=True,
         ctx=ctx,
     )
 
-    # Bottom half: home bats vs away pitcher
+    # Bottom half: home bats vs away pitcher (away pitcher pitching away)
     bot = _score_half(
         pitcher=away_prob,
         batters=lu.get("home", []),
@@ -144,6 +145,7 @@ def _score_game(game: dict, ctx: dict) -> dict:
         lat=lat, lon=lon,
         game_time=game_time,
         confirmed=confirmed,
+        is_home=False,
         ctx=ctx,
     )
 
@@ -181,13 +183,19 @@ def _score_half(
     lat, lon,
     game_time: str | None,
     confirmed: bool,
+    is_home: bool,
     ctx: dict,
 ) -> dict:
     season = ctx["season"]
     pid    = pitcher.get("id")
     phand  = pitcher.get("hand", "R")
 
-    p_score  = _pitcher_score(pid, phand, season, ctx)
+    # Fraction of left-handed batters in the top of the lineup (for platoon splits)
+    top5 = batters[:5]
+    lhb_count = sum(1 for b in top5 if b.get("bat_side") == "L")
+    lhb_frac  = lhb_count / len(top5) if top5 else 0.5
+
+    p_score  = _pitcher_score(pid, phand, season, ctx, lhb_frac=lhb_frac, is_home=is_home)
     b_score  = _lineup_score(batters[:5], phand, season, ctx)
     pw_score = _park_weather_score(venue_name, lat, lon, game_time)
     ds_score = _damage_speed_score(batters[:5], pid, defending_team_id, season, ctx)
@@ -227,7 +235,14 @@ def _composite_to_prob(composite: float) -> float:
 
 # ── Pitcher scoring ────────────────────────────────────────────────────────────
 
-def _pitcher_score(pid: int | None, vs_hand: str, season: int, ctx: dict) -> float:
+def _pitcher_score(
+    pid: int | None,
+    vs_hand: str,
+    season: int,
+    ctx: dict,
+    lhb_frac: float = 0.5,
+    is_home: bool = True,
+) -> float:
     if not pid:
         return 0.50   # league-average for TBD pitcher
 
@@ -255,25 +270,56 @@ def _pitcher_score(pid: int | None, vs_hand: str, season: int, ctx: dict) -> flo
         "hard_hit":   blend(sv.get("hard_hit"), sv_p.get("hard_hit"), None, LG["hard_hit"]),
     }
 
-    # First-inning split: ERA + K% nudge when we have real first-inning data
-    fi_adj = 0.0
-    if fi.get("bf", 0) >= 15:
-        if fi.get("era") is not None:
-            # Convert first-inning ERA to a per-inning run rate for comparison
-            fi_era_per_inn = fi["era"] / 9.0
-            fi_adj += (_sig_inv(fi_era_per_inn, 0.50, 0.20, 0.80) - 0.5) * 0.12
-        if fi.get("k_pct") is not None:
-            fi_adj += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.05
-
     components = {
         "k_pct":      _sig(m["k_pct"],       LG["k_pct"],     0.10,  0.40),
         "fps":        _sig(m["fps"],          LG["fps"],        0.50,  0.75),
-        "xera":       _sig_inv(m["xera"],     LG["xera"],       3.00,  5.80) + fi_adj,
+        "xera":       _sig_inv(m["xera"],     LG["xera"],       3.00,  5.80),
         "bb_pct":     _sig_inv(m["bb_pct"],   LG["bb_pct"],     0.03,  0.16),
         "chase_rate": _sig(m["chase_rate"],   LG["chase_rate"], 0.22,  0.40),
         "whiff_pct":  _sig(m["whiff_pct"],    LG["whiff_pct"],  0.15,  0.40),
         "hard_hit":   _sig_inv(m["hard_hit"], LG["hard_hit"],   0.25,  0.50),
     }
+
+    # ── 1. First-inning split (ERA + K% + BB%) — lowered threshold to 10 BF ──
+    if fi.get("bf", 0) >= 10:
+        if fi.get("era") is not None:
+            fi_era_rate = fi["era"] / 9.0
+            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.12
+        if fi.get("k_pct") is not None:
+            components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.05
+        if fi.get("bb_pct") is not None:
+            components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.04
+
+    # ── 3. Recent form — last 3 starts (±0.08 nudge to xERA component) ────────
+    form = F.pitcher_recent_form(pid, season)
+    if form.get("n", 0) >= 2 and form.get("bf", 0) >= 20 and form.get("era") is not None:
+        form_era_rate = form["era"] / 9.0
+        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.08
+
+    # ── 4. Platoon splits vs LHB / RHB (±0.07 nudge to K% component) ─────────
+    platoon = F.pitcher_platoon_stats(pid, season)
+    vs_lhb = platoon.get("vs_lhb", {})
+    vs_rhb = platoon.get("vs_rhb", {})
+    lhb_bf = vs_lhb.get("bf", 0)
+    rhb_bf = vs_rhb.get("bf", 0)
+    if lhb_bf >= 20 or rhb_bf >= 20:
+        # Build lineup-weighted platoon K%
+        k_lhb = vs_lhb.get("k_pct") if lhb_bf >= 20 else m["k_pct"]
+        k_rhb = vs_rhb.get("k_pct") if rhb_bf >= 20 else m["k_pct"]
+        plat_k = lhb_frac * k_lhb + (1.0 - lhb_frac) * k_rhb
+        if plat_k is not None:
+            components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
+
+    # ── 6a. Home/away split (±0.05 nudge to xERA component) ─────────────────
+    ha = F.pitcher_home_away(pid, season)
+    ha_split = ha.get("home" if is_home else "away", {})
+    if ha_split.get("bf", 0) >= 20 and ha_split.get("era") is not None:
+        ha_era_rate = ha_split["era"] / 9.0
+        components["xera"] += (_sig_inv(ha_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.05
+
+    # Clamp all components to [0, 1]
+    for key in components:
+        components[key] = max(0.0, min(1.0, components[key]))
 
     return _wsum(components, P_WEIGHTS)
 
@@ -380,6 +426,18 @@ def _park_weather_score(venue_name: str, lat, lon, game_time: str | None) -> flo
                 wx_adj = _weather_adjustment(wx, vn) * 0.5  # roof may be open
         else:
             wx_adj = _weather_adjustment(wx, vn)
+
+    # ── 6b. Day/night split — day games play slightly more favorably for hitters
+    # (brighter sun, pitcher fatigue patterns, bullpen availability differences)
+    if game_time and vn not in DOME_VENUES:
+        try:
+            gt = datetime.fromisoformat(game_time.replace("Z", "+00:00"))
+            tz_offset = VENUE_TZ_OFFSET.get(vn, -4)      # default to Eastern
+            local_hour = (gt.hour + tz_offset) % 24
+            if local_hour < 17:                            # before 5 PM local = day game
+                wx_adj -= 0.025                            # hitter-friendly nudge
+        except Exception:
+            pass
 
     combined = park_adj * (2.0 / 3.0) + wx_adj * (1.0 / 3.0)
     score = max(0.0, min(1.0, 0.5 - combined / 0.40))
