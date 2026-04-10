@@ -13,7 +13,7 @@ import logging
 import math
 import os
 import time
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from typing import Any
 
 import requests
@@ -519,6 +519,130 @@ def _fetch_pitcher_home_away(pid: int, season: int) -> dict:
                         "bb_pct": _safe_pct(s.get("baseOnBalls"), s.get("battersFaced")),
                         "bf":     s.get("battersFaced") or 0,
                     }
+    return result
+
+
+# ── NRFI odds (The Odds API) ──────────────────────────────────────────────────
+
+# Priority bookmaker order — best odds are taken from the first available book.
+# The Odds API key codes: draftkings, fanduel, betmgm, caesars, bovada, pointsbetus
+_PREFERRED_BOOKS = [
+    "draftkings", "fanduel", "betmgm", "caesars", "pointsbetus", "bovada",
+]
+
+# The Odds API market key for 1st-inning combined over/under 0.5 runs.
+# "Under 0.5" = NRFI (both teams score zero in the 1st inning).
+_NRFI_MARKET = "totals_1st_1_innings"
+
+
+def nrfi_odds(game_date: str) -> dict[int, int]:
+    """
+    Fetch NRFI odds (American format, 1st-inning under 0.5 runs) for all games
+    on game_date.  Requires ODDS_API_KEY environment variable.
+
+    Returns {game_pk: american_odds_int} — empty dict if key not set or fetch fails.
+
+    The Odds API (the-odds-api.com) free tier: 500 requests/month.
+    This function is only called when at least one pick is missing its odds,
+    so it typically runs once per game-day rather than on every workflow run.
+    """
+    api_key = os.environ.get("ODDS_API_KEY")
+    if not api_key:
+        return {}
+    return _cached(f"nrfi_odds_{game_date}", 7200,   # 2-hour in-process cache
+                   lambda: _fetch_nrfi_odds(game_date, api_key))
+
+
+def _fetch_nrfi_odds(game_date: str, api_key: str) -> dict[int, int]:
+    # Build team-name → game_pk lookup from cached schedule
+    games = schedule(game_date)
+    if not games:
+        return {}
+
+    def _norm(name: str) -> str:
+        return name.lower().strip()
+
+    sched_map: dict[tuple[str, str], int] = {
+        (_norm(g["away_team_name"]), _norm(g["home_team_name"])): g["game_pk"]
+        for g in games
+    }
+
+    try:
+        r = _S.get(
+            "https://api.the-odds-api.com/v4/sports/baseball_mlb/odds",
+            params={
+                "apiKey":      api_key,
+                "regions":     "us",
+                "markets":     _NRFI_MARKET,
+                "oddsFormat":  "american",
+                "dateFormat":  "iso",
+            },
+            timeout=15,
+        )
+        r.raise_for_status()
+        events = r.json()
+    except Exception as exc:
+        log.warning("Odds API request failed: %s", exc)
+        return {}
+
+    if not isinstance(events, list):
+        # API returns a dict on error (e.g. {"error_code": "...", "message": "..."})
+        log.warning("Odds API error response: %s", str(events)[:200])
+        return {}
+
+    # Accept games on game_date AND game_date+1 UTC to capture late west-coast
+    # games whose UTC commence_time rolls into the next calendar day.
+    target  = date.fromisoformat(game_date)
+    allowed = {game_date, (target + timedelta(days=1)).isoformat()}
+
+    result: dict[int, int] = {}
+    for ev in events:
+        ct_date = (ev.get("commence_time") or "")[:10]
+        if ct_date not in allowed:
+            continue
+
+        away = _norm(ev.get("away_team", ""))
+        home = _norm(ev.get("home_team", ""))
+
+        # Exact match first, then substring fallback (e.g. "Athletics" ↔ "Oakland Athletics")
+        game_pk = sched_map.get((away, home))
+        if not game_pk:
+            for (sa, sh), pk in sched_map.items():
+                if (away in sa or sa in away) and (home in sh or sh in home):
+                    game_pk = pk
+                    break
+        if not game_pk:
+            log.debug("Odds API: no schedule match for %s @ %s", away, home)
+            continue
+
+        # Extract "Under" price: preferred book first, then any available book
+        books_by_key = {b["key"]: b for b in ev.get("bookmakers", [])}
+        under_price: int | None = None
+
+        book_order = [books_by_key[k] for k in _PREFERRED_BOOKS if k in books_by_key]
+        book_order += [b for b in ev.get("bookmakers", []) if b["key"] not in _PREFERRED_BOOKS]
+
+        for book in book_order:
+            for mkt in book.get("markets", []):
+                if mkt.get("key") != _NRFI_MARKET:
+                    continue
+                for outcome in mkt.get("outcomes", []):
+                    if outcome.get("name") == "Under":
+                        under_price = outcome.get("price")
+                        break
+                if under_price is not None:
+                    break
+            if under_price is not None:
+                break
+
+        if under_price is not None:
+            result[game_pk] = int(under_price)
+            log.debug("Odds API: %s @ %s  NRFI=%s (book=%s)",
+                      ev.get("away_team"), ev.get("home_team"),
+                      under_price, book_order[0]["key"] if book_order else "?")
+
+    log.info("Odds API: %d/%d games have NRFI odds for %s",
+             len(result), len(games), game_date)
     return result
 
 

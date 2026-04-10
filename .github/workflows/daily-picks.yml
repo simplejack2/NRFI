@@ -61,6 +61,7 @@ jobs:
       - name: Generate picks
         env:
           OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python main.py --html --verbose
 
       - name: Verify injection

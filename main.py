@@ -153,11 +153,33 @@ def _update_history(results: list[dict], game_date: str, add_today: bool = True)
             log.warning("Could not resolve pick %s: %s", pick.get("game_pk"), exc)
 
     if add_today and results:
+        # Capture existing today picks BEFORE removing them so we can
+        # preserve already-stored odds (avoids burning API quota on every run).
+        existing_today: dict[int, dict] = {
+            p["game_pk"]: p
+            for p in history["picks"]
+            if p.get("date") == game_date
+        }
+
         # Remove existing picks for today (idempotent re-run)
         history["picks"] = [p for p in history["picks"] if p.get("date") != game_date]
+
         # Add top-3 by nrfi_prob
         top3 = sorted(results, key=lambda r: r["nrfi_prob"], reverse=True)[:3]
+
+        # Fetch NRFI odds only when at least one pick is still missing them.
+        # This keeps The Odds API usage to ~1 call per game-day, not per run.
+        needs_odds = any(
+            existing_today.get(r["game_pk"], {}).get("odds") is None
+            for r in top3
+        )
+        odds_map = F.nrfi_odds(game_date) if needs_odds else {}
+
         for rank, r in enumerate(top3, 1):
+            # Merge: fresh API odds → stored odds → None
+            stored_odds = existing_today.get(r["game_pk"], {}).get("odds")
+            odds = odds_map.get(r["game_pk"]) or stored_odds
+
             history["picks"].append({
                 "date":              game_date,
                 "game_pk":           r["game_pk"],
@@ -168,11 +190,13 @@ def _update_history(results: list[dict], game_date: str, add_today: bool = True)
                 "nrfi_prob":         round(r["nrfi_prob"], 4),
                 "rank":              rank,
                 "lineups_confirmed": r["lineups_confirmed"],
+                "odds":              odds,
                 "result":            None,
                 "game_status":       r.get("game_state", "pregame"),
             })
-            log.info("Added pick #%d: %s @ %s  %.1f%%",
-                     rank, r["away_team"], r["home_team"], r["nrfi_prob"] * 100)
+            log.info("Added pick #%d: %s @ %s  %.1f%%  odds=%s",
+                     rank, r["away_team"], r["home_team"],
+                     r["nrfi_prob"] * 100, odds)
 
     try:
         os.makedirs(os.path.dirname(_HISTORY_PATH), exist_ok=True)
