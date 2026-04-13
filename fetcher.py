@@ -744,18 +744,29 @@ def _fetch_nrfi_odds_actionnetwork(game_date: str) -> dict[int, int]:
         for g in games
     }
 
-    # ── Step 1: get today's MLB games from ActionNetwork ─────────────────────
-    try:
-        r = _S.get(
-            f"{_AN_BASE}/games",
-            params={"sport": "MLB", "date": game_date, "limit": 50},
-            headers=_AN_HEADERS,
-            timeout=15,
-        )
-        r.raise_for_status()
-        an_games = r.json().get("games", [])
-    except Exception as exc:
-        log.warning("ActionNetwork: games fetch failed: %s", exc)
+    # ── Step 1: get today's MLB matchups from ActionNetwork ──────────────────
+    # ActionNetwork uses /matchups (not /games); sport slug is lowercase.
+    an_games: list = []
+    for an_url, an_params in [
+        (f"{_AN_BASE}/matchups", {"sport": "baseball", "league": "mlb",
+                                   "date": game_date, "limit": 50}),
+        (f"{_AN_BASE}/matchups", {"sport": "mlb", "date": game_date, "limit": 50}),
+        (f"{_AN_BASE}/leagues/mlb/matchups", {"date": game_date}),
+    ]:
+        try:
+            r = _S.get(an_url, params=an_params, headers=_AN_HEADERS, timeout=15)
+            r.raise_for_status()
+            body = r.json()
+            an_games = body.get("matchups") or body.get("games") or []
+            if an_games:
+                log.info("ActionNetwork: %d MLB matchups from %s", len(an_games), an_url)
+                break
+            log.debug("ActionNetwork: empty response from %s params=%s", an_url, an_params)
+        except Exception as exc:
+            log.debug("ActionNetwork: %s params=%s failed: %s", an_url, an_params, exc)
+
+    if not an_games:
+        log.warning("ActionNetwork: no matchups found for %s (all endpoints failed)", game_date)
         return {}
 
     log.info("ActionNetwork: %d MLB games returned for %s", len(an_games), game_date)
@@ -791,29 +802,24 @@ def _fetch_nrfi_odds_actionnetwork(game_date: str) -> dict[int, int]:
     result: dict[int, int] = {}
 
     for an_id, game_pk in an_to_pk.items():
-        try:
-            r = _S.get(
-                f"{_AN_BASE}/game/{an_id}/props",
-                params={"sport": "MLB"},
-                headers=_AN_HEADERS,
-                timeout=15,
-            )
-            r.raise_for_status()
-            props_data = r.json()
-        except Exception as exc:
-            log.debug("ActionNetwork: props fetch failed for game %s: %s", an_id, exc)
-            # Also try the 'markets' or 'odds' sub-endpoint
+        props_data: dict | None = None
+        for prop_url in [
+            f"{_AN_BASE}/matchup/{an_id}/props",
+            f"{_AN_BASE}/matchup/{an_id}/markets",
+            f"{_AN_BASE}/game/{an_id}/props",
+            f"{_AN_BASE}/game/{an_id}/markets",
+        ]:
             try:
-                r2 = _S.get(
-                    f"{_AN_BASE}/game/{an_id}/markets",
-                    params={"sport": "MLB"},
-                    headers=_AN_HEADERS,
-                    timeout=15,
-                )
-                r2.raise_for_status()
-                props_data = r2.json()
-            except Exception:
-                continue
+                rp = _S.get(prop_url, headers=_AN_HEADERS, timeout=10)
+                rp.raise_for_status()
+                props_data = rp.json()
+                log.debug("ActionNetwork: props from %s", prop_url)
+                break
+            except Exception as exc:
+                log.debug("ActionNetwork: %s failed: %s", prop_url, exc)
+
+        if not props_data:
+            continue
 
         # Scan all markets/props for a 1st inning total under-0.5 line
         nrfi_price = _extract_an_nrfi(props_data)
