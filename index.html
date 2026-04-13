@@ -60,6 +60,27 @@
 
   .hvs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px; }
   @media(max-width:520px){ .hvs { grid-template-columns:1fr; } }
+
+  /* ── GitHub sync settings panel ── */
+  .gh-sync-panel { margin-top:24px; border:1px solid var(--border);
+    border-radius:8px; overflow:hidden; }
+  .gh-sync-summary { padding:10px 16px; cursor:pointer; font-size:13px;
+    color:var(--muted); user-select:none; list-style:none; display:flex;
+    align-items:center; gap:6px; }
+  .gh-sync-summary::-webkit-details-marker { display:none; }
+  .gh-sync-summary::before { content:"⚙"; }
+  details[open] .gh-sync-summary { color:var(--text); border-bottom:1px solid var(--border); }
+  .gh-sync-body { padding:16px; font-size:13px; line-height:1.6; color:var(--muted); }
+  .gh-sync-body p { margin:0 0 10px; }
+  .gh-sync-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .gh-tok-inp { flex:1; min-width:180px; background:var(--surface2,var(--surface));
+    border:1px solid var(--border); border-radius:6px; padding:6px 10px;
+    color:var(--text); font-size:13px; font-family:monospace; outline:none; }
+  .gh-tok-inp:focus { border-color:var(--blue); }
+  .gh-save-btn { background:var(--blue); color:#fff; border:none; border-radius:6px;
+    padding:6px 14px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .gh-save-btn:hover { opacity:.85; }
+  #gh-sync-status { font-size:12px; margin-top:8px; min-height:16px; }
   .hv { background:rgba(255,255,255,.03); border-radius:6px; padding:10px 12px; }
   .hl { font-size:11px; text-transform:uppercase; color:var(--muted); font-weight:600; }
   .hp { font-size:22px; font-weight:700; margin:4px 0; }
@@ -127,6 +148,34 @@
   </div>
 </div>
 <div id="tracker-app" style="display:none"></div>
+
+<!-- GitHub sync settings — shown below the tracker -->
+<div id="gh-sync-wrap" style="display:none;max-width:960px;margin:0 auto;padding:0 16px 32px">
+  <details class="gh-sync-panel">
+    <summary class="gh-sync-summary">Cross-device sync settings</summary>
+    <div class="gh-sync-body">
+      <p>Manually-entered odds are saved in this browser's local storage only.
+         To sync them across devices, paste a GitHub Personal Access Token here.
+         When you save odds, they will be written directly to <code>data/history.json</code>
+         in the repo and will appear on all devices after the next workflow run (~30 min).</p>
+      <p style="font-size:11px;color:var(--muted)">
+        Create a fine-grained PAT at
+        <strong>github.com → Settings → Developer settings → Personal access tokens → Fine-grained</strong>.
+        Grant <em>Contents: Read and Write</em> on the <strong>simplejack2/NRFI</strong> repository only.
+        The token is stored in this browser's local storage and never sent anywhere except the GitHub API.
+      </p>
+      <div class="gh-sync-row">
+        <input id="gh-token-inp" class="gh-tok-inp" type="password"
+               placeholder="github_pat_…"
+               value="" autocomplete="off" spellcheck="false" />
+        <button class="gh-save-btn" onclick="saveGhToken()">Save Token</button>
+        <span id="gh-tok-status" style="font-size:12px;color:var(--green)"></span>
+      </div>
+      <div id="gh-sync-status"></div>
+    </div>
+  </details>
+</div>
+
 <footer id="foot"></footer>
 
 <script>
@@ -137,9 +186,12 @@ const HISTORY_DATA = {"picks":[{"date":"2026-04-08","game_pk":822915,"away_team"
 function showTab(tab) {
   document.getElementById("app").style.display         = tab==="today"   ? "" : "none";
   document.getElementById("tracker-app").style.display = tab==="tracker" ? "" : "none";
+  document.getElementById("gh-sync-wrap").style.display = tab==="tracker" ? "" : "none";
   document.getElementById("tab-today").classList.toggle("active",   tab==="today");
   document.getElementById("tab-tracker").classList.toggle("active", tab==="tracker");
 }
+// Pre-populate token input if already stored
+(function(){const t=_ghToken();if(t){const i=document.getElementById("gh-token-inp");if(i)i.value=t;}})()
 
 // ── Today's Picks ─────────────────────────────────────────────────────────────
 (function(){
@@ -309,6 +361,57 @@ function renderTracker(){
 }
 renderTracker();
 
+// ── GitHub sync — write manually-entered odds back to history.json ────────────
+const _GH_TOK_KEY="nrfi_gh_token";
+const _GH_REPO="simplejack2/NRFI";
+const _GH_PATH="data/history.json";
+
+function _ghToken(){return localStorage.getItem(_GH_TOK_KEY)||"";}
+function _setGhToken(v){v?localStorage.setItem(_GH_TOK_KEY,v.trim()):localStorage.removeItem(_GH_TOK_KEY);}
+
+function _syncStatus(msg,color){
+  const el=document.getElementById("gh-sync-status");
+  if(!el)return;
+  el.textContent=msg;el.style.color=color||"var(--text)";
+}
+
+async function _syncOddsToRepo(pk,odds){
+  const token=_ghToken();
+  if(!token)return;
+  _syncStatus("Syncing…","var(--blue)");
+  try{
+    const headers={"Authorization":"token "+token,"Accept":"application/vnd.github+json"};
+    const getR=await fetch("https://api.github.com/repos/"+_GH_REPO+"/contents/"+_GH_PATH,{headers});
+    if(!getR.ok)throw new Error("GET "+getR.status+": "+((await getR.json()).message||""));
+    const fd=await getR.json();
+    const hist=JSON.parse(atob(fd.content.replace(/\s/g,"")));
+    let n=0;
+    for(const p of hist.picks){if(String(p.game_pk)===String(pk)){p.odds=odds;n++;}}
+    if(!n)throw new Error("game not found in history");
+    const body=JSON.stringify(hist,null,2);
+    // btoa needs latin1; encode unicode manually
+    const b64=btoa(unescape(encodeURIComponent(body)));
+    const putR=await fetch("https://api.github.com/repos/"+_GH_REPO+"/contents/"+_GH_PATH,{
+      method:"PUT",headers:{...headers,"Content-Type":"application/json"},
+      body:JSON.stringify({message:"Update NRFI odds game "+pk,content:b64,sha:fd.sha})
+    });
+    if(!putR.ok)throw new Error("PUT "+putR.status+": "+((await putR.json()).message||""));
+    _syncStatus("Synced — visible on all devices after next workflow run (~30 min)","var(--green)");
+    setTimeout(()=>_syncStatus(""),8000);
+  }catch(e){
+    console.error("GH sync:",e);
+    _syncStatus("Sync failed: "+e.message,"var(--red)");
+    setTimeout(()=>_syncStatus(""),10000);
+  }
+}
+
+function saveGhToken(){
+  const v=document.getElementById("gh-token-inp").value.trim();
+  _setGhToken(v);
+  const st=document.getElementById("gh-tok-status");
+  if(st){st.textContent=v?"Token saved.":"Token cleared.";setTimeout(()=>{st.textContent="";},3000);}
+}
+
 // ── Odds inline editor ────────────────────────────────────────────────────────
 function editOdds(cell){
   const pk=cell.dataset.pk;
@@ -322,17 +425,18 @@ function editOdds(cell){
   function commit(){
     if(committed)return;committed=true;
     const raw=inp.value.trim();
-    if(raw===""){_saveOdds(pk,null);renderTracker();return;}
+    if(raw===""){_saveOdds(pk,null);_syncOddsToRepo(pk,null);renderTracker();return;}
     const v=parseInt(raw,10);
     if(isNaN(v)||Math.abs(v)<100){
-      // invalid — flash red, let user fix
       committed=false;
       inp.style.borderColor="var(--red)";
       inp.title="Enter American odds (e.g. -150 or +110)";
       inp.focus();
       return;
     }
-    _saveOdds(pk,v);renderTracker();
+    _saveOdds(pk,v);
+    _syncOddsToRepo(pk,v);   // async — fires in background
+    renderTracker();
   }
   inp.addEventListener("keydown",e=>{
     if(e.key==="Enter"){e.preventDefault();commit();}
