@@ -568,9 +568,15 @@ def nrfi_odds(game_date: str) -> dict[int, int]:
         log.info("Odds API returned no NRFI data for %s — trying DraftKings fallback",
                  game_date)
     else:
-        log.info("ODDS_API_KEY not set — trying DraftKings fallback for %s", game_date)
+        log.info("ODDS_API_KEY not set — trying ActionNetwork fallback for %s", game_date)
 
-    # ── Fallback: DraftKings (no key required) ────────────────────────────────
+    # ── Fallback: ActionNetwork public API (no key required) ─────────────────
+    result = _cached(f"nrfi_odds_an_{game_date}", 7200,
+                     lambda: _fetch_nrfi_odds_actionnetwork(game_date))
+    if result:
+        return result
+
+    # ── Last resort: DraftKings (blocked on GitHub Actions, may work locally) ─
     return _cached(f"nrfi_odds_dk_{game_date}", 7200,
                    lambda: _fetch_nrfi_odds_draftkings(game_date))
 
@@ -697,6 +703,168 @@ def _fetch_nrfi_odds(game_date: str, api_key: str) -> dict[int, int]:
     log.info("Odds API: %d/%d games have NRFI odds for %s",
              len(result), len(games), game_date)
     return result
+
+
+# ── NRFI odds: ActionNetwork public API (no key required) ────────────────────
+
+_AN_BASE = "https://api.actionnetwork.com/web/v1"
+_AN_HEADERS = {
+    "Accept":  "application/json",
+    "Referer": "https://www.actionnetwork.com/",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0 Safari/537.36"
+    ),
+}
+
+# ActionNetwork book IDs for preferred sources (DraftKings=15, FanDuel=16, BetMGM=18)
+_AN_PREFERRED_BOOKS = {15, 16, 18, 19, 20}
+
+
+def _fetch_nrfi_odds_actionnetwork(game_date: str) -> dict[int, int]:
+    """
+    Fetch NRFI odds from ActionNetwork's public API (no API key required).
+    ActionNetwork aggregates odds from DraftKings, FanDuel, BetMGM, etc.
+
+    First fetches today's MLB game list, then fetches props for each game
+    to find 1st-inning total (NRFI = under 0.5) lines.
+
+    Returns {game_pk: american_odds_int} or {} on any failure.
+    """
+    games = schedule(game_date)
+    if not games:
+        return {}
+
+    def _norm(s: str) -> str:
+        return (s or "").lower().strip()
+
+    sched_map: dict[tuple[str, str], int] = {
+        (_norm(g["away_team_name"]), _norm(g["home_team_name"])): g["game_pk"]
+        for g in games
+    }
+
+    # ── Step 1: get today's MLB games from ActionNetwork ─────────────────────
+    try:
+        r = _S.get(
+            f"{_AN_BASE}/games",
+            params={"sport": "MLB", "date": game_date, "limit": 50},
+            headers=_AN_HEADERS,
+            timeout=15,
+        )
+        r.raise_for_status()
+        an_games = r.json().get("games", [])
+    except Exception as exc:
+        log.warning("ActionNetwork: games fetch failed: %s", exc)
+        return {}
+
+    log.info("ActionNetwork: %d MLB games returned for %s", len(an_games), game_date)
+
+    # ── Step 2: build AN game-id → game_pk mapping ───────────────────────────
+    an_to_pk: dict[int, int] = {}
+    for ag in an_games:
+        away = _norm((ag.get("away_team") or {}).get("full_name")
+                     or (ag.get("away_team") or {}).get("abbr", ""))
+        home = _norm((ag.get("home_team") or {}).get("full_name")
+                     or (ag.get("home_team") or {}).get("abbr", ""))
+
+        game_pk = sched_map.get((away, home))
+        if not game_pk:
+            for (sa, sh), pk in sched_map.items():
+                if (away and (away in sa or sa in away) and
+                        home and (home in sh or sh in home)):
+                    game_pk = pk
+                    break
+
+        if game_pk:
+            an_id = ag.get("id")
+            if an_id:
+                an_to_pk[int(an_id)] = game_pk
+
+    log.info("ActionNetwork: matched %d/%d games to schedule",
+             len(an_to_pk), len(an_games))
+
+    if not an_to_pk:
+        return {}
+
+    # ── Step 3: fetch props/lines for matched games ───────────────────────────
+    result: dict[int, int] = {}
+
+    for an_id, game_pk in an_to_pk.items():
+        try:
+            r = _S.get(
+                f"{_AN_BASE}/game/{an_id}/props",
+                params={"sport": "MLB"},
+                headers=_AN_HEADERS,
+                timeout=15,
+            )
+            r.raise_for_status()
+            props_data = r.json()
+        except Exception as exc:
+            log.debug("ActionNetwork: props fetch failed for game %s: %s", an_id, exc)
+            # Also try the 'markets' or 'odds' sub-endpoint
+            try:
+                r2 = _S.get(
+                    f"{_AN_BASE}/game/{an_id}/markets",
+                    params={"sport": "MLB"},
+                    headers=_AN_HEADERS,
+                    timeout=15,
+                )
+                r2.raise_for_status()
+                props_data = r2.json()
+            except Exception:
+                continue
+
+        # Scan all markets/props for a 1st inning total under-0.5 line
+        nrfi_price = _extract_an_nrfi(props_data)
+        if nrfi_price is not None:
+            result[game_pk] = nrfi_price
+            log.info("ActionNetwork: game_pk=%s  NRFI=%+d", game_pk, nrfi_price)
+
+    log.info("ActionNetwork: %d/%d games have NRFI odds for %s",
+             len(result), len(games), game_date)
+    return result
+
+
+def _extract_an_nrfi(props_data: dict) -> int | None:
+    """
+    Scan ActionNetwork props/markets response for a 1st-inning NRFI price.
+    ActionNetwork structures vary — try several known key paths.
+    """
+    def _norm(s: str) -> str:
+        return (s or "").lower()
+
+    # Common paths: props_data["markets"], props_data["props"], props_data["lines"]
+    for top_key in ("markets", "props", "lines", "game_lines"):
+        for market in props_data.get(top_key, []):
+            mname = _norm(market.get("name") or market.get("type") or market.get("title") or "")
+            # Any market whose name suggests "1st inning" total/NRFI
+            if not any(kw in mname for kw in ("nrfi", "1st inning", "first inning", "inning total")):
+                continue
+
+            # Look for under 0.5 outcomes
+            for line in market.get("lines", [market]):
+                # Outcome name / side
+                side = _norm(line.get("outcome") or line.get("side") or line.get("name") or "")
+                if side not in ("under", "no", "no run"):
+                    continue
+                # Line value (0.5 for NRFI)
+                try:
+                    val = float(line.get("value") or line.get("total") or line.get("line") or 0)
+                except (TypeError, ValueError):
+                    val = 0.0
+                if val and abs(val - 0.5) > 0.1:
+                    continue
+
+                # Price — try several field names ActionNetwork uses
+                for price_key in ("american", "odds", "price", "money", "ml"):
+                    raw = line.get(price_key) or (line.get("book_outcomes") or [{}])[0].get(price_key)
+                    if raw is not None:
+                        try:
+                            return int(raw)
+                        except (TypeError, ValueError):
+                            pass
+    return None
 
 
 # ── NRFI odds fallback: DraftKings unofficial API (no key required) ───────────
