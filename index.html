@@ -190,9 +190,6 @@ function showTab(tab) {
   document.getElementById("tab-today").classList.toggle("active",   tab==="today");
   document.getElementById("tab-tracker").classList.toggle("active", tab==="tracker");
 }
-// Pre-populate token input if already stored
-(function(){const t=_ghToken();if(t){const i=document.getElementById("gh-token-inp");if(i)i.value=t;}})()
-
 // ── Today's Picks ─────────────────────────────────────────────────────────────
 (function(){
   const app=document.getElementById("app"),sub=document.getElementById("sub"),foot=document.getElementById("foot");
@@ -512,6 +509,9 @@ function fmt(iso){
   try{return new Date(iso).toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit",timeZone:"America/New_York",timeZoneName:"short"});}
   catch{return"";}
 }
+
+// Pre-populate token input if already stored (must run after _ghToken is defined above)
+(function(){const t=_ghToken();if(t){const i=document.getElementById("gh-token-inp");if(i)i.value=t;}})();
 </script>
 </body>
 </html>
