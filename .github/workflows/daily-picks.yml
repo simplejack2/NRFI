@@ -64,6 +64,35 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python main.py --html --verbose
 
+      - name: Diagnose odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          echo "=== Odds diagnostic ==="
+          python - <<'PYEOF'
+          import json, os, sys
+          sys.path.insert(0, ".")
+          from datetime import date
+          today = date.today().isoformat()
+
+          # Show what ended up in history.json for today
+          try:
+              h = json.load(open("data/history.json"))
+              today_picks = [p for p in h["picks"] if p.get("date") == today]
+              print(f"Today's picks ({today}):")
+              for p in today_picks:
+                  odds = p.get("odds")
+                  print(f"  #{p['rank']} {p['away_team']} @ {p['home_team']}  odds={odds}")
+              if not today_picks:
+                  print("  (none)")
+          except Exception as e:
+              print(f"  Could not read history: {e}")
+
+          print()
+          key = os.environ.get("ODDS_API_KEY", "")
+          print(f"ODDS_API_KEY set: {'yes (len=' + str(len(key)) + ')' if key else 'NO'}")
+          PYEOF
+
       - name: Verify injection
         run: |
           echo "--- index.html REPORT_DATA line ---"
