@@ -311,12 +311,13 @@ def _pitcher_score(
     lhb_bf = vs_lhb.get("bf", 0)
     rhb_bf = vs_rhb.get("bf", 0)
     if lhb_bf >= 20 or rhb_bf >= 20:
-        # Build lineup-weighted platoon K%
+        # Build lineup-weighted platoon K%; fall back to overall k_pct when None
         k_lhb = vs_lhb.get("k_pct") if lhb_bf >= 20 else m["k_pct"]
         k_rhb = vs_rhb.get("k_pct") if rhb_bf >= 20 else m["k_pct"]
+        if k_lhb is None: k_lhb = m["k_pct"]
+        if k_rhb is None: k_rhb = m["k_pct"]
         plat_k = lhb_frac * k_lhb + (1.0 - lhb_frac) * k_rhb
-        if plat_k is not None:
-            components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
+        components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
 
     # ── 6a. Home/away split (±0.05 nudge to xERA component) ─────────────────
     ha = F.pitcher_home_away(pid, season)
@@ -515,8 +516,10 @@ def _damage_speed_score(batters: list[dict], pitcher_id: int | None,
 def _damage_score(batters: list[dict], pid: int | None,
                   season: int, ctx: dict) -> float:
     sv_pit = ctx["sv_pit"].get(pid, {}) if pid else {}
-    pit_hh = sv_pit.get("hard_hit", LG["hard_hit"])
-    pit_br = sv_pit.get("barrel",   LG["barrel"])
+    # Use explicit None check: .get(key, default) only falls back when key is ABSENT,
+    # not when key exists with value=None (which Savant returns for new-season pitchers).
+    pit_hh = sv_pit.get("hard_hit"); pit_hh = pit_hh if pit_hh is not None else LG["hard_hit"]
+    pit_br = sv_pit.get("barrel");   pit_br = pit_br if pit_br is not None else LG["barrel"]
 
     hh_vals, br_vals = [], []
     for b in batters:
