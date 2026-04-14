@@ -134,19 +134,25 @@ def _update_history(results: list[dict], game_date: str, add_today: bool = True)
     log = logging.getLogger("nrfi.history")
     history = _load_history()
 
-    # Resolve all pending picks (past dates AND same-day finals)
+    # Resolve pending picks AND backfill per-half run data for already-resolved
+    # picks that predate the away_r/home_r fields (needed for pitcher tracking).
     for pick in history["picks"]:
-        if pick.get("result") is not None:
-            continue  # already resolved
+        already_resolved = pick.get("result") in ("NRFI", "YRFI")
+        has_half_data    = pick.get("away_r") is not None
+        if already_resolved and has_half_data:
+            continue  # fully up to date
         try:
             ls = F.linescore(pick["game_pk"])
             nr = ls.get("nrfi_result", "pending")
             gs = ls.get("game_status", "S")
             if nr in ("NRFI", "YRFI"):
-                pick["result"] = nr
+                pick["result"]     = nr
                 pick["game_status"] = "F"
-                log.info("Resolved %s %s @ %s → %s",
-                         pick["date"], pick["away_team"], pick["home_team"], nr)
+                pick["away_r"]     = ls.get("away_r")   # runs in top 1st (off home pitcher)
+                pick["home_r"]     = ls.get("home_r")   # runs in bot 1st (off away pitcher)
+                log.info("Resolved %s %s @ %s → %s (top=%s bot=%s)",
+                         pick["date"], pick["away_team"], pick["home_team"], nr,
+                         pick["away_r"], pick["home_r"])
             elif gs == "I":
                 pick["game_status"] = "live"
         except Exception as exc:
@@ -191,6 +197,8 @@ def _update_history(results: list[dict], game_date: str, add_today: bool = True)
                 "rank":              rank,
                 "lineups_confirmed": r["lineups_confirmed"],
                 "odds":              odds,
+                "away_r":            None,  # runs in top 1st (off home pitcher); filled on resolve
+                "home_r":            None,  # runs in bot 1st (off away pitcher); filled on resolve
                 "result":            None,
                 "game_status":       r.get("game_state", "pregame"),
             })

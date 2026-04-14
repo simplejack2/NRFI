@@ -139,7 +139,8 @@
   <nav class="tabs">
     <button class="tab active" id="tab-today"   onclick="showTab('today')">Today's Picks</button>
     <button class="tab"        id="tab-tracker" onclick="showTab('tracker')">Season Tracker</button>
-    <button class="tab"        id="tab-teams"   onclick="showTab('teams')">Team Results</button>
+    <button class="tab"        id="tab-teams"    onclick="showTab('teams')">Team Results</button>
+    <button class="tab"        id="tab-pitchers" onclick="showTab('pitchers')">Pitcher Results</button>
   </nav>
 </header>
 <div id="app">
@@ -149,7 +150,8 @@
   </div>
 </div>
 <div id="tracker-app" style="display:none"></div>
-<div id="teams-app"   style="display:none"></div>
+<div id="teams-app"    style="display:none"></div>
+<div id="pitchers-app" style="display:none"></div>
 
 <!-- GitHub sync settings — shown below the tracker -->
 <div id="gh-sync-wrap" style="display:none;max-width:960px;margin:0 auto;padding:0 16px 32px">
@@ -186,13 +188,15 @@ const HISTORY_DATA = {"picks":[{"date":"2026-04-08","game_pk":822915,"away_team"
 
 // ── Tab switching ─────────────────────────────────────────────────────────────
 function showTab(tab) {
-  document.getElementById("app").style.display          = tab==="today"   ? "" : "none";
-  document.getElementById("tracker-app").style.display  = tab==="tracker" ? "" : "none";
-  document.getElementById("teams-app").style.display    = tab==="teams"   ? "" : "none";
-  document.getElementById("gh-sync-wrap").style.display = tab==="tracker" ? "" : "none";
-  document.getElementById("tab-today").classList.toggle("active",   tab==="today");
-  document.getElementById("tab-tracker").classList.toggle("active", tab==="tracker");
-  document.getElementById("tab-teams").classList.toggle("active",   tab==="teams");
+  document.getElementById("app").style.display           = tab==="today"    ? "" : "none";
+  document.getElementById("tracker-app").style.display   = tab==="tracker"  ? "" : "none";
+  document.getElementById("teams-app").style.display     = tab==="teams"    ? "" : "none";
+  document.getElementById("pitchers-app").style.display  = tab==="pitchers" ? "" : "none";
+  document.getElementById("gh-sync-wrap").style.display  = tab==="tracker"  ? "" : "none";
+  document.getElementById("tab-today").classList.toggle("active",    tab==="today");
+  document.getElementById("tab-tracker").classList.toggle("active",  tab==="tracker");
+  document.getElementById("tab-teams").classList.toggle("active",    tab==="teams");
+  document.getElementById("tab-pitchers").classList.toggle("active", tab==="pitchers");
 }
 // ── Today's Picks ─────────────────────────────────────────────────────────────
 (function(){
@@ -379,6 +383,78 @@ function renderTeams(){
   ta.innerHTML=html;
 }
 renderTeams();
+
+// ── Pitcher Results tab ───────────────────────────────────────────────────────
+function renderPitchers(){
+  const ta=document.getElementById("pitchers-app");
+  const picks=(HISTORY_DATA&&HISTORY_DATA.picks)||[];
+  const resolved=picks.filter(p=>p.result==="NRFI"||p.result==="YRFI");
+  if(!resolved.length){
+    ta.innerHTML=`<div class="no-data"><h2>No results yet</h2><p>Pitcher tracking begins once picks are resolved.</p></div>`;
+    return;
+  }
+
+  // Build per-pitcher records.
+  // away_r = runs scored by away team in TOP of 1st = runs off the HOME PITCHER.
+  // home_r = runs scored by home team in BOT of 1st = runs off the AWAY PITCHER.
+  const pitcherMap={};
+  function addStart(name,date,opp,result){
+    if(!name||name==="TBD")return;
+    if(!pitcherMap[name])pitcherMap[name]={starts:[],w:0,l:0};
+    pitcherMap[name].starts.push({date,opp,result});
+    if(result==="NRFI")pitcherMap[name].w++;
+    else pitcherMap[name].l++;
+  }
+  resolved.forEach(p=>{
+    const hasHalves=p.away_r!=null&&p.home_r!=null;
+    // Home pitcher faces away batters → result = did away team score?
+    const homeRes=hasHalves?(p.away_r===0?"NRFI":"YRFI"):p.result;
+    // Away pitcher faces home batters → result = did home team score?
+    const awayRes=hasHalves?(p.home_r===0?"NRFI":"YRFI"):p.result;
+    addStart(p.home_pitcher, p.date, p.away_team+" (vs)", homeRes);
+    addStart(p.away_pitcher, p.date, "@ "+p.home_team,   awayRes);
+  });
+
+  const pitchers=Object.entries(pitcherMap)
+    .map(([name,r])=>({
+      name,w:r.w,l:r.l,
+      pct:r.w+r.l?r.w/(r.w+r.l):null,
+      starts:r.starts.sort((a,b)=>a.date.localeCompare(b.date)),
+    }))
+    .sort((a,b)=>{
+      if(a.pct==null&&b.pct==null)return 0;
+      if(a.pct==null)return 1;
+      if(b.pct==null)return -1;
+      return b.pct-a.pct||(b.w+b.l)-(a.w+a.l);
+    });
+
+  let html=`<div class="sec" style="margin-top:8px">Pitcher NRFI Results</div>`;
+  html+=`<div style="font-size:11px;color:var(--muted);margin-bottom:16px">Starting pitchers from top-3 daily picks · NRFI = held first inning scoreless in their half</div>`;
+  html+=`<div class="tw"><table><thead><tr>
+    <th>Pitcher</th><th class="tr">Starts</th><th class="tr">NRFI</th><th class="tr">YRFI</th><th class="tr">Hold%</th><th>Recent</th>
+  </tr></thead><tbody>`;
+  pitchers.forEach(r=>{
+    const total=r.w+r.l;
+    const p=r.pct!=null?(r.pct*100).toFixed(1)+"%":"—";
+    const pc=r.pct!=null?clv(r.pct,.60,.45):"tm";
+    const last5=r.starts.slice(-5);
+    const dots=last5.map(s=>{
+      const col=s.result==="NRFI"?"var(--green)":"var(--red)";
+      return `<span title="${s.date} ${s.opp}: ${s.result}" style="display:inline-block;width:11px;height:11px;border-radius:50%;background:${col};margin-right:3px"></span>`;
+    }).join("");
+    html+=`<tr>
+      <td>${r.name}</td>
+      <td class="tr tm">${total}</td>
+      <td class="tr cg">${r.w}</td>
+      <td class="tr cr">${r.l}</td>
+      <td class="tr ${pc}">${p}</td>
+      <td style="min-width:80px">${dots}</td>
+    </tr>`;
+  });
+  html+="</tbody></table></div>";
+  ta.innerHTML=html;
+}
+renderPitchers();
 
 // ── GitHub sync — write manually-entered odds back to history.json ────────────
 const _GH_TOK_KEY="nrfi_gh_token";
