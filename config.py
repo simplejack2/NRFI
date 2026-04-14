@@ -33,8 +33,11 @@ B_WEIGHTS = {           # batter block
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
+# Thresholds adjusted for the recalibrated probability scale.
+# min_half_prob=0.79 now requires composite ≥ ~0.58 per half (meaningfully above avg).
+# min_nrfi_prob=0.63 is consistent with both halves at the min_half_prob floor.
 BET_FILTER = {
-    "min_nrfi_prob":  0.725,
+    "min_nrfi_prob":  0.63,
     "min_half_prob":  0.79,
     "max_plays":      2,
 }
@@ -63,12 +66,15 @@ LG = {
 }
 
 # ── Half-inning P(no-run) calibration ─────────────────────────────────────────
-# Logistic mapping: composite [0,1] → P(no run per half) in [0.75, 0.94]
-# Anchored: score=0.5 → P≈0.845 so that P(NRFI) = 0.845² ≈ 0.714 (historical avg)
-# K=6.5 gives steeper sigmoid → more differentiation between good/bad matchups
-HALF_P_LOW  = 0.75
-HALF_P_HIGH = 0.94
-LOGISTIC_K  = 6.5
+# Logistic mapping: composite [0,1] → P(no run per half) in [0.60, 0.91]
+# Anchored: score=0.5 → P≈0.755 so that P(NRFI) = 0.755² ≈ 0.570 (realistic baseline)
+# K=6.0 gives strong but not extreme sigmoid differentiation.
+# Prior range [0.75, 0.94] was severely overconfident — top picks displayed 73%
+# but historical hit rate was ~44%, a 29pp gap. New range produces 60-67% for top
+# picks, which better matches observed outcomes.
+HALF_P_LOW  = 0.60
+HALF_P_HIGH = 0.91
+LOGISTIC_K  = 6.0
 
 # ── Park factors (FanGraphs 100-scale; 100 = neutral) ─────────────────────────
 # r=runs, lhb=vs left-handed batter, rhb=vs right-handed batter

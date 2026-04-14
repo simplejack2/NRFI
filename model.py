@@ -2,12 +2,16 @@
 NRFI Probability Model.
 
 Flow per half-inning:
-  pitcher score (40%) + batter score (30%) + park/weather (15%)
-  + damage/speed (10%) + lineup confirmation (5%)
+  pitcher score (42%) + batter score (28%) + park/weather (14%)
+  + damage/speed (10%) + lineup confirmation (6%)
   → composite [0,1]
-  → logistic sigmoid → P(no run this half)
+  → logistic sigmoid → P(no run this half) in [0.60, 0.91]
 
 P(NRFI) = P(no run, top 1st) × P(no run, bottom 1st)
+
+Calibration note: baseline (composite=0.50) → half_prob≈0.755 → P(NRFI)≈0.57.
+Top picks (composite≈0.58) → P(NRFI)≈0.63.  This is realistic — prior [0.75,0.94]
+range produced 73% output but only ~44% observed hit rate over 15 picks.
 """
 
 from __future__ import annotations
@@ -280,21 +284,25 @@ def _pitcher_score(
         "hard_hit":   _sig_inv(m["hard_hit"], LG["hard_hit"],   0.25,  0.50),
     }
 
-    # ── 1. First-inning split (ERA + K% + BB%) — lowered threshold to 10 BF ──
+    # ── 1. First-inning split (ERA + K% + BB%) ───────────────────────────────
+    # The FI split is literally the outcome we're predicting — weight it heavily.
+    # ERA nudge raised from ±0.12 to ±0.20; K% from ±0.05 to ±0.09; BB% ±0.07.
     if fi.get("bf", 0) >= 10:
         if fi.get("era") is not None:
             fi_era_rate = fi["era"] / 9.0
-            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.12
+            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.20
         if fi.get("k_pct") is not None:
-            components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.05
+            components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.09
         if fi.get("bb_pct") is not None:
-            components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.04
+            components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.07
 
-    # ── 3. Recent form — last 3 starts (±0.08 nudge to xERA component) ────────
+    # ── 3. Recent form — last 3 starts (±0.14 nudge to xERA component) ─────
+    # Raised from ±0.08; a pitcher coming off a rough stretch has meaningfully
+    # higher first-inning risk regardless of career numbers.
     form = F.pitcher_recent_form(pid, season)
     if form.get("n", 0) >= 2 and form.get("bf", 0) >= 20 and form.get("era") is not None:
         form_era_rate = form["era"] / 9.0
-        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.08
+        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.14
 
     # ── 4. Platoon splits vs LHB / RHB (±0.07 nudge to K% component) ─────────
     platoon = F.pitcher_platoon_stats(pid, season)
@@ -321,7 +329,20 @@ def _pitcher_score(
     for key in components:
         components[key] = max(0.0, min(1.0, components[key]))
 
-    return _wsum(components, P_WEIGHTS)
+    base = _wsum(components, P_WEIGHTS)
+
+    # ── Data confidence discount ──────────────────────────────────────────────
+    # Pitchers with very few BF this season AND no prior-year MLB Statcast data
+    # are essentially unknowns — the model regresses them to league average, but
+    # "league average" in the first inning is not a safe bet.  Rookies, NPB
+    # imports, and injury returnees all carry higher first-inning variance.
+    # Pull the score toward 0.38 (below avg) to reflect this uncertainty.
+    has_prior_sv = sv_p.get("xera") is not None or sv_p.get("k_pct") is not None
+    if bf < 150 and not has_prior_sv:
+        discount_frac = max(0.0, 1.0 - bf / 150.0)
+        base = base * (1.0 - 0.18 * discount_frac) + 0.38 * (0.18 * discount_frac)
+
+    return base
 
 
 # ── Batter/lineup scoring ──────────────────────────────────────────────────────
