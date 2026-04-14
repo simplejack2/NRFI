@@ -139,6 +139,7 @@
   <nav class="tabs">
     <button class="tab active" id="tab-today"   onclick="showTab('today')">Today's Picks</button>
     <button class="tab"        id="tab-tracker" onclick="showTab('tracker')">Season Tracker</button>
+    <button class="tab"        id="tab-teams"   onclick="showTab('teams')">Team Results</button>
   </nav>
 </header>
 <div id="app">
@@ -148,6 +149,7 @@
   </div>
 </div>
 <div id="tracker-app" style="display:none"></div>
+<div id="teams-app"   style="display:none"></div>
 
 <!-- GitHub sync settings — shown below the tracker -->
 <div id="gh-sync-wrap" style="display:none;max-width:960px;margin:0 auto;padding:0 16px 32px">
@@ -184,11 +186,13 @@ const HISTORY_DATA = {"picks":[{"date":"2026-04-08","game_pk":822915,"away_team"
 
 // ── Tab switching ─────────────────────────────────────────────────────────────
 function showTab(tab) {
-  document.getElementById("app").style.display         = tab==="today"   ? "" : "none";
-  document.getElementById("tracker-app").style.display = tab==="tracker" ? "" : "none";
+  document.getElementById("app").style.display          = tab==="today"   ? "" : "none";
+  document.getElementById("tracker-app").style.display  = tab==="tracker" ? "" : "none";
+  document.getElementById("teams-app").style.display    = tab==="teams"   ? "" : "none";
   document.getElementById("gh-sync-wrap").style.display = tab==="tracker" ? "" : "none";
   document.getElementById("tab-today").classList.toggle("active",   tab==="today");
   document.getElementById("tab-tracker").classList.toggle("active", tab==="tracker");
+  document.getElementById("tab-teams").classList.toggle("active",   tab==="teams");
 }
 // ── Today's Picks ─────────────────────────────────────────────────────────────
 (function(){
@@ -255,7 +259,6 @@ function renderTracker(){
 
   // Aggregate — wins/losses + unit P/L per pick, per team
   let wins=0,losses=0,pending=0,totalU=0,oddsN=0;
-  const teamMap={};
   picks.forEach(p=>{
     const odds=allOdds[p.game_pk]??p.odds??null;
     const u=_calcU(odds,p.result);
@@ -263,12 +266,6 @@ function renderTracker(){
     else if(p.result==="YRFI")losses++;
     else pending++;
     if(u!==null){totalU+=u;oddsN++;}
-    [p.away_team,p.home_team].forEach(t=>{
-      if(!teamMap[t])teamMap[t]={w:0,l:0,u:0,n:0};
-      if(p.result==="NRFI")teamMap[t].w++;
-      else if(p.result==="YRFI")teamMap[t].l++;
-      if(u!==null){teamMap[t].u+=u;teamMap[t].n++;}
-    });
   });
   const decided=wins+losses;
   const winPct=decided?wins/decided:0;
@@ -325,8 +322,30 @@ function renderTracker(){
     </tr>`;
   });
   html+="</tbody></table></div>";
+  ta.innerHTML=html;
+}
+renderTracker();
 
-  // Team standings — W/L/Win%/Units per team
+// ── Team Results tab ──────────────────────────────────────────────────────────
+function renderTeams(){
+  const ta=document.getElementById("teams-app");
+  const picks=(HISTORY_DATA&&HISTORY_DATA.picks)||[];
+  if(!picks.length){
+    ta.innerHTML=`<div class="no-data"><h2>No history yet</h2><p>Picks are recorded automatically each day.</p></div>`;
+    return;
+  }
+  const allOdds=_lsOdds();
+  const teamMap={};
+  picks.forEach(p=>{
+    const odds=allOdds[p.game_pk]??p.odds??null;
+    const u=_calcU(odds,p.result);
+    [p.away_team,p.home_team].forEach(t=>{
+      if(!teamMap[t])teamMap[t]={w:0,l:0,u:0,n:0};
+      if(p.result==="NRFI")teamMap[t].w++;
+      else if(p.result==="YRFI")teamMap[t].l++;
+      if(u!==null){teamMap[t].u+=u;teamMap[t].n++;}
+    });
+  });
   const teams=Object.entries(teamMap)
     .map(([t,r])=>({team:t,w:r.w,l:r.l,u:r.u,n:r.n,pct:r.w+r.l?r.w/(r.w+r.l):null}))
     .filter(r=>r.w+r.l>0)
@@ -336,10 +355,13 @@ function renderTracker(){
       if(b.pct==null)return -1;
       return b.pct-a.pct||b.w-a.w;
     });
-  if(teams.length){
-    html+=`<div class="sec">Team Standings</div>
-    <div class="tw"><table><thead><tr>
-      <th>Team</th><th class="tr">W</th><th class="tr">L</th><th class="tr">Win%</th><th class="tr">Units</th>
+  let html=`<div class="sec" style="margin-top:8px">Team Results</div>`;
+  if(!teams.length){
+    html+=`<div class="no-data" style="padding:40px 24px"><h2>No results yet</h2><p>Team standings will appear after picks are resolved.</p></div>`;
+  } else {
+    html+=`<div style="font-size:11px;color:var(--muted);margin-bottom:16px">Win/loss record for each team appearing in a top-3 pick · 1 unit wagered per game</div>`;
+    html+=`<div class="tw"><table><thead><tr>
+      <th>Team</th><th class="tr">W</th><th class="tr">L</th><th class="tr">Win%</th><th class="tr">Units P/L</th>
     </tr></thead><tbody>`;
     teams.forEach(r=>{
       const p=r.pct!=null?(r.pct*100).toFixed(1)+"%":"—";
@@ -356,7 +378,7 @@ function renderTracker(){
   }
   ta.innerHTML=html;
 }
-renderTracker();
+renderTeams();
 
 // ── GitHub sync — write manually-entered odds back to history.json ────────────
 const _GH_TOK_KEY="nrfi_gh_token";
