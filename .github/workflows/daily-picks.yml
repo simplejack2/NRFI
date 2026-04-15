@@ -127,5 +127,6 @@ jobs:
           [ -f data/history.json ] && git add data/history.json || true
           git diff --staged --quiet && echo "index.html unchanged (already up to date)" || (
             git commit -m "NRFI picks $(date -u '+%Y-%m-%d %H:%M UTC')" &&
+            git pull --rebase origin main &&
             git push origin HEAD:main
           )
