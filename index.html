@@ -353,12 +353,7 @@ function renderTeams(){
   const teams=Object.entries(teamMap)
     .map(([t,r])=>({team:t,w:r.w,l:r.l,u:r.u,n:r.n,pct:r.w+r.l?r.w/(r.w+r.l):null}))
     .filter(r=>r.w+r.l>0)
-    .sort((a,b)=>{
-      if(a.pct==null&&b.pct==null)return 0;
-      if(a.pct==null)return 1;
-      if(b.pct==null)return -1;
-      return b.pct-a.pct||b.w-a.w;
-    });
+    .sort((a,b)=>b.u-a.u||b.w-a.w);
   let html=`<div class="sec" style="margin-top:8px">Team Results</div>`;
   if(!teams.length){
     html+=`<div class="no-data" style="padding:40px 24px"><h2>No results yet</h2><p>Team standings will appear after picks are resolved.</p></div>`;
