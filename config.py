@@ -33,12 +33,11 @@ B_WEIGHTS = {           # batter block
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
-# Thresholds adjusted for the recalibrated probability scale.
-# min_half_prob=0.79 now requires composite ≥ ~0.58 per half (meaningfully above avg).
-# min_nrfi_prob=0.63 is consistent with both halves at the min_half_prob floor.
+# min_half_prob=0.75 requires composite ≥ ~0.50 per half (around league average).
+# min_nrfi_prob=0.595 is consistent with both halves at the min_half_prob floor.
 BET_FILTER = {
-    "min_nrfi_prob":  0.63,
-    "min_half_prob":  0.79,
+    "min_nrfi_prob":  0.595,
+    "min_half_prob":  0.75,
     "max_plays":      2,
 }
 
