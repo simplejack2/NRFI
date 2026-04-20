@@ -533,10 +533,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 1,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-04-19",
@@ -549,10 +549,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 8,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-04-19",
@@ -565,10 +565,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 3,
+      "result": "YRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-04-20",
+      "game_pk": 824046,
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Los Angeles Angels",
+      "away_pitcher": "Dylan Cease",
+      "home_pitcher": "Reid Detmers",
+      "nrfi_prob": 0.5843,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-20",
+      "game_pk": 823149,
+      "away_team": "Athletics",
+      "home_team": "Seattle Mariners",
+      "away_pitcher": "J.T. Ginn",
+      "home_pitcher": "Emerson Hancock",
+      "nrfi_prob": 0.5778,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-20",
+      "game_pk": 824125,
+      "away_team": "Baltimore Orioles",
+      "home_team": "Kansas City Royals",
+      "away_pitcher": "Kyle Bradish",
+      "home_pitcher": "Seth Lugo",
+      "nrfi_prob": 0.5742,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
