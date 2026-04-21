@@ -285,24 +285,25 @@ def _pitcher_score(
     }
 
     # ── 1. First-inning split (ERA + K% + BB%) ───────────────────────────────
-    # The FI split is literally the outcome we're predicting — weight it heavily.
-    # ERA nudge raised from ±0.12 to ±0.20; K% from ±0.05 to ±0.09; BB% ±0.07.
-    if fi.get("bf", 0) >= 10:
+    # FI split is exactly the outcome we're predicting. Lowered BF threshold
+    # to 8 to catch struggling pitchers after just 1-2 early-season starts.
+    # ERA nudge raised to ±0.26 (was ±0.20) — the single most predictive signal.
+    if fi.get("bf", 0) >= 8:
         if fi.get("era") is not None:
             fi_era_rate = fi["era"] / 9.0
-            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.20
+            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.26
         if fi.get("k_pct") is not None:
             components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.09
         if fi.get("bb_pct") is not None:
             components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.07
 
-    # ── 3. Recent form — last 3 starts (±0.14 nudge to xERA component) ─────
-    # Raised from ±0.08; a pitcher coming off a rough stretch has meaningfully
-    # higher first-inning risk regardless of career numbers.
+    # ── 3. Recent form — last 3 starts (±0.18 nudge to xERA component) ─────
+    # Raised from ±0.14; pitchers like McCullers/Crochet in poor early-season
+    # form carry meaningfully higher first-inning risk than career numbers suggest.
     form = F.pitcher_recent_form(pid, season)
     if form.get("n", 0) >= 2 and form.get("bf", 0) >= 20 and form.get("era") is not None:
         form_era_rate = form["era"] / 9.0
-        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.14
+        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.18
 
     # ── 4. Platoon splits vs LHB / RHB (±0.07 nudge to K% component) ─────────
     platoon = F.pitcher_platoon_stats(pid, season)
@@ -319,12 +320,21 @@ def _pitcher_score(
         plat_k = lhb_frac * k_lhb + (1.0 - lhb_frac) * k_rhb
         components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
 
-    # ── 6a. Home/away split (±0.05 nudge to xERA component) ─────────────────
+    # ── 6a. Home/away split (±0.08 nudge to xERA component) ─────────────────
+    # Raised from ±0.05: road pitchers in the 1st inning fail at ~1.8x the rate
+    # of home pitchers in our sample — make the away-ERA split matter more.
     ha = F.pitcher_home_away(pid, season)
     ha_split = ha.get("home" if is_home else "away", {})
     if ha_split.get("bf", 0) >= 20 and ha_split.get("era") is not None:
         ha_era_rate = ha_split["era"] / 9.0
-        components["xera"] += (_sig_inv(ha_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.05
+        components["xera"] += (_sig_inv(ha_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.08
+
+    # ── Flat road-start penalty ───────────────────────────────────────────────
+    # Away pitchers face crowd noise, unfamiliar environment, and opposing
+    # lineup study advantages in the 1st inning. Apply a small universal
+    # downward nudge when we have insufficient home/away split data (bf < 20).
+    if not is_home and ha_split.get("bf", 0) < 20:
+        components["xera"] = max(0.0, components["xera"] - 0.03)
 
     # Clamp all components to [0, 1]
     for key in components:
@@ -333,15 +343,13 @@ def _pitcher_score(
     base = _wsum(components, P_WEIGHTS)
 
     # ── Data confidence discount ──────────────────────────────────────────────
-    # Pitchers with very few BF this season AND no prior-year MLB Statcast data
-    # are essentially unknowns — the model regresses them to league average, but
-    # "league average" in the first inning is not a safe bet.  Rookies, NPB
-    # imports, and injury returnees all carry higher first-inning variance.
-    # Pull the score toward 0.38 (below avg) to reflect this uncertainty.
+    # Pitchers with few BF this season AND no prior-year MLB Statcast data
+    # (rookies, NPB imports, injury returnees) carry higher 1st-inning variance.
+    # Raised threshold to 200 BF and discount depth to 22% (was 150 / 18%).
     has_prior_sv = sv_p.get("xera") is not None or sv_p.get("k_pct") is not None
-    if bf < 150 and not has_prior_sv:
-        discount_frac = max(0.0, 1.0 - bf / 150.0)
-        base = base * (1.0 - 0.18 * discount_frac) + 0.38 * (0.18 * discount_frac)
+    if bf < 200 and not has_prior_sv:
+        discount_frac = max(0.0, 1.0 - bf / 200.0)
+        base = base * (1.0 - 0.22 * discount_frac) + 0.35 * (0.22 * discount_frac)
 
     return base
 

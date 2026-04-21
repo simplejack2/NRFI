@@ -15,12 +15,12 @@ WEIGHTS = {
 # ── Sub-weights within each block ─────────────────────────────────────────────
 P_WEIGHTS = {               # pitcher block
     "k_pct":      0.22,   # strikeouts = most reliable outs, no contact risk
-    "fps":        0.20,   # first-pitch strike rate — strongest leading indicator
+    "fps":        0.22,   # first-pitch strike rate — strongest leading indicator (raised: command wins 1st innings)
     "xera":       0.20,   # park-neutral expected ERA — comprehensive quality signal
     "bb_pct":     0.13,   # walks guarantee baserunners
     "chase_rate": 0.12,   # o-swing% — batters chasing = weak contact / K's
     "whiff_pct":  0.08,   # swing-and-miss rate per swing — measures raw stuff
-    "hard_hit":   0.05,   # hard contact rate (residual signal beyond xERA)
+    "hard_hit":   0.03,   # hard contact rate (reduced: redundant with xERA in 1st inning)
 }
 
 B_WEIGHTS = {           # batter block
