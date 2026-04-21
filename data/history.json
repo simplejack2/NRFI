@@ -584,7 +584,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-04-20",
@@ -597,10 +597,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "live"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-04-20",
@@ -612,6 +612,54 @@
       "nrfi_prob": 0.5706,
       "rank": 3,
       "lineups_confirmed": true,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "live"
+    },
+    {
+      "date": "2026-04-21",
+      "game_pk": 823236,
+      "away_team": "Los Angeles Dodgers",
+      "home_team": "San Francisco Giants",
+      "away_pitcher": "TBD",
+      "home_pitcher": "Landen Roupp",
+      "nrfi_prob": 0.5888,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-21",
+      "game_pk": 822995,
+      "away_team": "Cincinnati Reds",
+      "home_team": "Tampa Bay Rays",
+      "away_pitcher": "Chase Burns",
+      "home_pitcher": "Steven Matz",
+      "nrfi_prob": 0.5868,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-21",
+      "game_pk": 824690,
+      "away_team": "Philadelphia Phillies",
+      "home_team": "Chicago Cubs",
+      "away_pitcher": "Jes\u00fas Luzardo",
+      "home_pitcher": "Shota Imanaga",
+      "nrfi_prob": 0.5858,
+      "rank": 3,
+      "lineups_confirmed": false,
       "odds": null,
       "away_r": null,
       "home_r": null,
