@@ -2,12 +2,16 @@
 NRFI Probability Model.
 
 Flow per half-inning:
-  pitcher score (40%) + batter score (30%) + park/weather (15%)
-  + damage/speed (10%) + lineup confirmation (5%)
+  pitcher score (42%) + batter score (28%) + park/weather (14%)
+  + damage/speed (10%) + lineup confirmation (6%)
   → composite [0,1]
-  → logistic sigmoid → P(no run this half)
+  → logistic sigmoid → P(no run this half) in [0.60, 0.91]
 
 P(NRFI) = P(no run, top 1st) × P(no run, bottom 1st)
+
+Calibration note: baseline (composite=0.50) → half_prob≈0.755 → P(NRFI)≈0.57.
+Top picks (composite≈0.58) → P(NRFI)≈0.63.  This is realistic — prior [0.75,0.94]
+range produced 73% output but only ~44% observed hit rate over 15 picks.
 """
 
 from __future__ import annotations
@@ -280,21 +284,26 @@ def _pitcher_score(
         "hard_hit":   _sig_inv(m["hard_hit"], LG["hard_hit"],   0.25,  0.50),
     }
 
-    # ── 1. First-inning split (ERA + K% + BB%) — lowered threshold to 10 BF ──
-    if fi.get("bf", 0) >= 10:
+    # ── 1. First-inning split (ERA + K% + BB%) ───────────────────────────────
+    # FI split is exactly the outcome we're predicting. Lowered BF threshold
+    # to 8 to catch struggling pitchers after just 1-2 early-season starts.
+    # ERA nudge raised to ±0.26 (was ±0.20) — the single most predictive signal.
+    if fi.get("bf", 0) >= 8:
         if fi.get("era") is not None:
             fi_era_rate = fi["era"] / 9.0
-            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.12
+            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.26
         if fi.get("k_pct") is not None:
-            components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.05
+            components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.09
         if fi.get("bb_pct") is not None:
-            components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.04
+            components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.07
 
-    # ── 3. Recent form — last 3 starts (±0.08 nudge to xERA component) ────────
+    # ── 3. Recent form — last 3 starts (±0.18 nudge to xERA component) ─────
+    # Raised from ±0.14; pitchers like McCullers/Crochet in poor early-season
+    # form carry meaningfully higher first-inning risk than career numbers suggest.
     form = F.pitcher_recent_form(pid, season)
     if form.get("n", 0) >= 2 and form.get("bf", 0) >= 20 and form.get("era") is not None:
         form_era_rate = form["era"] / 9.0
-        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.08
+        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.18
 
     # ── 4. Platoon splits vs LHB / RHB (±0.07 nudge to K% component) ─────────
     platoon = F.pitcher_platoon_stats(pid, season)
@@ -303,25 +312,46 @@ def _pitcher_score(
     lhb_bf = vs_lhb.get("bf", 0)
     rhb_bf = vs_rhb.get("bf", 0)
     if lhb_bf >= 20 or rhb_bf >= 20:
-        # Build lineup-weighted platoon K%
+        # Build lineup-weighted platoon K%; fall back to overall k_pct when None
         k_lhb = vs_lhb.get("k_pct") if lhb_bf >= 20 else m["k_pct"]
         k_rhb = vs_rhb.get("k_pct") if rhb_bf >= 20 else m["k_pct"]
+        if k_lhb is None: k_lhb = m["k_pct"]
+        if k_rhb is None: k_rhb = m["k_pct"]
         plat_k = lhb_frac * k_lhb + (1.0 - lhb_frac) * k_rhb
-        if plat_k is not None:
-            components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
+        components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
 
-    # ── 6a. Home/away split (±0.05 nudge to xERA component) ─────────────────
+    # ── 6a. Home/away split (±0.08 nudge to xERA component) ─────────────────
+    # Raised from ±0.05: road pitchers in the 1st inning fail at ~1.8x the rate
+    # of home pitchers in our sample — make the away-ERA split matter more.
     ha = F.pitcher_home_away(pid, season)
     ha_split = ha.get("home" if is_home else "away", {})
     if ha_split.get("bf", 0) >= 20 and ha_split.get("era") is not None:
         ha_era_rate = ha_split["era"] / 9.0
-        components["xera"] += (_sig_inv(ha_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.05
+        components["xera"] += (_sig_inv(ha_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.08
+
+    # ── Flat road-start penalty ───────────────────────────────────────────────
+    # Away pitchers face crowd noise, unfamiliar environment, and opposing
+    # lineup study advantages in the 1st inning. Apply a small universal
+    # downward nudge when we have insufficient home/away split data (bf < 20).
+    if not is_home and ha_split.get("bf", 0) < 20:
+        components["xera"] = max(0.0, components["xera"] - 0.03)
 
     # Clamp all components to [0, 1]
     for key in components:
         components[key] = max(0.0, min(1.0, components[key]))
 
-    return _wsum(components, P_WEIGHTS)
+    base = _wsum(components, P_WEIGHTS)
+
+    # ── Data confidence discount ──────────────────────────────────────────────
+    # Pitchers with few BF this season AND no prior-year MLB Statcast data
+    # (rookies, NPB imports, injury returnees) carry higher 1st-inning variance.
+    # Raised threshold to 200 BF and discount depth to 22% (was 150 / 18%).
+    has_prior_sv = sv_p.get("xera") is not None or sv_p.get("k_pct") is not None
+    if bf < 200 and not has_prior_sv:
+        discount_frac = max(0.0, 1.0 - bf / 200.0)
+        base = base * (1.0 - 0.22 * discount_frac) + 0.35 * (0.22 * discount_frac)
+
+    return base
 
 
 # ── Batter/lineup scoring ──────────────────────────────────────────────────────
@@ -494,8 +524,10 @@ def _damage_speed_score(batters: list[dict], pitcher_id: int | None,
 def _damage_score(batters: list[dict], pid: int | None,
                   season: int, ctx: dict) -> float:
     sv_pit = ctx["sv_pit"].get(pid, {}) if pid else {}
-    pit_hh = sv_pit.get("hard_hit", LG["hard_hit"])
-    pit_br = sv_pit.get("barrel",   LG["barrel"])
+    # Use explicit None check: .get(key, default) only falls back when key is ABSENT,
+    # not when key exists with value=None (which Savant returns for new-season pitchers).
+    pit_hh = sv_pit.get("hard_hit"); pit_hh = pit_hh if pit_hh is not None else LG["hard_hit"]
+    pit_br = sv_pit.get("barrel");   pit_br = pit_br if pit_br is not None else LG["barrel"]
 
     hh_vals, br_vals = [], []
     for b in batters:

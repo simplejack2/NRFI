@@ -565,14 +565,23 @@ def nrfi_odds(game_date: str) -> dict[int, int]:
                          lambda: _fetch_nrfi_odds(game_date, api_key))
         if result:
             return result
-        log.info("Odds API returned no NRFI data for %s — trying DraftKings fallback",
-                 game_date)
+        log.info("Odds API returned no NRFI data for %s", game_date)
     else:
-        log.info("ODDS_API_KEY not set — trying DraftKings fallback for %s", game_date)
+        log.info("ODDS_API_KEY not set — skipping Odds API for %s", game_date)
 
-    # ── Fallback: DraftKings (no key required) ────────────────────────────────
-    return _cached(f"nrfi_odds_dk_{game_date}", 7200,
-                   lambda: _fetch_nrfi_odds_draftkings(game_date))
+    # ── Fallback: DraftKings (no key; works locally but blocked on cloud IPs) ─
+    result = _cached(f"nrfi_odds_dk_{game_date}", 7200,
+                     lambda: _fetch_nrfi_odds_draftkings(game_date))
+    if result:
+        return result
+
+    log.warning(
+        "NRFI odds unavailable for %s. Automated pulling requires The Odds API "
+        "Standard plan ($9/mo at the-odds-api.com). Alternatively, click any "
+        "odds cell on the Season Tracker page to enter odds manually.",
+        game_date,
+    )
+    return {}
 
 
 def _fetch_nrfi_odds(game_date: str, api_key: str) -> dict[int, int]:
@@ -700,14 +709,18 @@ def _fetch_nrfi_odds(game_date: str, api_key: str) -> dict[int, int]:
 
 
 # ── NRFI odds fallback: DraftKings unofficial API (no key required) ───────────
+# NOTE: DraftKings blocks GitHub Actions / cloud IP ranges (HTTP 403).
+# This only works when run locally. Kept as a convenience for local testing.
 
-_DK_BASE   = "https://sportsbook.draftkings.com/sites/US-SB/api/v5"
-_DK_MLB_EG = 88808   # DraftKings eventGroupId for MLB
+_DK_BASE = "https://sportsbook.draftkings.com/sites/US-SB/api/v5"
+
+# DraftKings eventGroupId for MLB — try multiple in case DK changes the ID.
+# 88808 and 84240 are the most commonly cited MLB IDs.
+_DK_MLB_EG_IDS = [88808, 84240]
 
 _DK_HEADERS = {
     "Accept":  "application/json",
     "Referer": "https://sportsbook.draftkings.com/",
-    # Mimic a browser visit so the JSON endpoint doesn't redirect to HTML
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -715,22 +728,24 @@ _DK_HEADERS = {
     ),
 }
 
+# Category/subcategory name fragments to recognise 1st-inning total markets.
+# Broad intentionally: DK naming varies by season and region.
+_DK_CAT_KEYWORDS    = {"inning", "1st", "first"}
+_DK_SUBCAT_KEYWORDS = {"total", "run", "score", "line"}
+
 
 def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
     """
     Fetch NRFI odds from DraftKings unofficial sportsbook API — no API key needed.
 
-    Strategy:
-      1. GET the MLB event-group to discover category/subcategory IDs for any
-         category whose name contains "inning".
-      2. GET offers for that subcategory.
-      3. For each offer with an "Under 0.5" outcome, match the event's home/away
-         team names to our schedule and record the price.
+    Tries multiple MLB event-group IDs, logs ALL discovered categories so that
+    workflow output always reveals what the API is actually returning.
 
     Returns {game_pk: american_odds_int} or {} on any failure.
     """
     games = schedule(game_date)
     if not games:
+        log.warning("DraftKings: no schedule games found for %s", game_date)
         return {}
 
     def _norm(s: str) -> str:
@@ -741,10 +756,30 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
         for g in games
     }
 
-    # ── Step 1: discover category/subcategory IDs ─────────────────────────────
+    for eg_id in _DK_MLB_EG_IDS:
+        result = _try_dk_event_group(eg_id, sched_map, _norm, game_date)
+        if result:
+            return result
+
+    log.warning(
+        "DraftKings: no NRFI odds found for %s after trying event group IDs %s",
+        game_date, _DK_MLB_EG_IDS,
+    )
+    return {}
+
+
+def _try_dk_event_group(
+    eg_id: int,
+    sched_map: dict,
+    _norm,
+    game_date: str,
+) -> dict[int, int]:
+    """Try one DraftKings MLB event-group ID. Returns {} if nothing useful found."""
+
+    # ── Step 1: fetch event-group to discover category IDs ───────────────────
     try:
         r = _S.get(
-            f"{_DK_BASE}/eventgroups/{_DK_MLB_EG}",
+            f"{_DK_BASE}/eventgroups/{eg_id}",
             params={"format": "json"},
             headers=_DK_HEADERS,
             timeout=15,
@@ -752,20 +787,33 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
         r.raise_for_status()
         eg = r.json().get("eventGroup", {})
     except Exception as exc:
-        log.warning("DraftKings: MLB event-group fetch failed: %s", exc)
+        log.warning("DraftKings: event-group %s fetch failed: %s", eg_id, exc)
         return {}
 
+    eg_name = eg.get("name", "?")
+    cats = eg.get("offerCategories", [])
+
+    # Log ALL categories so workflow output reveals the API structure
+    cat_names = [f"[{c.get('id')}] {c.get('name')}" for c in cats]
+    log.info("DraftKings eventGroup %s ('%s'): %d categories: %s",
+             eg_id, eg_name, len(cats), ", ".join(cat_names) or "(none)")
+
+    # Find best matching category + subcategory
     cat_id: int | None    = None
     subcat_id: int | None = None
     cat_name = subcat_name = ""
 
-    for cat in eg.get("offerCategories", []):
+    for cat in cats:
         cname = _norm(cat.get("name", ""))
-        if "inning" not in cname:
+        if not any(kw in cname for kw in _DK_CAT_KEYWORDS):
             continue
-        for sc in cat.get("offerSubcategoryDescriptors", []):
+        sc_descs = cat.get("offerSubcategoryDescriptors", [])
+        sc_names = [s.get("name", "") for s in sc_descs]
+        log.info("DraftKings:   candidate cat '%s' → subcats: %s",
+                 cat.get("name"), sc_names)
+        for sc in sc_descs:
             scname = _norm(sc.get("name", ""))
-            if "total" in scname or "run" in scname:
+            if any(kw in scname for kw in _DK_SUBCAT_KEYWORDS):
                 cat_id     = cat.get("id")
                 subcat_id  = sc.get("subcategoryId")
                 cat_name   = cat.get("name", "")
@@ -775,16 +823,16 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
             break
 
     if cat_id is None:
-        log.info("DraftKings: no 1st-inning total category found in MLB event group")
+        log.info("DraftKings: eventGroup %s — no matching 1st-inning category", eg_id)
         return {}
 
-    log.info("DraftKings: using '%s / %s' (cat=%s, subcat=%s)",
-             cat_name, subcat_name, cat_id, subcat_id)
+    log.info("DraftKings: eventGroup %s using '%s / %s' (cat=%s, subcat=%s)",
+             eg_id, cat_name, subcat_name, cat_id, subcat_id)
 
     # ── Step 2: fetch offers for that subcategory ─────────────────────────────
     try:
         r = _S.get(
-            f"{_DK_BASE}/eventgroups/{_DK_MLB_EG}"
+            f"{_DK_BASE}/eventgroups/{eg_id}"
             f"/categories/{cat_id}/subcategories/{subcat_id}",
             params={"format": "json"},
             headers=_DK_HEADERS,
@@ -793,28 +841,31 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
         r.raise_for_status()
         data = r.json()
     except Exception as exc:
-        log.warning("DraftKings: offers fetch failed: %s", exc)
+        log.warning("DraftKings: offers fetch failed for %s/%s/%s: %s",
+                    eg_id, cat_id, subcat_id, exc)
         return {}
 
     eg2 = data.get("eventGroup", {})
 
-    # Build eventId → event-dict lookup (team name source)
+    # Build eventId → event-dict lookup (source of team names)
     events_lut: dict[int, dict] = {}
     for ev in eg2.get("events", []):
         eid = ev.get("id") or ev.get("eventId")
         if eid is not None:
             events_lut[int(eid)] = ev
 
-    # Navigate to the offers matrix
+    log.info("DraftKings: offers response has %d events in lookup", len(events_lut))
+
+    # Navigate: offerCategories[0] → offerSubcategoryDescriptors[0] → offerSubcategory → offers
     try:
         cats2 = eg2.get("offerCategories", [])
         scs2  = cats2[0].get("offerSubcategoryDescriptors", []) if cats2 else []
-        offers_matrix = (
-            scs2[0].get("offerSubcategory", {}).get("offers", []) if scs2 else []
-        )
+        offers_matrix = scs2[0].get("offerSubcategory", {}).get("offers", []) if scs2 else []
     except Exception as exc:
         log.warning("DraftKings: cannot navigate offers structure: %s", exc)
         return {}
+
+    log.info("DraftKings: %d offer rows in matrix", len(offers_matrix))
 
     # ── Step 3: extract Under-0.5 prices and match to schedule ───────────────
     result: dict[int, int] = {}
@@ -822,10 +873,9 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
     for offer_row in offers_matrix:
         items = offer_row if isinstance(offer_row, list) else [offer_row]
         for offer in items:
-            # Find Under 0.5 outcome
             under_price: int | None = None
             for oc in offer.get("outcomes", []):
-                lbl  = _norm(oc.get("label", ""))
+                lbl = _norm(oc.get("label", ""))
                 try:
                     line = float(oc.get("line") or 0)
                 except (TypeError, ValueError):
@@ -840,11 +890,9 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
             if not under_price:
                 continue
 
-            # Resolve team names from the events lookup
             eid = offer.get("eventId")
             ev  = events_lut.get(int(eid), {}) if eid is not None else {}
 
-            # DraftKings event structures vary; try several field names
             home_name = _norm(
                 ev.get("homeTeamName")
                 or ev.get("homeName")
@@ -856,8 +904,6 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
                 or (ev.get("away") or {}).get("name", "")
             )
 
-            # If team names are absent, try parsing from the event "name" field
-            # DraftKings typically formats as "Away Team vs. Home Team"
             if not home_name or not away_name:
                 ev_name = ev.get("name", "")
                 for sep in (" vs. ", " vs ", " @ "):
@@ -868,28 +914,25 @@ def _fetch_nrfi_odds_draftkings(game_date: str) -> dict[int, int]:
                         break
 
             if not home_name and not away_name:
+                log.debug("DraftKings: offer eventId=%s has no team names, skipping", eid)
                 continue
 
-            # Exact match first, then substring fallback
             game_pk = sched_map.get((away_name, home_name))
             if not game_pk:
                 for (sa, sh), pk in sched_map.items():
-                    away_ok = away_name and (away_name in sa or sa in away_name)
-                    home_ok = home_name and (home_name in sh or sh in home_name)
-                    if away_ok and home_ok:
+                    if (away_name and (away_name in sa or sa in away_name) and
+                            home_name and (home_name in sh or sh in home_name)):
                         game_pk = pk
                         break
 
             if game_pk:
                 result[game_pk] = under_price
-                log.debug("DraftKings: game_pk=%s  %s @ %s  NRFI=%+d",
-                          game_pk, away_name, home_name, under_price)
+                log.info("DraftKings: matched game_pk=%s  %s @ %s  NRFI=%+d",
+                         game_pk, away_name, home_name, under_price)
             else:
-                log.debug("DraftKings: no schedule match for '%s' @ '%s'",
-                          away_name, home_name)
+                log.info("DraftKings: no schedule match for '%s' @ '%s' (Under=%+d)",
+                         away_name, home_name, under_price)
 
-    log.info("DraftKings fallback: %d/%d games have NRFI odds for %s",
-             len(result), len(games), game_date)
     return result
 
 

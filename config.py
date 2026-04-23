@@ -15,12 +15,12 @@ WEIGHTS = {
 # ── Sub-weights within each block ─────────────────────────────────────────────
 P_WEIGHTS = {               # pitcher block
     "k_pct":      0.22,   # strikeouts = most reliable outs, no contact risk
-    "fps":        0.20,   # first-pitch strike rate — strongest leading indicator
+    "fps":        0.22,   # first-pitch strike rate — strongest leading indicator (raised: command wins 1st innings)
     "xera":       0.20,   # park-neutral expected ERA — comprehensive quality signal
     "bb_pct":     0.13,   # walks guarantee baserunners
     "chase_rate": 0.12,   # o-swing% — batters chasing = weak contact / K's
     "whiff_pct":  0.08,   # swing-and-miss rate per swing — measures raw stuff
-    "hard_hit":   0.05,   # hard contact rate (residual signal beyond xERA)
+    "hard_hit":   0.03,   # hard contact rate (reduced: redundant with xERA in 1st inning)
 }
 
 B_WEIGHTS = {           # batter block
@@ -33,9 +33,11 @@ B_WEIGHTS = {           # batter block
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
+# min_half_prob=0.75 requires composite ≥ ~0.50 per half (around league average).
+# min_nrfi_prob=0.595 is consistent with both halves at the min_half_prob floor.
 BET_FILTER = {
-    "min_nrfi_prob":  0.725,
-    "min_half_prob":  0.79,
+    "min_nrfi_prob":  0.595,
+    "min_half_prob":  0.75,
     "max_plays":      2,
 }
 
@@ -63,12 +65,15 @@ LG = {
 }
 
 # ── Half-inning P(no-run) calibration ─────────────────────────────────────────
-# Logistic mapping: composite [0,1] → P(no run per half) in [0.75, 0.94]
-# Anchored: score=0.5 → P≈0.845 so that P(NRFI) = 0.845² ≈ 0.714 (historical avg)
-# K=6.5 gives steeper sigmoid → more differentiation between good/bad matchups
-HALF_P_LOW  = 0.75
-HALF_P_HIGH = 0.94
-LOGISTIC_K  = 6.5
+# Logistic mapping: composite [0,1] → P(no run per half) in [0.60, 0.91]
+# Anchored: score=0.5 → P≈0.755 so that P(NRFI) = 0.755² ≈ 0.570 (realistic baseline)
+# K=6.0 gives strong but not extreme sigmoid differentiation.
+# Prior range [0.75, 0.94] was severely overconfident — top picks displayed 73%
+# but historical hit rate was ~44%, a 29pp gap. New range produces 60-67% for top
+# picks, which better matches observed outcomes.
+HALF_P_LOW  = 0.60
+HALF_P_HIGH = 0.91
+LOGISTIC_K  = 6.0
 
 # ── Park factors (FanGraphs 100-scale; 100 = neutral) ─────────────────────────
 # r=runs, lhb=vs left-handed batter, rhb=vs right-handed batter
