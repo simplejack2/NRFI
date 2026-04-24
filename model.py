@@ -70,11 +70,12 @@ def run(game_date: str | None = None) -> list[dict]:
     pops    = F.pop_time(season)
 
     ctx = {
-        "season":   season,
-        "sv_pit":   sv_pit,
-        "sv_bat":   sv_bat,
-        "sprints":  sprints,
-        "pops":     pops,
+        "season":    season,
+        "game_date": game_date,
+        "sv_pit":    sv_pit,
+        "sv_bat":    sv_bat,
+        "sprints":   sprints,
+        "pops":      pops,
     }
 
     results = []
@@ -201,6 +202,7 @@ def _score_half(
 
     p_score  = _pitcher_score(pid, phand, season, ctx, lhb_frac=lhb_frac, is_home=is_home)
     b_score  = _lineup_score(batters[:5], phand, season, ctx)
+    b_score  = _adjust_batter_score_team_fi(b_score, batting_team_id, season, confirmed)
     pw_score = _park_weather_score(venue_name, lat, lon, game_time)
     ds_score = _damage_speed_score(batters[:5], pid, defending_team_id, season, ctx)
     lu_score = 0.55 if confirmed else 0.45   # small adjustment for lineup status
@@ -250,11 +252,12 @@ def _pitcher_score(
     if not pid:
         return 0.50   # league-average for TBD pitcher
 
-    sv   = ctx["sv_pit"].get(pid, {})
-    sv_p = F.savant_pitchers(season - 1).get(pid, {})    # prior season
-    mlb  = F.pitcher_stats(pid, season)
-    car  = F.pitcher_career_stats(pid)
-    fi   = F.pitcher_fi_split(pid, season)
+    sv      = ctx["sv_pit"].get(pid, {})
+    sv_p    = F.savant_pitchers(season - 1).get(pid, {})    # prior season
+    mlb     = F.pitcher_stats(pid, season)
+    car     = F.pitcher_career_stats(pid)
+    fi      = F.pitcher_fi_split(pid, season)        # current-year 1st-inning split
+    fi_prev = F.pitcher_fi_split(pid, season - 1)    # prior-year 1st-inning split
 
     bf = sv.get("pa") or mlb.get("bf") or 0
 
@@ -268,10 +271,11 @@ def _pitcher_score(
                             sv_p.get("k_pct"), car.get("k_pct"), LG["k_pct"]),
         "bb_pct":     blend(sv.get("bb_pct") or mlb.get("bb_pct"),
                             sv_p.get("bb_pct"), car.get("bb_pct"), LG["bb_pct"]),
-        "fps":        blend(sv.get("fps"), sv_p.get("fps"), None, LG["fps"]),
-        "whiff_pct":  blend(sv.get("whiff_pct"), sv_p.get("whiff_pct"), None, LG["whiff_pct"]),
+        "fps":        blend(sv.get("fps"),        sv_p.get("fps"),        None, LG["fps"]),
+        "whiff_pct":  blend(sv.get("whiff_pct"),  sv_p.get("whiff_pct"),  None, LG["whiff_pct"]),
         "chase_rate": blend(sv.get("chase_rate"), sv_p.get("chase_rate"), None, LG["chase_rate"]),
-        "hard_hit":   blend(sv.get("hard_hit"), sv_p.get("hard_hit"), None, LG["hard_hit"]),
+        "hard_hit":   blend(sv.get("hard_hit"),   sv_p.get("hard_hit"),   None, LG["hard_hit"]),
+        "gb_pct":     blend(sv.get("gb_pct"),     sv_p.get("gb_pct"),     None, LG["gb_pct"]),
     }
 
     components = {
@@ -282,37 +286,57 @@ def _pitcher_score(
         "chase_rate": _sig(m["chase_rate"],   LG["chase_rate"], 0.22,  0.40),
         "whiff_pct":  _sig(m["whiff_pct"],    LG["whiff_pct"],  0.15,  0.40),
         "hard_hit":   _sig_inv(m["hard_hit"], LG["hard_hit"],   0.25,  0.50),
+        "gb_pct":     _sig(m["gb_pct"],       LG["gb_pct"],     0.32,  0.58),
     }
 
-    # ── 1. First-inning split (ERA + K% + BB%) ───────────────────────────────
-    # FI split is exactly the outcome we're predicting. Lowered BF threshold
-    # to 8 to catch struggling pitchers after just 1-2 early-season starts.
-    # ERA nudge raised to ±0.26 (was ±0.20) — the single most predictive signal.
-    if fi.get("bf", 0) >= 8:
-        if fi.get("era") is not None:
-            fi_era_rate = fi["era"] / 9.0
-            components["xera"] += (_sig_inv(fi_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.26
-        if fi.get("k_pct") is not None:
-            components["k_pct"] += (_sig(fi["k_pct"], LG["k_pct"], 0.10, 0.40) - 0.5) * 0.09
-        if fi.get("bb_pct") is not None:
-            components["bb_pct"] += (_sig_inv(fi["bb_pct"], LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.07
+    # ── 1. First-inning split — blend current + prior year ───────────────────
+    # Prior-year FI data is the strongest available early-season signal.
+    fi_era = _blend2(
+        fi.get("era")      if fi.get("bf", 0) >= 15  else None,
+        fi_prev.get("era") if fi_prev.get("bf", 0) >= 15 else None,
+    )
+    fi_k = _blend2(
+        fi.get("k_pct")      if fi.get("bf", 0) >= 15  else None,
+        fi_prev.get("k_pct") if fi_prev.get("bf", 0) >= 15 else None,
+    )
+    fi_bb = _blend2(
+        fi.get("bb_pct")      if fi.get("bf", 0) >= 15  else None,
+        fi_prev.get("bb_pct") if fi_prev.get("bf", 0) >= 15 else None,
+    )
+    if fi_era is not None:
+        components["xera"] += (_sig_inv(fi_era / 9.0, 0.50, 0.20, 0.80) - 0.5) * 0.26
+    if fi_k is not None:
+        components["k_pct"] += (_sig(fi_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.09
+    if fi_bb is not None:
+        components["bb_pct"] += (_sig_inv(fi_bb, LG["bb_pct"], 0.03, 0.16) - 0.5) * 0.07
 
-    # ── 3. Recent form — last 3 starts (±0.18 nudge to xERA component) ─────
-    # Raised from ±0.14; pitchers like McCullers/Crochet in poor early-season
-    # form carry meaningfully higher first-inning risk than career numbers suggest.
+    # ── 2. Recent form — last 3 starts (±0.18 nudge) ─────────────────────────
     form = F.pitcher_recent_form(pid, season)
     if form.get("n", 0) >= 2 and form.get("bf", 0) >= 20 and form.get("era") is not None:
-        form_era_rate = form["era"] / 9.0
-        components["xera"] += (_sig_inv(form_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.18
+        components["xera"] += (_sig_inv(form["era"] / 9.0, 0.50, 0.20, 0.80) - 0.5) * 0.18
 
-    # ── 4. Platoon splits vs LHB / RHB (±0.07 nudge to K% component) ─────────
+    # ── 3. Rest days — short/long rest affects 1st-inning command ────────────
+    last_start   = form.get("last_start")
+    game_date_s  = ctx.get("game_date", "")
+    if last_start and game_date_s:
+        try:
+            from datetime import date as _date
+            days_rest = (_date.fromisoformat(game_date_s) -
+                         _date.fromisoformat(last_start)).days
+            if days_rest <= 3:    # short rest → elevated fatigue/command risk
+                components["xera"] = max(0.0, components["xera"] - 0.07)
+            elif days_rest >= 10: # long layoff → timing/command rust
+                components["xera"] = max(0.0, components["xera"] - 0.04)
+        except Exception:
+            pass
+
+    # ── 4. Platoon splits vs LHB / RHB (±0.07 nudge) ─────────────────────────
     platoon = F.pitcher_platoon_stats(pid, season)
-    vs_lhb = platoon.get("vs_lhb", {})
-    vs_rhb = platoon.get("vs_rhb", {})
-    lhb_bf = vs_lhb.get("bf", 0)
-    rhb_bf = vs_rhb.get("bf", 0)
+    vs_lhb  = platoon.get("vs_lhb", {})
+    vs_rhb  = platoon.get("vs_rhb", {})
+    lhb_bf  = vs_lhb.get("bf", 0)
+    rhb_bf  = vs_rhb.get("bf", 0)
     if lhb_bf >= 20 or rhb_bf >= 20:
-        # Build lineup-weighted platoon K%; fall back to overall k_pct when None
         k_lhb = vs_lhb.get("k_pct") if lhb_bf >= 20 else m["k_pct"]
         k_rhb = vs_rhb.get("k_pct") if rhb_bf >= 20 else m["k_pct"]
         if k_lhb is None: k_lhb = m["k_pct"]
@@ -320,20 +344,12 @@ def _pitcher_score(
         plat_k = lhb_frac * k_lhb + (1.0 - lhb_frac) * k_rhb
         components["k_pct"] += (_sig(plat_k, LG["k_pct"], 0.10, 0.40) - 0.5) * 0.07
 
-    # ── 6a. Home/away split (±0.08 nudge to xERA component) ─────────────────
-    # Raised from ±0.05: road pitchers in the 1st inning fail at ~1.8x the rate
-    # of home pitchers in our sample — make the away-ERA split matter more.
-    ha = F.pitcher_home_away(pid, season)
+    # ── 5. Home/away split (±0.08 nudge) + flat road penalty ─────────────────
+    ha       = F.pitcher_home_away(pid, season)
     ha_split = ha.get("home" if is_home else "away", {})
     if ha_split.get("bf", 0) >= 20 and ha_split.get("era") is not None:
-        ha_era_rate = ha_split["era"] / 9.0
-        components["xera"] += (_sig_inv(ha_era_rate, 0.50, 0.20, 0.80) - 0.5) * 0.08
-
-    # ── Flat road-start penalty ───────────────────────────────────────────────
-    # Away pitchers face crowd noise, unfamiliar environment, and opposing
-    # lineup study advantages in the 1st inning. Apply a small universal
-    # downward nudge when we have insufficient home/away split data (bf < 20).
-    if not is_home and ha_split.get("bf", 0) < 20:
+        components["xera"] += (_sig_inv(ha_split["era"] / 9.0, 0.50, 0.20, 0.80) - 0.5) * 0.08
+    elif not is_home:
         components["xera"] = max(0.0, components["xera"] - 0.03)
 
     # Clamp all components to [0, 1]
@@ -432,6 +448,30 @@ def _summarize_batters(batters: list[dict], pitcher_hand: str,
             "obp":      mlb.get("obp"),
         })
     return out
+
+
+def _adjust_batter_score_team_fi(b_score: float, team_id: int,
+                                  season: int, confirmed: bool) -> float:
+    """Nudge lineup score using team-level first-inning batting stats.
+
+    Higher b_score = weaker lineup = better for NRFI.
+    High team FI OBP → dangerous → lower b_score.
+    High team FI K%  → easy outs → raise b_score.
+    Only applied when team has ≥50 first-inning PAs (~15 games).
+    """
+    if not team_id:
+        return b_score
+    fi = F.team_fi_batting(team_id, season)
+    if fi.get("pa", 0) < 50:
+        return b_score
+    adj = 0.0
+    obp = fi.get("obp")
+    if obp is not None:
+        adj += (_sig_inv(obp, LG["obp"], 0.250, 0.430) - 0.5) * 0.12
+    k_pct = fi.get("k_pct")
+    if k_pct is not None:
+        adj += (_sig(k_pct, LG["batter_k_pct"], 0.100, 0.380) - 0.5) * 0.08
+    return max(0.0, min(1.0, b_score + adj))
 
 
 # ── Park + weather scoring ─────────────────────────────────────────────────────
@@ -618,6 +658,13 @@ def _sig_inv(val: float, avg: float, lo: float, hi: float) -> float:
 def _wsum(components: dict, weights: dict) -> float:
     total_w = sum(weights.values())
     return sum(components.get(k, 0.5) * w for k, w in weights.items()) / total_w
+
+
+def _blend2(a, b):
+    """Blend two nullable floats: both present → average, one → that value, neither → None."""
+    if a is not None and b is not None:
+        return (a + b) / 2.0
+    return a if a is not None else b
 
 
 def _blend3(cur, prior, career, lg_avg: float, bf: int, full_at: int = 400) -> float:

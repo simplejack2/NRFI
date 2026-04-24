@@ -13,23 +13,24 @@ WEIGHTS = {
 }
 
 # ── Sub-weights within each block ─────────────────────────────────────────────
-P_WEIGHTS = {               # pitcher block
-    "k_pct":      0.22,   # strikeouts = most reliable outs, no contact risk
-    "fps":        0.22,   # first-pitch strike rate — strongest leading indicator (raised: command wins 1st innings)
-    "xera":       0.20,   # park-neutral expected ERA — comprehensive quality signal
-    "bb_pct":     0.13,   # walks guarantee baserunners
-    "chase_rate": 0.12,   # o-swing% — batters chasing = weak contact / K's
-    "whiff_pct":  0.08,   # swing-and-miss rate per swing — measures raw stuff
-    "hard_hit":   0.03,   # hard contact rate (reduced: redundant with xERA in 1st inning)
+P_WEIGHTS = {               # pitcher block — must sum to 1.0
+    "k_pct":      0.20,   # strikeouts = guaranteed outs, no scoring risk
+    "fps":        0.22,   # first-pitch strike rate — strongest 1st-inning leading indicator
+    "xera":       0.17,   # park-neutral xERA — prior-FI-split now carries more direct signal
+    "bb_pct":     0.12,   # walks = free baserunners, death in 1st inning
+    "chase_rate": 0.11,   # o-swing% — weak contact / K's
+    "whiff_pct":  0.07,   # swing-and-miss rate — raw stuff quality
+    "gb_pct":     0.08,   # ground ball rate — GB→double play, no HR risk
+    "hard_hit":   0.03,   # hard contact (reduced: mostly captured by xERA)
 }
 
-B_WEIGHTS = {           # batter block
-    "xwoba":    0.25,
-    "k_pct":    0.20,   # high K% batters = easier outs = good for NRFI
-    "obp":      0.20,
-    "bb_pct":   0.15,
-    "hard_hit": 0.12,
-    "barrel":   0.08,
+B_WEIGHTS = {           # batter block — must sum to 1.0
+    "xwoba":    0.22,   # overall contact quality
+    "k_pct":    0.22,   # high K% = easy out, can't score (raised: most reliable NRFI signal)
+    "obp":      0.22,   # on-base rate = run-scoring prerequisite (raised)
+    "bb_pct":   0.16,   # walk rate = free baserunner risk
+    "hard_hit": 0.11,   # hard contact = extra-base risk
+    "barrel":   0.07,   # barrel rate = solo-HR risk even with bases empty
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
@@ -59,6 +60,8 @@ LG = {
     "batter_k_pct":  0.228,  # mirror of pitcher K% — symmetric
     "batter_hh":     0.370,
     "batter_barrel": 0.080,
+    # pitcher batted-ball
+    "gb_pct":        0.44,   # MLB avg ground ball rate for pitchers
     # speed/field
     "sprint":        27.0,   # ft/s
     "pop_time":      2.02,   # seconds catcher 2B pop time
