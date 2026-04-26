@@ -821,10 +821,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-04-25",
@@ -837,10 +837,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-04-25",
@@ -853,10 +853,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-04-26",
+      "game_pk": 824122,
+      "away_team": "Los Angeles Angels",
+      "home_team": "Kansas City Royals",
+      "away_pitcher": "Reid Detmers",
+      "home_pitcher": "Seth Lugo",
+      "nrfi_prob": 0.5808,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-26",
+      "game_pk": 823959,
+      "away_team": "Chicago Cubs",
+      "home_team": "Los Angeles Dodgers",
+      "away_pitcher": "Shota Imanaga",
+      "home_pitcher": "Justin Wrobleski",
+      "nrfi_prob": 0.5795,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-04-26",
+      "game_pk": 823637,
+      "away_team": "Colorado Rockies",
+      "home_team": "New York Mets",
+      "away_pitcher": "TBD",
+      "home_pitcher": "Kodai Senga",
+      "nrfi_prob": 0.5791,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
