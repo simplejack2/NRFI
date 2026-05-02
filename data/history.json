@@ -1109,10 +1109,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-05-01",
@@ -1128,7 +1128,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-05-01",
@@ -1140,6 +1140,54 @@
       "nrfi_prob": 0.5693,
       "rank": 3,
       "lineups_confirmed": true,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "live"
+    },
+    {
+      "date": "2026-05-02",
+      "game_pk": 824042,
+      "away_team": "New York Mets",
+      "home_team": "Los Angeles Angels",
+      "away_pitcher": "Nolan McLean",
+      "home_pitcher": "Reid Detmers",
+      "nrfi_prob": 0.591,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-05-02",
+      "game_pk": 823715,
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Minnesota Twins",
+      "away_pitcher": "Dylan Cease",
+      "home_pitcher": "Connor Prielipp",
+      "nrfi_prob": 0.5832,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-05-02",
+      "game_pk": 823144,
+      "away_team": "Kansas City Royals",
+      "home_team": "Seattle Mariners",
+      "away_pitcher": "Seth Lugo",
+      "home_pitcher": "Emerson Hancock",
+      "nrfi_prob": 0.5812,
+      "rank": 3,
+      "lineups_confirmed": false,
       "odds": null,
       "away_r": null,
       "home_r": null,
