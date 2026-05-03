@@ -1160,7 +1160,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-05-02",
@@ -1176,7 +1176,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-05-02",
@@ -1189,10 +1189,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-05-03",
+      "game_pk": 823387,
+      "away_team": "Cincinnati Reds",
+      "home_team": "Pittsburgh Pirates",
+      "away_pitcher": "Chase Burns",
+      "home_pitcher": "Braxton Ashcraft",
+      "nrfi_prob": 0.592,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-05-03",
+      "game_pk": 823875,
+      "away_team": "Philadelphia Phillies",
+      "home_team": "Miami Marlins",
+      "away_pitcher": "Jes\u00fas Luzardo",
+      "home_pitcher": "Chris Paddack",
+      "nrfi_prob": 0.5783,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-05-03",
+      "game_pk": 823711,
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Minnesota Twins",
+      "away_pitcher": "Trey Yesavage",
+      "home_pitcher": "Joe Ryan",
+      "nrfi_prob": 0.5739,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
