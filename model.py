@@ -205,7 +205,7 @@ def _score_half(
     b_score  = _adjust_batter_score_team_fi(b_score, batting_team_id, season, confirmed)
     pw_score = _park_weather_score(venue_name, lat, lon, game_time)
     ds_score = _damage_speed_score(batters[:5], pid, defending_team_id, season, ctx)
-    lu_score = 0.55 if confirmed else 0.45   # small adjustment for lineup status
+    lu_score = 0.60 if confirmed else 0.40   # confirmed lineups meaningfully reduce uncertainty
 
     composite = (
         p_score  * WEIGHTS["pitcher"]
@@ -315,18 +315,19 @@ def _pitcher_score(
     if form.get("n", 0) >= 2 and form.get("bf", 0) >= 20 and form.get("era") is not None:
         components["xera"] += (_sig_inv(form["era"] / 9.0, 0.50, 0.20, 0.80) - 0.5) * 0.18
 
-    # ── 3. Rest days — short/long rest affects 1st-inning command ────────────
-    last_start   = form.get("last_start")
-    game_date_s  = ctx.get("game_date", "")
+    # ── 3. Short-rest penalty (≤3 days) ─────────────────────────────────────
+    # Research confirms rest days have no statistically significant ERA effect
+    # except on short rest (≤3 days), where documented fatigue raises command risk.
+    # Long-rest "rust" shows no measurable effect and is removed.
+    last_start  = form.get("last_start")
+    game_date_s = ctx.get("game_date", "")
     if last_start and game_date_s:
         try:
             from datetime import date as _date
             days_rest = (_date.fromisoformat(game_date_s) -
                          _date.fromisoformat(last_start)).days
-            if days_rest <= 3:    # short rest → elevated fatigue/command risk
-                components["xera"] = max(0.0, components["xera"] - 0.07)
-            elif days_rest >= 10: # long layoff → timing/command rust
-                components["xera"] = max(0.0, components["xera"] - 0.04)
+            if days_rest <= 3:
+                components["xera"] = max(0.0, components["xera"] - 0.06)
         except Exception:
             pass
 
@@ -660,10 +661,15 @@ def _wsum(components: dict, weights: dict) -> float:
     return sum(components.get(k, 0.5) * w for k, w in weights.items()) / total_w
 
 
-def _blend2(a, b):
-    """Blend two nullable floats: both present → average, one → that value, neither → None."""
+def _blend2(a, b, a_weight: float = 2.0):
+    """Blend two nullable floats with optional weighting (default 2:1 a over b).
+
+    Used for current-year vs prior-year FI splits: current data dominates once
+    ≥15 BF are available, but prior year still provides a meaningful anchor.
+    Neither present → None so the caller can detect absence and skip the nudge.
+    """
     if a is not None and b is not None:
-        return (a + b) / 2.0
+        return (a * a_weight + b) / (a_weight + 1.0)
     return a if a is not None else b
 
 

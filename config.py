@@ -4,33 +4,36 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # ── Scoring weights (must sum to 1.0) ─────────────────────────────────────────
+# Pitcher raised to 0.45: CMU XGBoost study confirms FIP is the #1-2 feature.
+# damage_speed reduced to 0.08: hard_hit/barrel already captured in batter block;
+# sprint speed almost never influences 1st-inning outcomes.
 WEIGHTS = {
-    "pitcher":      0.42,   # pitcher is the dominant factor in first-inning outcomes
-    "batter":       0.28,
-    "park_weather": 0.14,
-    "damage_speed": 0.10,
-    "lineup":       0.06,
+    "pitcher":      0.45,
+    "batter":       0.27,
+    "park_weather": 0.13,
+    "damage_speed": 0.08,
+    "lineup":       0.07,
 }
 
 # ── Sub-weights within each block ─────────────────────────────────────────────
 P_WEIGHTS = {               # pitcher block — must sum to 1.0
-    "k_pct":      0.20,   # strikeouts = guaranteed outs, no scoring risk
-    "fps":        0.22,   # first-pitch strike rate — strongest 1st-inning leading indicator
-    "xera":       0.17,   # park-neutral xERA — prior-FI-split now carries more direct signal
-    "bb_pct":     0.12,   # walks = free baserunners, death in 1st inning
-    "chase_rate": 0.11,   # o-swing% — weak contact / K's
-    "whiff_pct":  0.07,   # swing-and-miss rate — raw stuff quality
-    "gb_pct":     0.08,   # ground ball rate — GB→double play, no HR risk
-    "hard_hit":   0.03,   # hard contact (reduced: mostly captured by xERA)
+    "fps":        0.22,   # first-pitch strike rate — most direct command signal in 1st inning
+    "xera":       0.22,   # park-neutral xERA — #1 overall predictor (CMU research); raised to match
+    "k_pct":      0.18,   # strikeouts = outs with zero contact risk; partially overlaps xERA/FPS
+    "bb_pct":     0.14,   # walks = free baserunners; most damaging single event in 1st inning
+    "gb_pct":     0.09,   # ground balls → double-play potential, no HR risk
+    "chase_rate": 0.08,   # o-swing% — reduced: heavily correlated with k_pct
+    "whiff_pct":  0.05,   # swing-and-miss — reduced: mostly captured by k_pct + chase_rate
+    "hard_hit":   0.02,   # hard contact — minimal weight: almost entirely redundant with xERA
 }
 
 B_WEIGHTS = {           # batter block — must sum to 1.0
-    "xwoba":    0.22,   # overall contact quality
-    "k_pct":    0.22,   # high K% = easy out, can't score (raised: most reliable NRFI signal)
-    "obp":      0.22,   # on-base rate = run-scoring prerequisite (raised)
-    "bb_pct":   0.16,   # walk rate = free baserunner risk
-    "hard_hit": 0.11,   # hard contact = extra-base risk
-    "barrel":   0.07,   # barrel rate = solo-HR risk even with bases empty
+    "k_pct":    0.25,   # strikeout rate = outs without contact; fastest-stabilizing, most reliable
+    "xwoba":    0.21,   # expected weighted OBA — best single contact-quality metric
+    "bb_pct":   0.18,   # walk rate = free baserunners; distinct from xwoba
+    "obp":      0.18,   # on-base rate — lowered: highly correlated with xwoba (double-counting risk)
+    "hard_hit": 0.11,   # hard contact = extra-base damage potential
+    "barrel":   0.07,   # barrel rate = solo-HR risk even with empty bases
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
