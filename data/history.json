@@ -1448,7 +1448,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-05-08",
@@ -1461,10 +1461,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 4,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-05-08",
@@ -1477,10 +1477,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-05-09",
+      "game_pk": 823792,
+      "away_team": "New York Yankees",
+      "home_team": "Milwaukee Brewers",
+      "away_pitcher": "Cam Schlittler",
+      "home_pitcher": "Kyle Harrison",
+      "nrfi_prob": 0.5896,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-05-09",
+      "game_pk": 823224,
+      "away_team": "Pittsburgh Pirates",
+      "home_team": "San Francisco Giants",
+      "away_pitcher": "Braxton Ashcraft",
+      "home_pitcher": "Landen Roupp",
+      "nrfi_prob": 0.5817,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-05-09",
+      "game_pk": 824444,
+      "away_team": "Minnesota Twins",
+      "home_team": "Cleveland Guardians",
+      "away_pitcher": "Joe Ryan",
+      "home_pitcher": "Tanner Bibee",
+      "nrfi_prob": 0.5807,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
