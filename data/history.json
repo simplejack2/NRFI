@@ -3320,7 +3320,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-06-16",
@@ -3333,10 +3333,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-06-16",
@@ -3348,6 +3348,54 @@
       "nrfi_prob": 0.5658,
       "rank": 3,
       "lineups_confirmed": true,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "live"
+    },
+    {
+      "date": "2026-06-17",
+      "game_pk": 823940,
+      "away_team": "Tampa Bay Rays",
+      "home_team": "Los Angeles Dodgers",
+      "away_pitcher": "Shane McClanahan",
+      "home_pitcher": "Shohei Ohtani",
+      "nrfi_prob": 0.589,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-06-17",
+      "game_pk": 824178,
+      "away_team": "Detroit Tigers",
+      "home_team": "Houston Astros",
+      "away_pitcher": "Casey Mize",
+      "home_pitcher": "Peter Lambert",
+      "nrfi_prob": 0.5751,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-06-17",
+      "game_pk": 823127,
+      "away_team": "Baltimore Orioles",
+      "home_team": "Seattle Mariners",
+      "away_pitcher": "Kyle Bradish",
+      "home_pitcher": "George Kirby",
+      "nrfi_prob": 0.5721,
+      "rank": 3,
+      "lineups_confirmed": false,
       "odds": null,
       "away_r": null,
       "home_r": null,
