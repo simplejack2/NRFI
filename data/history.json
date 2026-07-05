@@ -4184,7 +4184,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-07-04",
@@ -4197,10 +4197,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 1,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-07-04",
@@ -4213,10 +4213,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-07-05",
+      "game_pk": 823117,
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Seattle Mariners",
+      "away_pitcher": "Trey Yesavage",
+      "home_pitcher": "Emerson Hancock",
+      "nrfi_prob": 0.5784,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-07-05",
+      "game_pk": 824980,
+      "away_team": "Miami Marlins",
+      "home_team": "Athletics",
+      "away_pitcher": "Eury P\u00e9rez",
+      "home_pitcher": "Gage Jump",
+      "nrfi_prob": 0.5778,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-07-05",
+      "game_pk": 823525,
+      "away_team": "Minnesota Twins",
+      "home_team": "New York Yankees",
+      "away_pitcher": "Joe Ryan",
+      "home_pitcher": "Ryan Weathers",
+      "nrfi_prob": 0.5768,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
