@@ -4,40 +4,51 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # ── Scoring weights (must sum to 1.0) ─────────────────────────────────────────
+# Anti-dilution rebuild: the 3-month backtest showed the model compresses real
+# game-to-game differences ~5x (fitted logistic slope b=4.85). Root cause is
+# variance collapse — averaging weakly-discriminative blocks pulls every
+# composite toward 0.5. Fix: concentrate weight on the proven signal (pitcher)
+# and cut the near-noise damage_speed block (hard_hit/barrel already live in the
+# batter block; sprint speed almost never affects a bases-empty 1st inning).
 WEIGHTS = {
-    "pitcher":      0.42,   # pitcher is the dominant factor in first-inning outcomes
-    "batter":       0.28,
-    "park_weather": 0.14,
-    "damage_speed": 0.10,
-    "lineup":       0.06,
+    "pitcher":      0.49,   # dominant, proven signal (CMU: FIP is feature #1-2)
+    "batter":       0.27,
+    "park_weather": 0.13,
+    "damage_speed": 0.04,   # cut from 0.08 — redundant with batter block, near-noise for inning 1
+    "lineup":       0.07,
 }
 
 # ── Sub-weights within each block ─────────────────────────────────────────────
-P_WEIGHTS = {               # pitcher block
-    "k_pct":      0.22,   # strikeouts = most reliable outs, no contact risk
-    "fps":        0.22,   # first-pitch strike rate — strongest leading indicator (raised: command wins 1st innings)
-    "xera":       0.20,   # park-neutral expected ERA — comprehensive quality signal
-    "bb_pct":     0.13,   # walks guarantee baserunners
-    "chase_rate": 0.12,   # o-swing% — batters chasing = weak contact / K's
-    "whiff_pct":  0.08,   # swing-and-miss rate per swing — measures raw stuff
-    "hard_hit":   0.03,   # hard contact rate (reduced: redundant with xERA in 1st inning)
+P_WEIGHTS = {               # pitcher block — must sum to 1.0
+    "fps":        0.22,   # first-pitch strike rate — most direct command signal in 1st inning
+    "xera":       0.22,   # park-neutral xERA — #1 overall predictor (CMU research); raised to match
+    "k_pct":      0.18,   # strikeouts = outs with zero contact risk; partially overlaps xERA/FPS
+    "bb_pct":     0.14,   # walks = free baserunners; most damaging single event in 1st inning
+    "gb_pct":     0.09,   # ground balls → double-play potential, no HR risk
+    "chase_rate": 0.08,   # o-swing% — reduced: heavily correlated with k_pct
+    "whiff_pct":  0.05,   # swing-and-miss — reduced: mostly captured by k_pct + chase_rate
+    "hard_hit":   0.02,   # hard contact — minimal weight: almost entirely redundant with xERA
 }
 
-B_WEIGHTS = {           # batter block
-    "xwoba":    0.25,
-    "k_pct":    0.20,   # high K% batters = easier outs = good for NRFI
-    "obp":      0.20,
-    "bb_pct":   0.15,
-    "hard_hit": 0.12,
-    "barrel":   0.08,
+B_WEIGHTS = {           # batter block — must sum to 1.0
+    "k_pct":    0.25,   # strikeout rate = outs without contact; fastest-stabilizing, most reliable
+    "xwoba":    0.21,   # expected weighted OBA — best single contact-quality metric
+    "bb_pct":   0.18,   # walk rate = free baserunners; distinct from xwoba
+    "obp":      0.18,   # on-base rate — lowered: highly correlated with xwoba (double-counting risk)
+    "hard_hit": 0.11,   # hard contact = extra-base damage potential
+    "barrel":   0.07,   # barrel rate = solo-HR risk even with empty bases
 }
 
 # ── Bet filter ─────────────────────────────────────────────────────────────────
-# min_half_prob=0.75 requires composite ≥ ~0.50 per half (around league average).
-# min_nrfi_prob=0.595 is consistent with both halves at the min_half_prob floor.
+# Threshold set from the 3-month backtest (201 post-April picks). The old 0.595
+# floor fired only 5 times in 3 months. At 0.580 the model would have hit 57.6%
+# (n=85, ~1.4 plays/day) — the "more action" volume. NOTE: the honest ranking
+# ceiling of the CURRENT model is ~56% (top tercile n=67 = 56.7%); reaching
+# 60-65% requires better feature discrimination, which the new slate_log.json
+# instrumentation is being collected to enable.
 BET_FILTER = {
-    "min_nrfi_prob":  0.595,
-    "min_half_prob":  0.75,
+    "min_nrfi_prob":  0.580,
+    "min_half_prob":  0.74,
     "max_plays":      2,
 }
 
@@ -59,6 +70,8 @@ LG = {
     "batter_k_pct":  0.228,  # mirror of pitcher K% — symmetric
     "batter_hh":     0.370,
     "batter_barrel": 0.080,
+    # pitcher batted-ball
+    "gb_pct":        0.44,   # MLB avg ground ball rate for pitchers
     # speed/field
     "sprint":        27.0,   # ft/s
     "pop_time":      2.02,   # seconds catcher 2B pop time
