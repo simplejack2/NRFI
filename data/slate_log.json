@@ -5,22 +5,22 @@
       "game_pk": 823202,
       "away_pitcher": "Dylan Cease",
       "home_pitcher": "Logan Webb",
-      "nrfi_prob": 0.5875,
+      "nrfi_prob": 0.5883,
       "confirmed": true,
       "top": {
-        "composite": 0.4963,
-        "half_prob": 0.7533,
-        "pitcher": 0.4878,
-        "batter": 0.4246,
+        "composite": 0.4966,
+        "half_prob": 0.7534,
+        "pitcher": 0.488,
+        "batter": 0.4251,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5541,
-        "half_prob": 0.7799,
-        "pitcher": 0.5551,
-        "batter": 0.516,
+        "composite": 0.5562,
+        "half_prob": 0.7809,
+        "pitcher": 0.5595,
+        "batter": 0.5161,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -56,10 +56,37 @@
     },
     {
       "date": "2026-07-08",
+      "game_pk": 824578,
+      "away_pitcher": "Jake Bennett",
+      "home_pitcher": "Davis Martin",
+      "nrfi_prob": 0.5784,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5077,
+        "half_prob": 0.7586,
+        "pitcher": 0.5335,
+        "batter": 0.4794,
+        "park_weather": 0.4217,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5161,
+        "half_prob": 0.7625,
+        "pitcher": 0.5366,
+        "batter": 0.505,
+        "park_weather": 0.4217,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-08",
       "game_pk": 823032,
       "away_pitcher": "Kyle Harrison",
       "home_pitcher": "Michael McGreevy",
-      "nrfi_prob": 0.5813,
+      "nrfi_prob": 0.5758,
       "confirmed": false,
       "top": {
         "composite": 0.4974,
@@ -71,10 +98,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5349,
-        "half_prob": 0.7712,
-        "pitcher": 0.5763,
-        "batter": 0.5,
+        "composite": 0.5189,
+        "half_prob": 0.7638,
+        "pitcher": 0.577,
+        "batter": 0.4393,
         "park_weather": 0.535,
         "damage_speed": 0.5,
         "lineup": 0.4
@@ -86,79 +113,25 @@
       "game_pk": 824253,
       "away_pitcher": "Jeffrey Springs",
       "home_pitcher": "Troy Melton",
-      "nrfi_prob": 0.5705,
+      "nrfi_prob": 0.5702,
       "confirmed": true,
       "top": {
-        "composite": 0.5091,
-        "half_prob": 0.7592,
+        "composite": 0.5086,
+        "half_prob": 0.759,
         "pitcher": 0.5189,
         "batter": 0.4469,
-        "park_weather": 0.555,
+        "park_weather": 0.5517,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4926,
-        "half_prob": 0.7515,
+        "composite": 0.4921,
+        "half_prob": 0.7513,
         "pitcher": 0.4699,
         "batter": 0.4748,
-        "park_weather": 0.555,
+        "park_weather": 0.5517,
         "damage_speed": 0.5,
         "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-08",
-      "game_pk": 824578,
-      "away_pitcher": "Jake Bennett",
-      "home_pitcher": "Davis Martin",
-      "nrfi_prob": 0.5703,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4985,
-        "half_prob": 0.7543,
-        "pitcher": 0.5321,
-        "batter": 0.5,
-        "park_weather": 0.4217,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5021,
-        "half_prob": 0.756,
-        "pitcher": 0.5366,
-        "batter": 0.505,
-        "park_weather": 0.4217,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-08",
-      "game_pk": 823684,
-      "away_pitcher": "Slade Cecconi",
-      "home_pitcher": "Connor Prielipp",
-      "nrfi_prob": 0.5669,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5008,
-        "half_prob": 0.7554,
-        "pitcher": 0.5116,
-        "batter": 0.5,
-        "park_weather": 0.5167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4904,
-        "half_prob": 0.7505,
-        "pitcher": 0.4902,
-        "batter": 0.5,
-        "park_weather": 0.5167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
       },
       "result": null
     },
@@ -194,23 +167,23 @@
       "game_pk": 824496,
       "away_pitcher": "Alan Rangel",
       "home_pitcher": "Chase Burns",
-      "nrfi_prob": 0.5658,
+      "nrfi_prob": 0.5657,
       "confirmed": true,
       "top": {
-        "composite": 0.5113,
-        "half_prob": 0.7602,
+        "composite": 0.5111,
+        "half_prob": 0.7601,
         "pitcher": 0.5778,
         "batter": 0.4452,
-        "park_weather": 0.3533,
+        "park_weather": 0.3517,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4769,
-        "half_prob": 0.7443,
+        "composite": 0.4767,
+        "half_prob": 0.7442,
         "pitcher": 0.4849,
         "batter": 0.4866,
-        "park_weather": 0.3533,
+        "park_weather": 0.3517,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -348,6 +321,33 @@
         "park_weather": 0.5417,
         "damage_speed": 0.5,
         "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-08",
+      "game_pk": 823684,
+      "away_pitcher": "Slade Cecconi",
+      "home_pitcher": "Connor Prielipp",
+      "nrfi_prob": 0.5592,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4787,
+        "half_prob": 0.7451,
+        "pitcher": 0.5128,
+        "batter": 0.4158,
+        "park_weather": 0.5167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4904,
+        "half_prob": 0.7505,
+        "pitcher": 0.4902,
+        "batter": 0.5,
+        "park_weather": 0.5167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
       },
       "result": null
     },
