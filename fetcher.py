@@ -458,11 +458,12 @@ def _fetch_pitcher_recent_form(pid: int, season: int, n: int) -> dict:
         except Exception:
             pass
     return {
-        "era":    round(total_er / total_ip * 9, 2) if total_ip > 0 else None,
-        "k_pct":  _safe_div(total_k, total_bf),
-        "bb_pct": _safe_div(total_bb, total_bf),
-        "n":      len(splits),
-        "bf":     total_bf,
+        "era":        round(total_er / total_ip * 9, 2) if total_ip > 0 else None,
+        "k_pct":      _safe_div(total_k, total_bf),
+        "bb_pct":     _safe_div(total_bb, total_bf),
+        "n":          len(splits),
+        "bf":         total_bf,
+        "last_start": splits[0].get("date") if splits else None,
     }
 
 
@@ -1004,7 +1005,7 @@ def _fetch_savant_pitchers(season: int) -> dict[int, dict]:
         "filter":     "",
         "selections": (
             "xwoba,xera,k_percent,bb_percent,whiff_percent,"
-            "hard_hit_percent,f_strike_percent,o_swing_percent"
+            "hard_hit_percent,f_strike_percent,o_swing_percent,groundballs_percent"
         ),
         "chart":      "false",
         "x":          "xwoba",
@@ -1025,6 +1026,7 @@ def _fetch_savant_pitchers(season: int) -> dict[int, dict]:
             "whiff_pct":  _pct(row.get("whiff_percent")),
             "chase_rate": _pct(row.get("o_swing_percent")),
             "hard_hit":   _pct(row.get("hard_hit_percent")),
+            "gb_pct":     _pct(row.get("groundballs_percent")),
             "pa":         _i(row.get("pa")) or 0,
         }
     log.info("Savant pitchers: %d rows for %d", len(result), season)
@@ -1129,6 +1131,35 @@ def _fetch_team_catchers(team_id: int, season: int) -> list[int]:
         for e in data.get("roster", [])
         if e.get("position", {}).get("abbreviation") == "C"
     ]
+
+
+def team_fi_batting(team_id: int, season: int) -> dict:
+    """Team-level first-inning batting stats (OBP, K%, BB%, runs per game)."""
+    return _cached(f"tfi_bat_{team_id}_{season}", 86400,
+                   lambda: _fetch_team_fi_batting(team_id, season))
+
+
+def _fetch_team_fi_batting(team_id: int, season: int) -> dict:
+    data = _get(f"/teams/{team_id}/stats", params={
+        "stats": "statSplits", "group": "hitting",
+        "season": season, "sitCodes": "i1", "sportId": 1,
+    })
+    if not data:
+        return {}
+    for block in data.get("stats", []):
+        for sp in block.get("splits", []):
+            if sp.get("split", {}).get("code") == "i1":
+                s  = sp.get("stat", {})
+                pa = s.get("plateAppearances") or 0
+                gp = s.get("gamesPlayed") or 1
+                return {
+                    "obp":         _f(s.get("obp")),
+                    "k_pct":       _safe_div(s.get("strikeOuts"), pa),
+                    "bb_pct":      _safe_div(s.get("baseOnBalls"), pa),
+                    "pa":          pa,
+                    "scoring_pct": _safe_div(s.get("runs"), gp),
+                }
+    return {}
 
 
 # ── Weather (wttr.in free API, no key required) ───────────────────────────────

@@ -113,6 +113,7 @@ def _print_card(r: dict) -> None:
 
 _ROOT = os.path.dirname(os.path.abspath(__file__))
 _HISTORY_PATH = os.path.join(_ROOT, "data", "history.json")
+_SLATE_LOG_PATH = os.path.join(_ROOT, "data", "slate_log.json")
 
 
 def _load_history() -> dict:
@@ -215,6 +216,65 @@ def _update_history(results: list[dict], game_date: str, add_today: bool = True)
         log.error("Could not save history: %s", exc)
 
     return history
+
+
+# ── Slate feature log ─────────────────────────────────────────────────────────
+# Records EVERY game's component-score breakdown (not just the top-3 bets) so
+# that once outcomes resolve we can regress features → NRFI outcome and run a
+# real, validated feature/weight rebuild.  history.json only stores nrfi_prob,
+# which is why the model can be calibrated but not diagnosed at the feature
+# level.  This log is the dataset for the next rebuild.
+
+def _update_slate_log(results: list[dict], game_date: str) -> None:
+    """Resolve pending slate records, then append today's full-slate features."""
+    log = logging.getLogger("nrfi.slate")
+    try:
+        with open(_SLATE_LOG_PATH) as f:
+            slate = json.load(f)
+    except Exception:
+        slate = {"games": []}
+
+    # Resolve any still-pending records (past dates and same-day finals)
+    for rec in slate["games"]:
+        if rec.get("result") is not None:
+            continue
+        try:
+            ls = F.linescore(rec["game_pk"])
+            nr = ls.get("nrfi_result", "pending")
+            if nr in ("NRFI", "YRFI"):
+                rec["result"] = nr
+        except Exception:
+            pass
+
+    if results:
+        # Idempotent re-run: drop today's existing records first.
+        slate["games"] = [g for g in slate["games"] if g.get("date") != game_date]
+        for r in results:
+            top, bot = r["top_half"], r["bot_half"]
+            slate["games"].append({
+                "date":         game_date,
+                "game_pk":      r["game_pk"],
+                "away_pitcher": r["away_pitcher"].get("name", "TBD"),
+                "home_pitcher": r["home_pitcher"].get("name", "TBD"),
+                "nrfi_prob":    round(r["nrfi_prob"], 4),
+                "confirmed":    r["lineups_confirmed"],
+                # Per-half block scores — the model's features, for later regression
+                "top": {"composite": top["composite"], "half_prob": top["half_prob"],
+                        **{k: round(v, 4) for k, v in top["scores"].items()}},
+                "bot": {"composite": bot["composite"], "half_prob": bot["half_prob"],
+                        **{k: round(v, 4) for k, v in bot["scores"].items()}},
+                "result":       None,
+            })
+
+    try:
+        os.makedirs(os.path.dirname(_SLATE_LOG_PATH), exist_ok=True)
+        with open(_SLATE_LOG_PATH, "w") as f:
+            json.dump(slate, f, indent=2)
+        resolved = sum(1 for g in slate["games"] if g.get("result"))
+        log.info("Slate log saved: %d games (%d resolved)",
+                 len(slate["games"]), resolved)
+    except Exception as exc:
+        log.error("Could not save slate log: %s", exc)
 
 
 # ── HTML injection ────────────────────────────────────────────────────────────
@@ -331,6 +391,7 @@ def main() -> int:
             else:
                 # Load existing history (resolve pending) even when model failed
                 history = _update_history([], game_date, add_today=False)
+            _update_slate_log(results or [], game_date)
             _write_html(results or [], game_date, history)
 
     return 0
