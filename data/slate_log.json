@@ -5,22 +5,22 @@
       "game_pk": 823202,
       "away_pitcher": "Dylan Cease",
       "home_pitcher": "Logan Webb",
-      "nrfi_prob": 0.5871,
+      "nrfi_prob": 0.5875,
       "confirmed": true,
       "top": {
-        "composite": 0.4965,
-        "half_prob": 0.7534,
-        "pitcher": 0.4881,
-        "batter": 0.4244,
+        "composite": 0.4963,
+        "half_prob": 0.7533,
+        "pitcher": 0.4878,
+        "batter": 0.4246,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5527,
-        "half_prob": 0.7793,
-        "pitcher": 0.553,
-        "batter": 0.5148,
+        "composite": 0.5541,
+        "half_prob": 0.7799,
+        "pitcher": 0.5551,
+        "batter": 0.516,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -137,33 +137,6 @@
     },
     {
       "date": "2026-07-08",
-      "game_pk": 823360,
-      "away_pitcher": "Grant Holmes",
-      "home_pitcher": "Jared Jones",
-      "nrfi_prob": 0.5678,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5043,
-        "half_prob": 0.757,
-        "pitcher": 0.5012,
-        "batter": 0.4532,
-        "park_weather": 0.5717,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4895,
-        "half_prob": 0.7501,
-        "pitcher": 0.478,
-        "batter": 0.4404,
-        "park_weather": 0.5717,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-08",
       "game_pk": 823684,
       "away_pitcher": "Slade Cecconi",
       "home_pitcher": "Connor Prielipp",
@@ -186,6 +159,33 @@
         "park_weather": 0.5167,
         "damage_speed": 0.5,
         "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-08",
+      "game_pk": 823360,
+      "away_pitcher": "Grant Holmes",
+      "home_pitcher": "Jared Jones",
+      "nrfi_prob": 0.5668,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5027,
+        "half_prob": 0.7563,
+        "pitcher": 0.5012,
+        "batter": 0.4532,
+        "park_weather": 0.56,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4879,
+        "half_prob": 0.7494,
+        "pitcher": 0.478,
+        "batter": 0.4404,
+        "park_weather": 0.56,
+        "damage_speed": 0.5,
+        "lineup": 0.6
       },
       "result": null
     },
@@ -299,6 +299,33 @@
     },
     {
       "date": "2026-07-08",
+      "game_pk": 822710,
+      "away_pitcher": "Spencer Arrighetti",
+      "home_pitcher": "Foster Griffin",
+      "nrfi_prob": 0.5596,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5107,
+        "half_prob": 0.76,
+        "pitcher": 0.5628,
+        "batter": 0.4093,
+        "park_weather": 0.48,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4595,
+        "half_prob": 0.7363,
+        "pitcher": 0.4554,
+        "batter": 0.4145,
+        "park_weather": 0.48,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-08",
       "game_pk": 823605,
       "away_pitcher": "Steven Cruz",
       "home_pitcher": "Christian Scott",
@@ -321,33 +348,6 @@
         "park_weather": 0.5417,
         "damage_speed": 0.5,
         "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-08",
-      "game_pk": 822710,
-      "away_pitcher": "Spencer Arrighetti",
-      "home_pitcher": "Foster Griffin",
-      "nrfi_prob": 0.558,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4967,
-        "half_prob": 0.7535,
-        "pitcher": 0.5628,
-        "batter": 0.4093,
-        "park_weather": 0.48,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4688,
-        "half_prob": 0.7405,
-        "pitcher": 0.4559,
-        "batter": 0.5,
-        "park_weather": 0.48,
-        "damage_speed": 0.5,
-        "lineup": 0.4
       },
       "result": null
     },
