@@ -5,23 +5,23 @@
       "game_pk": 823202,
       "away_pitcher": "Dylan Cease",
       "home_pitcher": "Logan Webb",
-      "nrfi_prob": 0.5877,
+      "nrfi_prob": 0.5882,
       "confirmed": false,
       "top": {
-        "composite": 0.5146,
-        "half_prob": 0.7618,
+        "composite": 0.5154,
+        "half_prob": 0.7621,
         "pitcher": 0.5231,
         "batter": 0.5,
-        "park_weather": 0.5794,
+        "park_weather": 0.5849,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5356,
-        "half_prob": 0.7715,
+        "composite": 0.5363,
+        "half_prob": 0.7718,
         "pitcher": 0.5659,
         "batter": 0.5,
-        "park_weather": 0.5794,
+        "park_weather": 0.5849,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -110,33 +110,6 @@
     },
     {
       "date": "2026-07-08",
-      "game_pk": 823848,
-      "away_pitcher": "George Kirby",
-      "home_pitcher": "Tyler Phillips",
-      "nrfi_prob": 0.5711,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4729,
-        "half_prob": 0.7424,
-        "pitcher": 0.4393,
-        "batter": 0.5,
-        "park_weather": 0.574,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5307,
-        "half_prob": 0.7692,
-        "pitcher": 0.5572,
-        "batter": 0.5,
-        "park_weather": 0.574,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-08",
       "game_pk": 824578,
       "away_pitcher": "Jake Bennett",
       "home_pitcher": "Davis Martin",
@@ -164,26 +137,26 @@
     },
     {
       "date": "2026-07-08",
-      "game_pk": 823605,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Christian Scott",
-      "nrfi_prob": 0.5692,
+      "game_pk": 823848,
+      "away_pitcher": "George Kirby",
+      "home_pitcher": "Tyler Phillips",
+      "nrfi_prob": 0.57,
       "confirmed": false,
       "top": {
-        "composite": 0.4957,
-        "half_prob": 0.753,
-        "pitcher": 0.4874,
+        "composite": 0.4714,
+        "half_prob": 0.7417,
+        "pitcher": 0.4393,
         "batter": 0.5,
-        "park_weather": 0.5686,
+        "park_weather": 0.5625,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5019,
-        "half_prob": 0.7559,
-        "pitcher": 0.5,
+        "composite": 0.5292,
+        "half_prob": 0.7685,
+        "pitcher": 0.5572,
         "batter": 0.5,
-        "park_weather": 0.5686,
+        "park_weather": 0.5625,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -346,6 +319,33 @@
         "pitcher": 0.4704,
         "batter": 0.5,
         "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-08",
+      "game_pk": 823605,
+      "away_pitcher": "Steven Cruz",
+      "home_pitcher": "Christian Scott",
+      "nrfi_prob": 0.5614,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4933,
+        "half_prob": 0.7519,
+        "pitcher": 0.4874,
+        "batter": 0.5,
+        "park_weather": 0.55,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4822,
+        "half_prob": 0.7467,
+        "pitcher": 0.4646,
+        "batter": 0.5,
+        "park_weather": 0.55,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
