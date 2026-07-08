@@ -83,6 +83,33 @@
     },
     {
       "date": "2026-07-08",
+      "game_pk": 823360,
+      "away_pitcher": "Grant Holmes",
+      "home_pitcher": "Jared Jones",
+      "nrfi_prob": 0.5731,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5101,
+        "half_prob": 0.7597,
+        "pitcher": 0.5017,
+        "batter": 0.5,
+        "park_weather": 0.625,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4988,
+        "half_prob": 0.7544,
+        "pitcher": 0.4786,
+        "batter": 0.5,
+        "park_weather": 0.625,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-08",
       "game_pk": 823848,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Tyler Phillips",
@@ -130,33 +157,6 @@
         "pitcher": 0.5361,
         "batter": 0.5,
         "park_weather": 0.4333,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-08",
-      "game_pk": 823360,
-      "away_pitcher": "Grant Holmes",
-      "home_pitcher": "Jared Jones",
-      "nrfi_prob": 0.5693,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5047,
-        "half_prob": 0.7572,
-        "pitcher": 0.5017,
-        "batter": 0.5,
-        "park_weather": 0.5833,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4933,
-        "half_prob": 0.7519,
-        "pitcher": 0.4786,
-        "batter": 0.5,
-        "park_weather": 0.5833,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
