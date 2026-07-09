@@ -437,7 +437,7 @@
       "game_pk": 822877,
       "away_pitcher": "Reid Detmers",
       "home_pitcher": "Nathan Eovaldi",
-      "nrfi_prob": 0.5748,
+      "nrfi_prob": 0.5745,
       "confirmed": false,
       "top": {
         "composite": 0.5152,
@@ -449,10 +449,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4982,
-        "half_prob": 0.7542,
-        "pitcher": 0.529,
-        "batter": 0.5,
+        "composite": 0.4976,
+        "half_prob": 0.7539,
+        "pitcher": 0.53,
+        "batter": 0.496,
         "park_weather": 0.4307,
         "damage_speed": 0.5,
         "lineup": 0.4
@@ -515,33 +515,6 @@
     },
     {
       "date": "2026-07-09",
-      "game_pk": 822954,
-      "away_pitcher": "Paul Blackburn",
-      "home_pitcher": "Drew Rasmussen",
-      "nrfi_prob": 0.5675,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5157,
-        "half_prob": 0.7623,
-        "pitcher": 0.5407,
-        "batter": 0.4022,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4771,
-        "half_prob": 0.7444,
-        "pitcher": 0.4665,
-        "batter": 0.3939,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
       "game_pk": 823034,
       "away_pitcher": "Logan Henderson",
       "home_pitcher": "Andre Pallante",
@@ -572,23 +545,50 @@
       "game_pk": 823683,
       "away_pitcher": "Gavin Williams",
       "home_pitcher": "Bailey Ober",
-      "nrfi_prob": 0.5656,
+      "nrfi_prob": 0.5669,
       "confirmed": true,
       "top": {
-        "composite": 0.4743,
-        "half_prob": 0.7431,
-        "pitcher": 0.4762,
-        "batter": 0.4047,
+        "composite": 0.4752,
+        "half_prob": 0.7435,
+        "pitcher": 0.4767,
+        "batter": 0.4075,
         "park_weather": 0.5358,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5131,
-        "half_prob": 0.7611,
-        "pitcher": 0.5345,
-        "batter": 0.4428,
+        "composite": 0.5162,
+        "half_prob": 0.7625,
+        "pitcher": 0.536,
+        "batter": 0.4512,
         "park_weather": 0.5358,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 822954,
+      "away_pitcher": "Paul Blackburn",
+      "home_pitcher": "Drew Rasmussen",
+      "nrfi_prob": 0.5667,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5134,
+        "half_prob": 0.7612,
+        "pitcher": 0.5381,
+        "batter": 0.3983,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4774,
+        "half_prob": 0.7445,
+        "pitcher": 0.4663,
+        "batter": 0.3955,
+        "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -599,52 +599,25 @@
       "game_pk": 824251,
       "away_pitcher": "Jos\u00e9 Suarez",
       "home_pitcher": "Framber Valdez",
-      "nrfi_prob": 0.557,
-      "confirmed": false,
+      "nrfi_prob": 0.5607,
+      "confirmed": true,
       "top": {
-        "composite": 0.4835,
-        "half_prob": 0.7473,
-        "pitcher": 0.4633,
-        "batter": 0.5,
+        "composite": 0.48,
+        "half_prob": 0.7457,
+        "pitcher": 0.4599,
+        "batter": 0.4413,
         "park_weather": 0.5652,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4793,
-        "half_prob": 0.7454,
+        "composite": 0.4933,
+        "half_prob": 0.7519,
         "pitcher": 0.4796,
         "batter": 0.4547,
         "park_weather": 0.5652,
         "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
-      "game_pk": 823201,
-      "away_pitcher": "Ryan Feltner",
-      "home_pitcher": "Carson Whisenhunt",
-      "nrfi_prob": 0.5563,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4635,
-        "half_prob": 0.7381,
-        "pitcher": 0.4132,
-        "batter": 0.5,
-        "park_weather": 0.6,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4972,
-        "half_prob": 0.7537,
-        "pitcher": 0.4821,
-        "batter": 0.5,
-        "park_weather": 0.6,
-        "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -653,13 +626,13 @@
       "game_pk": 823359,
       "away_pitcher": "Bryce Elder",
       "home_pitcher": "Mitch Keller",
-      "nrfi_prob": 0.5552,
+      "nrfi_prob": 0.5551,
       "confirmed": true,
       "top": {
-        "composite": 0.4781,
-        "half_prob": 0.7449,
+        "composite": 0.4779,
+        "half_prob": 0.7447,
         "pitcher": 0.4384,
-        "batter": 0.4619,
+        "batter": 0.4611,
         "park_weather": 0.5892,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -668,7 +641,7 @@
         "composite": 0.4794,
         "half_prob": 0.7454,
         "pitcher": 0.4488,
-        "batter": 0.4476,
+        "batter": 0.4477,
         "park_weather": 0.5892,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -680,25 +653,52 @@
       "game_pk": 824577,
       "away_pitcher": "Patrick Sandoval",
       "home_pitcher": "Anthony Kay",
-      "nrfi_prob": 0.5549,
+      "nrfi_prob": 0.5546,
       "confirmed": true,
       "top": {
-        "composite": 0.4697,
-        "half_prob": 0.741,
+        "composite": 0.4687,
+        "half_prob": 0.7405,
         "pitcher": 0.4435,
-        "batter": 0.489,
+        "batter": 0.4853,
         "park_weather": 0.4492,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4869,
-        "half_prob": 0.7489,
+        "composite": 0.4871,
+        "half_prob": 0.749,
         "pitcher": 0.4805,
-        "batter": 0.4855,
+        "batter": 0.4862,
         "park_weather": 0.4492,
         "damage_speed": 0.5,
         "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 823201,
+      "away_pitcher": "Ryan Feltner",
+      "home_pitcher": "Carson Whisenhunt",
+      "nrfi_prob": 0.5544,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4607,
+        "half_prob": 0.7368,
+        "pitcher": 0.4132,
+        "batter": 0.5,
+        "park_weather": 0.5784,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4944,
+        "half_prob": 0.7524,
+        "pitcher": 0.4821,
+        "batter": 0.5,
+        "park_weather": 0.5784,
+        "damage_speed": 0.5,
+        "lineup": 0.4
       },
       "result": null
     },
@@ -734,21 +734,21 @@
       "game_pk": 824816,
       "away_pitcher": "David Peterson",
       "home_pitcher": "Trevor Rogers",
-      "nrfi_prob": 0.5337,
+      "nrfi_prob": 0.5343,
       "confirmed": true,
       "top": {
-        "composite": 0.4585,
-        "half_prob": 0.7358,
-        "pitcher": 0.4743,
-        "batter": 0.3922,
+        "composite": 0.4595,
+        "half_prob": 0.7363,
+        "pitcher": 0.4761,
+        "batter": 0.3929,
         "park_weather": 0.4475,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4356,
-        "half_prob": 0.7254,
-        "pitcher": 0.4155,
+        "composite": 0.4363,
+        "half_prob": 0.7257,
+        "pitcher": 0.417,
         "batter": 0.4141,
         "park_weather": 0.4475,
         "damage_speed": 0.5,
