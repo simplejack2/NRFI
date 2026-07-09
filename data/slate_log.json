@@ -417,7 +417,7 @@
         "half_prob": 0.7524,
         "pitcher": 0.4778,
         "batter": 0.457,
-        "park_weather": 0.576,
+        "park_weather": 0.5763,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -426,7 +426,7 @@
         "half_prob": 0.7749,
         "pitcher": 0.6238,
         "batter": 0.372,
-        "park_weather": 0.576,
+        "park_weather": 0.5763,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -464,23 +464,23 @@
       "game_pk": 824577,
       "away_pitcher": "Patrick Sandoval",
       "home_pitcher": "Anthony Kay",
-      "nrfi_prob": 0.569,
+      "nrfi_prob": 0.5684,
       "confirmed": true,
       "top": {
-        "composite": 0.4789,
-        "half_prob": 0.7452,
+        "composite": 0.4784,
+        "half_prob": 0.745,
         "pitcher": 0.4576,
         "batter": 0.4957,
-        "park_weather": 0.4525,
+        "park_weather": 0.4492,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5182,
-        "half_prob": 0.7635,
-        "pitcher": 0.5313,
-        "batter": 0.5077,
-        "park_weather": 0.4525,
+        "composite": 0.5172,
+        "half_prob": 0.763,
+        "pitcher": 0.5298,
+        "batter": 0.5083,
+        "park_weather": 0.4492,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -518,13 +518,13 @@
       "game_pk": 823606,
       "away_pitcher": "Michael Wacha",
       "home_pitcher": "Sean Manaea",
-      "nrfi_prob": 0.5668,
+      "nrfi_prob": 0.5674,
       "confirmed": true,
       "top": {
-        "composite": 0.5154,
-        "half_prob": 0.7622,
-        "pitcher": 0.5084,
-        "batter": 0.4947,
+        "composite": 0.5169,
+        "half_prob": 0.7629,
+        "pitcher": 0.511,
+        "batter": 0.4956,
         "park_weather": 0.544,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -542,37 +542,10 @@
     },
     {
       "date": "2026-07-09",
-      "game_pk": 823683,
-      "away_pitcher": "Gavin Williams",
-      "home_pitcher": "Bailey Ober",
-      "nrfi_prob": 0.5665,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4746,
-        "half_prob": 0.7432,
-        "pitcher": 0.4762,
-        "batter": 0.4053,
-        "park_weather": 0.5375,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5154,
-        "half_prob": 0.7622,
-        "pitcher": 0.5397,
-        "batter": 0.4411,
-        "park_weather": 0.5375,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
       "game_pk": 822954,
       "away_pitcher": "Paul Blackburn",
       "home_pitcher": "Drew Rasmussen",
-      "nrfi_prob": 0.5648,
+      "nrfi_prob": 0.5657,
       "confirmed": true,
       "top": {
         "composite": 0.5161,
@@ -584,11 +557,38 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4692,
-        "half_prob": 0.7407,
+        "composite": 0.4717,
+        "half_prob": 0.7419,
         "pitcher": 0.4665,
-        "batter": 0.3645,
+        "batter": 0.3738,
         "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 823683,
+      "away_pitcher": "Gavin Williams",
+      "home_pitcher": "Bailey Ober",
+      "nrfi_prob": 0.565,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4746,
+        "half_prob": 0.7432,
+        "pitcher": 0.4762,
+        "batter": 0.4053,
+        "park_weather": 0.5375,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5113,
+        "half_prob": 0.7602,
+        "pitcher": 0.5312,
+        "batter": 0.4411,
+        "park_weather": 0.5375,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -734,22 +734,22 @@
       "game_pk": 824816,
       "away_pitcher": "David Peterson",
       "home_pitcher": "Trevor Rogers",
-      "nrfi_prob": 0.5393,
+      "nrfi_prob": 0.5392,
       "confirmed": true,
       "top": {
-        "composite": 0.4695,
+        "composite": 0.4694,
         "half_prob": 0.7408,
-        "pitcher": 0.4749,
-        "batter": 0.4126,
+        "pitcher": 0.4748,
+        "batter": 0.4122,
         "park_weather": 0.4875,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4414,
-        "half_prob": 0.728,
-        "pitcher": 0.4154,
-        "batter": 0.4163,
+        "composite": 0.441,
+        "half_prob": 0.7278,
+        "pitcher": 0.4155,
+        "batter": 0.4149,
         "park_weather": 0.4875,
         "damage_speed": 0.5,
         "lineup": 0.6
