@@ -417,7 +417,7 @@
         "half_prob": 0.7524,
         "pitcher": 0.4778,
         "batter": 0.457,
-        "park_weather": 0.5762,
+        "park_weather": 0.5763,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -426,7 +426,7 @@
         "half_prob": 0.7749,
         "pitcher": 0.6238,
         "batter": 0.372,
-        "park_weather": 0.5762,
+        "park_weather": 0.5763,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -444,7 +444,7 @@
         "half_prob": 0.7666,
         "pitcher": 0.5649,
         "batter": 0.4822,
-        "park_weather": 0.431,
+        "park_weather": 0.4305,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -453,7 +453,7 @@
         "half_prob": 0.7604,
         "pitcher": 0.53,
         "batter": 0.496,
-        "park_weather": 0.431,
+        "park_weather": 0.4305,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -481,33 +481,6 @@
         "pitcher": 0.5735,
         "batter": 0.3823,
         "park_weather": 0.5467,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
-      "game_pk": 824494,
-      "away_pitcher": "Jes\u00fas Luzardo",
-      "home_pitcher": "Brady Singer",
-      "nrfi_prob": 0.569,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4796,
-        "half_prob": 0.7455,
-        "pitcher": 0.4919,
-        "batter": 0.4837,
-        "park_weather": 0.3533,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5177,
-        "half_prob": 0.7632,
-        "pitcher": 0.5857,
-        "batter": 0.4548,
-        "park_weather": 0.3533,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -596,26 +569,80 @@
     },
     {
       "date": "2026-07-09",
-      "game_pk": 824251,
-      "away_pitcher": "Jos\u00e9 Suarez",
-      "home_pitcher": "Framber Valdez",
-      "nrfi_prob": 0.5607,
+      "game_pk": 824494,
+      "away_pitcher": "Jes\u00fas Luzardo",
+      "home_pitcher": "Brady Singer",
+      "nrfi_prob": 0.566,
       "confirmed": true,
       "top": {
-        "composite": 0.48,
-        "half_prob": 0.7457,
-        "pitcher": 0.4599,
-        "batter": 0.4413,
-        "park_weather": 0.5652,
+        "composite": 0.4752,
+        "half_prob": 0.7435,
+        "pitcher": 0.4919,
+        "batter": 0.4837,
+        "park_weather": 0.32,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4933,
-        "half_prob": 0.7519,
+        "composite": 0.5134,
+        "half_prob": 0.7612,
+        "pitcher": 0.5857,
+        "batter": 0.4548,
+        "park_weather": 0.32,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 823201,
+      "away_pitcher": "Ryan Feltner",
+      "home_pitcher": "Carson Whisenhunt",
+      "nrfi_prob": 0.5587,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4542,
+        "half_prob": 0.7339,
+        "pitcher": 0.4132,
+        "batter": 0.4239,
+        "park_weather": 0.5794,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5136,
+        "half_prob": 0.7613,
+        "pitcher": 0.4811,
+        "batter": 0.5205,
+        "park_weather": 0.5794,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 824251,
+      "away_pitcher": "Jos\u00e9 Suarez",
+      "home_pitcher": "Framber Valdez",
+      "nrfi_prob": 0.5571,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4749,
+        "half_prob": 0.7433,
+        "pitcher": 0.4599,
+        "batter": 0.4413,
+        "park_weather": 0.526,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4882,
+        "half_prob": 0.7495,
         "pitcher": 0.4796,
         "batter": 0.4547,
-        "park_weather": 0.5652,
+        "park_weather": 0.526,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -677,37 +704,10 @@
     },
     {
       "date": "2026-07-09",
-      "game_pk": 823201,
-      "away_pitcher": "Ryan Feltner",
-      "home_pitcher": "Carson Whisenhunt",
-      "nrfi_prob": 0.5544,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4607,
-        "half_prob": 0.7368,
-        "pitcher": 0.4132,
-        "batter": 0.5,
-        "park_weather": 0.5784,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4944,
-        "half_prob": 0.7524,
-        "pitcher": 0.4821,
-        "batter": 0.5,
-        "park_weather": 0.5784,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
       "game_pk": 823277,
       "away_pitcher": "Merrill Kelly",
       "home_pitcher": "Griffin Canning",
-      "nrfi_prob": 0.5522,
+      "nrfi_prob": 0.552,
       "confirmed": false,
       "top": {
         "composite": 0.4734,
@@ -719,10 +719,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4755,
-        "half_prob": 0.7436,
-        "pitcher": 0.4334,
-        "batter": 0.5,
+        "composite": 0.475,
+        "half_prob": 0.7434,
+        "pitcher": 0.4346,
+        "batter": 0.4958,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.4
