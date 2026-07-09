@@ -417,7 +417,7 @@
         "half_prob": 0.7524,
         "pitcher": 0.4778,
         "batter": 0.457,
-        "park_weather": 0.5763,
+        "park_weather": 0.5762,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -426,7 +426,7 @@
         "half_prob": 0.7749,
         "pitcher": 0.6238,
         "batter": 0.372,
-        "park_weather": 0.5763,
+        "park_weather": 0.5762,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -444,7 +444,7 @@
         "half_prob": 0.7621,
         "pitcher": 0.5637,
         "batter": 0.5,
-        "park_weather": 0.4307,
+        "park_weather": 0.431,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -453,9 +453,36 @@
         "half_prob": 0.7539,
         "pitcher": 0.53,
         "batter": 0.496,
-        "park_weather": 0.4307,
+        "park_weather": 0.431,
         "damage_speed": 0.5,
         "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 823034,
+      "away_pitcher": "Logan Henderson",
+      "home_pitcher": "Andre Pallante",
+      "nrfi_prob": 0.5733,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4929,
+        "half_prob": 0.7517,
+        "pitcher": 0.4839,
+        "batter": 0.457,
+        "park_weather": 0.5417,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5167,
+        "half_prob": 0.7627,
+        "pitcher": 0.5735,
+        "batter": 0.3823,
+        "park_weather": 0.5417,
+        "damage_speed": 0.5,
+        "lineup": 0.6
       },
       "result": null
     },
@@ -510,33 +537,6 @@
         "park_weather": 0.5542,
         "damage_speed": 0.5,
         "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
-      "game_pk": 823034,
-      "away_pitcher": "Logan Henderson",
-      "home_pitcher": "Andre Pallante",
-      "nrfi_prob": 0.5675,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4902,
-        "half_prob": 0.7505,
-        "pitcher": 0.4833,
-        "batter": 0.5,
-        "park_weather": 0.5417,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5027,
-        "half_prob": 0.7562,
-        "pitcher": 0.5735,
-        "batter": 0.3823,
-        "park_weather": 0.5417,
-        "damage_speed": 0.5,
-        "lineup": 0.4
       },
       "result": null
     },
@@ -623,52 +623,25 @@
     },
     {
       "date": "2026-07-09",
-      "game_pk": 823359,
-      "away_pitcher": "Bryce Elder",
-      "home_pitcher": "Mitch Keller",
-      "nrfi_prob": 0.5551,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4779,
-        "half_prob": 0.7447,
-        "pitcher": 0.4384,
-        "batter": 0.4611,
-        "park_weather": 0.5892,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4794,
-        "half_prob": 0.7454,
-        "pitcher": 0.4488,
-        "batter": 0.4477,
-        "park_weather": 0.5892,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-09",
       "game_pk": 824577,
       "away_pitcher": "Patrick Sandoval",
       "home_pitcher": "Anthony Kay",
-      "nrfi_prob": 0.5546,
+      "nrfi_prob": 0.5547,
       "confirmed": true,
       "top": {
-        "composite": 0.4687,
-        "half_prob": 0.7405,
+        "composite": 0.4689,
+        "half_prob": 0.7406,
         "pitcher": 0.4435,
-        "batter": 0.4853,
+        "batter": 0.4859,
         "park_weather": 0.4492,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4871,
+        "composite": 0.4872,
         "half_prob": 0.749,
         "pitcher": 0.4805,
-        "batter": 0.4862,
+        "batter": 0.4864,
         "park_weather": 0.4492,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -699,6 +672,33 @@
         "park_weather": 0.5784,
         "damage_speed": 0.5,
         "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-09",
+      "game_pk": 823359,
+      "away_pitcher": "Bryce Elder",
+      "home_pitcher": "Mitch Keller",
+      "nrfi_prob": 0.5541,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4761,
+        "half_prob": 0.7439,
+        "pitcher": 0.438,
+        "batter": 0.4552,
+        "park_weather": 0.5892,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4783,
+        "half_prob": 0.7449,
+        "pitcher": 0.4479,
+        "batter": 0.4452,
+        "park_weather": 0.5892,
+        "damage_speed": 0.5,
+        "lineup": 0.6
       },
       "result": null
     },
