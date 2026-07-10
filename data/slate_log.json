@@ -761,23 +761,23 @@
       "game_pk": 823357,
       "away_pitcher": "Brandon Sproat",
       "home_pitcher": "Braxton Ashcraft",
-      "nrfi_prob": 0.588,
+      "nrfi_prob": 0.5889,
       "confirmed": false,
       "top": {
-        "composite": 0.5473,
-        "half_prob": 0.7769,
+        "composite": 0.5486,
+        "half_prob": 0.7774,
         "pitcher": 0.5923,
         "batter": 0.5,
-        "park_weather": 0.57,
+        "park_weather": 0.58,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.504,
-        "half_prob": 0.7569,
+        "composite": 0.5053,
+        "half_prob": 0.7575,
         "pitcher": 0.5039,
         "batter": 0.5,
-        "park_weather": 0.57,
+        "park_weather": 0.58,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -920,33 +920,6 @@
     },
     {
       "date": "2026-07-10",
-      "game_pk": 824252,
-      "away_pitcher": "Aaron Nola",
-      "home_pitcher": "Jack Flaherty",
-      "nrfi_prob": 0.5792,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5157,
-        "half_prob": 0.7623,
-        "pitcher": 0.5287,
-        "batter": 0.5,
-        "park_weather": 0.5667,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5103,
-        "half_prob": 0.7598,
-        "pitcher": 0.5177,
-        "batter": 0.5,
-        "park_weather": 0.5667,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-10",
       "game_pk": 823200,
       "away_pitcher": "Tanner Gordon",
       "home_pitcher": "Robbie Ray",
@@ -974,80 +947,53 @@
     },
     {
       "date": "2026-07-10",
+      "game_pk": 824252,
+      "away_pitcher": "Aaron Nola",
+      "home_pitcher": "Jack Flaherty",
+      "nrfi_prob": 0.5735,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5157,
+        "half_prob": 0.7623,
+        "pitcher": 0.5287,
+        "batter": 0.5,
+        "park_weather": 0.5667,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4942,
+        "half_prob": 0.7523,
+        "pitcher": 0.5183,
+        "batter": 0.4392,
+        "park_weather": 0.5667,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-10",
       "game_pk": 823685,
       "away_pitcher": "Grayson Rodriguez",
       "home_pitcher": "Zebby Matthews",
-      "nrfi_prob": 0.5591,
+      "nrfi_prob": 0.5585,
       "confirmed": false,
       "top": {
-        "composite": 0.5103,
-        "half_prob": 0.7598,
+        "composite": 0.5095,
+        "half_prob": 0.7594,
         "pitcher": 0.5314,
         "batter": 0.5,
-        "park_weather": 0.515,
+        "park_weather": 0.5083,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4586,
-        "half_prob": 0.7359,
+        "composite": 0.4578,
+        "half_prob": 0.7355,
         "pitcher": 0.4259,
         "batter": 0.5,
-        "park_weather": 0.515,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-10",
-      "game_pk": 822709,
-      "away_pitcher": "Ryan Weathers",
-      "home_pitcher": "Carson Palmquist",
-      "nrfi_prob": 0.5589,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4632,
-        "half_prob": 0.738,
-        "pitcher": 0.4476,
-        "batter": 0.5,
-        "park_weather": 0.4683,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5049,
-        "half_prob": 0.7573,
-        "pitcher": 0.5327,
-        "batter": 0.5,
-        "park_weather": 0.4683,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-10",
-      "game_pk": 824493,
-      "away_pitcher": "Shota Imanaga",
-      "home_pitcher": "Hunter Greene",
-      "nrfi_prob": 0.5552,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4558,
-        "half_prob": 0.7346,
-        "pitcher": 0.4599,
-        "batter": 0.5,
-        "park_weather": 0.365,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5017,
-        "half_prob": 0.7558,
-        "pitcher": 0.5536,
-        "batter": 0.5,
-        "park_weather": 0.365,
+        "park_weather": 0.5083,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1075,6 +1021,60 @@
         "pitcher": 0.4182,
         "batter": 0.5,
         "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-10",
+      "game_pk": 822709,
+      "away_pitcher": "Ryan Weathers",
+      "home_pitcher": "Carson Palmquist",
+      "nrfi_prob": 0.5536,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4632,
+        "half_prob": 0.738,
+        "pitcher": 0.4476,
+        "batter": 0.5,
+        "park_weather": 0.4683,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4895,
+        "half_prob": 0.7501,
+        "pitcher": 0.5324,
+        "batter": 0.4433,
+        "park_weather": 0.4683,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-10",
+      "game_pk": 824493,
+      "away_pitcher": "Shota Imanaga",
+      "home_pitcher": "Hunter Greene",
+      "nrfi_prob": 0.552,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4558,
+        "half_prob": 0.7346,
+        "pitcher": 0.4599,
+        "batter": 0.5,
+        "park_weather": 0.365,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4923,
+        "half_prob": 0.7514,
+        "pitcher": 0.5515,
+        "batter": 0.469,
+        "park_weather": 0.365,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1139,23 +1139,23 @@
       "game_pk": 824817,
       "away_pitcher": "Luinder Avila",
       "home_pitcher": "Brandon Young",
-      "nrfi_prob": 0.5436,
+      "nrfi_prob": 0.541,
       "confirmed": false,
       "top": {
-        "composite": 0.4662,
-        "half_prob": 0.7393,
+        "composite": 0.4623,
+        "half_prob": 0.7375,
         "pitcher": 0.4665,
         "batter": 0.5,
-        "park_weather": 0.42,
+        "park_weather": 0.3898,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4573,
-        "half_prob": 0.7353,
+        "composite": 0.4534,
+        "half_prob": 0.7335,
         "pitcher": 0.4484,
         "batter": 0.5,
-        "park_weather": 0.42,
+        "park_weather": 0.3898,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
