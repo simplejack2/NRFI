@@ -808,7 +808,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-07-10",
@@ -835,7 +835,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-07-10",
@@ -1024,7 +1024,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-07-10",
@@ -1105,7 +1105,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-07-10",
@@ -1247,23 +1247,23 @@
       "game_pk": 823844,
       "away_pitcher": "Tanner Bibee",
       "home_pitcher": "Eury P\u00e9rez",
-      "nrfi_prob": 0.5841,
+      "nrfi_prob": 0.5844,
       "confirmed": false,
       "top": {
-        "composite": 0.5303,
-        "half_prob": 0.769,
+        "composite": 0.5306,
+        "half_prob": 0.7692,
         "pitcher": 0.5496,
         "batter": 0.5,
-        "park_weather": 0.5999,
+        "park_weather": 0.6025,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5097,
-        "half_prob": 0.7595,
+        "composite": 0.51,
+        "half_prob": 0.7597,
         "pitcher": 0.5075,
         "batter": 0.5,
-        "park_weather": 0.5999,
+        "park_weather": 0.6025,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1325,26 +1325,53 @@
     },
     {
       "date": "2026-07-11",
-      "game_pk": 823603,
+      "game_pk": 823357,
       "away_pitcher": "TBD",
-      "home_pitcher": "Freddy Peralta",
-      "nrfi_prob": 0.5735,
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5746,
       "confirmed": false,
       "top": {
-        "composite": 0.5086,
-        "half_prob": 0.759,
-        "pitcher": 0.5147,
+        "composite": 0.5065,
+        "half_prob": 0.758,
+        "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.5642,
+        "park_weather": 0.6042,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5013,
-        "half_prob": 0.7556,
+        "composite": 0.5065,
+        "half_prob": 0.758,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.5642,
+        "park_weather": 0.6042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-11",
+      "game_pk": 823603,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Freddy Peralta",
+      "nrfi_prob": 0.5732,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5081,
+        "half_prob": 0.7588,
+        "pitcher": 0.5147,
+        "batter": 0.5,
+        "park_weather": 0.5608,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5009,
+        "half_prob": 0.7554,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5608,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1385,47 +1412,20 @@
       "nrfi_prob": 0.5685,
       "confirmed": false,
       "top": {
-        "composite": 0.5036,
+        "composite": 0.5037,
         "half_prob": 0.7567,
         "pitcher": 0.4969,
         "batter": 0.5,
-        "park_weather": 0.5934,
+        "park_weather": 0.5941,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.492,
+        "composite": 0.4921,
         "half_prob": 0.7513,
         "pitcher": 0.4732,
         "batter": 0.5,
-        "park_weather": 0.5934,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-11",
-      "game_pk": 823356,
-      "away_pitcher": "Shane Drohan",
-      "home_pitcher": "Bubba Chandler",
-      "nrfi_prob": 0.5659,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4635,
-        "half_prob": 0.7381,
-        "pitcher": 0.4126,
-        "batter": 0.5,
-        "park_weather": 0.6025,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5253,
-        "half_prob": 0.7667,
-        "pitcher": 0.5387,
-        "batter": 0.5,
-        "park_weather": 0.6025,
+        "park_weather": 0.5941,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1436,23 +1436,50 @@
       "game_pk": 823030,
       "away_pitcher": "Reynaldo L\u00f3pez",
       "home_pitcher": "Matthew Liberatore",
-      "nrfi_prob": 0.5614,
+      "nrfi_prob": 0.5662,
       "confirmed": false,
       "top": {
-        "composite": 0.4788,
-        "half_prob": 0.7452,
+        "composite": 0.4858,
+        "half_prob": 0.7484,
         "pitcher": 0.4609,
         "batter": 0.5,
-        "park_weather": 0.5383,
+        "park_weather": 0.5917,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4962,
-        "half_prob": 0.7533,
+        "composite": 0.5032,
+        "half_prob": 0.7565,
         "pitcher": 0.4965,
         "batter": 0.5,
-        "park_weather": 0.5383,
+        "park_weather": 0.5917,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-11",
+      "game_pk": 823356,
+      "away_pitcher": "Shane Drohan",
+      "home_pitcher": "Bubba Chandler",
+      "nrfi_prob": 0.5661,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4637,
+        "half_prob": 0.7382,
+        "pitcher": 0.4126,
+        "batter": 0.5,
+        "park_weather": 0.6042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5255,
+        "half_prob": 0.7668,
+        "pitcher": 0.5387,
+        "batter": 0.5,
+        "park_weather": 0.6042,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1490,23 +1517,23 @@
       "game_pk": 824813,
       "away_pitcher": "Noah Cameron",
       "home_pitcher": "Kyle Bradish",
-      "nrfi_prob": 0.5547,
+      "nrfi_prob": 0.5549,
       "confirmed": false,
       "top": {
-        "composite": 0.4846,
-        "half_prob": 0.7479,
+        "composite": 0.4848,
+        "half_prob": 0.748,
         "pitcher": 0.5028,
         "batter": 0.5,
-        "park_weather": 0.425,
+        "park_weather": 0.4267,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4714,
-        "half_prob": 0.7417,
+        "composite": 0.4716,
+        "half_prob": 0.7418,
         "pitcher": 0.4759,
         "batter": 0.5,
-        "park_weather": 0.425,
+        "park_weather": 0.4267,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -1544,23 +1571,23 @@
       "game_pk": 824492,
       "away_pitcher": "Javier Assad",
       "home_pitcher": "Nick Lodolo",
-      "nrfi_prob": 0.5419,
+      "nrfi_prob": 0.5422,
       "confirmed": false,
       "top": {
-        "composite": 0.4687,
-        "half_prob": 0.7405,
+        "composite": 0.4692,
+        "half_prob": 0.7407,
         "pitcher": 0.4889,
         "batter": 0.5,
-        "park_weather": 0.355,
+        "park_weather": 0.3583,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4497,
-        "half_prob": 0.7318,
+        "composite": 0.4502,
+        "half_prob": 0.732,
         "pitcher": 0.4502,
         "batter": 0.5,
-        "park_weather": 0.355,
+        "park_weather": 0.3583,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
