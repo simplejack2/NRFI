@@ -1163,6 +1163,33 @@
     },
     {
       "date": "2026-07-11",
+      "game_pk": 824249,
+      "away_pitcher": "Cristopher S\u00e1nchez",
+      "home_pitcher": "Casey Mize",
+      "nrfi_prob": 0.6004,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5477,
+        "half_prob": 0.777,
+        "pitcher": 0.5669,
+        "batter": 0.4844,
+        "park_weather": 0.5937,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5381,
+        "half_prob": 0.7727,
+        "pitcher": 0.5564,
+        "batter": 0.4679,
+        "park_weather": 0.5937,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-11",
       "game_pk": 822953,
       "away_pitcher": "Logan Gilbert",
       "home_pitcher": "Griffin Jax",
@@ -1185,33 +1212,6 @@
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-11",
-      "game_pk": 824249,
-      "away_pitcher": "Cristopher S\u00e1nchez",
-      "home_pitcher": "Casey Mize",
-      "nrfi_prob": 0.594,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5337,
-        "half_prob": 0.7706,
-        "pitcher": 0.5669,
-        "batter": 0.4844,
-        "park_weather": 0.5937,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5342,
-        "half_prob": 0.7708,
-        "pitcher": 0.5591,
-        "batter": 0.5,
-        "park_weather": 0.5937,
-        "damage_speed": 0.5,
-        "lineup": 0.4
       },
       "result": null
     },
@@ -1328,22 +1328,22 @@
       "game_pk": 823682,
       "away_pitcher": "Ryan Johnson",
       "home_pitcher": "Joe Ryan",
-      "nrfi_prob": 0.5755,
+      "nrfi_prob": 0.5763,
       "confirmed": true,
       "top": {
-        "composite": 0.5529,
-        "half_prob": 0.7794,
-        "pitcher": 0.6,
-        "batter": 0.4762,
+        "composite": 0.5522,
+        "half_prob": 0.7791,
+        "pitcher": 0.5987,
+        "batter": 0.476,
         "park_weather": 0.5258,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4642,
-        "half_prob": 0.7384,
-        "pitcher": 0.4358,
-        "batter": 0.4455,
+        "composite": 0.467,
+        "half_prob": 0.7397,
+        "pitcher": 0.4414,
+        "batter": 0.4459,
         "park_weather": 0.5258,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1463,7 +1463,7 @@
       "game_pk": 824576,
       "away_pitcher": "Gage Jump",
       "home_pitcher": "Bryan Hudson",
-      "nrfi_prob": 0.5638,
+      "nrfi_prob": 0.5636,
       "confirmed": true,
       "top": {
         "composite": 0.4786,
@@ -1475,9 +1475,9 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5037,
-        "half_prob": 0.7567,
-        "pitcher": 0.4998,
+        "composite": 0.503,
+        "half_prob": 0.7564,
+        "pitcher": 0.4983,
         "batter": 0.4998,
         "park_weather": 0.476,
         "damage_speed": 0.5,
@@ -1544,25 +1544,25 @@
       "game_pk": 822875,
       "away_pitcher": "Peter Lambert",
       "home_pitcher": "Kumar Rocker",
-      "nrfi_prob": 0.5502,
-      "confirmed": false,
+      "nrfi_prob": 0.5489,
+      "confirmed": true,
       "top": {
-        "composite": 0.4796,
-        "half_prob": 0.7455,
-        "pitcher": 0.4892,
-        "batter": 0.5,
+        "composite": 0.4619,
+        "half_prob": 0.7374,
+        "pitcher": 0.4885,
+        "batter": 0.3841,
         "park_weather": 0.4375,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4633,
-        "half_prob": 0.738,
+        "composite": 0.4773,
+        "half_prob": 0.7444,
         "pitcher": 0.4864,
         "batter": 0.4446,
         "park_weather": 0.4375,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -1571,23 +1571,23 @@
       "game_pk": 824492,
       "away_pitcher": "Javier Assad",
       "home_pitcher": "Nick Lodolo",
-      "nrfi_prob": 0.5386,
+      "nrfi_prob": 0.5425,
       "confirmed": false,
       "top": {
-        "composite": 0.4698,
-        "half_prob": 0.741,
+        "composite": 0.4757,
+        "half_prob": 0.7437,
         "pitcher": 0.4889,
         "batter": 0.5,
-        "park_weather": 0.3633,
+        "park_weather": 0.4083,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4387,
-        "half_prob": 0.7268,
+        "composite": 0.4445,
+        "half_prob": 0.7294,
         "pitcher": 0.4499,
         "batter": 0.4555,
-        "park_weather": 0.3633,
+        "park_weather": 0.4083,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
