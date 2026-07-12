@@ -1676,6 +1676,33 @@
     },
     {
       "date": "2026-07-12",
+      "game_pk": 823274,
+      "away_pitcher": "Kevin Gausman",
+      "home_pitcher": "Germ\u00e1n M\u00e1rquez",
+      "nrfi_prob": 0.576,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4704,
+        "half_prob": 0.7413,
+        "pitcher": 0.4258,
+        "batter": 0.4502,
+        "park_weather": 0.6016,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5476,
+        "half_prob": 0.777,
+        "pitcher": 0.5315,
+        "batter": 0.5442,
+        "park_weather": 0.6016,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-12",
       "game_pk": 823602,
       "away_pitcher": "Payton Tolle",
       "home_pitcher": "Zach Thornton",
@@ -1730,52 +1757,25 @@
     },
     {
       "date": "2026-07-12",
-      "game_pk": 823274,
-      "away_pitcher": "Kevin Gausman",
-      "home_pitcher": "Germ\u00e1n M\u00e1rquez",
-      "nrfi_prob": 0.5712,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4703,
-        "half_prob": 0.7412,
-        "pitcher": 0.4258,
-        "batter": 0.4496,
-        "park_weather": 0.6016,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5339,
-        "half_prob": 0.7707,
-        "pitcher": 0.5315,
-        "batter": 0.4935,
-        "park_weather": 0.6016,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-12",
       "game_pk": 823199,
       "away_pitcher": "Michael Lorenzen",
       "home_pitcher": "Trevor McDonald",
-      "nrfi_prob": 0.5686,
+      "nrfi_prob": 0.5687,
       "confirmed": true,
       "top": {
-        "composite": 0.497,
-        "half_prob": 0.7536,
-        "pitcher": 0.4583,
-        "batter": 0.4802,
+        "composite": 0.4974,
+        "half_prob": 0.7538,
+        "pitcher": 0.4594,
+        "batter": 0.4799,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4988,
+        "composite": 0.4989,
         "half_prob": 0.7545,
-        "pitcher": 0.4455,
-        "batter": 0.5105,
+        "pitcher": 0.4466,
+        "batter": 0.5086,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1922,22 +1922,22 @@
       "game_pk": 823925,
       "away_pitcher": "Mitch Bratt",
       "home_pitcher": "Emmet Sheehan",
-      "nrfi_prob": 0.5416,
+      "nrfi_prob": 0.5418,
       "confirmed": true,
       "top": {
-        "composite": 0.5073,
-        "half_prob": 0.7584,
+        "composite": 0.5076,
+        "half_prob": 0.7585,
         "pitcher": 0.5514,
-        "batter": 0.3657,
+        "batter": 0.3667,
         "park_weather": 0.5875,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4102,
-        "half_prob": 0.7142,
+        "composite": 0.4103,
+        "half_prob": 0.7143,
         "pitcher": 0.3446,
-        "batter": 0.3814,
+        "batter": 0.3817,
         "park_weather": 0.5875,
         "damage_speed": 0.5,
         "lineup": 0.6
