@@ -1598,13 +1598,13 @@
       "game_pk": 824250,
       "away_pitcher": "Zack Wheeler",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.6075,
+      "nrfi_prob": 0.6074,
       "confirmed": true,
       "top": {
-        "composite": 0.5648,
-        "half_prob": 0.7848,
+        "composite": 0.5647,
+        "half_prob": 0.7847,
         "pitcher": 0.6102,
-        "batter": 0.4752,
+        "batter": 0.4746,
         "park_weather": 0.5808,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1625,23 +1625,23 @@
       "game_pk": 823358,
       "away_pitcher": "Robert Gasser",
       "home_pitcher": "Paul Skenes",
-      "nrfi_prob": 0.5831,
+      "nrfi_prob": 0.5828,
       "confirmed": true,
       "top": {
-        "composite": 0.5301,
-        "half_prob": 0.769,
+        "composite": 0.5297,
+        "half_prob": 0.7688,
         "pitcher": 0.5777,
         "batter": 0.4002,
-        "park_weather": 0.5925,
+        "park_weather": 0.5892,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5069,
-        "half_prob": 0.7582,
+        "composite": 0.5065,
+        "half_prob": 0.758,
         "pitcher": 0.4697,
         "batter": 0.51,
-        "park_weather": 0.5925,
+        "park_weather": 0.5892,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -1655,10 +1655,10 @@
       "nrfi_prob": 0.5776,
       "confirmed": true,
       "top": {
-        "composite": 0.5168,
+        "composite": 0.5167,
         "half_prob": 0.7628,
         "pitcher": 0.5172,
-        "batter": 0.449,
+        "batter": 0.4485,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1679,13 +1679,13 @@
       "game_pk": 823602,
       "away_pitcher": "Payton Tolle",
       "home_pitcher": "Zach Thornton",
-      "nrfi_prob": 0.5743,
+      "nrfi_prob": 0.5744,
       "confirmed": true,
       "top": {
-        "composite": 0.507,
-        "half_prob": 0.7582,
+        "composite": 0.5071,
+        "half_prob": 0.7583,
         "pitcher": 0.4979,
-        "batter": 0.4693,
+        "batter": 0.4699,
         "park_weather": 0.5717,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1703,42 +1703,15 @@
     },
     {
       "date": "2026-07-12",
-      "game_pk": 823199,
-      "away_pitcher": "Michael Lorenzen",
-      "home_pitcher": "Trevor McDonald",
-      "nrfi_prob": 0.5717,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4976,
-        "half_prob": 0.7539,
-        "pitcher": 0.46,
-        "batter": 0.4798,
-        "park_weather": 0.6208,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.507,
-        "half_prob": 0.7583,
-        "pitcher": 0.4616,
-        "batter": 0.5116,
-        "park_weather": 0.6208,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-12",
       "game_pk": 823274,
       "away_pitcher": "Kevin Gausman",
       "home_pitcher": "Germ\u00e1n M\u00e1rquez",
-      "nrfi_prob": 0.5712,
+      "nrfi_prob": 0.5735,
       "confirmed": true,
       "top": {
-        "composite": 0.4672,
-        "half_prob": 0.7398,
-        "pitcher": 0.413,
+        "composite": 0.4738,
+        "half_prob": 0.7428,
+        "pitcher": 0.4264,
         "batter": 0.4442,
         "park_weather": 0.6375,
         "damage_speed": 0.5,
@@ -1750,6 +1723,60 @@
         "pitcher": 0.5296,
         "batter": 0.4909,
         "park_weather": 0.6375,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-12",
+      "game_pk": 822708,
+      "away_pitcher": "Will Warren",
+      "home_pitcher": "Cade Cavalli",
+      "nrfi_prob": 0.5718,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5156,
+        "half_prob": 0.7622,
+        "pitcher": 0.5396,
+        "batter": 0.4618,
+        "park_weather": 0.4958,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4897,
+        "half_prob": 0.7502,
+        "pitcher": 0.4864,
+        "batter": 0.4626,
+        "park_weather": 0.4958,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-12",
+      "game_pk": 823199,
+      "away_pitcher": "Michael Lorenzen",
+      "home_pitcher": "Trevor McDonald",
+      "nrfi_prob": 0.5666,
+      "confirmed": true,
+      "top": {
+        "composite": 0.49,
+        "half_prob": 0.7504,
+        "pitcher": 0.4447,
+        "batter": 0.4792,
+        "park_weather": 0.6208,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5002,
+        "half_prob": 0.7551,
+        "pitcher": 0.4476,
+        "batter": 0.5116,
+        "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -1777,33 +1804,6 @@
         "pitcher": 0.4694,
         "batter": 0.4011,
         "park_weather": 0.5225,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-12",
-      "game_pk": 822708,
-      "away_pitcher": "Will Warren",
-      "home_pitcher": "Cade Cavalli",
-      "nrfi_prob": 0.5651,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4963,
-        "half_prob": 0.7533,
-        "pitcher": 0.5396,
-        "batter": 0.3904,
-        "park_weather": 0.4958,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4896,
-        "half_prob": 0.7502,
-        "pitcher": 0.4864,
-        "batter": 0.4622,
-        "park_weather": 0.4958,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -1841,23 +1841,23 @@
       "game_pk": 823029,
       "away_pitcher": "Danny Young",
       "home_pitcher": "Dustin May",
-      "nrfi_prob": 0.551,
+      "nrfi_prob": 0.5507,
       "confirmed": true,
       "top": {
-        "composite": 0.498,
-        "half_prob": 0.7541,
+        "composite": 0.4974,
+        "half_prob": 0.7538,
         "pitcher": 0.4899,
-        "batter": 0.4551,
-        "park_weather": 0.5625,
+        "batter": 0.4542,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4474,
-        "half_prob": 0.7307,
+        "composite": 0.4469,
+        "half_prob": 0.7305,
         "pitcher": 0.4216,
         "batter": 0.3913,
-        "park_weather": 0.5625,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -1895,23 +1895,23 @@
       "game_pk": 824491,
       "away_pitcher": "Matthew Boyd",
       "home_pitcher": "Andrew Abbott",
-      "nrfi_prob": 0.5492,
+      "nrfi_prob": 0.5475,
       "confirmed": true,
       "top": {
-        "composite": 0.4375,
-        "half_prob": 0.7263,
+        "composite": 0.4351,
+        "half_prob": 0.7252,
         "pitcher": 0.4201,
         "batter": 0.4226,
-        "park_weather": 0.4275,
+        "park_weather": 0.4088,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5023,
-        "half_prob": 0.7561,
+        "composite": 0.4999,
+        "half_prob": 0.7549,
         "pitcher": 0.5293,
         "batter": 0.4644,
-        "park_weather": 0.4275,
+        "park_weather": 0.4088,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -1922,7 +1922,7 @@
       "game_pk": 823842,
       "away_pitcher": "Joey Cantillo",
       "home_pitcher": "Tyler Phillips",
-      "nrfi_prob": 0.5449,
+      "nrfi_prob": 0.545,
       "confirmed": true,
       "top": {
         "composite": 0.4488,
@@ -1934,10 +1934,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4785,
-        "half_prob": 0.745,
+        "composite": 0.4788,
+        "half_prob": 0.7451,
         "pitcher": 0.4889,
-        "batter": 0.3772,
+        "batter": 0.3782,
         "park_weather": 0.5775,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1961,10 +1961,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4521,
+        "composite": 0.4522,
         "half_prob": 0.7329,
         "pitcher": 0.4457,
-        "batter": 0.4205,
+        "batter": 0.4207,
         "park_weather": 0.4475,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -1976,7 +1976,7 @@
       "game_pk": 822876,
       "away_pitcher": "Cristian Javier",
       "home_pitcher": "MacKenzie Gore",
-      "nrfi_prob": 0.5313,
+      "nrfi_prob": 0.5312,
       "confirmed": true,
       "top": {
         "composite": 0.464,
@@ -1988,10 +1988,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4225,
-        "half_prob": 0.7196,
+        "composite": 0.4222,
+        "half_prob": 0.7195,
         "pitcher": 0.3699,
-        "batter": 0.4428,
+        "batter": 0.4419,
         "park_weather": 0.4592,
         "damage_speed": 0.5,
         "lineup": 0.6
