@@ -2024,6 +2024,33 @@
         "lineup": 0.6
       },
       "result": "YRFI"
+    },
+    {
+      "date": "2026-07-16",
+      "game_pk": 823440,
+      "away_pitcher": "Christian Scott",
+      "home_pitcher": "Aaron Nola",
+      "nrfi_prob": 0.5651,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4913,
+        "half_prob": 0.751,
+        "pitcher": 0.5174,
+        "batter": 0.5,
+        "park_weather": 0.4217,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4945,
+        "half_prob": 0.7525,
+        "pitcher": 0.5239,
+        "batter": 0.5,
+        "park_weather": 0.4217,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
     }
   ]
 }
