@@ -2081,6 +2081,33 @@
     },
     {
       "date": "2026-07-17",
+      "game_pk": 824901,
+      "away_pitcher": "Cal Quantrill",
+      "home_pitcher": "Chris Sale",
+      "nrfi_prob": 0.5856,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5591,
+        "half_prob": 0.7822,
+        "pitcher": 0.615,
+        "batter": 0.4962,
+        "park_weather": 0.475,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4863,
+        "half_prob": 0.7486,
+        "pitcher": 0.4901,
+        "batter": 0.4532,
+        "park_weather": 0.475,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-17",
       "game_pk": 824414,
       "away_pitcher": "Jared Jones",
       "home_pitcher": "Gavin Williams",
@@ -2162,33 +2189,6 @@
     },
     {
       "date": "2026-07-17",
-      "game_pk": 824901,
-      "away_pitcher": "Cal Quantrill",
-      "home_pitcher": "Chris Sale",
-      "nrfi_prob": 0.5762,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5466,
-        "half_prob": 0.7765,
-        "pitcher": 0.616,
-        "batter": 0.5,
-        "park_weather": 0.475,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4723,
-        "half_prob": 0.7421,
-        "pitcher": 0.4901,
-        "batter": 0.4532,
-        "park_weather": 0.475,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-17",
       "game_pk": 824981,
       "away_pitcher": "Cade Cavalli",
       "home_pitcher": "Gage Jump",
@@ -2209,33 +2209,6 @@
         "pitcher": 0.5541,
         "batter": 0.5,
         "park_weather": 0.49,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-17",
-      "game_pk": 824170,
-      "away_pitcher": "Dean Kremer",
-      "home_pitcher": "Peter Lambert",
-      "nrfi_prob": 0.5681,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4895,
-        "half_prob": 0.7501,
-        "pitcher": 0.4981,
-        "batter": 0.5,
-        "park_weather": 0.48,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5049,
-        "half_prob": 0.7573,
-        "pitcher": 0.5295,
-        "batter": 0.5,
-        "park_weather": 0.48,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -2297,28 +2270,82 @@
     },
     {
       "date": "2026-07-17",
+      "game_pk": 824737,
+      "away_pitcher": "Mason Englert",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5602,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4794,
+        "half_prob": 0.7454,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.395,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4927,
+        "half_prob": 0.7516,
+        "pitcher": 0.5272,
+        "batter": 0.5,
+        "park_weather": 0.395,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-17",
       "game_pk": 824766,
       "away_pitcher": "Griffin Jax",
       "home_pitcher": "Jake Bennett",
-      "nrfi_prob": 0.5607,
+      "nrfi_prob": 0.5599,
       "confirmed": true,
       "top": {
-        "composite": 0.4822,
-        "half_prob": 0.7468,
-        "pitcher": 0.5252,
+        "composite": 0.4829,
+        "half_prob": 0.7471,
+        "pitcher": 0.5265,
         "batter": 0.4032,
         "park_weather": 0.4158,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4911,
-        "half_prob": 0.7508,
-        "pitcher": 0.503,
-        "batter": 0.4761,
+        "composite": 0.4879,
+        "half_prob": 0.7494,
+        "pitcher": 0.4982,
+        "batter": 0.4729,
         "park_weather": 0.4158,
         "damage_speed": 0.5,
         "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-17",
+      "game_pk": 824170,
+      "away_pitcher": "Dean Kremer",
+      "home_pitcher": "Peter Lambert",
+      "nrfi_prob": 0.5568,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4895,
+        "half_prob": 0.7501,
+        "pitcher": 0.4981,
+        "batter": 0.5,
+        "park_weather": 0.48,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4726,
+        "half_prob": 0.7423,
+        "pitcher": 0.5285,
+        "batter": 0.3822,
+        "park_weather": 0.48,
+        "damage_speed": 0.5,
+        "lineup": 0.4
       },
       "result": null
     },
@@ -2344,33 +2371,6 @@
         "pitcher": 0.5071,
         "batter": 0.5,
         "park_weather": 0.5,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-17",
-      "game_pk": 824737,
-      "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5556,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4794,
-        "half_prob": 0.7454,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.395,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4794,
-        "half_prob": 0.7454,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.395,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
