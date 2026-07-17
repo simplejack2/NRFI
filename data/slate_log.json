@@ -2135,6 +2135,33 @@
     },
     {
       "date": "2026-07-17",
+      "game_pk": 823766,
+      "away_pitcher": "Sandy Alcantara",
+      "home_pitcher": "Logan Henderson",
+      "nrfi_prob": 0.5763,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5273,
+        "half_prob": 0.7677,
+        "pitcher": 0.5761,
+        "batter": 0.5,
+        "park_weather": 0.4767,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4907,
+        "half_prob": 0.7507,
+        "pitcher": 0.5015,
+        "batter": 0.5,
+        "park_weather": 0.4767,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-17",
       "game_pk": 824901,
       "away_pitcher": "Cal Quantrill",
       "home_pitcher": "Chris Sale",
@@ -2162,53 +2189,26 @@
     },
     {
       "date": "2026-07-17",
-      "game_pk": 823766,
-      "away_pitcher": "Sandy Alcantara",
-      "home_pitcher": "Logan Henderson",
-      "nrfi_prob": 0.576,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5269,
-        "half_prob": 0.7675,
-        "pitcher": 0.5761,
-        "batter": 0.5,
-        "park_weather": 0.4742,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4904,
-        "half_prob": 0.7505,
-        "pitcher": 0.5015,
-        "batter": 0.5,
-        "park_weather": 0.4742,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-17",
       "game_pk": 824981,
       "away_pitcher": "Cade Cavalli",
       "home_pitcher": "Gage Jump",
-      "nrfi_prob": 0.5737,
+      "nrfi_prob": 0.5727,
       "confirmed": false,
       "top": {
-        "composite": 0.4909,
-        "half_prob": 0.7508,
+        "composite": 0.4896,
+        "half_prob": 0.7502,
         "pitcher": 0.4957,
         "batter": 0.5,
-        "park_weather": 0.5,
+        "park_weather": 0.49,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5195,
-        "half_prob": 0.7641,
+        "composite": 0.5182,
+        "half_prob": 0.7634,
         "pitcher": 0.5541,
         "batter": 0.5,
-        "park_weather": 0.5,
+        "park_weather": 0.49,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -2246,23 +2246,23 @@
       "game_pk": 822789,
       "away_pitcher": "Anthony Kay",
       "home_pitcher": "Spencer Miles",
-      "nrfi_prob": 0.5633,
+      "nrfi_prob": 0.5634,
       "confirmed": true,
       "top": {
-        "composite": 0.508,
-        "half_prob": 0.7587,
+        "composite": 0.5081,
+        "half_prob": 0.7588,
         "pitcher": 0.5407,
         "batter": 0.4222,
-        "park_weather": 0.5158,
+        "park_weather": 0.5167,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.473,
+        "composite": 0.4731,
         "half_prob": 0.7425,
         "pitcher": 0.4451,
         "batter": 0.4662,
-        "park_weather": 0.5158,
+        "park_weather": 0.5167,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -2300,13 +2300,13 @@
       "game_pk": 824766,
       "away_pitcher": "Griffin Jax",
       "home_pitcher": "Jake Bennett",
-      "nrfi_prob": 0.5566,
+      "nrfi_prob": 0.5607,
       "confirmed": true,
       "top": {
-        "composite": 0.4705,
-        "half_prob": 0.7413,
+        "composite": 0.4822,
+        "half_prob": 0.7468,
         "pitcher": 0.5252,
-        "batter": 0.3597,
+        "batter": 0.4032,
         "park_weather": 0.4158,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -2315,7 +2315,7 @@
         "composite": 0.4911,
         "half_prob": 0.7508,
         "pitcher": 0.503,
-        "batter": 0.476,
+        "batter": 0.4761,
         "park_weather": 0.4158,
         "damage_speed": 0.5,
         "lineup": 0.6
