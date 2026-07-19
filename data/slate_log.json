@@ -2894,22 +2894,22 @@
       "game_pk": 824411,
       "away_pitcher": "Paul Skenes",
       "home_pitcher": "Joey Cantillo",
-      "nrfi_prob": 0.5785,
+      "nrfi_prob": 0.579,
       "confirmed": true,
       "top": {
-        "composite": 0.5015,
-        "half_prob": 0.7557,
-        "pitcher": 0.4909,
-        "batter": 0.4716,
+        "composite": 0.5016,
+        "half_prob": 0.7558,
+        "pitcher": 0.4908,
+        "batter": 0.4722,
         "park_weather": 0.5513,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5227,
-        "half_prob": 0.7655,
-        "pitcher": 0.6019,
-        "batter": 0.3483,
+        "composite": 0.524,
+        "half_prob": 0.7661,
+        "pitcher": 0.6046,
+        "batter": 0.3484,
         "park_weather": 0.5513,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -2945,15 +2945,96 @@
     },
     {
       "date": "2026-07-19",
+      "game_pk": 823523,
+      "away_pitcher": "Yoshinobu Yamamoto",
+      "home_pitcher": "Cam Schlittler",
+      "nrfi_prob": 0.5723,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5095,
+        "half_prob": 0.7594,
+        "pitcher": 0.5993,
+        "batter": 0.3875,
+        "park_weather": 0.3787,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.497,
+        "half_prob": 0.7536,
+        "pitcher": 0.571,
+        "batter": 0.3924,
+        "park_weather": 0.3787,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-19",
+      "game_pk": 824086,
+      "away_pitcher": "Germ\u00e1n M\u00e1rquez",
+      "home_pitcher": "Noah Cameron",
+      "nrfi_prob": 0.5717,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5149,
+        "half_prob": 0.7619,
+        "pitcher": 0.4858,
+        "batter": 0.5203,
+        "park_weather": 0.5725,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4898,
+        "half_prob": 0.7503,
+        "pitcher": 0.4531,
+        "batter": 0.4866,
+        "park_weather": 0.5725,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-19",
+      "game_pk": 824739,
+      "away_pitcher": "Shane McClanahan",
+      "home_pitcher": "Sonny Gray",
+      "nrfi_prob": 0.5714,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4763,
+        "half_prob": 0.744,
+        "pitcher": 0.5337,
+        "batter": 0.3775,
+        "park_weather": 0.3913,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5281,
+        "half_prob": 0.768,
+        "pitcher": 0.5345,
+        "batter": 0.5678,
+        "park_weather": 0.3913,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-19",
       "game_pk": 823764,
       "away_pitcher": "Eury P\u00e9rez",
       "home_pitcher": "Robert Gasser",
-      "nrfi_prob": 0.573,
+      "nrfi_prob": 0.5704,
       "confirmed": true,
       "top": {
-        "composite": 0.4916,
-        "half_prob": 0.7511,
-        "pitcher": 0.4948,
+        "composite": 0.4842,
+        "half_prob": 0.7477,
+        "pitcher": 0.4797,
         "batter": 0.4505,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
@@ -2965,87 +3046,6 @@
         "pitcher": 0.5434,
         "batter": 0.4567,
         "park_weather": 0.5042,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-19",
-      "game_pk": 823523,
-      "away_pitcher": "Yoshinobu Yamamoto",
-      "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.5721,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5099,
-        "half_prob": 0.7596,
-        "pitcher": 0.5994,
-        "batter": 0.3886,
-        "park_weather": 0.3787,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4962,
-        "half_prob": 0.7532,
-        "pitcher": 0.5694,
-        "batter": 0.3924,
-        "park_weather": 0.3787,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-19",
-      "game_pk": 824739,
-      "away_pitcher": "Shane McClanahan",
-      "home_pitcher": "Sonny Gray",
-      "nrfi_prob": 0.5716,
-      "confirmed": true,
-      "top": {
-        "composite": 0.477,
-        "half_prob": 0.7443,
-        "pitcher": 0.5351,
-        "batter": 0.3774,
-        "park_weather": 0.3913,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5281,
-        "half_prob": 0.768,
-        "pitcher": 0.5346,
-        "batter": 0.5678,
-        "park_weather": 0.3913,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-19",
-      "game_pk": 824086,
-      "away_pitcher": "Germ\u00e1n M\u00e1rquez",
-      "home_pitcher": "Noah Cameron",
-      "nrfi_prob": 0.5708,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5123,
-        "half_prob": 0.7607,
-        "pitcher": 0.4805,
-        "batter": 0.5201,
-        "park_weather": 0.5725,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4898,
-        "half_prob": 0.7503,
-        "pitcher": 0.4531,
-        "batter": 0.4866,
-        "park_weather": 0.5725,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -3080,16 +3080,43 @@
     },
     {
       "date": "2026-07-19",
+      "game_pk": 822786,
+      "away_pitcher": "Sean Burke",
+      "home_pitcher": "Trey Yesavage",
+      "nrfi_prob": 0.5634,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4606,
+        "half_prob": 0.7367,
+        "pitcher": 0.4355,
+        "batter": 0.427,
+        "park_weather": 0.5375,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.521,
+        "half_prob": 0.7648,
+        "pitcher": 0.5474,
+        "batter": 0.4479,
+        "park_weather": 0.5375,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-19",
       "game_pk": 823439,
       "away_pitcher": "Nolan McLean",
       "home_pitcher": "Alan Rangel",
-      "nrfi_prob": 0.5644,
+      "nrfi_prob": 0.562,
       "confirmed": true,
       "top": {
-        "composite": 0.4579,
-        "half_prob": 0.7355,
-        "pitcher": 0.4495,
-        "batter": 0.4255,
+        "composite": 0.4509,
+        "half_prob": 0.7323,
+        "pitcher": 0.435,
+        "batter": 0.4258,
         "park_weather": 0.4675,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -3107,51 +3134,24 @@
     },
     {
       "date": "2026-07-19",
-      "game_pk": 822786,
-      "away_pitcher": "Sean Burke",
-      "home_pitcher": "Trey Yesavage",
-      "nrfi_prob": 0.5629,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4606,
-        "half_prob": 0.7367,
-        "pitcher": 0.4355,
-        "batter": 0.427,
-        "park_weather": 0.5375,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5196,
-        "half_prob": 0.7641,
-        "pitcher": 0.5449,
-        "batter": 0.4473,
-        "park_weather": 0.5375,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-19",
       "game_pk": 824897,
       "away_pitcher": "Nathan Eovaldi",
       "home_pitcher": "Grant Holmes",
-      "nrfi_prob": 0.5612,
+      "nrfi_prob": 0.5608,
       "confirmed": true,
       "top": {
-        "composite": 0.4718,
+        "composite": 0.4717,
         "half_prob": 0.7419,
-        "pitcher": 0.47,
+        "pitcher": 0.4698,
         "batter": 0.4453,
         "park_weather": 0.4558,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.503,
-        "half_prob": 0.7564,
-        "pitcher": 0.5359,
+        "composite": 0.502,
+        "half_prob": 0.7559,
+        "pitcher": 0.5337,
         "batter": 0.4415,
         "park_weather": 0.4558,
         "damage_speed": 0.5,
@@ -3245,13 +3245,13 @@
       "game_pk": 824168,
       "away_pitcher": "Brandon Young",
       "home_pitcher": "Hunter Brown",
-      "nrfi_prob": 0.5483,
+      "nrfi_prob": 0.5456,
       "confirmed": true,
       "top": {
-        "composite": 0.4741,
-        "half_prob": 0.743,
-        "pitcher": 0.4611,
-        "batter": 0.4452,
+        "composite": 0.4661,
+        "half_prob": 0.7393,
+        "pitcher": 0.4445,
+        "batter": 0.4455,
         "park_weather": 0.5075,
         "damage_speed": 0.5,
         "lineup": 0.6
