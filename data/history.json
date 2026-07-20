@@ -4741,10 +4741,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 2,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-07-19",
@@ -4757,10 +4757,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-07-19",
@@ -4773,10 +4773,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-07-20",
+      "game_pk": 824410,
+      "away_team": "Minnesota Twins",
+      "home_team": "Cleveland Guardians",
+      "away_pitcher": "Joe Ryan",
+      "home_pitcher": "Tanner Bibee",
+      "nrfi_prob": 0.5868,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-07-20",
+      "game_pk": 823436,
+      "away_team": "Los Angeles Dodgers",
+      "home_team": "Philadelphia Phillies",
+      "away_pitcher": "Emmet Sheehan",
+      "home_pitcher": "Cristopher S\u00e1nchez",
+      "nrfi_prob": 0.5842,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-07-20",
+      "game_pk": 823762,
+      "away_team": "New York Mets",
+      "home_team": "Milwaukee Brewers",
+      "away_pitcher": "Freddy Peralta",
+      "home_pitcher": "Jacob Misiorowski",
+      "nrfi_prob": 0.5839,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
