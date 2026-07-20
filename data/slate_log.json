@@ -3353,23 +3353,23 @@
       "game_pk": 823762,
       "away_pitcher": "Freddy Peralta",
       "home_pitcher": "Jacob Misiorowski",
-      "nrfi_prob": 0.575,
+      "nrfi_prob": 0.5748,
       "confirmed": false,
       "top": {
-        "composite": 0.5327,
-        "half_prob": 0.7702,
+        "composite": 0.5325,
+        "half_prob": 0.7701,
         "pitcher": 0.634,
         "batter": 0.4171,
-        "park_weather": 0.4726,
+        "park_weather": 0.4705,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4817,
-        "half_prob": 0.7465,
+        "composite": 0.4814,
+        "half_prob": 0.7464,
         "pitcher": 0.4842,
         "batter": 0.5,
-        "park_weather": 0.4726,
+        "park_weather": 0.4705,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -3431,33 +3431,6 @@
     },
     {
       "date": "2026-07-20",
-      "game_pk": 822874,
-      "away_pitcher": "Erick Fedde",
-      "home_pitcher": "Jacob deGrom",
-      "nrfi_prob": 0.5703,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5454,
-        "half_prob": 0.776,
-        "pitcher": 0.6242,
-        "batter": 0.5,
-        "park_weather": 0.435,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4564,
-        "half_prob": 0.7349,
-        "pitcher": 0.4426,
-        "batter": 0.5,
-        "park_weather": 0.435,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-20",
       "game_pk": 824087,
       "away_pitcher": "Trevor McDonald",
       "home_pitcher": "Michael Wacha",
@@ -3505,6 +3478,33 @@
         "pitcher": 0.5651,
         "batter": 0.4108,
         "park_weather": 0.3833,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-20",
+      "game_pk": 822874,
+      "away_pitcher": "Erick Fedde",
+      "home_pitcher": "Jacob deGrom",
+      "nrfi_prob": 0.5677,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5398,
+        "half_prob": 0.7734,
+        "pitcher": 0.6241,
+        "batter": 0.4277,
+        "park_weather": 0.435,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4546,
+        "half_prob": 0.734,
+        "pitcher": 0.4429,
+        "batter": 0.4408,
+        "park_weather": 0.435,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -3596,25 +3596,25 @@
       "game_pk": 824898,
       "away_pitcher": "JP Sears",
       "home_pitcher": "Bryce Elder",
-      "nrfi_prob": 0.5412,
-      "confirmed": false,
+      "nrfi_prob": 0.5522,
+      "confirmed": true,
       "top": {
-        "composite": 0.4695,
-        "half_prob": 0.7409,
+        "composite": 0.4879,
+        "half_prob": 0.7494,
         "pitcher": 0.4698,
-        "batter": 0.5,
+        "batter": 0.5162,
         "park_weather": 0.4333,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4469,
-        "half_prob": 0.7305,
+        "composite": 0.4609,
+        "half_prob": 0.7369,
         "pitcher": 0.4454,
         "batter": 0.4603,
         "park_weather": 0.4333,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
