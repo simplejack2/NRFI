@@ -3353,23 +3353,23 @@
       "game_pk": 823436,
       "away_pitcher": "Emmet Sheehan",
       "home_pitcher": "Cristopher S\u00e1nchez",
-      "nrfi_prob": 0.5799,
+      "nrfi_prob": 0.5797,
       "confirmed": true,
       "top": {
-        "composite": 0.5047,
-        "half_prob": 0.7572,
+        "composite": 0.5045,
+        "half_prob": 0.7571,
         "pitcher": 0.5756,
         "batter": 0.3817,
-        "park_weather": 0.4433,
+        "park_weather": 0.4417,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5233,
-        "half_prob": 0.7658,
+        "composite": 0.5231,
+        "half_prob": 0.7657,
         "pitcher": 0.5618,
         "batter": 0.4756,
-        "park_weather": 0.4433,
+        "park_weather": 0.4417,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -3512,33 +3512,6 @@
     },
     {
       "date": "2026-07-20",
-      "game_pk": 824006,
-      "away_pitcher": "Kyle Leahy",
-      "home_pitcher": "Jos\u00e9 Soriano",
-      "nrfi_prob": 0.5641,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4881,
-        "half_prob": 0.7495,
-        "pitcher": 0.4767,
-        "batter": 0.5,
-        "park_weather": 0.55,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4948,
-        "half_prob": 0.7526,
-        "pitcher": 0.4904,
-        "batter": 0.5,
-        "park_weather": 0.55,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-20",
       "game_pk": 824736,
       "away_pitcher": "Shane Baz",
       "home_pitcher": "Payton Tolle",
@@ -3561,6 +3534,33 @@
         "park_weather": 0.4,
         "damage_speed": 0.5,
         "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-20",
+      "game_pk": 824006,
+      "away_pitcher": "Kyle Leahy",
+      "home_pitcher": "Jos\u00e9 Soriano",
+      "nrfi_prob": 0.5636,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4874,
+        "half_prob": 0.7492,
+        "pitcher": 0.4767,
+        "batter": 0.5,
+        "park_weather": 0.545,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4942,
+        "half_prob": 0.7523,
+        "pitcher": 0.4904,
+        "batter": 0.5,
+        "park_weather": 0.545,
+        "damage_speed": 0.5,
+        "lineup": 0.4
       },
       "result": null
     },
