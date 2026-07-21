@@ -3755,26 +3755,53 @@
     },
     {
       "date": "2026-07-21",
+      "game_pk": 824085,
+      "away_pitcher": "Tyler Mahle",
+      "home_pitcher": "Luinder Avila",
+      "nrfi_prob": 0.5662,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4793,
+        "half_prob": 0.7454,
+        "pitcher": 0.4117,
+        "batter": 0.5367,
+        "park_weather": 0.5436,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5099,
+        "half_prob": 0.7596,
+        "pitcher": 0.4724,
+        "batter": 0.5399,
+        "park_weather": 0.5436,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-21",
       "game_pk": 824005,
       "away_pitcher": "Matthew Liberatore",
       "home_pitcher": "Walbert Ure\u00f1a",
-      "nrfi_prob": 0.5583,
+      "nrfi_prob": 0.558,
       "confirmed": false,
       "top": {
-        "composite": 0.4695,
-        "half_prob": 0.7409,
+        "composite": 0.4691,
+        "half_prob": 0.7407,
         "pitcher": 0.4388,
         "batter": 0.5,
-        "park_weather": 0.55,
+        "park_weather": 0.5467,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4969,
-        "half_prob": 0.7536,
+        "composite": 0.4965,
+        "half_prob": 0.7534,
         "pitcher": 0.4948,
         "batter": 0.5,
-        "park_weather": 0.55,
+        "park_weather": 0.5467,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -3809,55 +3836,28 @@
     },
     {
       "date": "2026-07-21",
-      "game_pk": 824085,
-      "away_pitcher": "Tyler Mahle",
-      "home_pitcher": "Luinder Avila",
-      "nrfi_prob": 0.5532,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4558,
-        "half_prob": 0.7346,
-        "pitcher": 0.4124,
-        "batter": 0.5,
-        "park_weather": 0.5436,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4959,
-        "half_prob": 0.7531,
-        "pitcher": 0.4724,
-        "batter": 0.5399,
-        "park_weather": 0.5436,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-21",
       "game_pk": 824895,
       "away_pitcher": "Walker Buehler",
       "home_pitcher": "Reynaldo L\u00f3pez",
-      "nrfi_prob": 0.5518,
-      "confirmed": false,
+      "nrfi_prob": 0.5565,
+      "confirmed": true,
       "top": {
-        "composite": 0.4805,
-        "half_prob": 0.7459,
-        "pitcher": 0.49,
-        "batter": 0.5,
+        "composite": 0.491,
+        "half_prob": 0.7508,
+        "pitcher": 0.4899,
+        "batter": 0.487,
         "park_weather": 0.4415,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4673,
-        "half_prob": 0.7398,
-        "pitcher": 0.463,
-        "batter": 0.5,
+        "composite": 0.4702,
+        "half_prob": 0.7412,
+        "pitcher": 0.4619,
+        "batter": 0.461,
         "park_weather": 0.4415,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -3947,23 +3947,23 @@
       "game_pk": 824165,
       "away_pitcher": "Tyler Phillips",
       "home_pitcher": "Tatsuya Imai",
-      "nrfi_prob": 0.5406,
+      "nrfi_prob": 0.5402,
       "confirmed": false,
       "top": {
-        "composite": 0.4696,
-        "half_prob": 0.7409,
+        "composite": 0.469,
+        "half_prob": 0.7406,
         "pitcher": 0.4576,
         "batter": 0.5,
-        "park_weather": 0.48,
+        "park_weather": 0.475,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4451,
-        "half_prob": 0.7297,
+        "composite": 0.4444,
+        "half_prob": 0.7294,
         "pitcher": 0.4075,
         "batter": 0.5,
-        "park_weather": 0.48,
+        "park_weather": 0.475,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
