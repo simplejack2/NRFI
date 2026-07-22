@@ -4295,6 +4295,33 @@
     },
     {
       "date": "2026-07-22",
+      "game_pk": 824408,
+      "away_pitcher": "Bailey Ober",
+      "home_pitcher": "Slade Cecconi",
+      "nrfi_prob": 0.5612,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4872,
+        "half_prob": 0.749,
+        "pitcher": 0.4823,
+        "batter": 0.5,
+        "park_weather": 0.522,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4875,
+        "half_prob": 0.7492,
+        "pitcher": 0.4829,
+        "batter": 0.5,
+        "park_weather": 0.522,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-22",
       "game_pk": 824650,
       "away_pitcher": "Keider Montero",
       "home_pitcher": "Colin Rea",
@@ -4342,33 +4369,6 @@
         "pitcher": 0.4556,
         "batter": 0.5,
         "park_weather": 0.3855,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-22",
-      "game_pk": 824408,
-      "away_pitcher": "Bailey Ober",
-      "home_pitcher": "Slade Cecconi",
-      "nrfi_prob": 0.5584,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4832,
-        "half_prob": 0.7472,
-        "pitcher": 0.4823,
-        "batter": 0.5,
-        "park_weather": 0.491,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4834,
-        "half_prob": 0.7473,
-        "pitcher": 0.4829,
-        "batter": 0.5,
-        "park_weather": 0.491,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
