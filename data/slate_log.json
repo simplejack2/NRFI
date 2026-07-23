@@ -4511,33 +4511,6 @@
     },
     {
       "date": "2026-07-23",
-      "game_pk": 824406,
-      "away_pitcher": "Taj Bradley",
-      "home_pitcher": "Gavin Williams",
-      "nrfi_prob": 0.5841,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5248,
-        "half_prob": 0.7665,
-        "pitcher": 0.5506,
-        "batter": 0.5,
-        "park_weather": 0.5542,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5153,
-        "half_prob": 0.7621,
-        "pitcher": 0.531,
-        "batter": 0.5,
-        "park_weather": 0.5542,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-23",
       "game_pk": 823042,
       "away_pitcher": "Brandon Pfaadt",
       "home_pitcher": "Michael McGreevy",
@@ -4565,28 +4538,55 @@
     },
     {
       "date": "2026-07-23",
-      "game_pk": 824893,
-      "away_pitcher": "Griffin Canning",
-      "home_pitcher": "Chris Sale",
-      "nrfi_prob": 0.5734,
-      "confirmed": false,
+      "game_pk": 824406,
+      "away_pitcher": "Taj Bradley",
+      "home_pitcher": "Gavin Williams",
+      "nrfi_prob": 0.5723,
+      "confirmed": true,
       "top": {
-        "composite": 0.5481,
-        "half_prob": 0.7772,
-        "pitcher": 0.6202,
-        "batter": 0.5,
-        "park_weather": 0.4708,
+        "composite": 0.5242,
+        "half_prob": 0.7663,
+        "pitcher": 0.55,
+        "batter": 0.4471,
+        "park_weather": 0.5542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4628,
-        "half_prob": 0.7378,
-        "pitcher": 0.4461,
-        "batter": 0.5,
-        "park_weather": 0.4708,
+        "composite": 0.4826,
+        "half_prob": 0.7469,
+        "pitcher": 0.5292,
+        "batter": 0.3306,
+        "park_weather": 0.5542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-23",
+      "game_pk": 824893,
+      "away_pitcher": "Kyle Hart",
+      "home_pitcher": "Chris Sale",
+      "nrfi_prob": 0.5721,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5428,
+        "half_prob": 0.7748,
+        "pitcher": 0.6095,
+        "batter": 0.451,
+        "park_weather": 0.4642,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4642,
+        "half_prob": 0.7384,
+        "pitcher": 0.4611,
+        "batter": 0.4294,
+        "park_weather": 0.4642,
+        "damage_speed": 0.5,
+        "lineup": 0.6
       },
       "result": null
     },
@@ -4620,9 +4620,9 @@
     {
       "date": "2026-07-23",
       "game_pk": 822785,
-      "away_pitcher": "Ian Seymour",
+      "away_pitcher": "Casey Legumina",
       "home_pitcher": "Shane Bieber",
-      "nrfi_prob": 0.5619,
+      "nrfi_prob": 0.5486,
       "confirmed": false,
       "top": {
         "composite": 0.4753,
@@ -4634,10 +4634,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5015,
-        "half_prob": 0.7557,
-        "pitcher": 0.5073,
-        "batter": 0.5,
+        "composite": 0.4629,
+        "half_prob": 0.7378,
+        "pitcher": 0.4579,
+        "batter": 0.447,
         "park_weather": 0.5375,
         "damage_speed": 0.5,
         "lineup": 0.4
