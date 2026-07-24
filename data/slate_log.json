@@ -4534,7 +4534,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-07-23",
@@ -4561,7 +4561,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-07-23",
@@ -4588,7 +4588,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-07-23",
@@ -4615,7 +4615,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-07-23",
@@ -4641,6 +4641,114 @@
         "park_weather": 0.5375,
         "damage_speed": 0.5,
         "lineup": 0.6
+      },
+      "result": "YRFI"
+    },
+    {
+      "date": "2026-07-24",
+      "game_pk": 822952,
+      "away_pitcher": "Joey Cantillo",
+      "home_pitcher": "Shane McClanahan",
+      "nrfi_prob": 0.5826,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5288,
+        "half_prob": 0.7683,
+        "pitcher": 0.5421,
+        "batter": 0.5,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5071,
+        "half_prob": 0.7583,
+        "pitcher": 0.4978,
+        "batter": 0.5,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-24",
+      "game_pk": 824812,
+      "away_pitcher": "Grant Holmes",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5552,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4843,
+        "half_prob": 0.7477,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4731,
+        "half_prob": 0.7425,
+        "pitcher": 0.4771,
+        "batter": 0.5,
+        "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-24",
+      "game_pk": 823031,
+      "away_pitcher": "Rhett Lowder",
+      "home_pitcher": "Dustin May",
+      "nrfi_prob": 0.5551,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5054,
+        "half_prob": 0.7575,
+        "pitcher": 0.5121,
+        "batter": 0.5,
+        "park_weather": 0.55,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.452,
+        "half_prob": 0.7328,
+        "pitcher": 0.403,
+        "batter": 0.5,
+        "park_weather": 0.55,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-24",
+      "game_pk": 824573,
+      "away_pitcher": "Spencer Arrighetti",
+      "home_pitcher": "Davis Martin",
+      "nrfi_prob": 0.5484,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4826,
+        "half_prob": 0.7469,
+        "pitcher": 0.4965,
+        "batter": 0.5,
+        "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4551,
+        "half_prob": 0.7342,
+        "pitcher": 0.4403,
+        "batter": 0.5,
+        "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
       },
       "result": null
     }
