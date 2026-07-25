@@ -5081,25 +5081,25 @@
       "game_pk": 823600,
       "away_pitcher": "Yoshinobu Yamamoto",
       "home_pitcher": "Nolan McLean",
-      "nrfi_prob": 0.597,
-      "confirmed": false,
+      "nrfi_prob": 0.595,
+      "confirmed": true,
       "top": {
-        "composite": 0.5349,
-        "half_prob": 0.7712,
-        "pitcher": 0.5681,
-        "batter": 0.5,
+        "composite": 0.5157,
+        "half_prob": 0.7623,
+        "pitcher": 0.5685,
+        "batter": 0.3764,
         "park_weather": 0.5656,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5413,
-        "half_prob": 0.7741,
+        "composite": 0.5553,
+        "half_prob": 0.7805,
         "pitcher": 0.5846,
         "batter": 0.4938,
         "park_weather": 0.5656,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5270,23 +5270,23 @@
       "game_pk": 823027,
       "away_pitcher": "Hunter Greene",
       "home_pitcher": "Andre Pallante",
-      "nrfi_prob": 0.5677,
+      "nrfi_prob": 0.5653,
       "confirmed": false,
       "top": {
-        "composite": 0.4773,
-        "half_prob": 0.7445,
-        "pitcher": 0.4552,
-        "batter": 0.5,
-        "park_weather": 0.5483,
+        "composite": 0.4717,
+        "half_prob": 0.7419,
+        "pitcher": 0.4556,
+        "batter": 0.4833,
+        "park_weather": 0.5383,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5161,
-        "half_prob": 0.7625,
+        "composite": 0.5148,
+        "half_prob": 0.7619,
         "pitcher": 0.5343,
         "batter": 0.5,
-        "park_weather": 0.5483,
+        "park_weather": 0.5383,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5348,6 +5348,33 @@
     },
     {
       "date": "2026-07-25",
+      "game_pk": 823758,
+      "away_pitcher": "Ryan Feltner",
+      "home_pitcher": "Robert Gasser",
+      "nrfi_prob": 0.5512,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4897,
+        "half_prob": 0.7502,
+        "pitcher": 0.5096,
+        "batter": 0.4305,
+        "park_weather": 0.4753,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4564,
+        "half_prob": 0.7348,
+        "pitcher": 0.4216,
+        "batter": 0.4666,
+        "park_weather": 0.4753,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-25",
       "game_pk": 824811,
       "away_pitcher": "Bryce Elder",
       "home_pitcher": "Brandon Young",
@@ -5402,55 +5429,28 @@
     },
     {
       "date": "2026-07-25",
-      "game_pk": 823758,
-      "away_pitcher": "Ryan Feltner",
-      "home_pitcher": "Robert Gasser",
-      "nrfi_prob": 0.5448,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4757,
-        "half_prob": 0.7437,
-        "pitcher": 0.5096,
-        "batter": 0.4305,
-        "park_weather": 0.4753,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4515,
-        "half_prob": 0.7326,
-        "pitcher": 0.4219,
-        "batter": 0.5,
-        "park_weather": 0.4753,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-25",
       "game_pk": 823679,
       "away_pitcher": "Brady Basso",
       "home_pitcher": "Mike Paredes",
-      "nrfi_prob": 0.5426,
-      "confirmed": false,
+      "nrfi_prob": 0.5461,
+      "confirmed": true,
       "top": {
-        "composite": 0.4518,
-        "half_prob": 0.7327,
-        "pitcher": 0.4127,
-        "batter": 0.5,
+        "composite": 0.4477,
+        "half_prob": 0.7309,
+        "pitcher": 0.4166,
+        "batter": 0.426,
         "park_weather": 0.5117,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.469,
-        "half_prob": 0.7406,
+        "composite": 0.483,
+        "half_prob": 0.7471,
         "pitcher": 0.4593,
         "batter": 0.4794,
         "park_weather": 0.5117,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     }
