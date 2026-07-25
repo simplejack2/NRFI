@@ -4804,7 +4804,7 @@
         "damage_speed": 0.5,
         "lineup": 0.6
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-07-24",
@@ -5054,23 +5054,23 @@
       "game_pk": 823355,
       "away_pitcher": "Shota Imanaga",
       "home_pitcher": "Paul Skenes",
-      "nrfi_prob": 0.6054,
+      "nrfi_prob": 0.6057,
       "confirmed": false,
       "top": {
-        "composite": 0.5629,
-        "half_prob": 0.7839,
+        "composite": 0.5634,
+        "half_prob": 0.7841,
         "pitcher": 0.6215,
         "batter": 0.5,
-        "park_weather": 0.58,
+        "park_weather": 0.5833,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5373,
-        "half_prob": 0.7723,
+        "composite": 0.5378,
+        "half_prob": 0.7725,
         "pitcher": 0.5692,
         "batter": 0.5,
-        "park_weather": 0.58,
+        "park_weather": 0.5833,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5081,23 +5081,50 @@
       "game_pk": 823600,
       "away_pitcher": "Yoshinobu Yamamoto",
       "home_pitcher": "Nolan McLean",
-      "nrfi_prob": 0.5966,
+      "nrfi_prob": 0.5958,
       "confirmed": false,
       "top": {
-        "composite": 0.5339,
-        "half_prob": 0.7707,
+        "composite": 0.5329,
+        "half_prob": 0.7702,
         "pitcher": 0.5681,
         "batter": 0.5,
-        "park_weather": 0.5575,
+        "park_weather": 0.55,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5412,
-        "half_prob": 0.7741,
+        "composite": 0.5402,
+        "half_prob": 0.7736,
         "pitcher": 0.5831,
         "batter": 0.5,
-        "park_weather": 0.5575,
+        "park_weather": 0.55,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-25",
+      "game_pk": 823841,
+      "away_pitcher": "JP Sears",
+      "home_pitcher": "Eury P\u00e9rez",
+      "nrfi_prob": 0.5814,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5317,
+        "half_prob": 0.7697,
+        "pitcher": 0.5523,
+        "batter": 0.5,
+        "park_weather": 0.6003,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5008,
+        "half_prob": 0.7554,
+        "pitcher": 0.4893,
+        "batter": 0.5,
+        "park_weather": 0.6003,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5125,33 +5152,6 @@
         "pitcher": 0.4834,
         "batter": 0.5,
         "park_weather": 0.5875,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-25",
-      "game_pk": 823841,
-      "away_pitcher": "JP Sears",
-      "home_pitcher": "Eury P\u00e9rez",
-      "nrfi_prob": 0.5797,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5292,
-        "half_prob": 0.7686,
-        "pitcher": 0.5523,
-        "batter": 0.5,
-        "park_weather": 0.5817,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4984,
-        "half_prob": 0.7542,
-        "pitcher": 0.4893,
-        "batter": 0.5,
-        "park_weather": 0.5817,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5189,23 +5189,23 @@
       "game_pk": 822869,
       "away_pitcher": "Bryan Woo",
       "home_pitcher": "Nathan Eovaldi",
-      "nrfi_prob": 0.5766,
+      "nrfi_prob": 0.577,
       "confirmed": false,
       "top": {
-        "composite": 0.502,
-        "half_prob": 0.7559,
+        "composite": 0.5025,
+        "half_prob": 0.7562,
         "pitcher": 0.5347,
         "batter": 0.5,
-        "park_weather": 0.4383,
+        "park_weather": 0.4425,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5167,
-        "half_prob": 0.7628,
+        "composite": 0.5173,
+        "half_prob": 0.763,
         "pitcher": 0.5648,
         "batter": 0.5,
-        "park_weather": 0.4383,
+        "park_weather": 0.4425,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5270,23 +5270,23 @@
       "game_pk": 823679,
       "away_pitcher": "TBD",
       "home_pitcher": "TBD",
-      "nrfi_prob": 0.5663,
+      "nrfi_prob": 0.567,
       "confirmed": false,
       "top": {
-        "composite": 0.4945,
-        "half_prob": 0.7525,
+        "composite": 0.4957,
+        "half_prob": 0.753,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.5118,
+        "park_weather": 0.5208,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4945,
-        "half_prob": 0.7525,
+        "composite": 0.4957,
+        "half_prob": 0.753,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.5118,
+        "park_weather": 0.5208,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5324,23 +5324,23 @@
       "game_pk": 823197,
       "away_pitcher": "Ryan Johnson",
       "home_pitcher": "Robbie Ray",
-      "nrfi_prob": 0.5614,
+      "nrfi_prob": 0.5613,
       "confirmed": false,
       "top": {
-        "composite": 0.4954,
-        "half_prob": 0.7529,
+        "composite": 0.4952,
+        "half_prob": 0.7528,
         "pitcher": 0.4825,
         "batter": 0.5,
-        "park_weather": 0.5843,
+        "park_weather": 0.5831,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4798,
+        "composite": 0.4797,
         "half_prob": 0.7456,
         "pitcher": 0.4507,
         "batter": 0.5,
-        "park_weather": 0.5843,
+        "park_weather": 0.5831,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
