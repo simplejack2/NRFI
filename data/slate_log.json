@@ -5459,50 +5459,23 @@
       "game_pk": 822870,
       "away_pitcher": "Logan Gilbert",
       "home_pitcher": "Jacob deGrom",
-      "nrfi_prob": 0.5968,
+      "nrfi_prob": 0.5936,
       "confirmed": false,
       "top": {
-        "composite": 0.5381,
-        "half_prob": 0.7726,
+        "composite": 0.5297,
+        "half_prob": 0.7688,
         "pitcher": 0.603,
-        "batter": 0.5,
-        "park_weather": 0.4589,
+        "batter": 0.4714,
+        "park_weather": 0.4532,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5376,
-        "half_prob": 0.7724,
+        "composite": 0.5369,
+        "half_prob": 0.7721,
         "pitcher": 0.602,
         "batter": 0.5,
-        "park_weather": 0.4589,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-26",
-      "game_pk": 822950,
-      "away_pitcher": "Parker Messick",
-      "home_pitcher": "Drew Rasmussen",
-      "nrfi_prob": 0.5947,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5319,
-        "half_prob": 0.7698,
-        "pitcher": 0.5485,
-        "batter": 0.5,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5379,
-        "half_prob": 0.7725,
-        "pitcher": 0.5607,
-        "batter": 0.5,
-        "park_weather": 0.6167,
+        "park_weather": 0.4532,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5513,25 +5486,52 @@
       "game_pk": 823755,
       "away_pitcher": "Kyle Freeland",
       "home_pitcher": "Jacob Misiorowski",
-      "nrfi_prob": 0.5852,
-      "confirmed": false,
+      "nrfi_prob": 0.5848,
+      "confirmed": true,
       "top": {
-        "composite": 0.5607,
-        "half_prob": 0.7829,
-        "pitcher": 0.6371,
-        "batter": 0.5,
+        "composite": 0.5683,
+        "half_prob": 0.7863,
+        "pitcher": 0.6354,
+        "batter": 0.4793,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4839,
-        "half_prob": 0.7475,
-        "pitcher": 0.4803,
-        "batter": 0.5,
+        "composite": 0.4756,
+        "half_prob": 0.7437,
+        "pitcher": 0.4792,
+        "batter": 0.4194,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-26",
+      "game_pk": 822950,
+      "away_pitcher": "Parker Messick",
+      "home_pitcher": "Drew Rasmussen",
+      "nrfi_prob": 0.5811,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5009,
+        "half_prob": 0.7554,
+        "pitcher": 0.5487,
+        "batter": 0.3328,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5306,
+        "half_prob": 0.7692,
+        "pitcher": 0.5621,
+        "batter": 0.4185,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5540,25 +5540,25 @@
       "game_pk": 823354,
       "away_pitcher": "Jameson Taillon",
       "home_pitcher": "Braxton Ashcraft",
-      "nrfi_prob": 0.5815,
-      "confirmed": false,
+      "nrfi_prob": 0.581,
+      "confirmed": true,
       "top": {
-        "composite": 0.5336,
-        "half_prob": 0.7706,
-        "pitcher": 0.5553,
-        "batter": 0.5,
+        "composite": 0.5298,
+        "half_prob": 0.7688,
+        "pitcher": 0.5528,
+        "batter": 0.4386,
         "park_weather": 0.6042,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4991,
-        "half_prob": 0.7546,
-        "pitcher": 0.4848,
-        "batter": 0.5,
+        "composite": 0.5015,
+        "half_prob": 0.7557,
+        "pitcher": 0.4857,
+        "batter": 0.4554,
         "park_weather": 0.6042,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5567,25 +5567,25 @@
       "game_pk": 823599,
       "away_pitcher": "Emmet Sheehan",
       "home_pitcher": "Freddy Peralta",
-      "nrfi_prob": 0.5757,
-      "confirmed": false,
+      "nrfi_prob": 0.5728,
+      "confirmed": true,
       "top": {
-        "composite": 0.4962,
-        "half_prob": 0.7532,
-        "pitcher": 0.4877,
-        "batter": 0.5,
-        "park_weather": 0.5708,
+        "composite": 0.4769,
+        "half_prob": 0.7443,
+        "pitcher": 0.4875,
+        "batter": 0.3804,
+        "park_weather": 0.5642,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5201,
-        "half_prob": 0.7643,
-        "pitcher": 0.5365,
-        "batter": 0.5,
-        "park_weather": 0.5708,
+        "composite": 0.5315,
+        "half_prob": 0.7696,
+        "pitcher": 0.5366,
+        "batter": 0.4934,
+        "park_weather": 0.5642,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5621,52 +5621,52 @@
       "game_pk": 824730,
       "away_pitcher": "Kevin Gausman",
       "home_pitcher": "Ranger Suarez",
-      "nrfi_prob": 0.5687,
-      "confirmed": false,
+      "nrfi_prob": 0.5654,
+      "confirmed": true,
       "top": {
-        "composite": 0.5056,
-        "half_prob": 0.7576,
-        "pitcher": 0.5466,
-        "batter": 0.5,
+        "composite": 0.4932,
+        "half_prob": 0.7518,
+        "pitcher": 0.545,
+        "batter": 0.4052,
         "park_weather": 0.4208,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4906,
-        "half_prob": 0.7506,
-        "pitcher": 0.516,
-        "batter": 0.5,
+        "composite": 0.4939,
+        "half_prob": 0.7521,
+        "pitcher": 0.5173,
+        "batter": 0.458,
         "park_weather": 0.4208,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
     {
       "date": "2026-07-26",
-      "game_pk": 823678,
-      "away_pitcher": "Jeffrey Springs",
-      "home_pitcher": "Connor Prielipp",
-      "nrfi_prob": 0.5641,
-      "confirmed": false,
+      "game_pk": 823028,
+      "away_pitcher": "Andrew Abbott",
+      "home_pitcher": "Kyle Leahy",
+      "nrfi_prob": 0.5651,
+      "confirmed": true,
       "top": {
-        "composite": 0.5057,
-        "half_prob": 0.7576,
-        "pitcher": 0.5159,
-        "batter": 0.5,
-        "park_weather": 0.5375,
+        "composite": 0.5178,
+        "half_prob": 0.7633,
+        "pitcher": 0.5029,
+        "batter": 0.5055,
+        "park_weather": 0.5608,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4776,
-        "half_prob": 0.7446,
-        "pitcher": 0.4586,
-        "batter": 0.5,
-        "park_weather": 0.5375,
+        "composite": 0.4684,
+        "half_prob": 0.7404,
+        "pitcher": 0.4592,
+        "batter": 0.402,
+        "park_weather": 0.5608,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5675,23 +5675,77 @@
       "game_pk": 823840,
       "away_pitcher": "Walker Buehler",
       "home_pitcher": "Janson Junk",
-      "nrfi_prob": 0.5614,
+      "nrfi_prob": 0.5638,
+      "confirmed": true,
+      "top": {
+        "composite": 0.499,
+        "half_prob": 0.7545,
+        "pitcher": 0.4809,
+        "batter": 0.4668,
+        "park_weather": 0.5792,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4832,
+        "half_prob": 0.7472,
+        "pitcher": 0.4518,
+        "batter": 0.4612,
+        "park_weather": 0.5792,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-26",
+      "game_pk": 823678,
+      "away_pitcher": "Jeffrey Springs",
+      "home_pitcher": "Connor Prielipp",
+      "nrfi_prob": 0.5636,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5045,
+        "half_prob": 0.7571,
+        "pitcher": 0.5167,
+        "batter": 0.4425,
+        "park_weather": 0.5375,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4773,
+        "half_prob": 0.7444,
+        "pitcher": 0.4591,
+        "batter": 0.4461,
+        "park_weather": 0.5375,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-26",
+      "game_pk": 823194,
+      "away_pitcher": "Jos\u00e9 Soriano",
+      "home_pitcher": "Carson Whisenhunt",
+      "nrfi_prob": 0.5593,
       "confirmed": false,
       "top": {
-        "composite": 0.4947,
-        "half_prob": 0.7526,
-        "pitcher": 0.4812,
+        "composite": 0.4636,
+        "half_prob": 0.7381,
+        "pitcher": 0.408,
         "batter": 0.5,
-        "park_weather": 0.5842,
+        "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4807,
-        "half_prob": 0.746,
-        "pitcher": 0.4525,
+        "composite": 0.5061,
+        "half_prob": 0.7578,
+        "pitcher": 0.4946,
         "batter": 0.5,
-        "park_weather": 0.5842,
+        "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5702,52 +5756,25 @@
       "game_pk": 824246,
       "away_pitcher": "Luinder Avila",
       "home_pitcher": "Framber Valdez",
-      "nrfi_prob": 0.5588,
-      "confirmed": false,
+      "nrfi_prob": 0.5574,
+      "confirmed": true,
       "top": {
-        "composite": 0.4854,
-        "half_prob": 0.7482,
-        "pitcher": 0.4612,
-        "batter": 0.5,
+        "composite": 0.5019,
+        "half_prob": 0.7559,
+        "pitcher": 0.458,
+        "batter": 0.5152,
         "park_weather": 0.5875,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4824,
-        "half_prob": 0.7468,
-        "pitcher": 0.4551,
-        "batter": 0.5,
+        "composite": 0.462,
+        "half_prob": 0.7374,
+        "pitcher": 0.4542,
+        "batter": 0.3743,
         "park_weather": 0.5875,
         "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-26",
-      "game_pk": 823194,
-      "away_pitcher": "Jos\u00e9 Soriano",
-      "home_pitcher": "Carson Whisenhunt",
-      "nrfi_prob": 0.5567,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4598,
-        "half_prob": 0.7364,
-        "pitcher": 0.408,
-        "batter": 0.5,
-        "park_weather": 0.5913,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5022,
-        "half_prob": 0.756,
-        "pitcher": 0.4946,
-        "batter": 0.5,
-        "park_weather": 0.5913,
-        "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5756,25 +5783,25 @@
       "game_pk": 824810,
       "away_pitcher": "Reynaldo L\u00f3pez",
       "home_pitcher": "Shane Baz",
-      "nrfi_prob": 0.5548,
-      "confirmed": false,
+      "nrfi_prob": 0.5527,
+      "confirmed": true,
       "top": {
-        "composite": 0.4887,
-        "half_prob": 0.7497,
-        "pitcher": 0.5033,
-        "batter": 0.5,
+        "composite": 0.4846,
+        "half_prob": 0.7478,
+        "pitcher": 0.5019,
+        "batter": 0.4356,
         "park_weather": 0.4542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4677,
-        "half_prob": 0.74,
-        "pitcher": 0.4606,
-        "batter": 0.5,
+        "composite": 0.4657,
+        "half_prob": 0.7391,
+        "pitcher": 0.4609,
+        "batter": 0.4401,
         "park_weather": 0.4542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5783,25 +5810,25 @@
       "game_pk": 822706,
       "away_pitcher": "Kohl Drake",
       "home_pitcher": "Miles Mikolas",
-      "nrfi_prob": 0.5515,
-      "confirmed": false,
+      "nrfi_prob": 0.545,
+      "confirmed": true,
       "top": {
-        "composite": 0.4723,
-        "half_prob": 0.7421,
-        "pitcher": 0.4566,
-        "batter": 0.5,
-        "park_weather": 0.5042,
+        "composite": 0.4478,
+        "half_prob": 0.7309,
+        "pitcher": 0.4568,
+        "batter": 0.3611,
+        "park_weather": 0.4958,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4745,
-        "half_prob": 0.7432,
+        "composite": 0.48,
+        "half_prob": 0.7457,
         "pitcher": 0.4612,
-        "batter": 0.5,
-        "park_weather": 0.5042,
+        "batter": 0.4725,
+        "park_weather": 0.4958,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     },
@@ -5810,25 +5837,25 @@
       "game_pk": 824572,
       "away_pitcher": "Ronel Blanco",
       "home_pitcher": "Erick Fedde",
-      "nrfi_prob": 0.551,
-      "confirmed": false,
+      "nrfi_prob": 0.5389,
+      "confirmed": true,
       "top": {
-        "composite": 0.4691,
-        "half_prob": 0.7407,
-        "pitcher": 0.4635,
-        "batter": 0.5,
+        "composite": 0.4484,
+        "half_prob": 0.7312,
+        "pitcher": 0.4638,
+        "batter": 0.3707,
         "park_weather": 0.4542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4761,
-        "half_prob": 0.7439,
+        "composite": 0.4611,
+        "half_prob": 0.737,
         "pitcher": 0.4777,
-        "batter": 0.5,
+        "batter": 0.3926,
         "park_weather": 0.4542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "result": null
     }
