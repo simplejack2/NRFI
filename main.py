@@ -263,6 +263,10 @@ def _update_slate_log(results: list[dict], game_date: str) -> None:
                         **{k: round(v, 4) for k, v in top["scores"].items()}},
                 "bot": {"composite": bot["composite"], "half_prob": bot["half_prob"],
                         **{k: round(v, 4) for k, v in bot["scores"].items()}},
+                # Sub-component detail (pitcher components + damage/speed diagnostics)
+                # for the next rebuild's P_WEIGHTS tuning and dead-block diagnosis.
+                "top_detail": {"pit": top.get("pit_detail", {}), "ds": top.get("ds_detail", {})},
+                "bot_detail": {"pit": bot.get("pit_detail", {}), "ds": bot.get("ds_detail", {})},
                 "result":       None,
             })
 
@@ -332,9 +336,14 @@ def _write_html(results: list[dict], game_date: str,
         logging.getLogger(__name__).error("Failed to write index.html: %s", exc)
 
 
+# Diagnostic sub-component detail is persisted to slate_log.json only; keep it
+# out of the public index.html / data JSON payloads.
+_SKIP_KEYS = {"pit_detail", "ds_detail"}
+
+
 def _serializable(obj):
     if isinstance(obj, dict):
-        return {k: _serializable(v) for k, v in obj.items()}
+        return {k: _serializable(v) for k, v in obj.items() if k not in _SKIP_KEYS}
     if isinstance(obj, (list, tuple)):
         return [_serializable(v) for v in obj]
     if isinstance(obj, float):

@@ -204,11 +204,15 @@ def _score_half(
     lhb_count = sum(1 for b in top5 if b.get("bat_side") == "L")
     lhb_frac  = lhb_count / len(top5) if top5 else 0.5
 
-    p_score  = _pitcher_score(pid, phand, season, ctx, lhb_frac=lhb_frac, is_home=is_home)
+    pit_detail: dict = {}
+    ds_detail: dict = {}
+    p_score  = _pitcher_score(pid, phand, season, ctx, lhb_frac=lhb_frac,
+                              is_home=is_home, detail=pit_detail)
     b_score  = _lineup_score(batters[:5], phand, season, ctx)
     b_score  = _adjust_batter_score_team_fi(b_score, batting_team_id, season, confirmed)
     pw_score = _park_weather_score(venue_name, lat, lon, game_time)
-    ds_score = _damage_speed_score(batters[:5], pid, defending_team_id, season, ctx)
+    ds_score = _damage_speed_score(batters[:5], pid, defending_team_id, season, ctx,
+                                   detail=ds_detail)
     lu_score = 0.60 if confirmed else 0.40   # confirmed lineups meaningfully reduce uncertainty
 
     composite = (
@@ -233,6 +237,9 @@ def _score_half(
             "damage_speed":round(ds_score, 4),
             "lineup":      round(lu_score, 4),
         },
+        # Sub-component detail for offline weight tuning + damage/speed diagnostics
+        "pit_detail": pit_detail,
+        "ds_detail":  ds_detail,
         "batters": _summarize_batters(batters[:5], phand, season, ctx),
     }
 
@@ -252,6 +259,7 @@ def _pitcher_score(
     ctx: dict,
     lhb_frac: float = 0.5,
     is_home: bool = True,
+    detail: dict | None = None,
 ) -> float:
     if not pid:
         return 0.50   # league-average for TBD pitcher
@@ -371,6 +379,11 @@ def _pitcher_score(
     if bf < 200 and not has_prior_sv:
         discount_frac = max(0.0, 1.0 - bf / 200.0)
         base = base * (1.0 - 0.22 * discount_frac) + 0.35 * (0.22 * discount_frac)
+
+    # Sub-component capture for offline P_WEIGHTS tuning (see slate_log.json).
+    if detail is not None:
+        detail["components"] = {k: round(v, 4) for k, v in components.items()}
+        detail["bf"] = bf
 
     return base
 
@@ -560,14 +573,18 @@ def _weather_adjustment(wx: dict, vn: str) -> float:
 # ── Damage / speed scoring ─────────────────────────────────────────────────────
 
 def _damage_speed_score(batters: list[dict], pitcher_id: int | None,
-                        defending_team_id: int, season: int, ctx: dict) -> float:
-    damage = _damage_score(batters, pitcher_id, season, ctx)
-    speed  = _speed_score(batters, defending_team_id, season, ctx)
+                        defending_team_id: int, season: int, ctx: dict,
+                        detail: dict | None = None) -> float:
+    damage = _damage_score(batters, pitcher_id, season, ctx, detail)
+    speed  = _speed_score(batters, defending_team_id, season, ctx, detail)
+    if detail is not None:
+        detail["damage"] = round(damage, 4)
+        detail["speed"]  = round(speed, 4)
     return 0.5 * damage + 0.5 * speed
 
 
 def _damage_score(batters: list[dict], pid: int | None,
-                  season: int, ctx: dict) -> float:
+                  season: int, ctx: dict, detail: dict | None = None) -> float:
     sv_pit = ctx["sv_pit"].get(pid, {}) if pid else {}
     # Use explicit None check: .get(key, default) only falls back when key is ABSENT,
     # not when key exists with value=None (which Savant returns for new-season pitchers).
@@ -586,12 +603,20 @@ def _damage_score(batters: list[dict], pid: int | None,
     matchup_hh = (pit_hh + avg_hh) / 2.0
     matchup_br = (pit_br + avg_br) / 2.0
 
+    # Diagnostics: how many lineup batters actually matched Savant batted-ball data.
+    # If n_hh is 0 across every game, the Savant batter feed isn't populating.
+    if detail is not None:
+        detail["dmg"] = {
+            "pit_hh": None if sv_pit.get("hard_hit") is None else round(pit_hh, 3),
+            "n_hh": len(hh_vals), "n_br": len(br_vals), "n_bat": len(batters),
+        }
+
     return 0.6 * _sig_inv(matchup_hh, 0.370, 0.25, 0.52) \
          + 0.4 * _sig_inv(matchup_br, 0.080, 0.03, 0.14)
 
 
 def _speed_score(batters: list[dict], defending_team_id: int,
-                 season: int, ctx: dict) -> float:
+                 season: int, ctx: dict, detail: dict | None = None) -> float:
     speeds = [ctx["sprints"][b["player_id"]]
               for b in batters if b["player_id"] in ctx["sprints"]]
     avg_speed = sum(speeds) / len(speeds) if speeds else LG["sprint"]
@@ -599,6 +624,10 @@ def _speed_score(batters: list[dict], defending_team_id: int,
     cat_ids  = F.team_catchers(defending_team_id, season)
     pop_vals = [ctx["pops"][c] for c in cat_ids if c in ctx["pops"]]
     best_pop = min(pop_vals) if pop_vals else LG["pop_time"]
+
+    # Diagnostics: n_spd=0 means the sprint-speed feed is empty; n_pop=0 the pop-time feed.
+    if detail is not None:
+        detail["spd"] = {"n_spd": len(speeds), "n_cat": len(cat_ids), "n_pop": len(pop_vals)}
 
     spd_score = _sig_inv(avg_speed, LG["sprint"],   24.0, 30.0)
     pop_score = _sig_inv(best_pop,  LG["pop_time"], 1.85, 2.25)
