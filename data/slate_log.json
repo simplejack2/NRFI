@@ -5864,23 +5864,23 @@
       "game_pk": 823839,
       "away_pitcher": "Zack Wheeler",
       "home_pitcher": "Tyler Phillips",
-      "nrfi_prob": 0.5814,
+      "nrfi_prob": 0.5821,
       "confirmed": false,
       "top": {
-        "composite": 0.4762,
-        "half_prob": 0.7439,
+        "composite": 0.4772,
+        "half_prob": 0.7444,
         "pitcher": 0.45,
         "batter": 0.5,
-        "park_weather": 0.5592,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5576,
-        "half_prob": 0.7815,
+        "composite": 0.5586,
+        "half_prob": 0.782,
         "pitcher": 0.6162,
         "batter": 0.5,
-        "park_weather": 0.5592,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -5915,15 +5915,42 @@
     },
     {
       "date": "2026-07-27",
+      "game_pk": 823195,
+      "away_pitcher": "Brandon Sproat",
+      "home_pitcher": "Tyler Mahle",
+      "nrfi_prob": 0.5708,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5054,
+        "half_prob": 0.7575,
+        "pitcher": 0.4988,
+        "batter": 0.5,
+        "park_weather": 0.6,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4967,
+        "half_prob": 0.7535,
+        "pitcher": 0.481,
+        "batter": 0.5,
+        "park_weather": 0.6,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-27",
       "game_pk": 822868,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Kumar Rocker",
-      "nrfi_prob": 0.5709,
+      "nrfi_prob": 0.5691,
       "confirmed": true,
       "top": {
-        "composite": 0.4759,
-        "half_prob": 0.7438,
-        "pitcher": 0.4666,
+        "composite": 0.471,
+        "half_prob": 0.7415,
+        "pitcher": 0.4566,
         "batter": 0.4667,
         "park_weather": 0.4558,
         "damage_speed": 0.5,
@@ -5945,7 +5972,7 @@
       "game_pk": 824245,
       "away_pitcher": "Kyle Bradish",
       "home_pitcher": "Keider Montero",
-      "nrfi_prob": 0.5709,
+      "nrfi_prob": 0.5625,
       "confirmed": false,
       "top": {
         "composite": 0.5047,
@@ -5957,38 +5984,11 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4979,
-        "half_prob": 0.754,
-        "pitcher": 0.5048,
-        "batter": 0.5,
+        "composite": 0.474,
+        "half_prob": 0.7429,
+        "pitcher": 0.5051,
+        "batter": 0.4108,
         "park_weather": 0.5198,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-27",
-      "game_pk": 823195,
-      "away_pitcher": "Brandon Sproat",
-      "home_pitcher": "Tyler Mahle",
-      "nrfi_prob": 0.5708,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5054,
-        "half_prob": 0.7575,
-        "pitcher": 0.4988,
-        "batter": 0.5,
-        "park_weather": 0.6,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4967,
-        "half_prob": 0.7535,
-        "pitcher": 0.481,
-        "batter": 0.5,
-        "park_weather": 0.6,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -6050,33 +6050,6 @@
     },
     {
       "date": "2026-07-27",
-      "game_pk": 823025,
-      "away_pitcher": "David Peterson",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.558,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4976,
-        "half_prob": 0.7539,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.535,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4678,
-        "half_prob": 0.7401,
-        "pitcher": 0.4393,
-        "batter": 0.5,
-        "park_weather": 0.535,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-27",
       "game_pk": 823597,
       "away_pitcher": "Mart\u00edn P\u00e9rez",
       "home_pitcher": "Zac Thornton",
@@ -6104,26 +6077,53 @@
     },
     {
       "date": "2026-07-27",
-      "game_pk": 824490,
-      "away_pitcher": "Slade Cecconi",
-      "home_pitcher": "Chase Burns",
-      "nrfi_prob": 0.5568,
+      "game_pk": 823025,
+      "away_pitcher": "David Peterson",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5566,
       "confirmed": false,
       "top": {
-        "composite": 0.5073,
-        "half_prob": 0.7584,
-        "pitcher": 0.569,
+        "composite": 0.4956,
+        "half_prob": 0.753,
+        "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.35,
+        "park_weather": 0.52,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4551,
-        "half_prob": 0.7342,
+        "composite": 0.4658,
+        "half_prob": 0.7392,
+        "pitcher": 0.4393,
+        "batter": 0.5,
+        "park_weather": 0.52,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-27",
+      "game_pk": 824490,
+      "away_pitcher": "Slade Cecconi",
+      "home_pitcher": "Chase Burns",
+      "nrfi_prob": 0.556,
+      "confirmed": false,
+      "top": {
+        "composite": 0.506,
+        "half_prob": 0.7578,
+        "pitcher": 0.569,
+        "batter": 0.5,
+        "park_weather": 0.34,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4538,
+        "half_prob": 0.7337,
         "pitcher": 0.4625,
         "batter": 0.5,
-        "park_weather": 0.35,
+        "park_weather": 0.34,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -6161,7 +6161,7 @@
       "game_pk": 822705,
       "away_pitcher": "Max Scherzer",
       "home_pitcher": "Eddy Yean",
-      "nrfi_prob": 0.5399,
+      "nrfi_prob": 0.5385,
       "confirmed": false,
       "top": {
         "composite": 0.4565,
@@ -6173,10 +6173,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4558,
-        "half_prob": 0.7346,
-        "pitcher": 0.433,
-        "batter": 0.5,
+        "composite": 0.4519,
+        "half_prob": 0.7328,
+        "pitcher": 0.4369,
+        "batter": 0.4783,
         "park_weather": 0.4667,
         "damage_speed": 0.5,
         "lineup": 0.4
