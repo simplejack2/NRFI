@@ -6023,6 +6023,33 @@
     },
     {
       "date": "2026-07-27",
+      "game_pk": 823025,
+      "away_pitcher": "David Peterson",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5584,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4982,
+        "half_prob": 0.7542,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.54,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4684,
+        "half_prob": 0.7404,
+        "pitcher": 0.4393,
+        "batter": 0.5,
+        "park_weather": 0.54,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-27",
       "game_pk": 824490,
       "away_pitcher": "Slade Cecconi",
       "home_pitcher": "Chase Burns",
@@ -6070,33 +6097,6 @@
         "pitcher": 0.4329,
         "batter": 0.5,
         "park_weather": 0.55,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-27",
-      "game_pk": 823025,
-      "away_pitcher": "David Peterson",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5575,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4969,
-        "half_prob": 0.7536,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.53,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4671,
-        "half_prob": 0.7398,
-        "pitcher": 0.4393,
-        "batter": 0.5,
-        "park_weather": 0.53,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
