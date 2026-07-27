@@ -5951,7 +5951,7 @@
       "game_pk": 824977,
       "away_pitcher": "Payton Tolle",
       "home_pitcher": "Jack Perkins",
-      "nrfi_prob": 0.5734,
+      "nrfi_prob": 0.5743,
       "confirmed": false,
       "top": {
         "composite": 0.488,
@@ -5963,10 +5963,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5221,
-        "half_prob": 0.7652,
-        "pitcher": 0.5677,
-        "batter": 0.5,
+        "composite": 0.5245,
+        "half_prob": 0.7664,
+        "pitcher": 0.5711,
+        "batter": 0.5029,
         "park_weather": 0.4683,
         "damage_speed": 0.5,
         "lineup": 0.4
@@ -6004,7 +6004,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6593,
+            "k_pct": 0.6779,
             "fps": 0.5,
             "xera": 0.5924,
             "bb_pct": 0.6337,
@@ -6020,7 +6020,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -6125,23 +6125,23 @@
       "game_pk": 824245,
       "away_pitcher": "Kyle Bradish",
       "home_pitcher": "Keider Montero",
-      "nrfi_prob": 0.5656,
+      "nrfi_prob": 0.5651,
       "confirmed": true,
       "top": {
-        "composite": 0.5014,
-        "half_prob": 0.7557,
+        "composite": 0.5009,
+        "half_prob": 0.7554,
         "pitcher": 0.5194,
         "batter": 0.4428,
-        "park_weather": 0.503,
+        "park_weather": 0.4987,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4858,
-        "half_prob": 0.7484,
+        "composite": 0.4852,
+        "half_prob": 0.7481,
         "pitcher": 0.5051,
         "batter": 0.4108,
-        "park_weather": 0.503,
+        "park_weather": 0.4987,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -6275,93 +6275,6 @@
             "gb_pct": 0.5
           },
           "bf": 497
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-27",
-      "game_pk": 824001,
-      "away_pitcher": "Tatsuya Imai",
-      "home_pitcher": "Walbert Ure\u00f1a",
-      "nrfi_prob": 0.5559,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4836,
-        "half_prob": 0.7474,
-        "pitcher": 0.4675,
-        "batter": 0.5,
-        "park_weather": 0.55,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4758,
-        "half_prob": 0.7438,
-        "pitcher": 0.4675,
-        "batter": 0.4712,
-        "park_weather": 0.55,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4566,
-            "fps": 0.5,
-            "xera": 0.614,
-            "bb_pct": 0.1442,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 378
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.716,
-            "fps": 0.5,
-            "xera": 0.4305,
-            "bb_pct": 0.0994,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 258
         },
         "ds": {
           "dmg": {
@@ -6536,6 +6449,93 @@
             "gb_pct": 0.5
           },
           "bf": 256
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-27",
+      "game_pk": 824001,
+      "away_pitcher": "Tatsuya Imai",
+      "home_pitcher": "Walbert Ure\u00f1a",
+      "nrfi_prob": 0.5523,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4785,
+        "half_prob": 0.745,
+        "pitcher": 0.4675,
+        "batter": 0.5,
+        "park_weather": 0.511,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4707,
+        "half_prob": 0.7414,
+        "pitcher": 0.4675,
+        "batter": 0.4712,
+        "park_weather": 0.511,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4566,
+            "fps": 0.5,
+            "xera": 0.614,
+            "bb_pct": 0.1442,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 378
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.716,
+            "fps": 0.5,
+            "xera": 0.4305,
+            "bb_pct": 0.0994,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 258
         },
         "ds": {
           "dmg": {
