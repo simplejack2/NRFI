@@ -5972,22 +5972,22 @@
       "game_pk": 822868,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Kumar Rocker",
-      "nrfi_prob": 0.5632,
+      "nrfi_prob": 0.5651,
       "confirmed": true,
       "top": {
-        "composite": 0.4729,
-        "half_prob": 0.7424,
-        "pitcher": 0.4599,
-        "batter": 0.4675,
+        "composite": 0.4774,
+        "half_prob": 0.7445,
+        "pitcher": 0.4689,
+        "batter": 0.4677,
         "park_weather": 0.4567,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5077,
-        "half_prob": 0.7586,
-        "pitcher": 0.53,
-        "batter": 0.4689,
+        "composite": 0.5088,
+        "half_prob": 0.7591,
+        "pitcher": 0.5319,
+        "batter": 0.4696,
         "park_weather": 0.4567,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -6016,33 +6016,6 @@
         "pitcher": 0.4668,
         "batter": 0.5,
         "park_weather": 0.55,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-27",
-      "game_pk": 823025,
-      "away_pitcher": "David Peterson",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5566,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4956,
-        "half_prob": 0.753,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.52,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4658,
-        "half_prob": 0.7392,
-        "pitcher": 0.4393,
-        "batter": 0.5,
-        "park_weather": 0.52,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -6080,25 +6053,52 @@
       "game_pk": 824490,
       "away_pitcher": "Slade Cecconi",
       "home_pitcher": "Chase Burns",
-      "nrfi_prob": 0.5481,
+      "nrfi_prob": 0.5484,
       "confirmed": true,
       "top": {
-        "composite": 0.4743,
-        "half_prob": 0.7431,
+        "composite": 0.4747,
+        "half_prob": 0.7433,
         "pitcher": 0.5679,
         "batter": 0.3327,
-        "park_weather": 0.34,
+        "park_weather": 0.3433,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4625,
-        "half_prob": 0.7376,
+        "composite": 0.463,
+        "half_prob": 0.7378,
         "pitcher": 0.4619,
         "batter": 0.4814,
-        "park_weather": 0.34,
+        "park_weather": 0.3433,
         "damage_speed": 0.5,
         "lineup": 0.6
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-27",
+      "game_pk": 823025,
+      "away_pitcher": "David Peterson",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5473,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4952,
+        "half_prob": 0.7528,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4392,
+        "half_prob": 0.727,
+        "pitcher": 0.4357,
+        "batter": 0.4092,
+        "park_weather": 0.5167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
       },
       "result": null
     },
