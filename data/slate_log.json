@@ -5864,23 +5864,23 @@
       "game_pk": 823839,
       "away_pitcher": "Zack Wheeler",
       "home_pitcher": "Tyler Phillips",
-      "nrfi_prob": 0.5878,
+      "nrfi_prob": 0.5871,
       "confirmed": true,
       "top": {
-        "composite": 0.4884,
-        "half_prob": 0.7496,
+        "composite": 0.4874,
+        "half_prob": 0.7491,
         "pitcher": 0.4494,
         "batter": 0.4907,
-        "park_weather": 0.5667,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5636,
-        "half_prob": 0.7842,
+        "composite": 0.5626,
+        "half_prob": 0.7838,
         "pitcher": 0.6167,
         "batter": 0.4657,
-        "park_weather": 0.5667,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -6212,23 +6212,23 @@
       "game_pk": 822868,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Kumar Rocker",
-      "nrfi_prob": 0.5651,
+      "nrfi_prob": 0.5648,
       "confirmed": true,
       "top": {
-        "composite": 0.4771,
-        "half_prob": 0.7444,
+        "composite": 0.4768,
+        "half_prob": 0.7442,
         "pitcher": 0.4689,
-        "batter": 0.4665,
-        "park_weather": 0.4567,
+        "batter": 0.4667,
+        "park_weather": 0.4542,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5088,
-        "half_prob": 0.7591,
+        "composite": 0.5085,
+        "half_prob": 0.7589,
         "pitcher": 0.5319,
         "batter": 0.4698,
-        "park_weather": 0.4567,
+        "park_weather": 0.4542,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -6386,23 +6386,23 @@
       "game_pk": 824570,
       "away_pitcher": "Max Fried",
       "home_pitcher": "Noah Schultz",
-      "nrfi_prob": 0.5555,
+      "nrfi_prob": 0.5525,
       "confirmed": true,
       "top": {
-        "composite": 0.454,
-        "half_prob": 0.7337,
+        "composite": 0.4496,
+        "half_prob": 0.7317,
         "pitcher": 0.4169,
         "batter": 0.4928,
-        "park_weather": 0.42,
+        "park_weather": 0.3862,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5045,
-        "half_prob": 0.7571,
+        "composite": 0.5001,
+        "half_prob": 0.7551,
         "pitcher": 0.5136,
         "batter": 0.5046,
-        "park_weather": 0.42,
+        "park_weather": 0.3862,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -6646,35 +6646,47 @@
       "date": "2026-07-27",
       "game_pk": 823025,
       "away_pitcher": "David Peterson",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5473,
-      "confirmed": false,
+      "home_pitcher": "Matthew Liberatore",
+      "nrfi_prob": 0.5475,
+      "confirmed": true,
       "top": {
-        "composite": 0.4952,
-        "half_prob": 0.7528,
-        "pitcher": 0.5,
-        "batter": 0.5,
+        "composite": 0.4817,
+        "half_prob": 0.7465,
+        "pitcher": 0.484,
+        "batter": 0.4275,
         "park_weather": 0.5167,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4392,
-        "half_prob": 0.727,
+        "composite": 0.4532,
+        "half_prob": 0.7334,
         "pitcher": 0.4357,
         "batter": 0.4092,
         "park_weather": 0.5167,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.4051,
+            "fps": 0.5,
+            "xera": 0.5018,
+            "bb_pct": 0.5046,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 437
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
