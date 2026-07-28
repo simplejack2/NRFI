@@ -7166,6 +7166,93 @@
     },
     {
       "date": "2026-07-28",
+      "game_pk": 823923,
+      "away_pitcher": "Luis Castillo",
+      "home_pitcher": "Justin Wrobleski",
+      "nrfi_prob": 0.5789,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5203,
+        "half_prob": 0.7645,
+        "pitcher": 0.5381,
+        "batter": 0.5,
+        "park_weather": 0.5667,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5047,
+        "half_prob": 0.7572,
+        "pitcher": 0.5061,
+        "batter": 0.5,
+        "park_weather": 0.5667,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3361,
+            "fps": 0.5,
+            "xera": 0.6104,
+            "bb_pct": 0.8095,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 424
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4391,
+            "fps": 0.5,
+            "xera": 0.496,
+            "bb_pct": 0.6284,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 417
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-28",
       "game_pk": 823676,
       "away_pitcher": "Seth Lugo",
       "home_pitcher": "Taj Bradley",
@@ -7239,93 +7326,6 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-28",
-      "game_pk": 823923,
-      "away_pitcher": "Luis Castillo",
-      "home_pitcher": "Justin Wrobleski",
-      "nrfi_prob": 0.5779,
-      "confirmed": false,
-      "top": {
-        "composite": 0.519,
-        "half_prob": 0.7638,
-        "pitcher": 0.5381,
-        "batter": 0.5,
-        "park_weather": 0.5567,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5034,
-        "half_prob": 0.7566,
-        "pitcher": 0.5061,
-        "batter": 0.5,
-        "park_weather": 0.5567,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3361,
-            "fps": 0.5,
-            "xera": 0.6104,
-            "bb_pct": 0.8095,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 424
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4391,
-            "fps": 0.5,
-            "xera": 0.496,
-            "bb_pct": 0.6284,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 417
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
           },
           "spd": {
             "n_spd": 0,
@@ -7560,7 +7560,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 3,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -7853,23 +7853,23 @@
       "game_pk": 824569,
       "away_pitcher": "Gerrit Cole",
       "home_pitcher": "Anthony Kay",
-      "nrfi_prob": 0.5596,
+      "nrfi_prob": 0.5594,
       "confirmed": false,
       "top": {
-        "composite": 0.4669,
-        "half_prob": 0.7397,
+        "composite": 0.4667,
+        "half_prob": 0.7396,
         "pitcher": 0.462,
         "batter": 0.5,
-        "park_weather": 0.4429,
+        "park_weather": 0.4414,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5032,
-        "half_prob": 0.7565,
+        "composite": 0.503,
+        "half_prob": 0.7564,
         "pitcher": 0.5776,
         "batter": 0.4244,
-        "park_weather": 0.4429,
+        "park_weather": 0.4414,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -8114,13 +8114,13 @@
       "game_pk": 824490,
       "away_pitcher": "Slade Cecconi",
       "home_pitcher": "Chase Burns",
-      "nrfi_prob": 0.5456,
+      "nrfi_prob": 0.5455,
       "confirmed": true,
       "top": {
-        "composite": 0.4704,
-        "half_prob": 0.7413,
+        "composite": 0.4702,
+        "half_prob": 0.7412,
         "pitcher": 0.5534,
-        "batter": 0.3321,
+        "batter": 0.3316,
         "park_weather": 0.3657,
         "damage_speed": 0.5,
         "lineup": 0.6
