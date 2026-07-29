@@ -8213,22 +8213,22 @@
       "game_pk": 824242,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.5985,
+      "nrfi_prob": 0.5948,
       "confirmed": true,
       "top": {
-        "composite": 0.5643,
-        "half_prob": 0.7846,
+        "composite": 0.5642,
+        "half_prob": 0.7845,
         "pitcher": 0.623,
-        "batter": 0.443,
+        "batter": 0.4425,
         "park_weather": 0.5959,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5167,
-        "half_prob": 0.7628,
+        "composite": 0.5069,
+        "half_prob": 0.7582,
         "pitcher": 0.4942,
-        "batter": 0.5001,
+        "batter": 0.4638,
         "park_weather": 0.5959,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -8300,30 +8300,30 @@
       "game_pk": 823598,
       "away_pitcher": "Chris Sale",
       "home_pitcher": "Christian Scott",
-      "nrfi_prob": 0.5976,
+      "nrfi_prob": 0.5859,
       "confirmed": false,
       "top": {
-        "composite": 0.5187,
-        "half_prob": 0.7637,
-        "pitcher": 0.5392,
-        "batter": 0.5,
-        "park_weather": 0.55,
+        "composite": 0.4887,
+        "half_prob": 0.7498,
+        "pitcher": 0.5386,
+        "batter": 0.3995,
+        "park_weather": 0.5306,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5598,
-        "half_prob": 0.7825,
+        "composite": 0.5573,
+        "half_prob": 0.7814,
         "pitcher": 0.6231,
         "batter": 0.5,
-        "park_weather": 0.55,
+        "park_weather": 0.5306,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7197,
+            "k_pct": 0.7165,
             "fps": 0.5,
             "xera": 0.5992,
             "bb_pct": 0.3415,
@@ -8339,7 +8339,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -8561,22 +8561,22 @@
       "game_pk": 823273,
       "away_pitcher": "Gabriel Hughes",
       "home_pitcher": "Kyle Hart",
-      "nrfi_prob": 0.5736,
+      "nrfi_prob": 0.5741,
       "confirmed": true,
       "top": {
-        "composite": 0.4912,
-        "half_prob": 0.7509,
-        "pitcher": 0.4643,
+        "composite": 0.4927,
+        "half_prob": 0.7516,
+        "pitcher": 0.4674,
         "batter": 0.4401,
         "park_weather": 0.6375,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5191,
-        "half_prob": 0.7639,
-        "pitcher": 0.5085,
-        "batter": 0.4633,
+        "composite": 0.5189,
+        "half_prob": 0.7638,
+        "pitcher": 0.5078,
+        "batter": 0.4638,
         "park_weather": 0.6375,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -8584,16 +8584,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4243,
+            "k_pct": 0.4306,
             "fps": 0.5,
             "xera": 0.412,
-            "bb_pct": 0.5172,
+            "bb_pct": 0.529,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 161
+          "bf": 164
         },
         "ds": {
           "dmg": {
@@ -8614,16 +8614,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5952,
+            "k_pct": 0.5639,
             "fps": 0.5,
-            "xera": 0.5119,
-            "bb_pct": 0.5899,
+            "xera": 0.5172,
+            "bb_pct": 0.6114,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 81
+          "bf": 84
         },
         "ds": {
           "dmg": {
@@ -8822,30 +8822,30 @@
       "game_pk": 823022,
       "away_pitcher": "Matthew Boyd",
       "home_pitcher": "Dustin May",
-      "nrfi_prob": 0.5692,
-      "confirmed": false,
+      "nrfi_prob": 0.5721,
+      "confirmed": true,
       "top": {
-        "composite": 0.5065,
-        "half_prob": 0.758,
-        "pitcher": 0.5169,
-        "batter": 0.5,
+        "composite": 0.501,
+        "half_prob": 0.7554,
+        "pitcher": 0.5176,
+        "batter": 0.4265,
         "park_weather": 0.54,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4911,
-        "half_prob": 0.7509,
+        "composite": 0.5051,
+        "half_prob": 0.7574,
         "pitcher": 0.536,
         "batter": 0.4083,
         "park_weather": 0.54,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5137,
+            "k_pct": 0.5175,
             "fps": 0.5,
             "xera": 0.5061,
             "bb_pct": 0.5935,
@@ -8861,7 +8861,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -9083,22 +9083,22 @@
       "game_pk": 823192,
       "away_pitcher": "Thomas Pannone",
       "home_pitcher": "Logan Webb",
-      "nrfi_prob": 0.5577,
+      "nrfi_prob": 0.5612,
       "confirmed": true,
       "top": {
-        "composite": 0.5136,
-        "half_prob": 0.7613,
-        "pitcher": 0.5019,
-        "batter": 0.4628,
+        "composite": 0.5119,
+        "half_prob": 0.7605,
+        "pitcher": 0.4982,
+        "batter": 0.463,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4512,
-        "half_prob": 0.7325,
-        "pitcher": 0.3668,
-        "batter": 0.4769,
+        "composite": 0.4631,
+        "half_prob": 0.7379,
+        "pitcher": 0.3913,
+        "batter": 0.4765,
         "park_weather": 0.6208,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -9106,16 +9106,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3584,
+            "k_pct": 0.3543,
             "fps": 0.5,
-            "xera": 0.4614,
-            "bb_pct": 0.7566,
+            "xera": 0.4465,
+            "bb_pct": 0.7589,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 471
+          "bf": 474
         },
         "ds": {
           "dmg": {
@@ -9136,16 +9136,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.1994,
+            "k_pct": 0.2857,
             "fps": 0.5,
             "xera": 0.41,
-            "bb_pct": 0.1082,
+            "bb_pct": 0.2162,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 11
+          "bf": 14
         },
         "ds": {
           "dmg": {
@@ -9170,23 +9170,23 @@
       "game_pk": 823596,
       "away_pitcher": "AJ Smith-Shawver",
       "home_pitcher": "Sean Manaea",
-      "nrfi_prob": 0.5576,
+      "nrfi_prob": 0.5558,
       "confirmed": true,
       "top": {
-        "composite": 0.489,
-        "half_prob": 0.7499,
+        "composite": 0.4864,
+        "half_prob": 0.7487,
         "pitcher": 0.5067,
         "batter": 0.3868,
-        "park_weather": 0.5708,
+        "park_weather": 0.5514,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4752,
-        "half_prob": 0.7435,
+        "composite": 0.4727,
+        "half_prob": 0.7423,
         "pitcher": 0.4282,
         "batter": 0.4784,
-        "park_weather": 0.5708,
+        "park_weather": 0.5514,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
