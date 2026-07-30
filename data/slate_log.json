@@ -9518,23 +9518,23 @@
       "game_pk": 823595,
       "away_pitcher": "Eury P\u00e9rez",
       "home_pitcher": "Nolan McLean",
-      "nrfi_prob": 0.5897,
+      "nrfi_prob": 0.5901,
       "confirmed": false,
       "top": {
-        "composite": 0.5341,
-        "half_prob": 0.7708,
+        "composite": 0.5346,
+        "half_prob": 0.771,
         "pitcher": 0.5688,
         "batter": 0.5,
-        "park_weather": 0.5569,
+        "park_weather": 0.5604,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5218,
-        "half_prob": 0.7651,
+        "composite": 0.5223,
+        "half_prob": 0.7654,
         "pitcher": 0.5438,
         "batter": 0.5,
-        "park_weather": 0.5569,
+        "park_weather": 0.5604,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -9689,93 +9689,6 @@
     },
     {
       "date": "2026-07-30",
-      "game_pk": 822946,
-      "away_pitcher": "Cole Winn",
-      "home_pitcher": "Shane McClanahan",
-      "nrfi_prob": 0.5795,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5328,
-        "half_prob": 0.7702,
-        "pitcher": 0.5029,
-        "batter": 0.5339,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4944,
-        "half_prob": 0.7524,
-        "pitcher": 0.5041,
-        "batter": 0.3897,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5386,
-            "fps": 0.5,
-            "xera": 0.4557,
-            "bb_pct": 0.5408,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 401
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4995,
-            "fps": 0.5,
-            "xera": 0.4614,
-            "bb_pct": 0.6467,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 156
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-30",
       "game_pk": 823921,
       "away_pitcher": "Bryan Woo",
       "home_pitcher": "Roki Sasaki",
@@ -9849,6 +9762,93 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-30",
+      "game_pk": 822946,
+      "away_pitcher": "Cole Winn",
+      "home_pitcher": "Shane McClanahan",
+      "nrfi_prob": 0.577,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5324,
+        "half_prob": 0.77,
+        "pitcher": 0.5029,
+        "batter": 0.5328,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4878,
+        "half_prob": 0.7493,
+        "pitcher": 0.491,
+        "batter": 0.389,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5404,
+            "fps": 0.5,
+            "xera": 0.4586,
+            "bb_pct": 0.5338,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 409
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4876,
+            "fps": 0.5,
+            "xera": 0.4014,
+            "bb_pct": 0.6541,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 159
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -10202,23 +10202,23 @@
       "game_pk": 824894,
       "away_pitcher": "Jake Irvin",
       "home_pitcher": "Grant Holmes",
-      "nrfi_prob": 0.5538,
+      "nrfi_prob": 0.5528,
       "confirmed": false,
       "top": {
-        "composite": 0.4709,
-        "half_prob": 0.7415,
+        "composite": 0.4694,
+        "half_prob": 0.7408,
         "pitcher": 0.4681,
         "batter": 0.5,
-        "park_weather": 0.45,
+        "park_weather": 0.4383,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4826,
-        "half_prob": 0.7469,
+        "composite": 0.4811,
+        "half_prob": 0.7462,
         "pitcher": 0.4921,
         "batter": 0.5,
-        "park_weather": 0.45,
+        "park_weather": 0.4383,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
