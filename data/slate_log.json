@@ -10550,25 +10550,25 @@
       "game_pk": 823111,
       "away_pitcher": "Zebby Matthews",
       "home_pitcher": "Bryce Miller",
-      "nrfi_prob": 0.5692,
-      "confirmed": false,
+      "nrfi_prob": 0.5742,
+      "confirmed": true,
       "top": {
-        "composite": 0.5126,
-        "half_prob": 0.7609,
+        "composite": 0.5266,
+        "half_prob": 0.7674,
         "pitcher": 0.5649,
         "batter": 0.4148,
         "park_weather": 0.5833,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4849,
-        "half_prob": 0.748,
-        "pitcher": 0.4615,
-        "batter": 0.5,
+        "composite": 0.4853,
+        "half_prob": 0.7482,
+        "pitcher": 0.4607,
+        "batter": 0.451,
         "park_weather": 0.5833,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
@@ -10603,7 +10603,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3444,
+            "k_pct": 0.34,
             "fps": 0.5,
             "xera": 0.3749,
             "bb_pct": 0.6214,
@@ -10619,7 +10619,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -10634,42 +10634,42 @@
     },
     {
       "date": "2026-07-31",
-      "game_pk": 824486,
-      "away_pitcher": "Paul Skenes",
-      "home_pitcher": "Hunter Greene",
-      "nrfi_prob": 0.5684,
+      "game_pk": 823922,
+      "away_pitcher": "Ranger Suarez",
+      "home_pitcher": "Edgardo Henriquez",
+      "nrfi_prob": 0.5693,
       "confirmed": true,
       "top": {
-        "composite": 0.4729,
-        "half_prob": 0.7424,
-        "pitcher": 0.4903,
-        "batter": 0.4572,
-        "park_weather": 0.3633,
+        "composite": 0.4879,
+        "half_prob": 0.7494,
+        "pitcher": 0.4785,
+        "batter": 0.4605,
+        "park_weather": 0.5164,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5228,
-        "half_prob": 0.7656,
-        "pitcher": 0.593,
-        "batter": 0.4554,
-        "park_weather": 0.3633,
+        "composite": 0.51,
+        "half_prob": 0.7597,
+        "pitcher": 0.5564,
+        "batter": 0.401,
+        "park_weather": 0.5164,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.74,
+            "k_pct": 0.5902,
             "fps": 0.5,
-            "xera": 0.3183,
-            "bb_pct": 0.5301,
+            "xera": 0.4787,
+            "bb_pct": 0.2963,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 101
+          "bf": 169
         },
         "ds": {
           "dmg": {
@@ -10690,16 +10690,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8478,
+            "k_pct": 0.6223,
             "fps": 0.5,
-            "xera": 0.4683,
-            "bb_pct": 0.767,
+            "xera": 0.5437,
+            "bb_pct": 0.6769,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 492
+          "bf": 391
         },
         "ds": {
           "dmg": {
@@ -10787,6 +10787,93 @@
             "gb_pct": 0.5
           },
           "bf": 507
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-07-31",
+      "game_pk": 824486,
+      "away_pitcher": "Paul Skenes",
+      "home_pitcher": "Hunter Greene",
+      "nrfi_prob": 0.5668,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4742,
+        "half_prob": 0.743,
+        "pitcher": 0.4928,
+        "batter": 0.4573,
+        "park_weather": 0.3633,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5168,
+        "half_prob": 0.7628,
+        "pitcher": 0.581,
+        "batter": 0.455,
+        "park_weather": 0.3633,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7372,
+            "fps": 0.5,
+            "xera": 0.3181,
+            "bb_pct": 0.5485,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 105
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8508,
+            "fps": 0.5,
+            "xera": 0.4147,
+            "bb_pct": 0.7614,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 500
         },
         "ds": {
           "dmg": {
@@ -11048,93 +11135,6 @@
             "gb_pct": 0.5
           },
           "bf": 342
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-07-31",
-      "game_pk": 823922,
-      "away_pitcher": "Ranger Suarez",
-      "home_pitcher": "Edgardo Henriquez",
-      "nrfi_prob": 0.5632,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4845,
-        "half_prob": 0.7478,
-        "pitcher": 0.4782,
-        "batter": 0.5,
-        "park_weather": 0.5164,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.496,
-        "half_prob": 0.7532,
-        "pitcher": 0.5564,
-        "batter": 0.401,
-        "park_weather": 0.5164,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5886,
-            "fps": 0.5,
-            "xera": 0.4787,
-            "bb_pct": 0.2963,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 169
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6223,
-            "fps": 0.5,
-            "xera": 0.5437,
-            "bb_pct": 0.6769,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 391
         },
         "ds": {
           "dmg": {
