@@ -11681,23 +11681,23 @@
       "game_pk": 823920,
       "away_pitcher": "Payton Tolle",
       "home_pitcher": "Yoshinobu Yamamoto",
-      "nrfi_prob": 0.5941,
+      "nrfi_prob": 0.5921,
       "confirmed": false,
       "top": {
-        "composite": 0.5362,
-        "half_prob": 0.7718,
+        "composite": 0.5334,
+        "half_prob": 0.7705,
         "pitcher": 0.5706,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.545,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5318,
-        "half_prob": 0.7697,
+        "composite": 0.5289,
+        "half_prob": 0.7684,
         "pitcher": 0.5614,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.545,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -11855,23 +11855,23 @@
       "game_pk": 824808,
       "away_pitcher": "Cristopher S\u00e1nchez",
       "home_pitcher": "Shane Baz",
-      "nrfi_prob": 0.5733,
+      "nrfi_prob": 0.5741,
       "confirmed": false,
       "top": {
-        "composite": 0.4844,
-        "half_prob": 0.7477,
+        "composite": 0.4849,
+        "half_prob": 0.748,
         "pitcher": 0.5045,
         "batter": 0.5,
-        "park_weather": 0.4167,
+        "park_weather": 0.4209,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5252,
-        "half_prob": 0.7667,
-        "pitcher": 0.5878,
-        "batter": 0.5,
-        "park_weather": 0.4167,
+        "composite": 0.5269,
+        "half_prob": 0.7675,
+        "pitcher": 0.5844,
+        "batter": 0.5103,
+        "park_weather": 0.4209,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -11908,7 +11908,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6865,
+            "k_pct": 0.6678,
             "fps": 0.5,
             "xera": 0.5374,
             "bb_pct": 0.8286,
@@ -11924,7 +11924,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -12635,26 +12635,113 @@
     },
     {
       "date": "2026-08-01",
+      "game_pk": 824405,
+      "away_pitcher": "Kohl Drake",
+      "home_pitcher": "Parker Messick",
+      "nrfi_prob": 0.5465,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5044,
+        "half_prob": 0.7571,
+        "pitcher": 0.5652,
+        "batter": 0.3641,
+        "park_weather": 0.5167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4275,
+        "half_prob": 0.7218,
+        "pitcher": 0.4117,
+        "batter": 0.3578,
+        "park_weather": 0.5167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.594,
+            "fps": 0.5,
+            "xera": 0.6123,
+            "bb_pct": 0.6685,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 496
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2397,
+            "fps": 0.5,
+            "xera": 0.4456,
+            "bb_pct": 0.3836,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 40
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-01",
       "game_pk": 824890,
       "away_pitcher": "Miles Mikolas",
       "home_pitcher": "Reynaldo L\u00f3pez",
-      "nrfi_prob": 0.5503,
+      "nrfi_prob": 0.542,
       "confirmed": false,
       "top": {
-        "composite": 0.472,
-        "half_prob": 0.742,
+        "composite": 0.4724,
+        "half_prob": 0.7422,
         "pitcher": 0.4744,
         "batter": 0.5,
-        "park_weather": 0.435,
+        "park_weather": 0.4383,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4711,
-        "half_prob": 0.7416,
-        "pitcher": 0.4725,
-        "batter": 0.5,
-        "park_weather": 0.435,
+        "composite": 0.4461,
+        "half_prob": 0.7302,
+        "pitcher": 0.4726,
+        "batter": 0.4059,
+        "park_weather": 0.4383,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -12691,7 +12778,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.1053,
+            "k_pct": 0.106,
             "fps": 0.5,
             "xera": 0.477,
             "bb_pct": 0.8468,
@@ -12701,63 +12788,6 @@
             "gb_pct": 0.5
           },
           "bf": 435
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-01",
-      "game_pk": 824405,
-      "away_pitcher": "Kohl Drake",
-      "home_pitcher": "Parker Messick",
-      "nrfi_prob": 0.55,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4904,
-        "half_prob": 0.7506,
-        "pitcher": 0.5652,
-        "batter": 0.3641,
-        "park_weather": 0.5167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4519,
-        "half_prob": 0.7328,
-        "pitcher": 0.4116,
-        "batter": 0.5,
-        "park_weather": 0.5167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.594,
-            "fps": 0.5,
-            "xera": 0.6123,
-            "bb_pct": 0.6685,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 496
         },
         "ds": {
           "dmg": {
@@ -12775,36 +12805,6 @@
           "speed": 0.5
         }
       },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2391,
-            "fps": 0.5,
-            "xera": 0.4456,
-            "bb_pct": 0.3836,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 40
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
       "result": null
     },
     {
@@ -12812,23 +12812,23 @@
       "game_pk": 824326,
       "away_pitcher": "Luinder Avila",
       "home_pitcher": "Ryan Feltner",
-      "nrfi_prob": 0.5186,
+      "nrfi_prob": 0.5178,
       "confirmed": false,
       "top": {
-        "composite": 0.422,
-        "half_prob": 0.7194,
+        "composite": 0.4207,
+        "half_prob": 0.7188,
         "pitcher": 0.4241,
         "batter": 0.5,
-        "park_weather": 0.24,
+        "park_weather": 0.23,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4254,
-        "half_prob": 0.7209,
+        "composite": 0.4241,
+        "half_prob": 0.7203,
         "pitcher": 0.431,
         "batter": 0.5,
-        "park_weather": 0.24,
+        "park_weather": 0.23,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
