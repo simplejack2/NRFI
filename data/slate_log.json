@@ -12983,6 +12983,93 @@
     },
     {
       "date": "2026-08-02",
+      "game_pk": 823107,
+      "away_pitcher": "Taj Bradley",
+      "home_pitcher": "George Kirby",
+      "nrfi_prob": 0.5909,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5461,
+        "half_prob": 0.7763,
+        "pitcher": 0.54,
+        "batter": 0.5221,
+        "park_weather": 0.6042,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5134,
+        "half_prob": 0.7612,
+        "pitcher": 0.5143,
+        "batter": 0.4476,
+        "park_weather": 0.6042,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4558,
+            "fps": 0.5,
+            "xera": 0.4904,
+            "bb_pct": 0.8574,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 523
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6634,
+            "fps": 0.5,
+            "xera": 0.5133,
+            "bb_pct": 0.3713,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 533
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-02",
       "game_pk": 823996,
       "away_pitcher": "Jacob Misiorowski",
       "home_pitcher": "Walbert Ure\u00f1a",
@@ -13060,93 +13147,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-02",
-      "game_pk": 823107,
-      "away_pitcher": "Taj Bradley",
-      "home_pitcher": "George Kirby",
-      "nrfi_prob": 0.5809,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5177,
-        "half_prob": 0.7632,
-        "pitcher": 0.54,
-        "batter": 0.4169,
-        "park_weather": 0.6042,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5134,
-        "half_prob": 0.7612,
-        "pitcher": 0.5143,
-        "batter": 0.4477,
-        "park_weather": 0.6042,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4558,
-            "fps": 0.5,
-            "xera": 0.4904,
-            "bb_pct": 0.8574,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 523
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6634,
-            "fps": 0.5,
-            "xera": 0.5133,
-            "bb_pct": 0.3713,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 533
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -13682,13 +13682,13 @@
       "game_pk": 823270,
       "away_pitcher": "Landen Roupp",
       "home_pitcher": "Kyle Hart",
-      "nrfi_prob": 0.5705,
+      "nrfi_prob": 0.5706,
       "confirmed": true,
       "top": {
-        "composite": 0.5162,
-        "half_prob": 0.7625,
+        "composite": 0.5164,
+        "half_prob": 0.7626,
         "pitcher": 0.4984,
-        "batter": 0.4707,
+        "batter": 0.4716,
         "park_weather": 0.6375,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -14117,13 +14117,13 @@
       "game_pk": 824971,
       "away_pitcher": "Keider Montero",
       "home_pitcher": "Gage Jump",
-      "nrfi_prob": 0.5467,
+      "nrfi_prob": 0.5465,
       "confirmed": true,
       "top": {
-        "composite": 0.4504,
-        "half_prob": 0.7321,
+        "composite": 0.4499,
+        "half_prob": 0.7319,
         "pitcher": 0.4564,
-        "batter": 0.3753,
+        "batter": 0.3734,
         "park_weather": 0.4875,
         "damage_speed": 0.5,
         "lineup": 0.6
