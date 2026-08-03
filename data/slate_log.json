@@ -14288,49 +14288,49 @@
     },
     {
       "date": "2026-08-03",
-      "game_pk": 824647,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Matthew Boyd",
-      "nrfi_prob": 0.565,
-      "confirmed": false,
+      "game_pk": 823520,
+      "away_pitcher": "Michael McGreevy",
+      "home_pitcher": "Cam Schlittler",
+      "nrfi_prob": 0.5668,
+      "confirmed": true,
       "top": {
-        "composite": 0.5015,
-        "half_prob": 0.7557,
-        "pitcher": 0.535,
-        "batter": 0.5,
-        "park_weather": 0.4333,
+        "composite": 0.5291,
+        "half_prob": 0.7685,
+        "pitcher": 0.6226,
+        "batter": 0.4109,
+        "park_weather": 0.3927,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4843,
-        "half_prob": 0.7477,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4333,
+        "composite": 0.4621,
+        "half_prob": 0.7375,
+        "pitcher": 0.4678,
+        "batter": 0.4439,
+        "park_weather": 0.3927,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4711,
+            "k_pct": 0.8292,
             "fps": 0.5,
-            "xera": 0.5901,
-            "bb_pct": 0.646,
+            "xera": 0.5937,
+            "bb_pct": 0.805,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 274
+          "bf": 538
         },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -14342,13 +14342,25 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.2004,
+            "fps": 0.5,
+            "xera": 0.4293,
+            "bb_pct": 0.7666,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 469
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -14450,93 +14462,6 @@
     },
     {
       "date": "2026-08-03",
-      "game_pk": 823520,
-      "away_pitcher": "Michael McGreevy",
-      "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.5611,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5137,
-        "half_prob": 0.7614,
-        "pitcher": 0.6226,
-        "batter": 0.4109,
-        "park_weather": 0.382,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.461,
-        "half_prob": 0.7369,
-        "pitcher": 0.4659,
-        "batter": 0.5,
-        "park_weather": 0.382,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8292,
-            "fps": 0.5,
-            "xera": 0.5937,
-            "bb_pct": 0.805,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 538
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.19,
-            "fps": 0.5,
-            "xera": 0.4293,
-            "bb_pct": 0.7666,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 469
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-03",
       "game_pk": 823431,
       "away_pitcher": "Andrew Alvarez",
       "home_pitcher": "Aaron Nola",
@@ -14624,10 +14549,85 @@
     },
     {
       "date": "2026-08-03",
+      "game_pk": 824647,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Matthew Boyd",
+      "nrfi_prob": 0.5545,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4711,
+        "half_prob": 0.7416,
+        "pitcher": 0.5335,
+        "batter": 0.3901,
+        "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4843,
+        "half_prob": 0.7477,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4623,
+            "fps": 0.5,
+            "xera": 0.5901,
+            "bb_pct": 0.646,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 274
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-03",
       "game_pk": 822867,
       "away_pitcher": "Logan Webb",
       "home_pitcher": "Cal Quantrill",
-      "nrfi_prob": 0.5533,
+      "nrfi_prob": 0.5511,
       "confirmed": false,
       "top": {
         "composite": 0.4604,
@@ -14639,10 +14639,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4915,
-        "half_prob": 0.751,
-        "pitcher": 0.5145,
-        "batter": 0.5,
+        "composite": 0.485,
+        "half_prob": 0.748,
+        "pitcher": 0.5147,
+        "batter": 0.4759,
         "park_weather": 0.4333,
         "damage_speed": 0.5,
         "lineup": 0.4
@@ -14680,7 +14680,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3591,
+            "k_pct": 0.3599,
             "fps": 0.5,
             "xera": 0.5188,
             "bb_pct": 0.7556,
@@ -14696,7 +14696,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
