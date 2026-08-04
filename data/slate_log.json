@@ -15596,23 +15596,23 @@
       "game_pk": 823517,
       "away_pitcher": "Hunter Dobbins",
       "home_pitcher": "Ryan Weathers",
-      "nrfi_prob": 0.5622,
+      "nrfi_prob": 0.5639,
       "confirmed": true,
       "top": {
-        "composite": 0.4976,
-        "half_prob": 0.7539,
+        "composite": 0.5008,
+        "half_prob": 0.7554,
         "pitcher": 0.5522,
-        "batter": 0.4355,
-        "park_weather": 0.365,
+        "batter": 0.441,
+        "park_weather": 0.3783,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.48,
-        "half_prob": 0.7457,
+        "composite": 0.4817,
+        "half_prob": 0.7465,
         "pitcher": 0.5046,
         "batter": 0.4565,
-        "park_weather": 0.365,
+        "park_weather": 0.3783,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -15770,30 +15770,30 @@
       "game_pk": 825054,
       "away_pitcher": "Randy V\u00e1squez",
       "home_pitcher": "Eduardo Rodriguez",
-      "nrfi_prob": 0.5541,
-      "confirmed": false,
+      "nrfi_prob": 0.5497,
+      "confirmed": true,
       "top": {
-        "composite": 0.4792,
-        "half_prob": 0.7454,
-        "pitcher": 0.4763,
-        "batter": 0.5,
+        "composite": 0.4747,
+        "half_prob": 0.7433,
+        "pitcher": 0.4759,
+        "batter": 0.4322,
         "park_weather": 0.4833,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.475,
-        "half_prob": 0.7434,
-        "pitcher": 0.4677,
-        "batter": 0.5,
+        "composite": 0.4665,
+        "half_prob": 0.7395,
+        "pitcher": 0.4674,
+        "batter": 0.4173,
         "park_weather": 0.4833,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2748,
+            "k_pct": 0.2724,
             "fps": 0.5,
             "xera": 0.5666,
             "bb_pct": 0.5159,
@@ -15809,7 +15809,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -15823,7 +15823,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.1606,
+            "k_pct": 0.1587,
             "fps": 0.5,
             "xera": 0.5608,
             "bb_pct": 0.6104,
@@ -15839,7 +15839,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
