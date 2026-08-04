@@ -15495,9 +15495,9 @@
     {
       "date": "2026-08-04",
       "game_pk": 823517,
-      "away_pitcher": "TBD",
+      "away_pitcher": "Hunter Dobbins",
       "home_pitcher": "Ryan Weathers",
-      "nrfi_prob": 0.5636,
+      "nrfi_prob": 0.5641,
       "confirmed": false,
       "top": {
         "composite": 0.5039,
@@ -15509,9 +15509,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4778,
-        "half_prob": 0.7447,
-        "pitcher": 0.5,
+        "composite": 0.4793,
+        "half_prob": 0.7454,
+        "pitcher": 0.503,
         "batter": 0.5,
         "park_weather": 0.3833,
         "damage_speed": 0.5,
@@ -15548,7 +15548,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.4456,
+            "fps": 0.5,
+            "xera": 0.5478,
+            "bb_pct": 0.5898,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 143
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
