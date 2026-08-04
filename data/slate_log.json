@@ -15581,101 +15581,26 @@
     },
     {
       "date": "2026-08-04",
-      "game_pk": 825054,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Eduardo Rodriguez",
-      "nrfi_prob": 0.5604,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4804,
-        "half_prob": 0.7459,
-        "pitcher": 0.4763,
-        "batter": 0.5,
-        "park_weather": 0.4926,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.492,
-        "half_prob": 0.7513,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4926,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2748,
-            "fps": 0.5,
-            "xera": 0.5666,
-            "bb_pct": 0.5159,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 533
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-04",
       "game_pk": 822865,
       "away_pitcher": "Blade Tidwell",
       "home_pitcher": "MacKenzie Gore",
-      "nrfi_prob": 0.5571,
+      "nrfi_prob": 0.5574,
       "confirmed": false,
       "top": {
-        "composite": 0.4937,
-        "half_prob": 0.7521,
+        "composite": 0.4942,
+        "half_prob": 0.7523,
         "pitcher": 0.5174,
         "batter": 0.5,
-        "park_weather": 0.44,
+        "park_weather": 0.4433,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4691,
-        "half_prob": 0.7407,
+        "composite": 0.4695,
+        "half_prob": 0.7409,
         "pitcher": 0.4671,
         "batter": 0.5,
-        "park_weather": 0.44,
+        "park_weather": 0.4433,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -15808,6 +15733,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-04",
+      "game_pk": 825054,
+      "away_pitcher": "Randy V\u00e1squez",
+      "home_pitcher": "Eduardo Rodriguez",
+      "nrfi_prob": 0.5549,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4804,
+        "half_prob": 0.7459,
+        "pitcher": 0.4763,
+        "batter": 0.5,
+        "park_weather": 0.4926,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4762,
+        "half_prob": 0.744,
+        "pitcher": 0.4677,
+        "batter": 0.5,
+        "park_weather": 0.4926,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2748,
+            "fps": 0.5,
+            "xera": 0.5666,
+            "bb_pct": 0.5159,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 533
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.1606,
+            "fps": 0.5,
+            "xera": 0.5608,
+            "bb_pct": 0.6104,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 414
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
