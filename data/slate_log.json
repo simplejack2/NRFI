@@ -17249,23 +17249,23 @@
       "game_pk": 823429,
       "away_pitcher": "Jake Irvin",
       "home_pitcher": "Andrew Painter",
-      "nrfi_prob": 0.5473,
+      "nrfi_prob": 0.5474,
       "confirmed": false,
       "top": {
-        "composite": 0.455,
-        "half_prob": 0.7342,
+        "composite": 0.4552,
+        "half_prob": 0.7343,
         "pitcher": 0.4362,
         "batter": 0.5,
-        "park_weather": 0.4483,
+        "park_weather": 0.45,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4793,
-        "half_prob": 0.7454,
+        "composite": 0.4795,
+        "half_prob": 0.7455,
         "pitcher": 0.4857,
         "batter": 0.5,
-        "park_weather": 0.4483,
+        "park_weather": 0.45,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -17399,81 +17399,6 @@
             "gb_pct": 0.5
           },
           "bf": 497
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-05",
-      "game_pk": 822866,
-      "away_pitcher": "Carson Whisenhunt",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5426,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4879,
-        "half_prob": 0.7494,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4608,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4325,
-        "half_prob": 0.7241,
-        "pitcher": 0.387,
-        "batter": 0.5,
-        "park_weather": 0.4608,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3181,
-            "fps": 0.5,
-            "xera": 0.3757,
-            "bb_pct": 0.1596,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 87
         },
         "ds": {
           "dmg": {
