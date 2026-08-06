@@ -17855,6 +17855,93 @@
     },
     {
       "date": "2026-08-06",
+      "game_pk": 823430,
+      "away_pitcher": "Miles Mikolas",
+      "home_pitcher": "Cristopher S\u00e1nchez",
+      "nrfi_prob": 0.5745,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5425,
+        "half_prob": 0.7747,
+        "pitcher": 0.6032,
+        "batter": 0.5,
+        "park_weather": 0.4917,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4711,
+        "half_prob": 0.7416,
+        "pitcher": 0.4575,
+        "batter": 0.5,
+        "park_weather": 0.4917,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7115,
+            "fps": 0.5,
+            "xera": 0.6084,
+            "bb_pct": 0.7952,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 603
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.1043,
+            "fps": 0.5,
+            "xera": 0.4081,
+            "bb_pct": 0.8496,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 462
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-06",
       "game_pk": 824664,
       "away_pitcher": "Dylan Cease",
       "home_pitcher": "David Peterson",
@@ -18019,93 +18106,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-06",
-      "game_pk": 823430,
-      "away_pitcher": "Miles Mikolas",
-      "home_pitcher": "Cristopher S\u00e1nchez",
-      "nrfi_prob": 0.5707,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5371,
-        "half_prob": 0.7722,
-        "pitcher": 0.6032,
-        "batter": 0.5,
-        "park_weather": 0.45,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4657,
-        "half_prob": 0.7391,
-        "pitcher": 0.4575,
-        "batter": 0.5,
-        "park_weather": 0.45,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7115,
-            "fps": 0.5,
-            "xera": 0.6084,
-            "bb_pct": 0.7952,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 603
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.1043,
-            "fps": 0.5,
-            "xera": 0.4081,
-            "bb_pct": 0.8496,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 462
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
