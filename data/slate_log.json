@@ -18554,7 +18554,7 @@
       "game_pk": 823103,
       "away_pitcher": "Drew Rasmussen",
       "home_pitcher": "Logan Gilbert",
-      "nrfi_prob": 0.6041,
+      "nrfi_prob": 0.5943,
       "confirmed": false,
       "top": {
         "composite": 0.5434,
@@ -18566,10 +18566,10 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5529,
-        "half_prob": 0.7794,
-        "pitcher": 0.6002,
-        "batter": 0.5,
+        "composite": 0.5251,
+        "half_prob": 0.7667,
+        "pitcher": 0.6,
+        "batter": 0.3974,
         "park_weather": 0.5833,
         "damage_speed": 0.5,
         "lineup": 0.4
@@ -18607,7 +18607,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.652,
+            "k_pct": 0.6508,
             "fps": 0.5,
             "xera": 0.6128,
             "bb_pct": 0.8428,
@@ -18623,7 +18623,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -19250,23 +19250,23 @@
       "game_pk": 823191,
       "away_pitcher": "Keider Montero",
       "home_pitcher": "JT Brubaker",
-      "nrfi_prob": 0.5607,
+      "nrfi_prob": 0.5597,
       "confirmed": false,
       "top": {
-        "composite": 0.4628,
-        "half_prob": 0.7378,
+        "composite": 0.4623,
+        "half_prob": 0.7376,
         "pitcher": 0.4166,
         "batter": 0.5,
-        "park_weather": 0.5822,
+        "park_weather": 0.5783,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5108,
-        "half_prob": 0.76,
-        "pitcher": 0.5145,
-        "batter": 0.5,
-        "park_weather": 0.5822,
+        "composite": 0.5081,
+        "half_prob": 0.7588,
+        "pitcher": 0.5152,
+        "batter": 0.4905,
+        "park_weather": 0.5783,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -19303,7 +19303,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2462,
+            "k_pct": 0.25,
             "fps": 0.5,
             "xera": 0.5995,
             "bb_pct": 0.7737,
@@ -19319,94 +19319,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-07",
-      "game_pk": 823266,
-      "away_pitcher": "Ronel Blanco",
-      "home_pitcher": "Robbie Ray",
-      "nrfi_prob": 0.5592,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4987,
-        "half_prob": 0.7544,
-        "pitcher": 0.4938,
-        "batter": 0.5,
-        "park_weather": 0.567,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4704,
-        "half_prob": 0.7413,
-        "pitcher": 0.4362,
-        "batter": 0.5,
-        "park_weather": 0.567,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5081,
-            "fps": 0.5,
-            "xera": 0.62,
-            "bb_pct": 0.2567,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 512
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5903,
-            "fps": 0.5,
-            "xera": 0.3782,
-            "bb_pct": 0.2293,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 62
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -19487,6 +19400,93 @@
             "gb_pct": 0.5
           },
           "bf": 334
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-07",
+      "game_pk": 823266,
+      "away_pitcher": "Ronel Blanco",
+      "home_pitcher": "Robbie Ray",
+      "nrfi_prob": 0.5531,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4987,
+        "half_prob": 0.7544,
+        "pitcher": 0.4938,
+        "batter": 0.5,
+        "park_weather": 0.567,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4525,
+        "half_prob": 0.7331,
+        "pitcher": 0.4366,
+        "batter": 0.4328,
+        "park_weather": 0.567,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5081,
+            "fps": 0.5,
+            "xera": 0.62,
+            "bb_pct": 0.2567,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 512
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5935,
+            "fps": 0.5,
+            "xera": 0.3782,
+            "bb_pct": 0.2293,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 62
         },
         "ds": {
           "dmg": {
