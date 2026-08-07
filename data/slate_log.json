@@ -19274,81 +19274,6 @@
     },
     {
       "date": "2026-08-07",
-      "game_pk": 825051,
-      "away_pitcher": "Roki Sasaki",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5626,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4882,
-        "half_prob": 0.7495,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4632,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4907,
-        "half_prob": 0.7507,
-        "pitcher": 0.505,
-        "batter": 0.5,
-        "park_weather": 0.4632,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.53,
-            "fps": 0.5,
-            "xera": 0.577,
-            "bb_pct": 0.3761,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 423
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-07",
       "game_pk": 823266,
       "away_pitcher": "Ronel Blanco",
       "home_pitcher": "Robbie Ray",
@@ -19676,6 +19601,93 @@
             "gb_pct": 0.5
           },
           "bf": 404
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-07",
+      "game_pk": 825051,
+      "away_pitcher": "Roki Sasaki",
+      "home_pitcher": "Merrill Kelly",
+      "nrfi_prob": 0.5533,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4614,
+        "half_prob": 0.7371,
+        "pitcher": 0.4452,
+        "batter": 0.5,
+        "park_weather": 0.4632,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4907,
+        "half_prob": 0.7507,
+        "pitcher": 0.505,
+        "batter": 0.5,
+        "park_weather": 0.4632,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2214,
+            "fps": 0.5,
+            "xera": 0.4927,
+            "bb_pct": 0.4782,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 498
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.53,
+            "fps": 0.5,
+            "xera": 0.577,
+            "bb_pct": 0.3761,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 423
         },
         "ds": {
           "dmg": {
