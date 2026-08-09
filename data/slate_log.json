@@ -21161,93 +21161,6 @@
     },
     {
       "date": "2026-08-09",
-      "game_pk": 823190,
-      "away_pitcher": "Troy Melton",
-      "home_pitcher": "Logan Webb",
-      "nrfi_prob": 0.5906,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5269,
-        "half_prob": 0.7675,
-        "pitcher": 0.5211,
-        "batter": 0.4771,
-        "park_weather": 0.6208,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5312,
-        "half_prob": 0.7695,
-        "pitcher": 0.5217,
-        "batter": 0.492,
-        "park_weather": 0.6208,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3614,
-            "fps": 0.5,
-            "xera": 0.538,
-            "bb_pct": 0.7691,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 538
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4878,
-            "fps": 0.5,
-            "xera": 0.5669,
-            "bb_pct": 0.5657,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 307
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-09",
       "game_pk": 823751,
       "away_pitcher": "Connor Prielipp",
       "home_pitcher": "Jacob Misiorowski",
@@ -21335,26 +21248,113 @@
     },
     {
       "date": "2026-08-09",
-      "game_pk": 823345,
-      "away_pitcher": "Sean Manaea",
-      "home_pitcher": "Jared Jones",
-      "nrfi_prob": 0.5848,
+      "game_pk": 823190,
+      "away_pitcher": "Troy Melton",
+      "home_pitcher": "Logan Webb",
+      "nrfi_prob": 0.5891,
       "confirmed": true,
       "top": {
-        "composite": 0.5147,
-        "half_prob": 0.7618,
-        "pitcher": 0.4983,
-        "batter": 0.4871,
-        "park_weather": 0.5925,
+        "composite": 0.525,
+        "half_prob": 0.7666,
+        "pitcher": 0.5217,
+        "batter": 0.4775,
+        "park_weather": 0.6036,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5272,
-        "half_prob": 0.7676,
+        "composite": 0.529,
+        "half_prob": 0.7685,
+        "pitcher": 0.5216,
+        "batter": 0.4926,
+        "park_weather": 0.6036,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3579,
+            "fps": 0.5,
+            "xera": 0.5436,
+            "bb_pct": 0.7691,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 538
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4867,
+            "fps": 0.5,
+            "xera": 0.5672,
+            "bb_pct": 0.5657,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 307
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-09",
+      "game_pk": 823345,
+      "away_pitcher": "Sean Manaea",
+      "home_pitcher": "Jared Jones",
+      "nrfi_prob": 0.5846,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5145,
+        "half_prob": 0.7617,
+        "pitcher": 0.4983,
+        "batter": 0.4871,
+        "park_weather": 0.5908,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.527,
+        "half_prob": 0.7675,
         "pitcher": 0.5242,
         "batter": 0.4865,
-        "park_weather": 0.5925,
+        "park_weather": 0.5908,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -21428,10 +21428,10 @@
       "nrfi_prob": 0.5747,
       "confirmed": true,
       "top": {
-        "composite": 0.4911,
+        "composite": 0.491,
         "half_prob": 0.7508,
         "pitcher": 0.5091,
-        "batter": 0.3743,
+        "batter": 0.3739,
         "park_weather": 0.6042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -21440,7 +21440,7 @@
         "composite": 0.5224,
         "half_prob": 0.7654,
         "pitcher": 0.5557,
-        "batter": 0.4059,
+        "batter": 0.4057,
         "park_weather": 0.6042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -21599,23 +21599,23 @@
       "game_pk": 823835,
       "away_pitcher": "Grayson Rodriguez",
       "home_pitcher": "Ryan Gusto",
-      "nrfi_prob": 0.5655,
+      "nrfi_prob": 0.5654,
       "confirmed": true,
       "top": {
-        "composite": 0.514,
-        "half_prob": 0.7615,
+        "composite": 0.5139,
+        "half_prob": 0.7614,
         "pitcher": 0.4819,
         "batter": 0.5116,
-        "park_weather": 0.5978,
+        "park_weather": 0.5968,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4734,
+        "composite": 0.4732,
         "half_prob": 0.7426,
         "pitcher": 0.4625,
         "batter": 0.3964,
-        "park_weather": 0.5978,
+        "park_weather": 0.5968,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -21773,23 +21773,23 @@
       "game_pk": 824078,
       "away_pitcher": "Matthew Boyd",
       "home_pitcher": "Randy Dobnak",
-      "nrfi_prob": 0.5597,
+      "nrfi_prob": 0.5603,
       "confirmed": true,
       "top": {
-        "composite": 0.4715,
-        "half_prob": 0.7418,
+        "composite": 0.4724,
+        "half_prob": 0.7422,
         "pitcher": 0.4378,
         "batter": 0.4661,
-        "park_weather": 0.5322,
+        "park_weather": 0.5387,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4989,
-        "half_prob": 0.7545,
+        "composite": 0.4998,
+        "half_prob": 0.7549,
         "pitcher": 0.5116,
         "batter": 0.4335,
-        "park_weather": 0.5322,
+        "park_weather": 0.5387,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -21860,23 +21860,23 @@
       "game_pk": 822862,
       "away_pitcher": "Cade Povich",
       "home_pitcher": "Kumar Rocker",
-      "nrfi_prob": 0.5591,
+      "nrfi_prob": 0.5584,
       "confirmed": true,
       "top": {
-        "composite": 0.4849,
-        "half_prob": 0.748,
+        "composite": 0.4839,
+        "half_prob": 0.7475,
         "pitcher": 0.4514,
         "batter": 0.5239,
-        "park_weather": 0.4637,
+        "park_weather": 0.4558,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4837,
-        "half_prob": 0.7474,
+        "composite": 0.4827,
+        "half_prob": 0.747,
         "pitcher": 0.4412,
         "batter": 0.5379,
-        "park_weather": 0.4637,
+        "park_weather": 0.4558,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -21947,23 +21947,23 @@
       "game_pk": 822700,
       "away_pitcher": "Brady Singer",
       "home_pitcher": "Brad Lord",
-      "nrfi_prob": 0.5548,
+      "nrfi_prob": 0.5551,
       "confirmed": true,
       "top": {
-        "composite": 0.4674,
-        "half_prob": 0.7399,
+        "composite": 0.4678,
+        "half_prob": 0.7401,
         "pitcher": 0.4511,
         "batter": 0.4561,
-        "park_weather": 0.4708,
+        "park_weather": 0.4742,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4888,
-        "half_prob": 0.7498,
+        "composite": 0.4892,
+        "half_prob": 0.75,
         "pitcher": 0.4558,
         "batter": 0.5268,
-        "park_weather": 0.4708,
+        "park_weather": 0.4742,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -22034,23 +22034,23 @@
       "game_pk": 823268,
       "away_pitcher": "Cristian Javier",
       "home_pitcher": "Randy V\u00e1squez",
-      "nrfi_prob": 0.5534,
+      "nrfi_prob": 0.554,
       "confirmed": true,
       "top": {
-        "composite": 0.4688,
-        "half_prob": 0.7405,
+        "composite": 0.4697,
+        "half_prob": 0.7409,
         "pitcher": 0.4706,
         "batter": 0.3786,
-        "park_weather": 0.5688,
+        "park_weather": 0.5759,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4836,
-        "half_prob": 0.7474,
+        "composite": 0.4845,
+        "half_prob": 0.7478,
         "pitcher": 0.4535,
         "batter": 0.4644,
-        "park_weather": 0.5688,
+        "park_weather": 0.5759,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -22118,25 +22118,112 @@
     },
     {
       "date": "2026-08-09",
+      "game_pk": 824724,
+      "away_pitcher": "J.T. Ginn",
+      "home_pitcher": "Erik Miller",
+      "nrfi_prob": 0.5488,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4778,
+        "half_prob": 0.7447,
+        "pitcher": 0.485,
+        "batter": 0.4826,
+        "park_weather": 0.3683,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4609,
+        "half_prob": 0.7369,
+        "pitcher": 0.4755,
+        "batter": 0.4371,
+        "park_weather": 0.3683,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8126,
+            "fps": 0.5,
+            "xera": 0.4605,
+            "bb_pct": 0.1008,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 157
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4419,
+            "fps": 0.5,
+            "xera": 0.5402,
+            "bb_pct": 0.3367,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 508
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-09",
       "game_pk": 824564,
       "away_pitcher": "Joey Cantillo",
       "home_pitcher": "Davis Martin",
-      "nrfi_prob": 0.5502,
+      "nrfi_prob": 0.5479,
       "confirmed": true,
       "top": {
-        "composite": 0.4388,
-        "half_prob": 0.7268,
+        "composite": 0.4415,
+        "half_prob": 0.7281,
         "pitcher": 0.4669,
-        "batter": 0.3367,
+        "batter": 0.3469,
         "park_weather": 0.4392,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5043,
-        "half_prob": 0.757,
+        "composite": 0.4947,
+        "half_prob": 0.7525,
         "pitcher": 0.4997,
-        "batter": 0.5197,
+        "batter": 0.4841,
         "park_weather": 0.4392,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -22205,112 +22292,25 @@
     },
     {
       "date": "2026-08-09",
-      "game_pk": 824724,
-      "away_pitcher": "J.T. Ginn",
-      "home_pitcher": "Erik Miller",
-      "nrfi_prob": 0.548,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4768,
-        "half_prob": 0.7442,
-        "pitcher": 0.485,
-        "batter": 0.4826,
-        "park_weather": 0.3607,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4599,
-        "half_prob": 0.7364,
-        "pitcher": 0.4755,
-        "batter": 0.4371,
-        "park_weather": 0.3607,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8126,
-            "fps": 0.5,
-            "xera": 0.4605,
-            "bb_pct": 0.1008,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 157
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4419,
-            "fps": 0.5,
-            "xera": 0.5402,
-            "bb_pct": 0.3367,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 508
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-09",
       "game_pk": 825050,
       "away_pitcher": "Justin Wrobleski",
       "home_pitcher": "Eduardo Rodriguez",
-      "nrfi_prob": 0.5451,
+      "nrfi_prob": 0.545,
       "confirmed": true,
       "top": {
-        "composite": 0.4669,
-        "half_prob": 0.7396,
-        "pitcher": 0.4763,
-        "batter": 0.3923,
+        "composite": 0.4671,
+        "half_prob": 0.7397,
+        "pitcher": 0.4769,
+        "batter": 0.3922,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.461,
-        "half_prob": 0.737,
-        "pitcher": 0.4804,
-        "batter": 0.3634,
+        "composite": 0.4606,
+        "half_prob": 0.7368,
+        "pitcher": 0.4792,
+        "batter": 0.3641,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -22318,9 +22318,9 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2904,
+            "k_pct": 0.2929,
             "fps": 0.5,
-            "xera": 0.5287,
+            "xera": 0.529,
             "bb_pct": 0.5553,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
@@ -22348,9 +22348,9 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3364,
+            "k_pct": 0.3348,
             "fps": 0.5,
-            "xera": 0.3682,
+            "xera": 0.3641,
             "bb_pct": 0.7772,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
