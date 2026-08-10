@@ -22730,23 +22730,23 @@
       "game_pk": 825048,
       "away_pitcher": "Gabriel Hughes",
       "home_pitcher": "Michael Soroka",
-      "nrfi_prob": 0.5741,
+      "nrfi_prob": 0.5739,
       "confirmed": false,
       "top": {
-        "composite": 0.5242,
-        "half_prob": 0.7662,
+        "composite": 0.5239,
+        "half_prob": 0.7661,
         "pitcher": 0.5674,
         "batter": 0.5,
-        "park_weather": 0.4858,
+        "park_weather": 0.4833,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4876,
-        "half_prob": 0.7493,
+        "composite": 0.4873,
+        "half_prob": 0.7491,
         "pitcher": 0.4928,
         "batter": 0.5,
-        "park_weather": 0.4858,
+        "park_weather": 0.4833,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -22793,180 +22793,6 @@
             "gb_pct": 0.5
           },
           "bf": 121
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-10",
-      "game_pk": 822780,
-      "away_pitcher": "Sonny Gray",
-      "home_pitcher": "Jameson Taillon",
-      "nrfi_prob": 0.5664,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4822,
-        "half_prob": 0.7467,
-        "pitcher": 0.4751,
-        "batter": 0.5,
-        "park_weather": 0.5108,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5075,
-        "half_prob": 0.7585,
-        "pitcher": 0.5267,
-        "batter": 0.5,
-        "park_weather": 0.5108,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4011,
-            "fps": 0.5,
-            "xera": 0.4068,
-            "bb_pct": 0.5957,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 346
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4842,
-            "fps": 0.5,
-            "xera": 0.5255,
-            "bb_pct": 0.6707,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 484
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-10",
-      "game_pk": 824887,
-      "away_pitcher": "Christian Scott",
-      "home_pitcher": "Bryce Elder",
-      "nrfi_prob": 0.5642,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4837,
-        "half_prob": 0.7474,
-        "pitcher": 0.5013,
-        "batter": 0.5,
-        "park_weather": 0.4233,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4999,
-        "half_prob": 0.7549,
-        "pitcher": 0.5343,
-        "batter": 0.5,
-        "park_weather": 0.4233,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3282,
-            "fps": 0.5,
-            "xera": 0.6111,
-            "bb_pct": 0.5555,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 529
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7346,
-            "fps": 0.5,
-            "xera": 0.5358,
-            "bb_pct": 0.3874,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 319
         },
         "ds": {
           "dmg": {
@@ -23075,26 +22901,113 @@
     },
     {
       "date": "2026-08-10",
+      "game_pk": 822780,
+      "away_pitcher": "Sonny Gray",
+      "home_pitcher": "Jameson Taillon",
+      "nrfi_prob": 0.562,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4796,
+        "half_prob": 0.7455,
+        "pitcher": 0.4759,
+        "batter": 0.4371,
+        "park_weather": 0.5108,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4977,
+        "half_prob": 0.7539,
+        "pitcher": 0.526,
+        "batter": 0.4132,
+        "park_weather": 0.5108,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4056,
+            "fps": 0.5,
+            "xera": 0.4068,
+            "bb_pct": 0.5957,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 346
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4805,
+            "fps": 0.5,
+            "xera": 0.5255,
+            "bb_pct": 0.6707,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 484
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-10",
       "game_pk": 823675,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Dean Kremer",
-      "nrfi_prob": 0.5597,
+      "nrfi_prob": 0.5591,
       "confirmed": false,
       "top": {
-        "composite": 0.4876,
-        "half_prob": 0.7493,
+        "composite": 0.4868,
+        "half_prob": 0.7489,
         "pitcher": 0.4877,
         "batter": 0.5,
-        "park_weather": 0.505,
+        "park_weather": 0.4983,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4828,
-        "half_prob": 0.747,
+        "composite": 0.482,
+        "half_prob": 0.7466,
         "pitcher": 0.5124,
         "batter": 0.4375,
-        "park_weather": 0.505,
+        "park_weather": 0.4983,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -23162,42 +23075,42 @@
     },
     {
       "date": "2026-08-10",
-      "game_pk": 823018,
-      "away_pitcher": "Andrew Painter",
-      "home_pitcher": "Hunter Dobbins",
-      "nrfi_prob": 0.5578,
+      "game_pk": 824887,
+      "away_pitcher": "Christian Scott",
+      "home_pitcher": "Bryce Elder",
+      "nrfi_prob": 0.5567,
       "confirmed": false,
       "top": {
-        "composite": 0.4967,
-        "half_prob": 0.7535,
-        "pitcher": 0.5014,
+        "composite": 0.4837,
+        "half_prob": 0.7474,
+        "pitcher": 0.5013,
         "batter": 0.5,
-        "park_weather": 0.5233,
+        "park_weather": 0.4233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4683,
-        "half_prob": 0.7403,
-        "pitcher": 0.4433,
-        "batter": 0.5,
-        "park_weather": 0.5233,
+        "composite": 0.478,
+        "half_prob": 0.7448,
+        "pitcher": 0.5341,
+        "batter": 0.4195,
+        "park_weather": 0.4233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4091,
+            "k_pct": 0.3282,
             "fps": 0.5,
-            "xera": 0.5748,
-            "bb_pct": 0.5478,
+            "xera": 0.6111,
+            "bb_pct": 0.5555,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 169
+          "bf": 529
         },
         "ds": {
           "dmg": {
@@ -23218,23 +23131,23 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2957,
+            "k_pct": 0.7333,
             "fps": 0.5,
-            "xera": 0.3927,
-            "bb_pct": 0.5262,
+            "xera": 0.5358,
+            "bb_pct": 0.3874,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 339
+          "bf": 319
         },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -23322,6 +23235,93 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-10",
+      "game_pk": 823018,
+      "away_pitcher": "Andrew Painter",
+      "home_pitcher": "Hunter Dobbins",
+      "nrfi_prob": 0.5454,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4941,
+        "half_prob": 0.7523,
+        "pitcher": 0.5014,
+        "batter": 0.5,
+        "park_weather": 0.5033,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4348,
+        "half_prob": 0.725,
+        "pitcher": 0.4428,
+        "batter": 0.3865,
+        "park_weather": 0.5033,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4091,
+            "fps": 0.5,
+            "xera": 0.5748,
+            "bb_pct": 0.5478,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 169
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.293,
+            "fps": 0.5,
+            "xera": 0.3927,
+            "bb_pct": 0.5262,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 339
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
