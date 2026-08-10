@@ -22901,26 +22901,113 @@
     },
     {
       "date": "2026-08-10",
+      "game_pk": 824887,
+      "away_pitcher": "Christian Scott",
+      "home_pitcher": "Bryce Elder",
+      "nrfi_prob": 0.5648,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4935,
+        "half_prob": 0.752,
+        "pitcher": 0.5008,
+        "batter": 0.4871,
+        "park_weather": 0.42,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4916,
+        "half_prob": 0.7511,
+        "pitcher": 0.5341,
+        "batter": 0.4195,
+        "park_weather": 0.42,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3254,
+            "fps": 0.5,
+            "xera": 0.6111,
+            "bb_pct": 0.5555,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 529
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7333,
+            "fps": 0.5,
+            "xera": 0.5358,
+            "bb_pct": 0.3874,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 319
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-10",
       "game_pk": 823189,
       "away_pitcher": "Hayden Wesneski",
       "home_pitcher": "Blade Tidwell",
-      "nrfi_prob": 0.5637,
+      "nrfi_prob": 0.5628,
       "confirmed": false,
       "top": {
-        "composite": 0.4949,
-        "half_prob": 0.7526,
+        "composite": 0.4935,
+        "half_prob": 0.752,
         "pitcher": 0.4776,
         "batter": 0.5,
-        "park_weather": 0.5988,
+        "park_weather": 0.5883,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4871,
-        "half_prob": 0.749,
+        "composite": 0.4858,
+        "half_prob": 0.7484,
         "pitcher": 0.4618,
         "batter": 0.5,
-        "park_weather": 0.5988,
+        "park_weather": 0.5883,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -23054,93 +23141,6 @@
             "gb_pct": 0.5
           },
           "bf": 484
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-10",
-      "game_pk": 824887,
-      "away_pitcher": "Christian Scott",
-      "home_pitcher": "Bryce Elder",
-      "nrfi_prob": 0.5564,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4832,
-        "half_prob": 0.7472,
-        "pitcher": 0.5013,
-        "batter": 0.5,
-        "park_weather": 0.42,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4776,
-        "half_prob": 0.7446,
-        "pitcher": 0.5341,
-        "batter": 0.4195,
-        "park_weather": 0.42,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3282,
-            "fps": 0.5,
-            "xera": 0.6111,
-            "bb_pct": 0.5555,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 529
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7333,
-            "fps": 0.5,
-            "xera": 0.5358,
-            "bb_pct": 0.3874,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 319
         },
         "ds": {
           "dmg": {
