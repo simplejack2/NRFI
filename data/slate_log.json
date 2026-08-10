@@ -22556,23 +22556,23 @@
       "game_pk": 823918,
       "away_pitcher": "Noah Cameron",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.5964,
+      "nrfi_prob": 0.5942,
       "confirmed": false,
       "top": {
-        "composite": 0.563,
-        "half_prob": 0.7839,
+        "composite": 0.5598,
+        "half_prob": 0.7825,
         "pitcher": 0.6317,
         "batter": 0.5,
-        "park_weather": 0.5417,
+        "park_weather": 0.5177,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5124,
-        "half_prob": 0.7608,
+        "composite": 0.5093,
+        "half_prob": 0.7593,
         "pitcher": 0.5286,
         "batter": 0.5,
-        "park_weather": 0.5417,
+        "park_weather": 0.5177,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -23162,93 +23162,6 @@
     },
     {
       "date": "2026-08-10",
-      "game_pk": 824969,
-      "away_pitcher": "Freddy Peralta",
-      "home_pitcher": "Jacob Lopez",
-      "nrfi_prob": 0.5497,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4663,
-        "half_prob": 0.7394,
-        "pitcher": 0.4527,
-        "batter": 0.5,
-        "park_weather": 0.4733,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4751,
-        "half_prob": 0.7434,
-        "pitcher": 0.4706,
-        "batter": 0.5,
-        "park_weather": 0.4733,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4224,
-            "fps": 0.5,
-            "xera": 0.5488,
-            "bb_pct": 0.1851,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 345
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5575,
-            "fps": 0.5,
-            "xera": 0.3743,
-            "bb_pct": 0.4133,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 531
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-10",
       "game_pk": 823018,
       "away_pitcher": "Andrew Painter",
       "home_pitcher": "Hunter Dobbins",
@@ -23315,6 +23228,93 @@
             "gb_pct": 0.5
           },
           "bf": 339
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-10",
+      "game_pk": 824969,
+      "away_pitcher": "Freddy Peralta",
+      "home_pitcher": "Jacob Lopez",
+      "nrfi_prob": 0.5412,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4663,
+        "half_prob": 0.7394,
+        "pitcher": 0.4527,
+        "batter": 0.5,
+        "park_weather": 0.4733,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4501,
+        "half_prob": 0.732,
+        "pitcher": 0.4703,
+        "batter": 0.408,
+        "park_weather": 0.4733,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4224,
+            "fps": 0.5,
+            "xera": 0.5488,
+            "bb_pct": 0.1851,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 345
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5562,
+            "fps": 0.5,
+            "xera": 0.3743,
+            "bb_pct": 0.4133,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 531
         },
         "ds": {
           "dmg": {
