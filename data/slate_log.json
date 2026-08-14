@@ -27080,23 +27080,23 @@
       "game_pk": 824159,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Peter Lambert",
-      "nrfi_prob": 0.5692,
+      "nrfi_prob": 0.5699,
       "confirmed": false,
       "top": {
-        "composite": 0.4892,
-        "half_prob": 0.75,
+        "composite": 0.4903,
+        "half_prob": 0.7505,
         "pitcher": 0.4983,
         "batter": 0.5,
-        "park_weather": 0.4767,
+        "park_weather": 0.4858,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5083,
-        "half_prob": 0.7589,
+        "composite": 0.5095,
+        "half_prob": 0.7594,
         "pitcher": 0.5375,
         "batter": 0.5,
-        "park_weather": 0.4767,
+        "park_weather": 0.4858,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -27143,93 +27143,6 @@
             "gb_pct": 0.5
           },
           "bf": 543
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-14",
-      "game_pk": 823346,
-      "away_pitcher": "Jake Bennett",
-      "home_pitcher": "Bubba Chandler",
-      "nrfi_prob": 0.5683,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4851,
-        "half_prob": 0.7481,
-        "pitcher": 0.4507,
-        "batter": 0.5,
-        "park_weather": 0.625,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.51,
-        "half_prob": 0.7597,
-        "pitcher": 0.5016,
-        "batter": 0.5,
-        "park_weather": 0.625,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3815,
-            "fps": 0.5,
-            "xera": 0.5709,
-            "bb_pct": 0.1885,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 508
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2819,
-            "fps": 0.5,
-            "xera": 0.4959,
-            "bb_pct": 0.7985,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 305
         },
         "ds": {
           "dmg": {
@@ -27317,6 +27230,93 @@
             "gb_pct": 0.5
           },
           "bf": 509
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-14",
+      "game_pk": 823346,
+      "away_pitcher": "Jake Bennett",
+      "home_pitcher": "Bubba Chandler",
+      "nrfi_prob": 0.5646,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4797,
+        "half_prob": 0.7456,
+        "pitcher": 0.4507,
+        "batter": 0.5,
+        "park_weather": 0.5833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5046,
+        "half_prob": 0.7572,
+        "pitcher": 0.5016,
+        "batter": 0.5,
+        "park_weather": 0.5833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3815,
+            "fps": 0.5,
+            "xera": 0.5709,
+            "bb_pct": 0.1885,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 508
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2819,
+            "fps": 0.5,
+            "xera": 0.4959,
+            "bb_pct": 0.7985,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 305
         },
         "ds": {
           "dmg": {
