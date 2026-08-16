@@ -29515,13 +29515,13 @@
       "date": "2026-08-16",
       "game_pk": 823344,
       "away_pitcher": "Patrick Sandoval",
-      "home_pitcher": "Paul Skenes",
-      "nrfi_prob": 0.5899,
+      "home_pitcher": "Lake Bachar",
+      "nrfi_prob": 0.5787,
       "confirmed": false,
       "top": {
-        "composite": 0.5526,
-        "half_prob": 0.7793,
-        "pitcher": 0.583,
+        "composite": 0.5203,
+        "half_prob": 0.7644,
+        "pitcher": 0.517,
         "batter": 0.5,
         "park_weather": 0.6458,
         "damage_speed": 0.5,
@@ -29539,16 +29539,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8375,
+            "k_pct": 0.6149,
             "fps": 0.5,
-            "xera": 0.4658,
-            "bb_pct": 0.7129,
+            "xera": 0.5024,
+            "bb_pct": 0.4702,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 553
+          "bf": 270
         },
         "ds": {
           "dmg": {
@@ -30035,6 +30035,93 @@
     },
     {
       "date": "2026-08-16",
+      "game_pk": 823670,
+      "away_pitcher": "Andrew Painter",
+      "home_pitcher": "Dean Kremer",
+      "nrfi_prob": 0.5698,
+      "confirmed": false,
+      "top": {
+        "composite": 0.509,
+        "half_prob": 0.7592,
+        "pitcher": 0.5117,
+        "batter": 0.5,
+        "park_weather": 0.5792,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4904,
+        "half_prob": 0.7505,
+        "pitcher": 0.4737,
+        "batter": 0.5,
+        "park_weather": 0.5792,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5203,
+            "fps": 0.5,
+            "xera": 0.4759,
+            "bb_pct": 0.6032,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 194
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3189,
+            "fps": 0.5,
+            "xera": 0.5365,
+            "bb_pct": 0.4876,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 360
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-16",
       "game_pk": 823182,
       "away_pitcher": "Gabriel Hughes",
       "home_pitcher": "Blade Tidwell",
@@ -30101,93 +30188,6 @@
             "gb_pct": 0.5
           },
           "bf": 143
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-16",
-      "game_pk": 823670,
-      "away_pitcher": "Andrew Painter",
-      "home_pitcher": "Dean Kremer",
-      "nrfi_prob": 0.566,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5036,
-        "half_prob": 0.7567,
-        "pitcher": 0.5117,
-        "batter": 0.5,
-        "park_weather": 0.5375,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.485,
-        "half_prob": 0.748,
-        "pitcher": 0.4737,
-        "batter": 0.5,
-        "park_weather": 0.5375,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5203,
-            "fps": 0.5,
-            "xera": 0.4759,
-            "bb_pct": 0.6032,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 194
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3189,
-            "fps": 0.5,
-            "xera": 0.5365,
-            "bb_pct": 0.4876,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 360
         },
         "ds": {
           "dmg": {
@@ -30473,23 +30473,23 @@
       "game_pk": 824965,
       "away_pitcher": "Cody Bradford",
       "home_pitcher": "Jacob Lopez",
-      "nrfi_prob": 0.5515,
+      "nrfi_prob": 0.5525,
       "confirmed": false,
       "top": {
-        "composite": 0.4684,
-        "half_prob": 0.7404,
+        "composite": 0.4698,
+        "half_prob": 0.741,
         "pitcher": 0.4545,
         "batter": 0.5,
-        "park_weather": 0.4823,
+        "park_weather": 0.4933,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4783,
-        "half_prob": 0.7449,
+        "composite": 0.4798,
+        "half_prob": 0.7456,
         "pitcher": 0.4748,
         "batter": 0.5,
-        "park_weather": 0.4823,
+        "park_weather": 0.4933,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
