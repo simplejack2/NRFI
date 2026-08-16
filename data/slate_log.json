@@ -29861,6 +29861,93 @@
     },
     {
       "date": "2026-08-16",
+      "game_pk": 824880,
+      "away_pitcher": "Michael Soroka",
+      "home_pitcher": "Bryce Elder",
+      "nrfi_prob": 0.5709,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4824,
+        "half_prob": 0.7468,
+        "pitcher": 0.4777,
+        "batter": 0.5,
+        "park_weather": 0.5025,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5202,
+        "half_prob": 0.7644,
+        "pitcher": 0.5548,
+        "batter": 0.5,
+        "park_weather": 0.5025,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3198,
+            "fps": 0.5,
+            "xera": 0.5192,
+            "bb_pct": 0.5422,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 556
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5233,
+            "fps": 0.5,
+            "xera": 0.5864,
+            "bb_pct": 0.7258,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 351
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-16",
       "game_pk": 823590,
       "away_pitcher": "Jake Irvin",
       "home_pitcher": "Christian Scott",
@@ -30014,93 +30101,6 @@
             "gb_pct": 0.5
           },
           "bf": 143
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-16",
-      "game_pk": 824880,
-      "away_pitcher": "Michael Soroka",
-      "home_pitcher": "Bryce Elder",
-      "nrfi_prob": 0.5666,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4763,
-        "half_prob": 0.744,
-        "pitcher": 0.4777,
-        "batter": 0.5,
-        "park_weather": 0.4558,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5141,
-        "half_prob": 0.7616,
-        "pitcher": 0.5548,
-        "batter": 0.5,
-        "park_weather": 0.4558,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3198,
-            "fps": 0.5,
-            "xera": 0.5192,
-            "bb_pct": 0.5422,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 556
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5233,
-            "fps": 0.5,
-            "xera": 0.5864,
-            "bb_pct": 0.7258,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 351
         },
         "ds": {
           "dmg": {
