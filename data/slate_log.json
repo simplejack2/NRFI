@@ -29365,10 +29365,10 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.9348,
+            "k_pct": 0.9347,
             "fps": 0.5,
             "xera": 0.6063,
-            "bb_pct": 0.2916,
+            "bb_pct": 0.2917,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
@@ -29600,15 +29600,102 @@
     },
     {
       "date": "2026-08-16",
+      "game_pk": 823991,
+      "away_pitcher": "Noah Cameron",
+      "home_pitcher": "Ryan Johnson",
+      "nrfi_prob": 0.5751,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4825,
+        "half_prob": 0.7469,
+        "pitcher": 0.4248,
+        "batter": 0.5117,
+        "park_weather": 0.5708,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5324,
+        "half_prob": 0.77,
+        "pitcher": 0.5195,
+        "batter": 0.5246,
+        "park_weather": 0.5708,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2706,
+            "fps": 0.5,
+            "xera": 0.4711,
+            "bb_pct": 0.3035,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 249
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4175,
+            "fps": 0.5,
+            "xera": 0.5937,
+            "bb_pct": 0.598,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 551
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-16",
       "game_pk": 823344,
       "away_pitcher": "Patrick Sandoval",
       "home_pitcher": "Lake Bachar",
-      "nrfi_prob": 0.5768,
+      "nrfi_prob": 0.5746,
       "confirmed": true,
       "top": {
-        "composite": 0.5077,
-        "half_prob": 0.7586,
-        "pitcher": 0.5164,
+        "composite": 0.5016,
+        "half_prob": 0.7557,
+        "pitcher": 0.5038,
         "batter": 0.4028,
         "park_weather": 0.6458,
         "damage_speed": 0.5,
@@ -29626,16 +29713,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6112,
+            "k_pct": 0.6086,
             "fps": 0.5,
-            "xera": 0.5024,
-            "bb_pct": 0.4702,
+            "xera": 0.446,
+            "bb_pct": 0.4724,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 270
+          "bf": 271
         },
         "ds": {
           "dmg": {
@@ -30038,22 +30125,22 @@
       "game_pk": 822940,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Freddy Peralta",
-      "nrfi_prob": 0.5669,
+      "nrfi_prob": 0.567,
       "confirmed": true,
       "top": {
-        "composite": 0.4993,
-        "half_prob": 0.7547,
+        "composite": 0.4991,
+        "half_prob": 0.7546,
         "pitcher": 0.4687,
-        "batter": 0.4721,
+        "batter": 0.4713,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4917,
-        "half_prob": 0.7511,
-        "pitcher": 0.5022,
-        "batter": 0.3832,
+        "composite": 0.4923,
+        "half_prob": 0.7514,
+        "pitcher": 0.5034,
+        "batter": 0.3833,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -30061,16 +30148,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5419,
+            "k_pct": 0.5406,
             "fps": 0.5,
             "xera": 0.3806,
-            "bb_pct": 0.4103,
+            "bb_pct": 0.4116,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 572
+          "bf": 573
         },
         "ds": {
           "dmg": {
@@ -30091,16 +30178,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3976,
+            "k_pct": 0.3984,
             "fps": 0.5,
-            "xera": 0.5047,
-            "bb_pct": 0.6402,
+            "xera": 0.5068,
+            "bb_pct": 0.6443,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 519
+          "bf": 523
         },
         "ds": {
           "dmg": {
@@ -30296,113 +30383,26 @@
     },
     {
       "date": "2026-08-16",
-      "game_pk": 823991,
-      "away_pitcher": "Noah Cameron",
-      "home_pitcher": "Ryan Johnson",
-      "nrfi_prob": 0.5631,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4685,
-        "half_prob": 0.7404,
-        "pitcher": 0.4248,
-        "batter": 0.5117,
-        "park_weather": 0.5708,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5121,
-        "half_prob": 0.7606,
-        "pitcher": 0.5202,
-        "batter": 0.5,
-        "park_weather": 0.5708,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2706,
-            "fps": 0.5,
-            "xera": 0.4711,
-            "bb_pct": 0.3035,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 249
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4215,
-            "fps": 0.5,
-            "xera": 0.5937,
-            "bb_pct": 0.598,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 551
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-16",
       "game_pk": 824880,
       "away_pitcher": "Michael Soroka",
       "home_pitcher": "Bryce Elder",
-      "nrfi_prob": 0.5557,
+      "nrfi_prob": 0.555,
       "confirmed": true,
       "top": {
-        "composite": 0.45,
-        "half_prob": 0.7319,
+        "composite": 0.4489,
+        "half_prob": 0.7314,
         "pitcher": 0.4774,
         "batter": 0.3528,
-        "park_weather": 0.4525,
+        "park_weather": 0.4442,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5093,
-        "half_prob": 0.7593,
+        "composite": 0.5082,
+        "half_prob": 0.7588,
         "pitcher": 0.557,
         "batter": 0.428,
-        "park_weather": 0.4525,
+        "park_weather": 0.4442,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
