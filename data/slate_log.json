@@ -30995,23 +30995,23 @@
       "game_pk": 823343,
       "away_pitcher": "Framber Valdez",
       "home_pitcher": "Carmen Mlodzinski",
-      "nrfi_prob": 0.5585,
+      "nrfi_prob": 0.5586,
       "confirmed": true,
       "top": {
-        "composite": 0.4659,
-        "half_prob": 0.7392,
+        "composite": 0.4662,
+        "half_prob": 0.7393,
         "pitcher": 0.4537,
         "batter": 0.375,
-        "park_weather": 0.6183,
+        "park_weather": 0.62,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5011,
-        "half_prob": 0.7555,
+        "composite": 0.5013,
+        "half_prob": 0.7556,
         "pitcher": 0.4827,
         "batter": 0.4527,
-        "park_weather": 0.6183,
+        "park_weather": 0.62,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -31169,30 +31169,30 @@
       "game_pk": 824478,
       "away_pitcher": "Andre Pallante",
       "home_pitcher": "Rhett Lowder",
-      "nrfi_prob": 0.5471,
-      "confirmed": false,
+      "nrfi_prob": 0.5448,
+      "confirmed": true,
       "top": {
-        "composite": 0.4607,
-        "half_prob": 0.7368,
-        "pitcher": 0.4597,
-        "batter": 0.5,
+        "composite": 0.4432,
+        "half_prob": 0.7288,
+        "pitcher": 0.4593,
+        "batter": 0.3841,
         "park_weather": 0.4033,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4731,
-        "half_prob": 0.7425,
-        "pitcher": 0.485,
-        "batter": 0.5,
+        "composite": 0.4838,
+        "half_prob": 0.7475,
+        "pitcher": 0.4855,
+        "batter": 0.487,
         "park_weather": 0.4033,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2664,
+            "k_pct": 0.2638,
             "fps": 0.5,
             "xera": 0.5846,
             "bb_pct": 0.3798,
@@ -31208,7 +31208,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -31222,7 +31222,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2155,
+            "k_pct": 0.2182,
             "fps": 0.5,
             "xera": 0.6154,
             "bb_pct": 0.5776,
@@ -31238,7 +31238,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
