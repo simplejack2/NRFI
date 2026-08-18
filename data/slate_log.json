@@ -31517,30 +31517,30 @@
       "game_pk": 823749,
       "away_pitcher": "Bryce Miller",
       "home_pitcher": "Kyle Harrison",
-      "nrfi_prob": 0.5849,
-      "confirmed": false,
+      "nrfi_prob": 0.58,
+      "confirmed": true,
       "top": {
-        "composite": 0.532,
-        "half_prob": 0.7698,
-        "pitcher": 0.59,
-        "batter": 0.5,
+        "composite": 0.5222,
+        "half_prob": 0.7653,
+        "pitcher": 0.5906,
+        "batter": 0.4107,
         "park_weather": 0.4607,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5102,
-        "half_prob": 0.7598,
-        "pitcher": 0.5456,
-        "batter": 0.5,
+        "composite": 0.5062,
+        "half_prob": 0.7579,
+        "pitcher": 0.5469,
+        "batter": 0.4309,
         "park_weather": 0.4607,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7648,
+            "k_pct": 0.7683,
             "fps": 0.5,
             "xera": 0.5643,
             "bb_pct": 0.7014,
@@ -31556,7 +31556,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -31570,7 +31570,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.593,
+            "k_pct": 0.6002,
             "fps": 0.5,
             "xera": 0.4377,
             "bb_pct": 0.8042,
@@ -31586,7 +31586,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -32124,9 +32124,9 @@
     {
       "date": "2026-08-18",
       "game_pk": 824075,
-      "away_pitcher": "Jack Perkins",
+      "away_pitcher": "Brady Basso",
       "home_pitcher": "Daniel Lynch IV",
-      "nrfi_prob": 0.5563,
+      "nrfi_prob": 0.5574,
       "confirmed": false,
       "top": {
         "composite": 0.487,
@@ -32138,9 +32138,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4734,
-        "half_prob": 0.7427,
-        "pitcher": 0.485,
+        "composite": 0.4767,
+        "half_prob": 0.7442,
+        "pitcher": 0.4917,
         "batter": 0.433,
         "park_weather": 0.545,
         "damage_speed": 0.5,
@@ -32179,16 +32179,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5912,
+            "k_pct": 0.3564,
             "fps": 0.5,
-            "xera": 0.3757,
-            "bb_pct": 0.471,
+            "xera": 0.4795,
+            "bb_pct": 0.7957,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 376
+          "bf": 91
         },
         "ds": {
           "dmg": {
@@ -32561,23 +32561,23 @@
       "game_pk": 824475,
       "away_pitcher": "Kyle Leahy",
       "home_pitcher": "Andrew Abbott",
-      "nrfi_prob": 0.5404,
+      "nrfi_prob": 0.5402,
       "confirmed": true,
       "top": {
-        "composite": 0.418,
-        "half_prob": 0.7176,
+        "composite": 0.4178,
+        "half_prob": 0.7175,
         "pitcher": 0.4153,
         "batter": 0.394,
-        "park_weather": 0.355,
+        "park_weather": 0.3533,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4958,
-        "half_prob": 0.753,
+        "composite": 0.4956,
+        "half_prob": 0.7529,
         "pitcher": 0.5246,
         "batter": 0.4837,
-        "park_weather": 0.355,
+        "park_weather": 0.3533,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -32778,7 +32778,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 2,
+            "n_cat": 1,
             "n_pop": 0
           },
           "damage": 0.5,
