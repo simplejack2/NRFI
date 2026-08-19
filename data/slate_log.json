@@ -33341,6 +33341,93 @@
     },
     {
       "date": "2026-08-19",
+      "game_pk": 824640,
+      "away_pitcher": "Sean Newcomb",
+      "home_pitcher": "Clay Holmes",
+      "nrfi_prob": 0.5624,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5009,
+        "half_prob": 0.7554,
+        "pitcher": 0.4762,
+        "batter": 0.5269,
+        "park_weather": 0.4871,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4774,
+        "half_prob": 0.7445,
+        "pitcher": 0.4884,
+        "batter": 0.4176,
+        "park_weather": 0.4871,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3393,
+            "fps": 0.5,
+            "xera": 0.541,
+            "bb_pct": 0.472,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 278
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4987,
+            "fps": 0.5,
+            "xera": 0.5509,
+            "bb_pct": 0.3389,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 283
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-19",
       "game_pk": 823424,
       "away_pitcher": "Sandy Alcantara",
       "home_pitcher": "Aaron Nola",
@@ -33428,112 +33515,25 @@
     },
     {
       "date": "2026-08-19",
-      "game_pk": 824640,
-      "away_pitcher": "Sean Newcomb",
-      "home_pitcher": "Clay Holmes",
-      "nrfi_prob": 0.5594,
+      "game_pk": 824722,
+      "away_pitcher": "Brandon Pfaadt",
+      "home_pitcher": "Payton Tolle",
+      "nrfi_prob": 0.5598,
       "confirmed": true,
       "top": {
-        "composite": 0.4966,
-        "half_prob": 0.7534,
-        "pitcher": 0.4762,
-        "batter": 0.5269,
-        "park_weather": 0.4542,
+        "composite": 0.4979,
+        "half_prob": 0.754,
+        "pitcher": 0.5832,
+        "batter": 0.3758,
+        "park_weather": 0.3743,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
         "composite": 0.4731,
         "half_prob": 0.7425,
-        "pitcher": 0.4884,
-        "batter": 0.4176,
-        "park_weather": 0.4542,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3393,
-            "fps": 0.5,
-            "xera": 0.541,
-            "bb_pct": 0.472,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 278
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4987,
-            "fps": 0.5,
-            "xera": 0.5509,
-            "bb_pct": 0.3389,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 283
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-19",
-      "game_pk": 824722,
-      "away_pitcher": "Brandon Pfaadt",
-      "home_pitcher": "Payton Tolle",
-      "nrfi_prob": 0.5588,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4975,
-        "half_prob": 0.7538,
-        "pitcher": 0.5825,
-        "batter": 0.3757,
-        "park_weather": 0.3743,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4705,
-        "half_prob": 0.7413,
-        "pitcher": 0.5044,
-        "batter": 0.4171,
+        "pitcher": 0.5096,
+        "batter": 0.4175,
         "park_weather": 0.3743,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -33541,16 +33541,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7645,
+            "k_pct": 0.7646,
             "fps": 0.5,
             "xera": 0.5484,
-            "bb_pct": 0.6732,
+            "bb_pct": 0.6783,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 473
+          "bf": 476
         },
         "ds": {
           "dmg": {
@@ -33571,16 +33571,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2522,
+            "k_pct": 0.2756,
             "fps": 0.5,
-            "xera": 0.5572,
-            "bb_pct": 0.7605,
+            "xera": 0.5576,
+            "bb_pct": 0.7664,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 389
+          "bf": 394
         },
         "ds": {
           "dmg": {
