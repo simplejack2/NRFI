@@ -34124,93 +34124,6 @@
     },
     {
       "date": "2026-08-20",
-      "game_pk": 824395,
-      "away_pitcher": "Landen Roupp",
-      "home_pitcher": "Gavin Williams",
-      "nrfi_prob": 0.5791,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5421,
-        "half_prob": 0.7745,
-        "pitcher": 0.5748,
-        "batter": 0.5,
-        "park_weather": 0.5958,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4844,
-        "half_prob": 0.7477,
-        "pitcher": 0.4569,
-        "batter": 0.5,
-        "park_weather": 0.5958,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8382,
-            "fps": 0.5,
-            "xera": 0.5472,
-            "bb_pct": 0.525,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 597
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5143,
-            "fps": 0.5,
-            "xera": 0.4487,
-            "bb_pct": 0.2546,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 548
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-20",
       "game_pk": 823747,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Robert Gasser",
@@ -34298,26 +34211,113 @@
     },
     {
       "date": "2026-08-20",
-      "game_pk": 824802,
-      "away_pitcher": "Gerrit Cole",
-      "home_pitcher": "Kyle Bradish",
-      "nrfi_prob": 0.5741,
+      "game_pk": 824395,
+      "away_pitcher": "Landen Roupp",
+      "home_pitcher": "Gavin Williams",
+      "nrfi_prob": 0.5753,
       "confirmed": false,
       "top": {
-        "composite": 0.4821,
-        "half_prob": 0.7467,
-        "pitcher": 0.499,
+        "composite": 0.5367,
+        "half_prob": 0.772,
+        "pitcher": 0.5748,
         "batter": 0.5,
-        "park_weather": 0.42,
+        "park_weather": 0.5542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5298,
-        "half_prob": 0.7688,
+        "composite": 0.4789,
+        "half_prob": 0.7452,
+        "pitcher": 0.4569,
+        "batter": 0.5,
+        "park_weather": 0.5542,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8382,
+            "fps": 0.5,
+            "xera": 0.5472,
+            "bb_pct": 0.525,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 597
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5143,
+            "fps": 0.5,
+            "xera": 0.4487,
+            "bb_pct": 0.2546,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 548
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-20",
+      "game_pk": 824802,
+      "away_pitcher": "Gerrit Cole",
+      "home_pitcher": "Kyle Bradish",
+      "nrfi_prob": 0.5751,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4836,
+        "half_prob": 0.7474,
+        "pitcher": 0.499,
+        "batter": 0.5,
+        "park_weather": 0.4317,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5314,
+        "half_prob": 0.7695,
         "pitcher": 0.5964,
         "batter": 0.5,
-        "park_weather": 0.42,
+        "park_weather": 0.4317,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
