@@ -34823,7 +34823,7 @@
       "game_pk": 823746,
       "away_pitcher": "Chris Sale",
       "home_pitcher": "Jacob Misiorowski",
-      "nrfi_prob": 0.6038,
+      "nrfi_prob": 0.6069,
       "confirmed": true,
       "top": {
         "composite": 0.5555,
@@ -34835,10 +34835,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5399,
-        "half_prob": 0.7735,
-        "pitcher": 0.6128,
-        "batter": 0.4152,
+        "composite": 0.5487,
+        "half_prob": 0.7775,
+        "pitcher": 0.6137,
+        "batter": 0.4462,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -34876,16 +34876,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8487,
+            "k_pct": 0.8513,
             "fps": 0.5,
-            "xera": 0.5303,
-            "bb_pct": 0.81,
+            "xera": 0.532,
+            "bb_pct": 0.8105,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 541
+          "bf": 542
         },
         "ds": {
           "dmg": {
@@ -35516,93 +35516,6 @@
     },
     {
       "date": "2026-08-21",
-      "game_pk": 823911,
-      "away_pitcher": "Bubba Chandler",
-      "home_pitcher": "Yoshinobu Yamamoto",
-      "nrfi_prob": 0.5741,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5362,
-        "half_prob": 0.7718,
-        "pitcher": 0.5784,
-        "batter": 0.5,
-        "park_weather": 0.5367,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4759,
-        "half_prob": 0.7438,
-        "pitcher": 0.4553,
-        "batter": 0.5,
-        "park_weather": 0.5367,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6326,
-            "fps": 0.5,
-            "xera": 0.6067,
-            "bb_pct": 0.7218,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 556
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3897,
-            "fps": 0.5,
-            "xera": 0.5824,
-            "bb_pct": 0.1929,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 528
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-21",
       "game_pk": 823101,
       "away_pitcher": "Matthew Boyd",
       "home_pitcher": "Emerson Hancock",
@@ -35690,26 +35603,113 @@
     },
     {
       "date": "2026-08-21",
+      "game_pk": 823911,
+      "away_pitcher": "Bubba Chandler",
+      "home_pitcher": "Yoshinobu Yamamoto",
+      "nrfi_prob": 0.563,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5362,
+        "half_prob": 0.7718,
+        "pitcher": 0.5784,
+        "batter": 0.5,
+        "park_weather": 0.5367,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4444,
+        "half_prob": 0.7294,
+        "pitcher": 0.456,
+        "batter": 0.3822,
+        "park_weather": 0.5367,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6326,
+            "fps": 0.5,
+            "xera": 0.6067,
+            "bb_pct": 0.7218,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 556
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3937,
+            "fps": 0.5,
+            "xera": 0.5824,
+            "bb_pct": 0.1929,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 528
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-21",
       "game_pk": 823262,
       "away_pitcher": "Connor Prielipp",
       "home_pitcher": "Randy V\u00e1squez",
-      "nrfi_prob": 0.5594,
+      "nrfi_prob": 0.5596,
       "confirmed": true,
       "top": {
-        "composite": 0.4829,
-        "half_prob": 0.7471,
+        "composite": 0.4831,
+        "half_prob": 0.7472,
         "pitcher": 0.4676,
         "batter": 0.4221,
-        "park_weather": 0.5983,
+        "park_weather": 0.6,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4866,
-        "half_prob": 0.7488,
+        "composite": 0.4868,
+        "half_prob": 0.7489,
         "pitcher": 0.4779,
         "batter": 0.4171,
-        "park_weather": 0.5983,
+        "park_weather": 0.6,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
