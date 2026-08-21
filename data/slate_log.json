@@ -35828,93 +35828,6 @@
     },
     {
       "date": "2026-08-21",
-      "game_pk": 824152,
-      "away_pitcher": "J.T. Ginn",
-      "home_pitcher": "Hayden Wesneski",
-      "nrfi_prob": 0.5604,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4815,
-        "half_prob": 0.7464,
-        "pitcher": 0.464,
-        "batter": 0.5,
-        "park_weather": 0.5474,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.491,
-        "half_prob": 0.7508,
-        "pitcher": 0.4833,
-        "batter": 0.5,
-        "park_weather": 0.5474,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3879,
-            "fps": 0.5,
-            "xera": 0.4324,
-            "bb_pct": 0.5999,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 95
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4464,
-            "fps": 0.5,
-            "xera": 0.5447,
-            "bb_pct": 0.3794,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 533
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-21",
       "game_pk": 825045,
       "away_pitcher": "Nick Lodolo",
       "home_pitcher": "Eduardo Rodriguez",
@@ -35992,6 +35905,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-21",
+      "game_pk": 824152,
+      "away_pitcher": "J.T. Ginn",
+      "home_pitcher": "Hayden Wesneski",
+      "nrfi_prob": 0.555,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4738,
+        "half_prob": 0.7428,
+        "pitcher": 0.464,
+        "batter": 0.5,
+        "park_weather": 0.4875,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4832,
+        "half_prob": 0.7472,
+        "pitcher": 0.4833,
+        "batter": 0.5,
+        "park_weather": 0.4875,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3879,
+            "fps": 0.5,
+            "xera": 0.4324,
+            "bb_pct": 0.5999,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 95
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4464,
+            "fps": 0.5,
+            "xera": 0.5447,
+            "bb_pct": 0.3794,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 533
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
