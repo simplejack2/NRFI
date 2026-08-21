@@ -35255,6 +35255,93 @@
     },
     {
       "date": "2026-08-21",
+      "game_pk": 823420,
+      "away_pitcher": "Hunter Dobbins",
+      "home_pitcher": "Jes\u00fas Luzardo",
+      "nrfi_prob": 0.5751,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5277,
+        "half_prob": 0.7679,
+        "pitcher": 0.5853,
+        "batter": 0.446,
+        "park_weather": 0.45,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4869,
+        "half_prob": 0.7489,
+        "pitcher": 0.505,
+        "batter": 0.4408,
+        "park_weather": 0.45,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7933,
+            "fps": 0.5,
+            "xera": 0.5824,
+            "bb_pct": 0.6025,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 621
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4835,
+            "fps": 0.5,
+            "xera": 0.5881,
+            "bb_pct": 0.4182,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 212
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-21",
       "game_pk": 824559,
       "away_pitcher": "Sean Manaea",
       "home_pitcher": "Sean Burke",
@@ -35415,81 +35502,6 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-21",
-      "game_pk": 823420,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Jes\u00fas Luzardo",
-      "nrfi_prob": 0.5742,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5277,
-        "half_prob": 0.7679,
-        "pitcher": 0.5853,
-        "batter": 0.446,
-        "park_weather": 0.45,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4845,
-        "half_prob": 0.7478,
-        "pitcher": 0.5,
-        "batter": 0.4408,
-        "park_weather": 0.45,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7933,
-            "fps": 0.5,
-            "xera": 0.5824,
-            "bb_pct": 0.6025,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 621
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
