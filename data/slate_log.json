@@ -35686,7 +35686,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-08-21",
@@ -35860,7 +35860,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-08-21",
@@ -36128,23 +36128,23 @@
       "game_pk": 823910,
       "away_pitcher": "Jared Jones",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.5949,
+      "nrfi_prob": 0.5956,
       "confirmed": false,
       "top": {
-        "composite": 0.5601,
-        "half_prob": 0.7826,
+        "composite": 0.5612,
+        "half_prob": 0.7831,
         "pitcher": 0.625,
         "batter": 0.5,
-        "park_weather": 0.545,
+        "park_weather": 0.5533,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5109,
-        "half_prob": 0.7601,
+        "composite": 0.512,
+        "half_prob": 0.7606,
         "pitcher": 0.5247,
         "batter": 0.5,
-        "park_weather": 0.545,
+        "park_weather": 0.5533,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -36299,93 +36299,6 @@
     },
     {
       "date": "2026-08-22",
-      "game_pk": 823509,
-      "away_pitcher": "Dylan Cease",
-      "home_pitcher": "Ryan Weathers",
-      "nrfi_prob": 0.5813,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5119,
-        "half_prob": 0.7606,
-        "pitcher": 0.5567,
-        "batter": 0.5,
-        "park_weather": 0.4321,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.52,
-        "half_prob": 0.7643,
-        "pitcher": 0.5731,
-        "batter": 0.5,
-        "park_weather": 0.4321,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5779,
-            "fps": 0.5,
-            "xera": 0.5988,
-            "bb_pct": 0.6493,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 551
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.9383,
-            "fps": 0.5,
-            "xera": 0.6098,
-            "bb_pct": 0.2858,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 553
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-22",
       "game_pk": 824073,
       "away_pitcher": "Drew Anderson",
       "home_pitcher": "Michael Wacha",
@@ -36452,6 +36365,93 @@
             "gb_pct": 0.5
           },
           "bf": 327
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-22",
+      "game_pk": 823509,
+      "away_pitcher": "Dylan Cease",
+      "home_pitcher": "Ryan Weathers",
+      "nrfi_prob": 0.5787,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5083,
+        "half_prob": 0.7589,
+        "pitcher": 0.5567,
+        "batter": 0.5,
+        "park_weather": 0.4042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5163,
+        "half_prob": 0.7626,
+        "pitcher": 0.5731,
+        "batter": 0.5,
+        "park_weather": 0.4042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5779,
+            "fps": 0.5,
+            "xera": 0.5988,
+            "bb_pct": 0.6493,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 551
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.9383,
+            "fps": 0.5,
+            "xera": 0.6098,
+            "bb_pct": 0.2858,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 553
         },
         "ds": {
           "dmg": {
@@ -37247,23 +37247,23 @@
       "game_pk": 824316,
       "away_pitcher": "Tanner Bibee",
       "home_pitcher": "Gabriel Hughes",
-      "nrfi_prob": 0.5311,
+      "nrfi_prob": 0.5349,
       "confirmed": false,
       "top": {
-        "composite": 0.4371,
-        "half_prob": 0.7261,
+        "composite": 0.4429,
+        "half_prob": 0.7287,
         "pitcher": 0.4662,
         "batter": 0.5,
-        "park_weather": 0.1974,
+        "park_weather": 0.2417,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4488,
-        "half_prob": 0.7314,
+        "composite": 0.4546,
+        "half_prob": 0.734,
         "pitcher": 0.4901,
         "batter": 0.5,
-        "park_weather": 0.1974,
+        "park_weather": 0.2417,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
