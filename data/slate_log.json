@@ -38909,101 +38909,26 @@
     },
     {
       "date": "2026-08-24",
-      "game_pk": 823183,
-      "away_pitcher": "Chase Burns",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5848,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5045,
-        "half_prob": 0.7571,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.5886,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5375,
-        "half_prob": 0.7724,
-        "pitcher": 0.5673,
-        "batter": 0.5,
-        "park_weather": 0.5886,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.813,
-            "fps": 0.5,
-            "xera": 0.5675,
-            "bb_pct": 0.4724,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 548
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-24",
       "game_pk": 824235,
       "away_pitcher": "Drew Rasmussen",
       "home_pitcher": "Framber Valdez",
-      "nrfi_prob": 0.581,
+      "nrfi_prob": 0.5849,
       "confirmed": false,
       "top": {
-        "composite": 0.4887,
-        "half_prob": 0.7497,
+        "composite": 0.4941,
+        "half_prob": 0.7523,
         "pitcher": 0.4735,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.6083,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5433,
-        "half_prob": 0.775,
+        "composite": 0.5487,
+        "half_prob": 0.7775,
         "pitcher": 0.5849,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.6083,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -39050,6 +38975,81 @@
             "gb_pct": 0.5
           },
           "bf": 529
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-24",
+      "game_pk": 823183,
+      "away_pitcher": "Chase Burns",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5848,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5046,
+        "half_prob": 0.7571,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5891,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5376,
+        "half_prob": 0.7724,
+        "pitcher": 0.5673,
+        "batter": 0.5,
+        "park_weather": 0.5891,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.813,
+            "fps": 0.5,
+            "xera": 0.5675,
+            "bb_pct": 0.4724,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 548
         },
         "ds": {
           "dmg": {
@@ -39161,23 +39161,23 @@
       "game_pk": 823992,
       "away_pitcher": "Parker Messick",
       "home_pitcher": "George Klassen",
-      "nrfi_prob": 0.5654,
+      "nrfi_prob": 0.5687,
       "confirmed": false,
       "top": {
-        "composite": 0.4575,
-        "half_prob": 0.7353,
+        "composite": 0.4622,
+        "half_prob": 0.7375,
         "pitcher": 0.431,
         "batter": 0.5,
-        "park_weather": 0.4866,
+        "park_weather": 0.5233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5299,
-        "half_prob": 0.7689,
+        "composite": 0.5346,
+        "half_prob": 0.7711,
         "pitcher": 0.5788,
         "batter": 0.5,
-        "park_weather": 0.4866,
+        "park_weather": 0.5233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -39497,23 +39497,23 @@
       "game_pk": 824964,
       "away_pitcher": "Zebby Matthews",
       "home_pitcher": "Jeffrey Springs",
-      "nrfi_prob": 0.5494,
+      "nrfi_prob": 0.5479,
       "confirmed": false,
       "top": {
-        "composite": 0.4579,
-        "half_prob": 0.7355,
+        "composite": 0.4556,
+        "half_prob": 0.7345,
         "pitcher": 0.4363,
         "batter": 0.5,
-        "park_weather": 0.47,
+        "park_weather": 0.4526,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4828,
-        "half_prob": 0.747,
+        "composite": 0.4805,
+        "half_prob": 0.746,
         "pitcher": 0.4871,
         "batter": 0.5,
-        "park_weather": 0.47,
+        "park_weather": 0.4526,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
