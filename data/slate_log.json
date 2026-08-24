@@ -38735,93 +38735,6 @@
     },
     {
       "date": "2026-08-24",
-      "game_pk": 824964,
-      "away_pitcher": "Zebby Matthews",
-      "home_pitcher": "Jeffrey Springs",
-      "nrfi_prob": 0.5521,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4618,
-        "half_prob": 0.7373,
-        "pitcher": 0.4363,
-        "batter": 0.5,
-        "park_weather": 0.5,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4867,
-        "half_prob": 0.7488,
-        "pitcher": 0.4871,
-        "batter": 0.5,
-        "park_weather": 0.5,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3156,
-            "fps": 0.5,
-            "xera": 0.3936,
-            "bb_pct": 0.4491,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 504
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3812,
-            "fps": 0.5,
-            "xera": 0.4591,
-            "bb_pct": 0.6251,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 410
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-24",
       "game_pk": 824557,
       "away_pitcher": "Kumar Rocker",
       "home_pitcher": "Jos\u00e9 Urquidy",
@@ -38895,6 +38808,93 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-24",
+      "game_pk": 824964,
+      "away_pitcher": "Zebby Matthews",
+      "home_pitcher": "Jeffrey Springs",
+      "nrfi_prob": 0.5448,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4404,
+        "half_prob": 0.7276,
+        "pitcher": 0.4368,
+        "batter": 0.4198,
+        "park_weather": 0.5,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4867,
+        "half_prob": 0.7488,
+        "pitcher": 0.4871,
+        "batter": 0.5,
+        "park_weather": 0.5,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3184,
+            "fps": 0.5,
+            "xera": 0.3936,
+            "bb_pct": 0.4491,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 504
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3812,
+            "fps": 0.5,
+            "xera": 0.4591,
+            "bb_pct": 0.6251,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 410
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
           },
           "spd": {
             "n_spd": 0,
