@@ -38822,6 +38822,93 @@
     },
     {
       "date": "2026-08-24",
+      "game_pk": 823260,
+      "away_pitcher": "Braxton Ashcraft",
+      "home_pitcher": "Robbie Ray",
+      "nrfi_prob": 0.5854,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4918,
+        "half_prob": 0.7512,
+        "pitcher": 0.467,
+        "batter": 0.5,
+        "park_weather": 0.615,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5528,
+        "half_prob": 0.7793,
+        "pitcher": 0.5914,
+        "batter": 0.5,
+        "park_weather": 0.615,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4797,
+            "fps": 0.5,
+            "xera": 0.5455,
+            "bb_pct": 0.2185,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 578
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6747,
+            "fps": 0.5,
+            "xera": 0.5945,
+            "bb_pct": 0.7801,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 602
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-24",
       "game_pk": 823183,
       "away_pitcher": "Chase Burns",
       "home_pitcher": "TBD",
@@ -38887,93 +38974,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-24",
-      "game_pk": 823260,
-      "away_pitcher": "Braxton Ashcraft",
-      "home_pitcher": "Robbie Ray",
-      "nrfi_prob": 0.5812,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4857,
-        "half_prob": 0.7484,
-        "pitcher": 0.467,
-        "batter": 0.5,
-        "park_weather": 0.5684,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5467,
-        "half_prob": 0.7766,
-        "pitcher": 0.5914,
-        "batter": 0.5,
-        "park_weather": 0.5684,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4797,
-            "fps": 0.5,
-            "xera": 0.5455,
-            "bb_pct": 0.2185,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 578
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6747,
-            "fps": 0.5,
-            "xera": 0.5945,
-            "bb_pct": 0.7801,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 602
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
