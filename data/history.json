@@ -6504,7 +6504,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-08-25",
@@ -6520,7 +6520,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-08-25",
@@ -6533,10 +6533,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-08-26",
+      "game_pk": 823096,
+      "away_team": "Philadelphia Phillies",
+      "home_team": "Seattle Mariners",
+      "away_pitcher": "Jes\u00fas Luzardo",
+      "home_pitcher": "Bryan Woo",
+      "nrfi_prob": 0.6049,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-08-26",
+      "game_pk": 823825,
+      "away_team": "Boston Red Sox",
+      "home_team": "Miami Marlins",
+      "away_pitcher": "Sonny Gray",
+      "home_pitcher": "Ryan Gusto",
+      "nrfi_prob": 0.5847,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-08-26",
+      "game_pk": 824234,
+      "away_team": "Tampa Bay Rays",
+      "home_team": "Detroit Tigers",
+      "away_pitcher": "Freddy Peralta",
+      "home_pitcher": "Troy Melton",
+      "nrfi_prob": 0.5737,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
