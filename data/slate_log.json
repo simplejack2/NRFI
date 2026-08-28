@@ -42119,23 +42119,23 @@
       "game_pk": 824231,
       "away_pitcher": "Tarik Skubal",
       "home_pitcher": "Drew Anderson",
-      "nrfi_prob": 0.5968,
+      "nrfi_prob": 0.5972,
       "confirmed": false,
       "top": {
-        "composite": 0.5126,
-        "half_prob": 0.7608,
+        "composite": 0.5132,
+        "half_prob": 0.7611,
         "pitcher": 0.5236,
         "batter": 0.5,
-        "park_weather": 0.5617,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5641,
-        "half_prob": 0.7844,
+        "composite": 0.5647,
+        "half_prob": 0.7847,
         "pitcher": 0.6286,
         "batter": 0.5,
-        "park_weather": 0.5617,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -42455,23 +42455,23 @@
       "game_pk": 823985,
       "away_pitcher": "Andrew Painter",
       "home_pitcher": "Reid Detmers",
-      "nrfi_prob": 0.5755,
+      "nrfi_prob": 0.5753,
       "confirmed": false,
       "top": {
-        "composite": 0.5356,
-        "half_prob": 0.7715,
+        "composite": 0.5354,
+        "half_prob": 0.7714,
         "pitcher": 0.5803,
         "batter": 0.5,
-        "park_weather": 0.525,
+        "park_weather": 0.5233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4805,
-        "half_prob": 0.7459,
+        "composite": 0.4803,
+        "half_prob": 0.7458,
         "pitcher": 0.4679,
         "batter": 0.5,
-        "park_weather": 0.525,
+        "park_weather": 0.5233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -42626,113 +42626,26 @@
     },
     {
       "date": "2026-08-28",
-      "game_pk": 823504,
-      "away_pitcher": "Patrick Sandoval",
-      "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.5716,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5416,
-        "half_prob": 0.7742,
-        "pitcher": 0.6163,
-        "batter": 0.5,
-        "park_weather": 0.4354,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.464,
-        "half_prob": 0.7383,
-        "pitcher": 0.4579,
-        "batter": 0.5,
-        "park_weather": 0.4354,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8436,
-            "fps": 0.5,
-            "xera": 0.6005,
-            "bb_pct": 0.7311,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 627
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4857,
-            "fps": 0.5,
-            "xera": 0.4094,
-            "bb_pct": 0.374,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 184
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-28",
       "game_pk": 823666,
       "away_pitcher": "Luis Castillo",
       "home_pitcher": "Dean Kremer",
-      "nrfi_prob": 0.571,
+      "nrfi_prob": 0.5715,
       "confirmed": false,
       "top": {
-        "composite": 0.5065,
-        "half_prob": 0.758,
+        "composite": 0.5071,
+        "half_prob": 0.7583,
         "pitcher": 0.5248,
         "batter": 0.5,
-        "park_weather": 0.51,
+        "park_weather": 0.515,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4963,
-        "half_prob": 0.7533,
+        "composite": 0.4969,
+        "half_prob": 0.7536,
         "pitcher": 0.504,
         "batter": 0.5,
-        "park_weather": 0.51,
+        "park_weather": 0.515,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -42779,6 +42692,93 @@
             "gb_pct": 0.5
           },
           "bf": 525
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-28",
+      "game_pk": 823504,
+      "away_pitcher": "Patrick Sandoval",
+      "home_pitcher": "Cam Schlittler",
+      "nrfi_prob": 0.571,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5407,
+        "half_prob": 0.7738,
+        "pitcher": 0.6163,
+        "batter": 0.5,
+        "park_weather": 0.4285,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4631,
+        "half_prob": 0.7379,
+        "pitcher": 0.4579,
+        "batter": 0.5,
+        "park_weather": 0.4285,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8436,
+            "fps": 0.5,
+            "xera": 0.6005,
+            "bb_pct": 0.7311,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 627
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4857,
+            "fps": 0.5,
+            "xera": 0.4094,
+            "bb_pct": 0.374,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 184
         },
         "ds": {
           "dmg": {
