@@ -42119,23 +42119,23 @@
       "game_pk": 824231,
       "away_pitcher": "Tarik Skubal",
       "home_pitcher": "Drew Anderson",
-      "nrfi_prob": 0.5987,
+      "nrfi_prob": 0.5972,
       "confirmed": false,
       "top": {
-        "composite": 0.5153,
-        "half_prob": 0.7621,
+        "composite": 0.5132,
+        "half_prob": 0.7611,
         "pitcher": 0.5236,
         "batter": 0.5,
-        "park_weather": 0.5823,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5667,
-        "half_prob": 0.7856,
+        "composite": 0.5647,
+        "half_prob": 0.7847,
         "pitcher": 0.6286,
         "batter": 0.5,
-        "park_weather": 0.5823,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -42455,23 +42455,23 @@
       "game_pk": 823985,
       "away_pitcher": "Andrew Painter",
       "home_pitcher": "Reid Detmers",
-      "nrfi_prob": 0.5762,
+      "nrfi_prob": 0.5775,
       "confirmed": false,
       "top": {
-        "composite": 0.5367,
-        "half_prob": 0.772,
+        "composite": 0.5384,
+        "half_prob": 0.7728,
         "pitcher": 0.5803,
         "batter": 0.5,
-        "park_weather": 0.5333,
+        "park_weather": 0.5467,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4816,
-        "half_prob": 0.7464,
+        "composite": 0.4833,
+        "half_prob": 0.7473,
         "pitcher": 0.4679,
         "batter": 0.5,
-        "park_weather": 0.5333,
+        "park_weather": 0.5467,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -42887,6 +42887,81 @@
     },
     {
       "date": "2026-08-28",
+      "game_pk": 824960,
+      "away_pitcher": "Brandon Young",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5602,
+      "confirmed": false,
+      "top": {
+        "composite": 0.493,
+        "half_prob": 0.7517,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.479,
+        "half_prob": 0.7453,
+        "pitcher": 0.4715,
+        "batter": 0.5,
+        "park_weather": 0.5,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2934,
+            "fps": 0.5,
+            "xera": 0.5407,
+            "bb_pct": 0.4982,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 529
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-28",
       "game_pk": 823013,
       "away_pitcher": "Jared Jones",
       "home_pitcher": "Quinn Mathews",
@@ -43040,81 +43115,6 @@
             "gb_pct": 0.5
           },
           "bf": 515
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-28",
-      "game_pk": 824960,
-      "away_pitcher": "Brandon Young",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5573,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4887,
-        "half_prob": 0.7497,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4669,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4747,
-        "half_prob": 0.7433,
-        "pitcher": 0.4715,
-        "batter": 0.5,
-        "park_weather": 0.4669,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2934,
-            "fps": 0.5,
-            "xera": 0.5407,
-            "bb_pct": 0.4982,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 529
         },
         "ds": {
           "dmg": {
