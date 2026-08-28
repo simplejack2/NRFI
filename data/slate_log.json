@@ -42887,81 +42887,6 @@
     },
     {
       "date": "2026-08-28",
-      "game_pk": 823178,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Blade Tidwell",
-      "nrfi_prob": 0.5681,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4886,
-        "half_prob": 0.7497,
-        "pitcher": 0.4645,
-        "batter": 0.5,
-        "park_weather": 0.6,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.506,
-        "half_prob": 0.7578,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.6,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3797,
-            "fps": 0.5,
-            "xera": 0.54,
-            "bb_pct": 0.4058,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 131
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-28",
       "game_pk": 823013,
       "away_pitcher": "Jared Jones",
       "home_pitcher": "Quinn Mathews",
@@ -43201,6 +43126,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-28",
+      "game_pk": 823178,
+      "away_pitcher": "Kohl Drake",
+      "home_pitcher": "Blade Tidwell",
+      "nrfi_prob": 0.5563,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4886,
+        "half_prob": 0.7497,
+        "pitcher": 0.4645,
+        "batter": 0.5,
+        "park_weather": 0.6,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4721,
+        "half_prob": 0.742,
+        "pitcher": 0.4308,
+        "batter": 0.5,
+        "park_weather": 0.6,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3797,
+            "fps": 0.5,
+            "xera": 0.54,
+            "bb_pct": 0.4058,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 131
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2781,
+            "fps": 0.5,
+            "xera": 0.3873,
+            "bb_pct": 0.5583,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 77
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
