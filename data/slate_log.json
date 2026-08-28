@@ -42626,6 +42626,93 @@
     },
     {
       "date": "2026-08-28",
+      "game_pk": 824396,
+      "away_pitcher": "Michael Wacha",
+      "home_pitcher": "Tanner Bibee",
+      "nrfi_prob": 0.573,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5022,
+        "half_prob": 0.756,
+        "pitcher": 0.4989,
+        "batter": 0.5,
+        "park_weather": 0.575,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5064,
+        "half_prob": 0.758,
+        "pitcher": 0.5074,
+        "batter": 0.5,
+        "park_weather": 0.575,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3683,
+            "fps": 0.5,
+            "xera": 0.4915,
+            "bb_pct": 0.6749,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 637
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3315,
+            "fps": 0.5,
+            "xera": 0.5438,
+            "bb_pct": 0.701,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 658
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-28",
       "game_pk": 823666,
       "away_pitcher": "Luis Castillo",
       "home_pitcher": "Dean Kremer",
@@ -42779,93 +42866,6 @@
             "gb_pct": 0.5
           },
           "bf": 184
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-28",
-      "game_pk": 824396,
-      "away_pitcher": "Michael Wacha",
-      "home_pitcher": "Tanner Bibee",
-      "nrfi_prob": 0.5693,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4968,
-        "half_prob": 0.7535,
-        "pitcher": 0.4989,
-        "batter": 0.5,
-        "park_weather": 0.5333,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.501,
-        "half_prob": 0.7555,
-        "pitcher": 0.5074,
-        "batter": 0.5,
-        "park_weather": 0.5333,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3683,
-            "fps": 0.5,
-            "xera": 0.4915,
-            "bb_pct": 0.6749,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 637
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3315,
-            "fps": 0.5,
-            "xera": 0.5438,
-            "bb_pct": 0.701,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 658
         },
         "ds": {
           "dmg": {
@@ -43223,93 +43223,6 @@
     },
     {
       "date": "2026-08-28",
-      "game_pk": 824877,
-      "away_pitcher": "Tomoyuki Sugano",
-      "home_pitcher": "Grant Holmes",
-      "nrfi_prob": 0.5499,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4727,
-        "half_prob": 0.7423,
-        "pitcher": 0.4607,
-        "batter": 0.5,
-        "park_weather": 0.4917,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4694,
-        "half_prob": 0.7408,
-        "pitcher": 0.454,
-        "batter": 0.5,
-        "park_weather": 0.4917,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3507,
-            "fps": 0.5,
-            "xera": 0.5477,
-            "bb_pct": 0.3364,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 529
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.1243,
-            "fps": 0.5,
-            "xera": 0.4035,
-            "bb_pct": 0.8063,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 516
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-28",
       "game_pk": 824638,
       "away_pitcher": "Rhett Lowder",
       "home_pitcher": "David Peterson",
@@ -43387,6 +43300,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-28",
+      "game_pk": 824877,
+      "away_pitcher": "Tomoyuki Sugano",
+      "home_pitcher": "Grant Holmes",
+      "nrfi_prob": 0.5462,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4673,
+        "half_prob": 0.7398,
+        "pitcher": 0.4607,
+        "batter": 0.5,
+        "park_weather": 0.45,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.464,
+        "half_prob": 0.7383,
+        "pitcher": 0.454,
+        "batter": 0.5,
+        "park_weather": 0.45,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3507,
+            "fps": 0.5,
+            "xera": 0.5477,
+            "bb_pct": 0.3364,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 529
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.1243,
+            "fps": 0.5,
+            "xera": 0.4035,
+            "bb_pct": 0.8063,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 516
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
