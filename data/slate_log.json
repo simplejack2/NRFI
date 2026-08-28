@@ -42025,7 +42025,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-08-27",
@@ -42716,23 +42716,23 @@
       "game_pk": 823504,
       "away_pitcher": "Patrick Sandoval",
       "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.571,
+      "nrfi_prob": 0.5704,
       "confirmed": false,
       "top": {
-        "composite": 0.5407,
-        "half_prob": 0.7738,
+        "composite": 0.5398,
+        "half_prob": 0.7734,
         "pitcher": 0.6163,
         "batter": 0.5,
-        "park_weather": 0.4285,
+        "park_weather": 0.4218,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4631,
-        "half_prob": 0.7379,
+        "composite": 0.4622,
+        "half_prob": 0.7375,
         "pitcher": 0.4579,
         "batter": 0.5,
-        "park_weather": 0.4285,
+        "park_weather": 0.4218,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -43049,101 +43049,26 @@
     },
     {
       "date": "2026-08-28",
-      "game_pk": 824960,
-      "away_pitcher": "Brandon Young",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5549,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4852,
-        "half_prob": 0.7481,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4399,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4712,
-        "half_prob": 0.7417,
-        "pitcher": 0.4715,
-        "batter": 0.5,
-        "park_weather": 0.4399,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2934,
-            "fps": 0.5,
-            "xera": 0.5407,
-            "bb_pct": 0.4982,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 529
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-28",
       "game_pk": 822691,
       "away_pitcher": "Eury P\u00e9rez",
       "home_pitcher": "Jackson Kent",
-      "nrfi_prob": 0.5538,
+      "nrfi_prob": 0.5581,
       "confirmed": false,
       "top": {
-        "composite": 0.4438,
-        "half_prob": 0.7291,
+        "composite": 0.4501,
+        "half_prob": 0.732,
         "pitcher": 0.4062,
         "batter": 0.5,
-        "park_weather": 0.475,
+        "park_weather": 0.5233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5096,
-        "half_prob": 0.7595,
+        "composite": 0.5159,
+        "half_prob": 0.7624,
         "pitcher": 0.5406,
         "batter": 0.5,
-        "park_weather": 0.475,
+        "park_weather": 0.5233,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -43190,6 +43115,81 @@
             "gb_pct": 0.5
           },
           "bf": 515
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-28",
+      "game_pk": 824960,
+      "away_pitcher": "Brandon Young",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.556,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4868,
+        "half_prob": 0.7489,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4521,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4728,
+        "half_prob": 0.7424,
+        "pitcher": 0.4715,
+        "batter": 0.5,
+        "park_weather": 0.4521,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2934,
+            "fps": 0.5,
+            "xera": 0.5407,
+            "bb_pct": 0.4982,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 529
         },
         "ds": {
           "dmg": {
