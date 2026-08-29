@@ -43688,10 +43688,10 @@
       "nrfi_prob": 0.5765,
       "confirmed": true,
       "top": {
-        "composite": 0.5062,
+        "composite": 0.5063,
         "half_prob": 0.7579,
         "pitcher": 0.4941,
-        "batter": 0.5539,
+        "batter": 0.5542,
         "park_weather": 0.4042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -43859,22 +43859,22 @@
       "game_pk": 823741,
       "away_pitcher": "Cal Quantrill",
       "home_pitcher": "Shane Drohan",
-      "nrfi_prob": 0.5721,
+      "nrfi_prob": 0.571,
       "confirmed": true,
       "top": {
-        "composite": 0.5206,
-        "half_prob": 0.7646,
-        "pitcher": 0.5225,
+        "composite": 0.5226,
+        "half_prob": 0.7655,
+        "pitcher": 0.5266,
         "batter": 0.5176,
         "park_weather": 0.4833,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4853,
-        "half_prob": 0.7482,
-        "pitcher": 0.5036,
-        "batter": 0.4211,
+        "composite": 0.4803,
+        "half_prob": 0.7459,
+        "pitcher": 0.4934,
+        "batter": 0.4213,
         "park_weather": 0.4833,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -43882,16 +43882,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.553,
+            "k_pct": 0.567,
             "fps": 0.5,
-            "xera": 0.5238,
-            "bb_pct": 0.5554,
+            "xera": 0.5269,
+            "bb_pct": 0.5615,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 449
+          "bf": 452
         },
         "ds": {
           "dmg": {
@@ -43912,16 +43912,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2354,
+            "k_pct": 0.2492,
             "fps": 0.5,
-            "xera": 0.6111,
-            "bb_pct": 0.691,
+            "xera": 0.5482,
+            "bb_pct": 0.6994,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 347
+          "bf": 353
         },
         "ds": {
           "dmg": {
@@ -44030,6 +44030,93 @@
     },
     {
       "date": "2026-08-29",
+      "game_pk": 823501,
+      "away_pitcher": "Alec Gamboa",
+      "home_pitcher": "Max Fried",
+      "nrfi_prob": 0.5661,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5237,
+        "half_prob": 0.766,
+        "pitcher": 0.5352,
+        "batter": 0.5542,
+        "park_weather": 0.3833,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4656,
+        "half_prob": 0.739,
+        "pitcher": 0.4605,
+        "batter": 0.4745,
+        "park_weather": 0.3833,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5586,
+            "fps": 0.5,
+            "xera": 0.552,
+            "bb_pct": 0.5941,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 338
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3025,
+            "fps": 0.5,
+            "xera": 0.4795,
+            "bb_pct": 0.6182,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 85
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-29",
       "game_pk": 824230,
       "away_pitcher": "Blake Snell",
       "home_pitcher": "Keider Montero",
@@ -44117,113 +44204,26 @@
     },
     {
       "date": "2026-08-29",
-      "game_pk": 823501,
-      "away_pitcher": "Alec Gamboa",
-      "home_pitcher": "Max Fried",
-      "nrfi_prob": 0.5649,
-      "confirmed": true,
-      "top": {
-        "composite": 0.523,
-        "half_prob": 0.7657,
-        "pitcher": 0.5338,
-        "batter": 0.5539,
-        "park_weather": 0.3833,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4628,
-        "half_prob": 0.7378,
-        "pitcher": 0.4547,
-        "batter": 0.4746,
-        "park_weather": 0.3833,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5556,
-            "fps": 0.5,
-            "xera": 0.5519,
-            "bb_pct": 0.5884,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 335
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.288,
-            "fps": 0.5,
-            "xera": 0.4795,
-            "bb_pct": 0.5943,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 81
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-29",
       "game_pk": 823011,
       "away_pitcher": "Lake Bachar",
       "home_pitcher": "Kyle Leahy",
-      "nrfi_prob": 0.5647,
+      "nrfi_prob": 0.565,
       "confirmed": true,
       "top": {
-        "composite": 0.4988,
-        "half_prob": 0.7545,
+        "composite": 0.4993,
+        "half_prob": 0.7547,
         "pitcher": 0.5229,
         "batter": 0.4014,
-        "park_weather": 0.5558,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4858,
-        "half_prob": 0.7484,
+        "composite": 0.4862,
+        "half_prob": 0.7486,
         "pitcher": 0.4985,
         "batter": 0.3974,
-        "park_weather": 0.5558,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -44294,23 +44294,23 @@
       "game_pk": 824961,
       "away_pitcher": "Shane Baz",
       "home_pitcher": "Jack Perkins",
-      "nrfi_prob": 0.5631,
+      "nrfi_prob": 0.5629,
       "confirmed": true,
       "top": {
-        "composite": 0.4936,
-        "half_prob": 0.752,
+        "composite": 0.4932,
+        "half_prob": 0.7519,
         "pitcher": 0.4956,
         "batter": 0.4838,
-        "park_weather": 0.4471,
+        "park_weather": 0.4442,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4866,
-        "half_prob": 0.7488,
+        "composite": 0.4862,
+        "half_prob": 0.7486,
         "pitcher": 0.4773,
         "batter": 0.491,
-        "park_weather": 0.4471,
+        "park_weather": 0.4442,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
