@@ -43511,86 +43511,23 @@
       "game_pk": 823177,
       "away_pitcher": "TBD",
       "home_pitcher": "TBD",
-      "nrfi_prob": 0.58,
+      "nrfi_prob": 0.5782,
       "confirmed": false,
       "top": {
-        "composite": 0.5141,
-        "half_prob": 0.7616,
+        "composite": 0.5115,
+        "half_prob": 0.7604,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.6625,
+        "park_weather": 0.6424,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5141,
-        "half_prob": 0.7616,
+        "composite": 0.5115,
+        "half_prob": 0.7604,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.6625,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-29",
-      "game_pk": 823176,
-      "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5781,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5114,
-        "half_prob": 0.7603,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.6417,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5114,
-        "half_prob": 0.7603,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.6417,
+        "park_weather": 0.6424,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -43796,26 +43733,89 @@
     },
     {
       "date": "2026-08-29",
-      "game_pk": 823582,
-      "away_pitcher": "Bennett Sousa",
-      "home_pitcher": "Nolan McLean",
-      "nrfi_prob": 0.575,
+      "game_pk": 823176,
+      "away_pitcher": "TBD",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5762,
       "confirmed": false,
       "top": {
-        "composite": 0.5306,
-        "half_prob": 0.7692,
-        "pitcher": 0.5499,
+        "composite": 0.5088,
+        "half_prob": 0.7591,
+        "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.6015,
+        "park_weather": 0.6216,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4838,
-        "half_prob": 0.7475,
+        "composite": 0.5088,
+        "half_prob": 0.7591,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.6216,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-29",
+      "game_pk": 823582,
+      "away_pitcher": "Bennett Sousa",
+      "home_pitcher": "Nolan McLean",
+      "nrfi_prob": 0.5756,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5316,
+        "half_prob": 0.7696,
+        "pitcher": 0.5499,
+        "batter": 0.5,
+        "park_weather": 0.6087,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4848,
+        "half_prob": 0.7479,
         "pitcher": 0.4544,
         "batter": 0.5,
-        "park_weather": 0.6015,
+        "park_weather": 0.6087,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
