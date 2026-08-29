@@ -43598,13 +43598,13 @@
       "game_pk": 823539,
       "away_pitcher": "Jake Bennett",
       "home_pitcher": "Carlos Rod\u00f3n",
-      "nrfi_prob": 0.5757,
+      "nrfi_prob": 0.5756,
       "confirmed": true,
       "top": {
-        "composite": 0.5056,
-        "half_prob": 0.7576,
+        "composite": 0.5053,
+        "half_prob": 0.7575,
         "pitcher": 0.4944,
-        "batter": 0.5536,
+        "batter": 0.5526,
         "park_weather": 0.3992,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -43759,93 +43759,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-29",
-      "game_pk": 823741,
-      "away_pitcher": "Cal Quantrill",
-      "home_pitcher": "Shane Drohan",
-      "nrfi_prob": 0.5683,
-      "confirmed": false,
-      "top": {
-        "composite": 0.502,
-        "half_prob": 0.7559,
-        "pitcher": 0.5227,
-        "batter": 0.5,
-        "park_weather": 0.4833,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4931,
-        "half_prob": 0.7518,
-        "pitcher": 0.5047,
-        "batter": 0.5,
-        "park_weather": 0.4833,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5336,
-            "fps": 0.5,
-            "xera": 0.5471,
-            "bb_pct": 0.5451,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 444
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2418,
-            "fps": 0.5,
-            "xera": 0.6111,
-            "bb_pct": 0.691,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 347
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -44039,15 +43952,15 @@
         "composite": 0.4985,
         "half_prob": 0.7543,
         "pitcher": 0.5047,
-        "batter": 0.4057,
+        "batter": 0.4056,
         "park_weather": 0.6132,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4856,
+        "composite": 0.4857,
         "half_prob": 0.7483,
-        "pitcher": 0.4488,
+        "pitcher": 0.4489,
         "batter": 0.4592,
         "park_weather": 0.6132,
         "damage_speed": 0.5,
@@ -44086,16 +43999,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2147,
+            "k_pct": 0.2131,
             "fps": 0.5,
-            "xera": 0.5141,
-            "bb_pct": 0.4787,
+            "xera": 0.5145,
+            "bb_pct": 0.4813,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 530
+          "bf": 532
         },
         "ds": {
           "dmg": {
@@ -44213,7 +44126,7 @@
         "composite": 0.4814,
         "half_prob": 0.7464,
         "pitcher": 0.4956,
-        "batter": 0.3779,
+        "batter": 0.378,
         "park_weather": 0.5732,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -44453,6 +44366,93 @@
     },
     {
       "date": "2026-08-29",
+      "game_pk": 823741,
+      "away_pitcher": "Cal Quantrill",
+      "home_pitcher": "Shane Drohan",
+      "nrfi_prob": 0.5607,
+      "confirmed": false,
+      "top": {
+        "composite": 0.502,
+        "half_prob": 0.7559,
+        "pitcher": 0.5227,
+        "batter": 0.5,
+        "park_weather": 0.4833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4713,
+        "half_prob": 0.7417,
+        "pitcher": 0.5036,
+        "batter": 0.4211,
+        "park_weather": 0.4833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5336,
+            "fps": 0.5,
+            "xera": 0.5471,
+            "bb_pct": 0.5451,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 444
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2354,
+            "fps": 0.5,
+            "xera": 0.6111,
+            "bb_pct": 0.691,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 347
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-29",
       "game_pk": 822770,
       "away_pitcher": "Kade Anderson",
       "home_pitcher": "Jos\u00e9 Soriano",
@@ -44479,10 +44479,10 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5409,
+            "k_pct": 0.5407,
             "fps": 0.5,
             "xera": 0.5011,
-            "bb_pct": 0.2622,
+            "bb_pct": 0.2623,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
@@ -44618,22 +44618,22 @@
       "game_pk": 824637,
       "away_pitcher": "Andrew Abbott",
       "home_pitcher": "Kevin Gausman",
-      "nrfi_prob": 0.5482,
+      "nrfi_prob": 0.5481,
       "confirmed": true,
       "top": {
-        "composite": 0.5056,
-        "half_prob": 0.7576,
-        "pitcher": 0.5351,
-        "batter": 0.4563,
+        "composite": 0.5059,
+        "half_prob": 0.7577,
+        "pitcher": 0.5359,
+        "batter": 0.4561,
         "park_weather": 0.4475,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4315,
-        "half_prob": 0.7236,
-        "pitcher": 0.4086,
-        "batter": 0.4116,
+        "composite": 0.431,
+        "half_prob": 0.7234,
+        "pitcher": 0.4075,
+        "batter": 0.4117,
         "park_weather": 0.4475,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -44641,16 +44641,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5689,
+            "k_pct": 0.5675,
             "fps": 0.5,
-            "xera": 0.4736,
-            "bb_pct": 0.7038,
+            "xera": 0.4779,
+            "bb_pct": 0.7045,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 652
+          "bf": 653
         },
         "ds": {
           "dmg": {
@@ -44673,7 +44673,7 @@
           "components": {
             "k_pct": 0.2827,
             "fps": 0.5,
-            "xera": 0.3791,
+            "xera": 0.3744,
             "bb_pct": 0.3162,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
