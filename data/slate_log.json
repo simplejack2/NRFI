@@ -43243,7 +43243,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-08-28",
@@ -44306,6 +44306,168 @@
     },
     {
       "date": "2026-08-29",
+      "game_pk": 823501,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Max Fried",
+      "nrfi_prob": 0.5645,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5031,
+        "half_prob": 0.7564,
+        "pitcher": 0.5446,
+        "batter": 0.5,
+        "park_weather": 0.4095,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4812,
+        "half_prob": 0.7463,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4095,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5484,
+            "fps": 0.5,
+            "xera": 0.6107,
+            "bb_pct": 0.5828,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 332
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-29",
+      "game_pk": 823539,
+      "away_pitcher": "Jake Bennett",
+      "home_pitcher": "Carlos Rod\u00f3n",
+      "nrfi_prob": 0.5606,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4877,
+        "half_prob": 0.7493,
+        "pitcher": 0.5078,
+        "batter": 0.5,
+        "park_weather": 0.4303,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4853,
+        "half_prob": 0.7482,
+        "pitcher": 0.5028,
+        "batter": 0.5,
+        "park_weather": 0.4303,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6288,
+            "fps": 0.5,
+            "xera": 0.615,
+            "bb_pct": 0.2092,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 228
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3203,
+            "fps": 0.5,
+            "xera": 0.4579,
+            "bb_pct": 0.8172,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 352
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-29",
       "game_pk": 823665,
       "away_pitcher": "Erick Fedde",
       "home_pitcher": "Bailey Ober",
@@ -44372,81 +44534,6 @@
             "gb_pct": 0.5
           },
           "bf": 512
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-29",
-      "game_pk": 823539,
-      "away_pitcher": "Jake Bennett",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5593,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4839,
-        "half_prob": 0.7475,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4303,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4853,
-        "half_prob": 0.7482,
-        "pitcher": 0.5028,
-        "batter": 0.5,
-        "park_weather": 0.4303,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3203,
-            "fps": 0.5,
-            "xera": 0.4579,
-            "bb_pct": 0.8172,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 352
         },
         "ds": {
           "dmg": {
@@ -44535,69 +44622,6 @@
           },
           "bf": 22
         },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-29",
-      "game_pk": 823501,
-      "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.557,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4812,
-        "half_prob": 0.7463,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4095,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4812,
-        "half_prob": 0.7463,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4095,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
         "ds": {
           "dmg": {
             "pit_hh": null,
