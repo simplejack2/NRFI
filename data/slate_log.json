@@ -44990,23 +44990,23 @@
       "game_pk": 824636,
       "away_pitcher": "Chase Burns",
       "home_pitcher": "Shota Imanaga",
-      "nrfi_prob": 0.5819,
+      "nrfi_prob": 0.5793,
       "confirmed": false,
       "top": {
-        "composite": 0.5128,
-        "half_prob": 0.761,
+        "composite": 0.5092,
+        "half_prob": 0.7593,
         "pitcher": 0.5471,
         "batter": 0.5,
-        "park_weather": 0.475,
+        "park_weather": 0.4469,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5207,
-        "half_prob": 0.7646,
+        "composite": 0.517,
+        "half_prob": 0.7629,
         "pitcher": 0.5631,
         "batter": 0.5,
-        "park_weather": 0.475,
+        "park_weather": 0.4469,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -45770,81 +45770,6 @@
     },
     {
       "date": "2026-08-30",
-      "game_pk": 824959,
-      "away_pitcher": "Chris Bassitt",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.56,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4927,
-        "half_prob": 0.7516,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4979,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4786,
-        "half_prob": 0.7451,
-        "pitcher": 0.4712,
-        "batter": 0.5,
-        "park_weather": 0.4979,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.236,
-            "fps": 0.5,
-            "xera": 0.5304,
-            "bb_pct": 0.5859,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 335
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-30",
       "game_pk": 824876,
       "away_pitcher": "Mason Adams",
       "home_pitcher": "Tyler Mahle",
@@ -45922,6 +45847,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-30",
+      "game_pk": 824959,
+      "away_pitcher": "Chris Bassitt",
+      "home_pitcher": "Jeffrey Springs",
+      "nrfi_prob": 0.5509,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4661,
+        "half_prob": 0.7393,
+        "pitcher": 0.4456,
+        "batter": 0.5,
+        "park_weather": 0.4979,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4786,
+        "half_prob": 0.7451,
+        "pitcher": 0.4712,
+        "batter": 0.5,
+        "park_weather": 0.4979,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.308,
+            "fps": 0.5,
+            "xera": 0.441,
+            "bb_pct": 0.4511,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 527
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.236,
+            "fps": 0.5,
+            "xera": 0.5304,
+            "bb_pct": 0.5859,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 335
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
