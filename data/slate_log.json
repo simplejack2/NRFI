@@ -44819,19 +44819,19 @@
       "nrfi_prob": 0.5848,
       "confirmed": true,
       "top": {
-        "composite": 0.5687,
+        "composite": 0.5688,
         "half_prob": 0.7865,
         "pitcher": 0.5641,
-        "batter": 0.556,
+        "batter": 0.5563,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4751,
+        "composite": 0.4752,
         "half_prob": 0.7435,
         "pitcher": 0.4637,
-        "batter": 0.3917,
+        "batter": 0.3918,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -44903,22 +44903,22 @@
       "game_pk": 823010,
       "away_pitcher": "Braxton Ashcraft",
       "home_pitcher": "Matthew Liberatore",
-      "nrfi_prob": 0.5792,
+      "nrfi_prob": 0.5785,
       "confirmed": true,
       "top": {
-        "composite": 0.4964,
-        "half_prob": 0.7533,
-        "pitcher": 0.4726,
+        "composite": 0.496,
+        "half_prob": 0.7531,
+        "pitcher": 0.4716,
         "batter": 0.4998,
         "park_weather": 0.5225,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5299,
-        "half_prob": 0.7689,
-        "pitcher": 0.5727,
-        "batter": 0.4422,
+        "composite": 0.5283,
+        "half_prob": 0.7681,
+        "pitcher": 0.5707,
+        "batter": 0.4395,
         "park_weather": 0.5225,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -44926,16 +44926,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5004,
+            "k_pct": 0.5024,
             "fps": 0.5,
-            "xera": 0.3254,
-            "bb_pct": 0.5782,
+            "xera": 0.3265,
+            "bb_pct": 0.5668,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 586
+          "bf": 589
         },
         "ds": {
           "dmg": {
@@ -44956,16 +44956,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6283,
+            "k_pct": 0.6233,
             "fps": 0.5,
-            "xera": 0.5452,
-            "bb_pct": 0.7831,
+            "xera": 0.5393,
+            "bb_pct": 0.785,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 642
+          "bf": 645
         },
         "ds": {
           "dmg": {
@@ -45077,23 +45077,23 @@
       "game_pk": 824636,
       "away_pitcher": "Chase Burns",
       "home_pitcher": "Shota Imanaga",
-      "nrfi_prob": 0.5759,
+      "nrfi_prob": 0.5755,
       "confirmed": false,
       "top": {
-        "composite": 0.5014,
-        "half_prob": 0.7557,
+        "composite": 0.5008,
+        "half_prob": 0.7554,
         "pitcher": 0.5457,
         "batter": 0.4802,
-        "park_weather": 0.4338,
+        "park_weather": 0.4288,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5153,
-        "half_prob": 0.7621,
+        "composite": 0.5147,
+        "half_prob": 0.7618,
         "pitcher": 0.5631,
         "batter": 0.5,
-        "park_weather": 0.4338,
+        "park_weather": 0.4288,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -45161,26 +45161,113 @@
     },
     {
       "date": "2026-08-30",
-      "game_pk": 823502,
-      "away_pitcher": "Ranger Suarez",
-      "home_pitcher": "Will Warren",
-      "nrfi_prob": 0.5693,
+      "game_pk": 824393,
+      "away_pitcher": "Seth Lugo",
+      "home_pitcher": "Parker Messick",
+      "nrfi_prob": 0.5688,
       "confirmed": true,
       "top": {
-        "composite": 0.4967,
-        "half_prob": 0.7534,
-        "pitcher": 0.5158,
-        "batter": 0.4682,
-        "park_weather": 0.4269,
+        "composite": 0.5437,
+        "half_prob": 0.7752,
+        "pitcher": 0.5641,
+        "batter": 0.4952,
+        "park_weather": 0.5508,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5015,
-        "half_prob": 0.7557,
+        "composite": 0.4539,
+        "half_prob": 0.7337,
+        "pitcher": 0.4499,
+        "batter": 0.3698,
+        "park_weather": 0.5508,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6263,
+            "fps": 0.5,
+            "xera": 0.554,
+            "bb_pct": 0.7106,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 637
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3139,
+            "fps": 0.5,
+            "xera": 0.3334,
+            "bb_pct": 0.643,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 662
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-30",
+      "game_pk": 823502,
+      "away_pitcher": "Ranger Suarez",
+      "home_pitcher": "Will Warren",
+      "nrfi_prob": 0.5684,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4955,
+        "half_prob": 0.7529,
+        "pitcher": 0.5158,
+        "batter": 0.4682,
+        "park_weather": 0.4182,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4999,
+        "half_prob": 0.7549,
         "pitcher": 0.4936,
-        "batter": 0.5263,
-        "park_weather": 0.4269,
+        "batter": 0.5247,
+        "park_weather": 0.4182,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -45248,93 +45335,6 @@
     },
     {
       "date": "2026-08-30",
-      "game_pk": 824393,
-      "away_pitcher": "Seth Lugo",
-      "home_pitcher": "Parker Messick",
-      "nrfi_prob": 0.5689,
-      "confirmed": true,
-      "top": {
-        "composite": 0.544,
-        "half_prob": 0.7754,
-        "pitcher": 0.5647,
-        "batter": 0.4952,
-        "park_weather": 0.5508,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.454,
-        "half_prob": 0.7337,
-        "pitcher": 0.4499,
-        "batter": 0.37,
-        "park_weather": 0.5508,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6333,
-            "fps": 0.5,
-            "xera": 0.5535,
-            "bb_pct": 0.7069,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 633
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3139,
-            "fps": 0.5,
-            "xera": 0.3334,
-            "bb_pct": 0.643,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 662
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-30",
       "game_pk": 822766,
       "away_pitcher": "Logan Gilbert",
       "home_pitcher": "Max Scherzer",
@@ -45350,10 +45350,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5095,
+        "composite": 0.5094,
         "half_prob": 0.7594,
         "pitcher": 0.5541,
-        "batter": 0.3929,
+        "batter": 0.3926,
         "park_weather": 0.5375,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45425,22 +45425,22 @@
       "game_pk": 824232,
       "away_pitcher": "Tyler Glasnow",
       "home_pitcher": "Framber Valdez",
-      "nrfi_prob": 0.5672,
+      "nrfi_prob": 0.5664,
       "confirmed": true,
       "top": {
-        "composite": 0.4691,
-        "half_prob": 0.7407,
-        "pitcher": 0.4469,
-        "batter": 0.3986,
+        "composite": 0.4702,
+        "half_prob": 0.7412,
+        "pitcher": 0.4489,
+        "batter": 0.399,
         "park_weather": 0.6192,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.523,
-        "half_prob": 0.7657,
-        "pitcher": 0.565,
-        "batter": 0.3838,
+        "composite": 0.5196,
+        "half_prob": 0.7641,
+        "pitcher": 0.5585,
+        "batter": 0.3834,
         "park_weather": 0.6192,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45448,16 +45448,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2971,
+            "k_pct": 0.3004,
             "fps": 0.5,
-            "xera": 0.439,
-            "bb_pct": 0.4775,
+            "xera": 0.444,
+            "bb_pct": 0.4798,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 655
+          "bf": 657
         },
         "ds": {
           "dmg": {
@@ -45478,16 +45478,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8574,
+            "k_pct": 0.8546,
             "fps": 0.5,
-            "xera": 0.5041,
-            "bb_pct": 0.529,
+            "xera": 0.4734,
+            "bb_pct": 0.5319,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 182
+          "bf": 183
         },
         "ds": {
           "dmg": {
@@ -45512,23 +45512,23 @@
       "game_pk": 822688,
       "away_pitcher": "Janson Junk",
       "home_pitcher": "Andrew Alvarez",
-      "nrfi_prob": 0.5651,
+      "nrfi_prob": 0.565,
       "confirmed": true,
       "top": {
-        "composite": 0.4906,
-        "half_prob": 0.7506,
+        "composite": 0.4903,
+        "half_prob": 0.7505,
         "pitcher": 0.4704,
         "batter": 0.4989,
-        "park_weather": 0.4875,
+        "park_weather": 0.4858,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4956,
-        "half_prob": 0.7529,
+        "composite": 0.4953,
+        "half_prob": 0.7528,
         "pitcher": 0.4847,
         "batter": 0.4914,
-        "park_weather": 0.4875,
+        "park_weather": 0.4858,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -45599,23 +45599,23 @@
       "game_pk": 824959,
       "away_pitcher": "Chris Bassitt",
       "home_pitcher": "Jeffrey Springs",
-      "nrfi_prob": 0.5614,
+      "nrfi_prob": 0.5606,
       "confirmed": true,
       "top": {
-        "composite": 0.4823,
-        "half_prob": 0.7468,
+        "composite": 0.4813,
+        "half_prob": 0.7463,
         "pitcher": 0.4459,
         "batter": 0.4968,
-        "park_weather": 0.5208,
+        "park_weather": 0.5125,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.493,
-        "half_prob": 0.7517,
+        "composite": 0.4919,
+        "half_prob": 0.7512,
         "pitcher": 0.4718,
         "batter": 0.4893,
-        "park_weather": 0.5208,
+        "park_weather": 0.5125,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -45692,7 +45692,7 @@
         "composite": 0.5107,
         "half_prob": 0.76,
         "pitcher": 0.5201,
-        "batter": 0.4987,
+        "batter": 0.4986,
         "park_weather": 0.4558,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45701,7 +45701,7 @@
         "composite": 0.4609,
         "half_prob": 0.7369,
         "pitcher": 0.4495,
-        "batter": 0.4422,
+        "batter": 0.442,
         "park_weather": 0.4558,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45773,13 +45773,13 @@
       "game_pk": 823662,
       "away_pitcher": "Jordan Hicks",
       "home_pitcher": "Zebby Matthews",
-      "nrfi_prob": 0.557,
+      "nrfi_prob": 0.5572,
       "confirmed": true,
       "top": {
-        "composite": 0.4914,
-        "half_prob": 0.751,
-        "pitcher": 0.5142,
-        "batter": 0.4057,
+        "composite": 0.4921,
+        "half_prob": 0.7513,
+        "pitcher": 0.5154,
+        "batter": 0.406,
         "park_weather": 0.5225,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45788,7 +45788,7 @@
         "composite": 0.4714,
         "half_prob": 0.7417,
         "pitcher": 0.4585,
-        "batter": 0.4327,
+        "batter": 0.4326,
         "park_weather": 0.5225,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45796,16 +45796,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3807,
+            "k_pct": 0.3841,
             "fps": 0.5,
-            "xera": 0.5521,
-            "bb_pct": 0.6732,
+            "xera": 0.5522,
+            "bb_pct": 0.677,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 457
+          "bf": 460
         },
         "ds": {
           "dmg": {
@@ -45860,13 +45860,13 @@
       "game_pk": 823740,
       "away_pitcher": "Kumar Rocker",
       "home_pitcher": "Dustin May",
-      "nrfi_prob": 0.5559,
+      "nrfi_prob": 0.555,
       "confirmed": true,
       "top": {
-        "composite": 0.4817,
-        "half_prob": 0.7465,
-        "pitcher": 0.4736,
-        "batter": 0.452,
+        "composite": 0.4788,
+        "half_prob": 0.7452,
+        "pitcher": 0.4687,
+        "batter": 0.4504,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45875,7 +45875,7 @@
         "composite": 0.4779,
         "half_prob": 0.7447,
         "pitcher": 0.4678,
-        "batter": 0.4485,
+        "batter": 0.4487,
         "park_weather": 0.5042,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -45883,16 +45883,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.478,
+            "k_pct": 0.4732,
             "fps": 0.5,
             "xera": 0.3623,
-            "bb_pct": 0.5563,
+            "bb_pct": 0.5275,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 543
+          "bf": 546
         },
         "ds": {
           "dmg": {
@@ -45947,21 +45947,21 @@
       "game_pk": 823580,
       "away_pitcher": "Ethan Pecko",
       "home_pitcher": "Zac Thornton",
-      "nrfi_prob": 0.5375,
+      "nrfi_prob": 0.5391,
       "confirmed": true,
       "top": {
-        "composite": 0.4834,
-        "half_prob": 0.7473,
-        "pitcher": 0.4906,
+        "composite": 0.4838,
+        "half_prob": 0.7475,
+        "pitcher": 0.4915,
         "batter": 0.3887,
         "park_weather": 0.5848,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4217,
-        "half_prob": 0.7192,
-        "pitcher": 0.3562,
+        "composite": 0.426,
+        "half_prob": 0.7212,
+        "pitcher": 0.3651,
         "batter": 0.4041,
         "park_weather": 0.5848,
         "damage_speed": 0.5,
@@ -45970,16 +45970,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2934,
+            "k_pct": 0.2905,
             "fps": 0.5,
-            "xera": 0.4811,
-            "bb_pct": 0.7281,
+            "xera": 0.4865,
+            "bb_pct": 0.7303,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 233
+          "bf": 234
         },
         "ds": {
           "dmg": {
@@ -46000,16 +46000,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.253,
+            "k_pct": 0.2936,
             "fps": 0.5,
-            "xera": 0.3113,
-            "bb_pct": 0.0958,
+            "xera": 0.3125,
+            "bb_pct": 0.1183,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 45
+          "bf": 47
         },
         "ds": {
           "dmg": {
