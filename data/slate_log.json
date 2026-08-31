@@ -46457,23 +46457,23 @@
       "game_pk": 822855,
       "away_pitcher": "Gage Jump",
       "home_pitcher": "Jacob deGrom",
-      "nrfi_prob": 0.5695,
+      "nrfi_prob": 0.569,
       "confirmed": false,
       "top": {
-        "composite": 0.5228,
-        "half_prob": 0.7656,
+        "composite": 0.5223,
+        "half_prob": 0.7653,
         "pitcher": 0.5758,
         "batter": 0.5,
-        "park_weather": 0.4433,
+        "park_weather": 0.4396,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4758,
-        "half_prob": 0.7438,
+        "composite": 0.4753,
+        "half_prob": 0.7435,
         "pitcher": 0.4799,
         "batter": 0.5,
-        "park_weather": 0.4433,
+        "park_weather": 0.4396,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -46631,23 +46631,23 @@
       "game_pk": 824149,
       "away_pitcher": "Anthony Kay",
       "home_pitcher": "Peter Lambert",
-      "nrfi_prob": 0.5513,
+      "nrfi_prob": 0.5515,
       "confirmed": false,
       "top": {
-        "composite": 0.4738,
-        "half_prob": 0.7429,
+        "composite": 0.474,
+        "half_prob": 0.743,
         "pitcher": 0.4613,
         "batter": 0.5,
-        "park_weather": 0.4983,
+        "park_weather": 0.5,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4721,
-        "half_prob": 0.7421,
+        "composite": 0.4724,
+        "half_prob": 0.7422,
         "pitcher": 0.4579,
         "batter": 0.5,
-        "park_weather": 0.4983,
+        "park_weather": 0.5,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -46889,101 +46889,26 @@
     },
     {
       "date": "2026-08-31",
-      "game_pk": 824314,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Tanner Gordon",
-      "nrfi_prob": 0.5496,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4751,
-        "half_prob": 0.7435,
-        "pitcher": 0.5188,
-        "batter": 0.5,
-        "park_weather": 0.2917,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4659,
-        "half_prob": 0.7392,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.2917,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2977,
-            "fps": 0.5,
-            "xera": 0.5139,
-            "bb_pct": 0.8725,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 365
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-31",
       "game_pk": 823982,
       "away_pitcher": "Elmer Rodr\u00edguez",
       "home_pitcher": "Walbert Ure\u00f1a",
-      "nrfi_prob": 0.5465,
+      "nrfi_prob": 0.5471,
       "confirmed": false,
       "top": {
-        "composite": 0.4782,
-        "half_prob": 0.7449,
+        "composite": 0.4791,
+        "half_prob": 0.7453,
         "pitcher": 0.4587,
         "batter": 0.5,
-        "park_weather": 0.5417,
+        "park_weather": 0.5483,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4538,
-        "half_prob": 0.7336,
+        "composite": 0.4546,
+        "half_prob": 0.734,
         "pitcher": 0.4089,
         "batter": 0.5,
-        "park_weather": 0.5417,
+        "park_weather": 0.5483,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -47041,6 +46966,81 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-31",
+      "game_pk": 824314,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Tanner Gordon",
+      "nrfi_prob": 0.5459,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4697,
+        "half_prob": 0.741,
+        "pitcher": 0.5188,
+        "batter": 0.5,
+        "park_weather": 0.25,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4605,
+        "half_prob": 0.7367,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.25,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2977,
+            "fps": 0.5,
+            "xera": 0.5139,
+            "bb_pct": 0.8725,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 365
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
