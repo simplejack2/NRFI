@@ -46727,113 +46727,26 @@
     },
     {
       "date": "2026-08-31",
-      "game_pk": 824911,
-      "away_pitcher": "Anthony Molina",
-      "home_pitcher": "Bryce Elder",
-      "nrfi_prob": 0.5469,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4786,
-        "half_prob": 0.7451,
-        "pitcher": 0.4715,
-        "batter": 0.4579,
-        "park_weather": 0.4767,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4545,
-        "half_prob": 0.734,
-        "pitcher": 0.442,
-        "batter": 0.4222,
-        "park_weather": 0.4767,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3186,
-            "fps": 0.5,
-            "xera": 0.4641,
-            "bb_pct": 0.5861,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 606
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.1338,
-            "fps": 0.5,
-            "xera": 0.5084,
-            "bb_pct": 0.689,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 35
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-31",
       "game_pk": 823663,
       "away_pitcher": "Jackson Jobe",
       "home_pitcher": "Taj Bradley",
-      "nrfi_prob": 0.5469,
+      "nrfi_prob": 0.5475,
       "confirmed": true,
       "top": {
-        "composite": 0.4775,
-        "half_prob": 0.7446,
+        "composite": 0.4784,
+        "half_prob": 0.745,
         "pitcher": 0.5063,
         "batter": 0.3849,
-        "park_weather": 0.4883,
+        "park_weather": 0.495,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4556,
-        "half_prob": 0.7345,
+        "composite": 0.4564,
+        "half_prob": 0.7349,
         "pitcher": 0.4362,
         "batter": 0.4308,
-        "park_weather": 0.4883,
+        "park_weather": 0.495,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -46891,93 +46804,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 1,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-31",
-      "game_pk": 823982,
-      "away_pitcher": "Elmer Rodr\u00edguez",
-      "home_pitcher": "Walbert Ure\u00f1a",
-      "nrfi_prob": 0.5453,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4764,
-        "half_prob": 0.7441,
-        "pitcher": 0.4587,
-        "batter": 0.5,
-        "park_weather": 0.5281,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.452,
-        "half_prob": 0.7328,
-        "pitcher": 0.4089,
-        "batter": 0.5,
-        "park_weather": 0.5281,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4797,
-            "fps": 0.5,
-            "xera": 0.5702,
-            "bb_pct": 0.1208,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 500
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2223,
-            "fps": 0.5,
-            "xera": 0.5292,
-            "bb_pct": 0.2093,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 105
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -47054,6 +46880,180 @@
             "gb_pct": 0.5
           },
           "bf": 588
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-31",
+      "game_pk": 823982,
+      "away_pitcher": "Elmer Rodr\u00edguez",
+      "home_pitcher": "Walbert Ure\u00f1a",
+      "nrfi_prob": 0.5436,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4764,
+        "half_prob": 0.7441,
+        "pitcher": 0.4587,
+        "batter": 0.5,
+        "park_weather": 0.5281,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4469,
+        "half_prob": 0.7305,
+        "pitcher": 0.4104,
+        "batter": 0.4781,
+        "park_weather": 0.5281,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4797,
+            "fps": 0.5,
+            "xera": 0.5702,
+            "bb_pct": 0.1208,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 500
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2319,
+            "fps": 0.5,
+            "xera": 0.5292,
+            "bb_pct": 0.2093,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 105
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-31",
+      "game_pk": 824911,
+      "away_pitcher": "Anthony Molina",
+      "home_pitcher": "Bryce Elder",
+      "nrfi_prob": 0.5426,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4724,
+        "half_prob": 0.7422,
+        "pitcher": 0.4715,
+        "batter": 0.4579,
+        "park_weather": 0.4283,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4482,
+        "half_prob": 0.7311,
+        "pitcher": 0.442,
+        "batter": 0.4222,
+        "park_weather": 0.4283,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3186,
+            "fps": 0.5,
+            "xera": 0.4641,
+            "bb_pct": 0.5861,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 606
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.1338,
+            "fps": 0.5,
+            "xera": 0.5084,
+            "bb_pct": 0.689,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 35
         },
         "ds": {
           "dmg": {
