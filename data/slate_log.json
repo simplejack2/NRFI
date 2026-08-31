@@ -46034,23 +46034,23 @@
       "game_pk": 824635,
       "away_pitcher": "Kyle Harrison",
       "home_pitcher": "Clay Holmes",
-      "nrfi_prob": 0.5775,
+      "nrfi_prob": 0.5741,
       "confirmed": false,
       "top": {
-        "composite": 0.4865,
-        "half_prob": 0.7487,
+        "composite": 0.4815,
+        "half_prob": 0.7464,
         "pitcher": 0.4933,
         "batter": 0.5,
-        "park_weather": 0.475,
+        "park_weather": 0.4365,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5353,
-        "half_prob": 0.7714,
+        "composite": 0.5303,
+        "half_prob": 0.7691,
         "pitcher": 0.593,
         "batter": 0.5,
-        "park_weather": 0.475,
+        "park_weather": 0.4365,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -46193,113 +46193,26 @@
     },
     {
       "date": "2026-08-31",
-      "game_pk": 822932,
-      "away_pitcher": "Robert Stock",
-      "home_pitcher": "Ian Seymour",
-      "nrfi_prob": 0.5724,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5417,
-        "half_prob": 0.7743,
-        "pitcher": 0.5684,
-        "batter": 0.5,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4661,
-        "half_prob": 0.7393,
-        "pitcher": 0.4142,
-        "batter": 0.5,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7737,
-            "fps": 0.5,
-            "xera": 0.4976,
-            "bb_pct": 0.6406,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 446
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4116,
-            "fps": 0.5,
-            "xera": 0.4082,
-            "bb_pct": 0.1992,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 104
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-08-31",
       "game_pk": 822689,
       "away_pitcher": "Ryan Gusto",
       "home_pitcher": "Will Dion",
-      "nrfi_prob": 0.5724,
+      "nrfi_prob": 0.5727,
       "confirmed": false,
       "top": {
-        "composite": 0.5114,
-        "half_prob": 0.7603,
+        "composite": 0.5119,
+        "half_prob": 0.7605,
         "pitcher": 0.5456,
         "batter": 0.5,
-        "park_weather": 0.47,
+        "park_weather": 0.4733,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4956,
-        "half_prob": 0.7529,
+        "composite": 0.496,
+        "half_prob": 0.7531,
         "pitcher": 0.5132,
         "batter": 0.5,
-        "park_weather": 0.47,
+        "park_weather": 0.4733,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -46370,23 +46283,23 @@
       "game_pk": 824719,
       "away_pitcher": "George Kirby",
       "home_pitcher": "Payton Tolle",
-      "nrfi_prob": 0.5696,
+      "nrfi_prob": 0.5725,
       "confirmed": false,
       "top": {
-        "composite": 0.5177,
-        "half_prob": 0.7632,
+        "composite": 0.5219,
+        "half_prob": 0.7652,
         "pitcher": 0.5854,
         "batter": 0.5,
-        "park_weather": 0.3678,
+        "park_weather": 0.4,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4813,
-        "half_prob": 0.7463,
+        "composite": 0.4855,
+        "half_prob": 0.7482,
         "pitcher": 0.5111,
         "batter": 0.5,
-        "park_weather": 0.3678,
+        "park_weather": 0.4,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -46433,6 +46346,93 @@
             "gb_pct": 0.5
           },
           "bf": 617
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-08-31",
+      "game_pk": 822932,
+      "away_pitcher": "Robert Stock",
+      "home_pitcher": "Ian Seymour",
+      "nrfi_prob": 0.5724,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5417,
+        "half_prob": 0.7743,
+        "pitcher": 0.5684,
+        "batter": 0.5,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4661,
+        "half_prob": 0.7393,
+        "pitcher": 0.4142,
+        "batter": 0.5,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7737,
+            "fps": 0.5,
+            "xera": 0.4976,
+            "bb_pct": 0.6406,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 446
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4116,
+            "fps": 0.5,
+            "xera": 0.4082,
+            "bb_pct": 0.1992,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 104
         },
         "ds": {
           "dmg": {
@@ -46967,23 +46967,23 @@
       "game_pk": 823982,
       "away_pitcher": "Elmer Rodr\u00edguez",
       "home_pitcher": "Walbert Ure\u00f1a",
-      "nrfi_prob": 0.5434,
+      "nrfi_prob": 0.5436,
       "confirmed": false,
       "top": {
-        "composite": 0.4738,
-        "half_prob": 0.7428,
+        "composite": 0.474,
+        "half_prob": 0.7429,
         "pitcher": 0.4587,
         "batter": 0.5,
-        "park_weather": 0.508,
+        "park_weather": 0.5095,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4494,
-        "half_prob": 0.7316,
+        "composite": 0.4496,
+        "half_prob": 0.7317,
         "pitcher": 0.4089,
         "batter": 0.5,
-        "park_weather": 0.508,
+        "park_weather": 0.5095,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
