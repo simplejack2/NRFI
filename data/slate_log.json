@@ -47846,6 +47846,93 @@
     },
     {
       "date": "2026-09-01",
+      "game_pk": 824633,
+      "away_pitcher": "Robert Gasser",
+      "home_pitcher": "Matthew Boyd",
+      "nrfi_prob": 0.5593,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4757,
+        "half_prob": 0.7437,
+        "pitcher": 0.4713,
+        "batter": 0.5,
+        "park_weather": 0.475,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4935,
+        "half_prob": 0.752,
+        "pitcher": 0.5077,
+        "batter": 0.5,
+        "park_weather": 0.475,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3515,
+            "fps": 0.5,
+            "xera": 0.4138,
+            "bb_pct": 0.6216,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 401
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4212,
+            "fps": 0.5,
+            "xera": 0.4772,
+            "bb_pct": 0.6922,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 358
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-01",
       "game_pk": 824148,
       "away_pitcher": "Sean Burke",
       "home_pitcher": "Ronel Blanco",
@@ -47912,93 +47999,6 @@
             "gb_pct": 0.5
           },
           "bf": 613
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-01",
-      "game_pk": 824633,
-      "away_pitcher": "Robert Gasser",
-      "home_pitcher": "Matthew Boyd",
-      "nrfi_prob": 0.5563,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4714,
-        "half_prob": 0.7417,
-        "pitcher": 0.4713,
-        "batter": 0.5,
-        "park_weather": 0.4417,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4892,
-        "half_prob": 0.75,
-        "pitcher": 0.5077,
-        "batter": 0.5,
-        "park_weather": 0.4417,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3515,
-            "fps": 0.5,
-            "xera": 0.4138,
-            "bb_pct": 0.6216,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 401
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4212,
-            "fps": 0.5,
-            "xera": 0.4772,
-            "bb_pct": 0.6922,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 358
         },
         "ds": {
           "dmg": {
