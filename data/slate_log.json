@@ -47162,93 +47162,6 @@
     },
     {
       "date": "2026-09-01",
-      "game_pk": 825038,
-      "away_pitcher": "Jes\u00fas Luzardo",
-      "home_pitcher": "Eduardo Rodriguez",
-      "nrfi_prob": 0.5807,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4925,
-        "half_prob": 0.7515,
-        "pitcher": 0.5034,
-        "batter": 0.5,
-        "park_weather": 0.4833,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5383,
-        "half_prob": 0.7727,
-        "pitcher": 0.5969,
-        "batter": 0.5,
-        "park_weather": 0.4833,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3241,
-            "fps": 0.5,
-            "xera": 0.619,
-            "bb_pct": 0.5635,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 661
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8142,
-            "fps": 0.5,
-            "xera": 0.6207,
-            "bb_pct": 0.5982,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 670
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-01",
       "game_pk": 823984,
       "away_pitcher": "Gerrit Cole",
       "home_pitcher": "Grayson Rodriguez",
@@ -47510,6 +47423,93 @@
     },
     {
       "date": "2026-09-01",
+      "game_pk": 825038,
+      "away_pitcher": "Jes\u00fas Luzardo",
+      "home_pitcher": "Eduardo Rodriguez",
+      "nrfi_prob": 0.5666,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4925,
+        "half_prob": 0.7515,
+        "pitcher": 0.5034,
+        "batter": 0.5,
+        "park_weather": 0.4833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4977,
+        "half_prob": 0.7539,
+        "pitcher": 0.5957,
+        "batter": 0.3519,
+        "park_weather": 0.4833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3241,
+            "fps": 0.5,
+            "xera": 0.619,
+            "bb_pct": 0.5635,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 661
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8078,
+            "fps": 0.5,
+            "xera": 0.6207,
+            "bb_pct": 0.5982,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 670
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-01",
       "game_pk": 824391,
       "away_pitcher": "Spencer Miles",
       "home_pitcher": "Gavin Williams",
@@ -47604,19 +47604,19 @@
       "confirmed": true,
       "top": {
         "composite": 0.49,
-        "half_prob": 0.7504,
+        "half_prob": 0.7503,
         "pitcher": 0.4661,
         "batter": 0.4928,
-        "park_weather": 0.5123,
+        "park_weather": 0.5118,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4794,
+        "composite": 0.4793,
         "half_prob": 0.7454,
         "pitcher": 0.4424,
         "batter": 0.4962,
-        "park_weather": 0.5123,
+        "park_weather": 0.5118,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -47774,25 +47774,25 @@
       "game_pk": 823908,
       "away_pitcher": "Michael McGreevy",
       "home_pitcher": "Eric Lauer",
-      "nrfi_prob": 0.5553,
-      "confirmed": false,
+      "nrfi_prob": 0.5538,
+      "confirmed": true,
       "top": {
-        "composite": 0.4699,
-        "half_prob": 0.741,
+        "composite": 0.4839,
+        "half_prob": 0.7475,
         "pitcher": 0.4678,
         "batter": 0.4457,
         "park_weather": 0.5567,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.488,
-        "half_prob": 0.7494,
-        "pitcher": 0.4747,
-        "batter": 0.5,
+        "composite": 0.4696,
+        "half_prob": 0.7409,
+        "pitcher": 0.4761,
+        "batter": 0.3775,
         "park_weather": 0.5567,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
@@ -47827,7 +47827,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2062,
+            "k_pct": 0.2136,
             "fps": 0.5,
             "xera": 0.4716,
             "bb_pct": 0.742,
@@ -47843,7 +47843,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -48209,23 +48209,23 @@
       "game_pk": 824472,
       "away_pitcher": "Randy V\u00e1squez",
       "home_pitcher": "Nick Lodolo",
-      "nrfi_prob": 0.5379,
+      "nrfi_prob": 0.5381,
       "confirmed": true,
       "top": {
-        "composite": 0.4441,
-        "half_prob": 0.7293,
+        "composite": 0.4443,
+        "half_prob": 0.7294,
         "pitcher": 0.453,
         "batter": 0.4328,
-        "park_weather": 0.3333,
+        "park_weather": 0.335,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4624,
-        "half_prob": 0.7376,
+        "composite": 0.4626,
+        "half_prob": 0.7377,
         "pitcher": 0.4744,
         "batter": 0.4615,
-        "park_weather": 0.3333,
+        "park_weather": 0.335,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
