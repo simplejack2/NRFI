@@ -47151,7 +47151,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 2,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -47597,93 +47597,6 @@
     },
     {
       "date": "2026-09-01",
-      "game_pk": 823908,
-      "away_pitcher": "Michael McGreevy",
-      "home_pitcher": "Eric Lauer",
-      "nrfi_prob": 0.5606,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4851,
-        "half_prob": 0.7481,
-        "pitcher": 0.4689,
-        "batter": 0.5,
-        "park_weather": 0.5567,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.488,
-        "half_prob": 0.7494,
-        "pitcher": 0.4747,
-        "batter": 0.5,
-        "park_weather": 0.5567,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2356,
-            "fps": 0.5,
-            "xera": 0.5267,
-            "bb_pct": 0.5756,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 448
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2062,
-            "fps": 0.5,
-            "xera": 0.4716,
-            "bb_pct": 0.742,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 586
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-01",
       "game_pk": 824070,
       "away_pitcher": "Tyler Phillips",
       "home_pitcher": "Randy Dobnak",
@@ -47848,6 +47761,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 1,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-01",
+      "game_pk": 823908,
+      "away_pitcher": "Michael McGreevy",
+      "home_pitcher": "Eric Lauer",
+      "nrfi_prob": 0.5553,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4699,
+        "half_prob": 0.741,
+        "pitcher": 0.4678,
+        "batter": 0.4457,
+        "park_weather": 0.5567,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.488,
+        "half_prob": 0.7494,
+        "pitcher": 0.4747,
+        "batter": 0.5,
+        "park_weather": 0.5567,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2296,
+            "fps": 0.5,
+            "xera": 0.5267,
+            "bb_pct": 0.5756,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 448
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2062,
+            "fps": 0.5,
+            "xera": 0.4716,
+            "bb_pct": 0.742,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 586
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
