@@ -48632,23 +48632,23 @@
       "game_pk": 824068,
       "away_pitcher": "Eury P\u00e9rez",
       "home_pitcher": "Noah Cameron",
-      "nrfi_prob": 0.5718,
+      "nrfi_prob": 0.5717,
       "confirmed": false,
       "top": {
-        "composite": 0.5005,
-        "half_prob": 0.7552,
+        "composite": 0.5014,
+        "half_prob": 0.7556,
         "pitcher": 0.5128,
         "batter": 0.5,
-        "park_weather": 0.5093,
+        "park_weather": 0.5164,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5047,
-        "half_prob": 0.7572,
-        "pitcher": 0.5215,
-        "batter": 0.5,
-        "park_weather": 0.5093,
+        "composite": 0.5034,
+        "half_prob": 0.7566,
+        "pitcher": 0.5194,
+        "batter": 0.4954,
+        "park_weather": 0.5164,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -48685,7 +48685,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7115,
+            "k_pct": 0.7,
             "fps": 0.5,
             "xera": 0.5405,
             "bb_pct": 0.3178,
@@ -48701,7 +48701,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -48806,30 +48806,30 @@
       "game_pk": 824390,
       "away_pitcher": "Dylan Cease",
       "home_pitcher": "Joey Cantillo",
-      "nrfi_prob": 0.5629,
-      "confirmed": false,
+      "nrfi_prob": 0.564,
+      "confirmed": true,
       "top": {
-        "composite": 0.4891,
-        "half_prob": 0.7499,
-        "pitcher": 0.497,
-        "batter": 0.5,
+        "composite": 0.4785,
+        "half_prob": 0.745,
+        "pitcher": 0.4997,
+        "batter": 0.4042,
         "park_weather": 0.4811,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4905,
-        "half_prob": 0.7506,
+        "composite": 0.5045,
+        "half_prob": 0.7571,
         "pitcher": 0.5725,
         "batter": 0.3683,
         "park_weather": 0.4811,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6049,
+            "k_pct": 0.62,
             "fps": 0.5,
             "xera": 0.5967,
             "bb_pct": 0.1918,
@@ -48845,7 +48845,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -48896,36 +48896,36 @@
       "nrfi_prob": 0.5591,
       "confirmed": true,
       "top": {
-        "composite": 0.4935,
-        "half_prob": 0.752,
-        "pitcher": 0.4777,
-        "batter": 0.5123,
-        "park_weather": 0.455,
+        "composite": 0.4883,
+        "half_prob": 0.7496,
+        "pitcher": 0.4624,
+        "batter": 0.511,
+        "park_weather": 0.475,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4752,
-        "half_prob": 0.7435,
-        "pitcher": 0.4603,
-        "batter": 0.4759,
-        "park_weather": 0.455,
+        "composite": 0.4802,
+        "half_prob": 0.7458,
+        "pitcher": 0.4653,
+        "batter": 0.4758,
+        "park_weather": 0.475,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2255,
+            "k_pct": 0.2083,
             "fps": 0.5,
-            "xera": 0.5229,
-            "bb_pct": 0.7434,
+            "xera": 0.4452,
+            "bb_pct": 0.7601,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 122
+          "bf": 129
         },
         "ds": {
           "dmg": {
@@ -48946,16 +48946,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4831,
+            "k_pct": 0.4955,
             "fps": 0.5,
-            "xera": 0.5028,
-            "bb_pct": 0.2341,
+            "xera": 0.5079,
+            "bb_pct": 0.2458,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 446
+          "bf": 453
         },
         "ds": {
           "dmg": {
@@ -48992,10 +48992,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4893,
+        "composite": 0.4892,
         "half_prob": 0.75,
         "pitcher": 0.4634,
-        "batter": 0.5119,
+        "batter": 0.5114,
         "park_weather": 0.4775,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -49415,39 +49415,39 @@
       "game_pk": 824312,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Tomoyuki Sugano",
-      "nrfi_prob": 0.5424,
+      "nrfi_prob": 0.5376,
       "confirmed": true,
       "top": {
-        "composite": 0.4435,
-        "half_prob": 0.729,
-        "pitcher": 0.4548,
-        "batter": 0.4612,
-        "park_weather": 0.2625,
+        "composite": 0.4372,
+        "half_prob": 0.7261,
+        "pitcher": 0.4422,
+        "batter": 0.4615,
+        "park_weather": 0.2608,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4766,
-        "half_prob": 0.7441,
-        "pitcher": 0.5001,
-        "batter": 0.5017,
-        "park_weather": 0.2625,
+        "composite": 0.4685,
+        "half_prob": 0.7404,
+        "pitcher": 0.4837,
+        "batter": 0.5023,
+        "park_weather": 0.2608,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.131,
+            "k_pct": 0.1315,
             "fps": 0.5,
-            "xera": 0.3992,
-            "bb_pct": 0.8102,
+            "xera": 0.3393,
+            "bb_pct": 0.8136,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 541
+          "bf": 547
         },
         "ds": {
           "dmg": {
@@ -49468,16 +49468,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.425,
+            "k_pct": 0.4297,
             "fps": 0.5,
-            "xera": 0.4539,
-            "bb_pct": 0.6692,
+            "xera": 0.3723,
+            "bb_pct": 0.6744,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 579
+          "bf": 585
         },
         "ds": {
           "dmg": {
@@ -49502,22 +49502,22 @@
       "game_pk": 824470,
       "away_pitcher": "Casey Mize",
       "home_pitcher": "Brandon Williamson",
-      "nrfi_prob": 0.5313,
+      "nrfi_prob": 0.5334,
       "confirmed": true,
       "top": {
-        "composite": 0.4136,
-        "half_prob": 0.7157,
-        "pitcher": 0.3671,
-        "batter": 0.4654,
+        "composite": 0.4145,
+        "half_prob": 0.7161,
+        "pitcher": 0.3677,
+        "batter": 0.4677,
         "park_weather": 0.3542,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4726,
-        "half_prob": 0.7423,
-        "pitcher": 0.4894,
-        "batter": 0.4622,
+        "composite": 0.4781,
+        "half_prob": 0.7448,
+        "pitcher": 0.4882,
+        "batter": 0.4847,
         "park_weather": 0.3542,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -49525,9 +49525,9 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.254,
+            "k_pct": 0.2567,
             "fps": 0.5,
-            "xera": 0.3122,
+            "xera": 0.313,
             "bb_pct": 0.1687,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
@@ -49555,9 +49555,9 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4099,
+            "k_pct": 0.4121,
             "fps": 0.5,
-            "xera": 0.3678,
+            "xera": 0.3605,
             "bb_pct": 0.748,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
