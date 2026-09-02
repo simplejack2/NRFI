@@ -48545,23 +48545,23 @@
       "game_pk": 824634,
       "away_pitcher": "Jacob Misiorowski",
       "home_pitcher": "David Peterson",
-      "nrfi_prob": 0.5774,
+      "nrfi_prob": 0.5771,
       "confirmed": false,
       "top": {
-        "composite": 0.4694,
-        "half_prob": 0.7408,
+        "composite": 0.469,
+        "half_prob": 0.7406,
         "pitcher": 0.4717,
         "batter": 0.5,
-        "park_weather": 0.425,
+        "park_weather": 0.4217,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.553,
-        "half_prob": 0.7794,
+        "composite": 0.5526,
+        "half_prob": 0.7792,
         "pitcher": 0.6423,
         "batter": 0.5,
-        "park_weather": 0.425,
+        "park_weather": 0.4217,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -48619,93 +48619,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-02",
-      "game_pk": 824390,
-      "away_pitcher": "Dylan Cease",
-      "home_pitcher": "Joey Cantillo",
-      "nrfi_prob": 0.5753,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4891,
-        "half_prob": 0.7499,
-        "pitcher": 0.497,
-        "batter": 0.5,
-        "park_weather": 0.4811,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5262,
-        "half_prob": 0.7672,
-        "pitcher": 0.5728,
-        "batter": 0.5,
-        "park_weather": 0.4811,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6049,
-            "fps": 0.5,
-            "xera": 0.5967,
-            "bb_pct": 0.1918,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 589
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.9354,
-            "fps": 0.5,
-            "xera": 0.6173,
-            "bb_pct": 0.2757,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 601
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -48890,25 +48803,112 @@
     },
     {
       "date": "2026-09-02",
+      "game_pk": 824390,
+      "away_pitcher": "Dylan Cease",
+      "home_pitcher": "Joey Cantillo",
+      "nrfi_prob": 0.5629,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4891,
+        "half_prob": 0.7499,
+        "pitcher": 0.497,
+        "batter": 0.5,
+        "park_weather": 0.4811,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4905,
+        "half_prob": 0.7506,
+        "pitcher": 0.5725,
+        "batter": 0.3683,
+        "park_weather": 0.4811,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6049,
+            "fps": 0.5,
+            "xera": 0.5967,
+            "bb_pct": 0.1918,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 589
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.9339,
+            "fps": 0.5,
+            "xera": 0.6173,
+            "bb_pct": 0.2757,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 601
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-02",
       "game_pk": 822851,
       "away_pitcher": "Jacob Lopez",
       "home_pitcher": "Cody Bradford",
-      "nrfi_prob": 0.562,
+      "nrfi_prob": 0.5591,
       "confirmed": true,
       "top": {
-        "composite": 0.4942,
-        "half_prob": 0.7523,
-        "pitcher": 0.4796,
-        "batter": 0.5113,
+        "composite": 0.4935,
+        "half_prob": 0.752,
+        "pitcher": 0.4777,
+        "batter": 0.5123,
         "park_weather": 0.455,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4831,
-        "half_prob": 0.7471,
-        "pitcher": 0.476,
-        "batter": 0.4767,
+        "composite": 0.4752,
+        "half_prob": 0.7435,
+        "pitcher": 0.4603,
+        "batter": 0.4759,
         "park_weather": 0.455,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -48916,16 +48916,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.1941,
+            "k_pct": 0.2255,
             "fps": 0.5,
-            "xera": 0.5508,
-            "bb_pct": 0.7645,
+            "xera": 0.5229,
+            "bb_pct": 0.7434,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 114
+          "bf": 122
         },
         "ds": {
           "dmg": {
@@ -48946,16 +48946,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4738,
+            "k_pct": 0.4831,
             "fps": 0.5,
-            "xera": 0.5774,
-            "bb_pct": 0.2405,
+            "xera": 0.5028,
+            "bb_pct": 0.2341,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 441
+          "bf": 446
         },
         "ds": {
           "dmg": {
@@ -49151,93 +49151,6 @@
     },
     {
       "date": "2026-09-02",
-      "game_pk": 823339,
-      "away_pitcher": "Landen Roupp",
-      "home_pitcher": "Bubba Chandler",
-      "nrfi_prob": 0.554,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4731,
-        "half_prob": 0.7425,
-        "pitcher": 0.4431,
-        "batter": 0.5,
-        "park_weather": 0.5617,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4809,
-        "half_prob": 0.7461,
-        "pitcher": 0.459,
-        "batter": 0.5,
-        "park_weather": 0.5617,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3941,
-            "fps": 0.5,
-            "xera": 0.5172,
-            "bb_pct": 0.2025,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 569
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4699,
-            "fps": 0.5,
-            "xera": 0.5013,
-            "bb_pct": 0.2438,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 595
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-02",
       "game_pk": 824717,
       "away_pitcher": "Bryce Miller",
       "home_pitcher": "Patrick Sandoval",
@@ -49412,16 +49325,103 @@
     },
     {
       "date": "2026-09-02",
+      "game_pk": 823339,
+      "away_pitcher": "Landen Roupp",
+      "home_pitcher": "Bubba Chandler",
+      "nrfi_prob": 0.5448,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4731,
+        "half_prob": 0.7425,
+        "pitcher": 0.4431,
+        "batter": 0.5,
+        "park_weather": 0.5617,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4541,
+        "half_prob": 0.7338,
+        "pitcher": 0.4597,
+        "batter": 0.3992,
+        "park_weather": 0.5617,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3941,
+            "fps": 0.5,
+            "xera": 0.5172,
+            "bb_pct": 0.2025,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 569
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4739,
+            "fps": 0.5,
+            "xera": 0.5013,
+            "bb_pct": 0.2438,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 595
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-02",
       "game_pk": 824312,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Tomoyuki Sugano",
-      "nrfi_prob": 0.5422,
+      "nrfi_prob": 0.5424,
       "confirmed": true,
       "top": {
-        "composite": 0.443,
-        "half_prob": 0.7287,
-        "pitcher": 0.4541,
-        "batter": 0.4604,
+        "composite": 0.4435,
+        "half_prob": 0.729,
+        "pitcher": 0.4548,
+        "batter": 0.4612,
         "park_weather": 0.2625,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -49438,16 +49438,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.1275,
+            "k_pct": 0.131,
             "fps": 0.5,
             "xera": 0.3992,
-            "bb_pct": 0.8096,
+            "bb_pct": 0.8102,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 540
+          "bf": 541
         },
         "ds": {
           "dmg": {
@@ -49502,22 +49502,22 @@
       "game_pk": 824470,
       "away_pitcher": "Casey Mize",
       "home_pitcher": "Brandon Williamson",
-      "nrfi_prob": 0.5311,
+      "nrfi_prob": 0.5313,
       "confirmed": true,
       "top": {
-        "composite": 0.4132,
-        "half_prob": 0.7155,
+        "composite": 0.4136,
+        "half_prob": 0.7157,
         "pitcher": 0.3671,
-        "batter": 0.464,
+        "batter": 0.4654,
         "park_weather": 0.3542,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4727,
+        "composite": 0.4726,
         "half_prob": 0.7423,
         "pitcher": 0.4894,
-        "batter": 0.4623,
+        "batter": 0.4622,
         "park_weather": 0.3542,
         "damage_speed": 0.5,
         "lineup": 0.6
