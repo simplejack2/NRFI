@@ -49772,6 +49772,93 @@
     },
     {
       "date": "2026-09-03",
+      "game_pk": 824632,
+      "away_pitcher": "Logan Henderson",
+      "home_pitcher": "Kevin Gausman",
+      "nrfi_prob": 0.5848,
+      "confirmed": true,
+      "top": {
+        "composite": 0.503,
+        "half_prob": 0.7564,
+        "pitcher": 0.5443,
+        "batter": 0.4228,
+        "park_weather": 0.4626,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5392,
+        "half_prob": 0.7731,
+        "pitcher": 0.6246,
+        "batter": 0.4109,
+        "park_weather": 0.4626,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5701,
+            "fps": 0.5,
+            "xera": 0.5124,
+            "bb_pct": 0.7066,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 656
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8198,
+            "fps": 0.5,
+            "xera": 0.6133,
+            "bb_pct": 0.8011,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 286
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-03",
       "game_pk": 824069,
       "away_pitcher": "Sandy Alcantara",
       "home_pitcher": "Michael Wacha",
@@ -49849,93 +49936,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-03",
-      "game_pk": 824632,
-      "away_pitcher": "Logan Henderson",
-      "home_pitcher": "Kevin Gausman",
-      "nrfi_prob": 0.5807,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4972,
-        "half_prob": 0.7537,
-        "pitcher": 0.5443,
-        "batter": 0.4228,
-        "park_weather": 0.4183,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5334,
-        "half_prob": 0.7705,
-        "pitcher": 0.6246,
-        "batter": 0.4109,
-        "park_weather": 0.4183,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5701,
-            "fps": 0.5,
-            "xera": 0.5124,
-            "bb_pct": 0.7066,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 656
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8198,
-            "fps": 0.5,
-            "xera": 0.6133,
-            "bb_pct": 0.8011,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 286
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
