@@ -49685,113 +49685,26 @@
     },
     {
       "date": "2026-09-03",
-      "game_pk": 824632,
-      "away_pitcher": "Logan Henderson",
-      "home_pitcher": "Kevin Gausman",
-      "nrfi_prob": 0.5877,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5054,
-        "half_prob": 0.7575,
-        "pitcher": 0.543,
-        "batter": 0.5,
-        "park_weather": 0.4333,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5452,
-        "half_prob": 0.7759,
-        "pitcher": 0.6242,
-        "batter": 0.5,
-        "park_weather": 0.4333,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.563,
-            "fps": 0.5,
-            "xera": 0.5124,
-            "bb_pct": 0.7066,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 656
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8175,
-            "fps": 0.5,
-            "xera": 0.6133,
-            "bb_pct": 0.8011,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 286
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-03",
       "game_pk": 823907,
       "away_pitcher": "Quinn Mathews",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.5836,
+      "nrfi_prob": 0.5864,
       "confirmed": false,
       "top": {
-        "composite": 0.5629,
-        "half_prob": 0.7839,
+        "composite": 0.5669,
+        "half_prob": 0.7857,
         "pitcher": 0.6332,
         "batter": 0.5,
-        "park_weather": 0.5356,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4773,
-        "half_prob": 0.7445,
+        "composite": 0.4814,
+        "half_prob": 0.7464,
         "pitcher": 0.4586,
         "batter": 0.5,
-        "park_weather": 0.5356,
+        "park_weather": 0.5667,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -49849,6 +49762,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-03",
+      "game_pk": 824632,
+      "away_pitcher": "Logan Henderson",
+      "home_pitcher": "Kevin Gausman",
+      "nrfi_prob": 0.5848,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5012,
+        "half_prob": 0.7555,
+        "pitcher": 0.543,
+        "batter": 0.5,
+        "park_weather": 0.4007,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.541,
+        "half_prob": 0.774,
+        "pitcher": 0.6242,
+        "batter": 0.5,
+        "park_weather": 0.4007,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.563,
+            "fps": 0.5,
+            "xera": 0.5124,
+            "bb_pct": 0.7066,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 656
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8175,
+            "fps": 0.5,
+            "xera": 0.6133,
+            "bb_pct": 0.8011,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 286
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -50036,23 +50036,23 @@
       "game_pk": 822853,
       "away_pitcher": "Shane McClanahan",
       "home_pitcher": "Cal Quantrill",
-      "nrfi_prob": 0.5688,
+      "nrfi_prob": 0.5691,
       "confirmed": false,
       "top": {
-        "composite": 0.496,
-        "half_prob": 0.7531,
+        "composite": 0.4963,
+        "half_prob": 0.7533,
         "pitcher": 0.5153,
         "batter": 0.5,
-        "park_weather": 0.4652,
+        "park_weather": 0.4679,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5007,
-        "half_prob": 0.7553,
+        "composite": 0.5011,
+        "half_prob": 0.7555,
         "pitcher": 0.525,
         "batter": 0.5,
-        "park_weather": 0.4652,
+        "park_weather": 0.4679,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
