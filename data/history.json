@@ -6888,7 +6888,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-09-02",
@@ -6901,10 +6901,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "live"
+      "away_r": 2,
+      "home_r": 5,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-02",
@@ -6916,6 +6916,54 @@
       "nrfi_prob": 0.5715,
       "rank": 3,
       "lineups_confirmed": true,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "live"
+    },
+    {
+      "date": "2026-09-03",
+      "game_pk": 824632,
+      "away_team": "Milwaukee Brewers",
+      "home_team": "Chicago Cubs",
+      "away_pitcher": "Logan Henderson",
+      "home_pitcher": "Kevin Gausman",
+      "nrfi_prob": 0.5838,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-03",
+      "game_pk": 823907,
+      "away_team": "St. Louis Cardinals",
+      "home_team": "Los Angeles Dodgers",
+      "away_pitcher": "Quinn Mathews",
+      "home_pitcher": "Tarik Skubal",
+      "nrfi_prob": 0.5821,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-03",
+      "game_pk": 824069,
+      "away_team": "Miami Marlins",
+      "home_team": "Kansas City Royals",
+      "away_pitcher": "Sandy Alcantara",
+      "home_pitcher": "Michael Wacha",
+      "nrfi_prob": 0.5731,
+      "rank": 3,
+      "lineups_confirmed": false,
       "odds": null,
       "away_r": null,
       "home_r": null,
