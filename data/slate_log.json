@@ -50116,7 +50116,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-09-03",
@@ -51155,23 +51155,23 @@
       "game_pk": 824797,
       "away_pitcher": "Ranger Suarez",
       "home_pitcher": "Shane Baz",
-      "nrfi_prob": 0.5617,
+      "nrfi_prob": 0.5623,
       "confirmed": false,
       "top": {
-        "composite": 0.4862,
-        "half_prob": 0.7486,
+        "composite": 0.487,
+        "half_prob": 0.749,
         "pitcher": 0.498,
         "batter": 0.5,
-        "park_weather": 0.455,
+        "park_weather": 0.4613,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4901,
-        "half_prob": 0.7504,
+        "composite": 0.4909,
+        "half_prob": 0.7508,
         "pitcher": 0.5059,
         "batter": 0.5,
-        "park_weather": 0.455,
+        "park_weather": 0.4613,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -51305,6 +51305,93 @@
             "gb_pct": 0.5
           },
           "bf": 362
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-04",
+      "game_pk": 823905,
+      "away_pitcher": "Jackson Kent",
+      "home_pitcher": "Blake Snell",
+      "nrfi_prob": 0.5562,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5152,
+        "half_prob": 0.7621,
+        "pitcher": 0.5352,
+        "batter": 0.5,
+        "park_weather": 0.5382,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4452,
+        "half_prob": 0.7298,
+        "pitcher": 0.3924,
+        "batter": 0.5,
+        "park_weather": 0.5382,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8272,
+            "fps": 0.5,
+            "xera": 0.6134,
+            "bb_pct": 0.2996,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 109
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.375,
+            "fps": 0.5,
+            "xera": 0.4241,
+            "bb_pct": 0.0538,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 88
         },
         "ds": {
           "dmg": {
@@ -51587,81 +51674,6 @@
     },
     {
       "date": "2026-09-04",
-      "game_pk": 823905,
-      "away_pitcher": "Jackson Kent",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5503,
-      "confirmed": false,
-      "top": {
-        "composite": 0.498,
-        "half_prob": 0.7541,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.5382,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4452,
-        "half_prob": 0.7298,
-        "pitcher": 0.3924,
-        "batter": 0.5,
-        "park_weather": 0.5382,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.375,
-            "fps": 0.5,
-            "xera": 0.4241,
-            "bb_pct": 0.0538,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 88
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-04",
       "game_pk": 824471,
       "away_pitcher": "Shane Drohan",
       "home_pitcher": "Rhett Lowder",
@@ -51750,9 +51762,9 @@
     {
       "date": "2026-09-04",
       "game_pk": 824311,
-      "away_pitcher": "TBD",
+      "away_pitcher": "Andre Pallante",
       "home_pitcher": "Ryan Feltner",
-      "nrfi_prob": 0.5253,
+      "nrfi_prob": 0.5227,
       "confirmed": false,
       "top": {
         "composite": 0.4117,
@@ -51764,9 +51776,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4562,
-        "half_prob": 0.7348,
-        "pitcher": 0.5,
+        "composite": 0.4484,
+        "half_prob": 0.7312,
+        "pitcher": 0.484,
         "batter": 0.5,
         "park_weather": 0.2172,
         "damage_speed": 0.5,
@@ -51803,7 +51815,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.2195,
+            "fps": 0.5,
+            "xera": 0.5987,
+            "bb_pct": 0.591,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 564
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
