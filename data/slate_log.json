@@ -52298,23 +52298,23 @@
       "game_pk": 823577,
       "away_pitcher": "Anthony Molina",
       "home_pitcher": "Zac Thornton",
-      "nrfi_prob": 0.5717,
+      "nrfi_prob": 0.5715,
       "confirmed": true,
       "top": {
-        "composite": 0.5205,
-        "half_prob": 0.7645,
+        "composite": 0.5193,
+        "half_prob": 0.764,
         "pitcher": 0.5076,
         "batter": 0.4994,
-        "park_weather": 0.5766,
+        "park_weather": 0.5675,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4844,
-        "half_prob": 0.7478,
-        "pitcher": 0.4867,
+        "composite": 0.485,
+        "half_prob": 0.748,
+        "pitcher": 0.4903,
         "batter": 0.4036,
-        "park_weather": 0.5766,
+        "park_weather": 0.5675,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -52351,16 +52351,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3159,
+            "k_pct": 0.3248,
             "fps": 0.5,
-            "xera": 0.5119,
-            "bb_pct": 0.8005,
+            "xera": 0.5144,
+            "bb_pct": 0.8097,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 60
+          "bf": 64
         },
         "ds": {
           "dmg": {
@@ -52385,7 +52385,7 @@
       "game_pk": 823823,
       "away_pitcher": "Javier Assad",
       "home_pitcher": "Ryan Gusto",
-      "nrfi_prob": 0.5709,
+      "nrfi_prob": 0.5712,
       "confirmed": true,
       "top": {
         "composite": 0.4973,
@@ -52397,9 +52397,9 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5051,
-        "half_prob": 0.7574,
-        "pitcher": 0.4684,
+        "composite": 0.5061,
+        "half_prob": 0.7578,
+        "pitcher": 0.4704,
         "batter": 0.5062,
         "park_weather": 0.5919,
         "damage_speed": 0.5,
@@ -52438,16 +52438,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2292,
+            "k_pct": 0.2326,
             "fps": 0.5,
-            "xera": 0.5128,
-            "bb_pct": 0.6023,
+            "xera": 0.5159,
+            "bb_pct": 0.6074,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 336
+          "bf": 339
         },
         "ds": {
           "dmg": {
@@ -52991,6 +52991,93 @@
     },
     {
       "date": "2026-09-05",
+      "game_pk": 824145,
+      "away_pitcher": "Brandon Pfaadt",
+      "home_pitcher": "Ethan Pecko",
+      "nrfi_prob": 0.5305,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4073,
+        "half_prob": 0.713,
+        "pitcher": 0.3826,
+        "batter": 0.3324,
+        "park_weather": 0.5233,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4762,
+        "half_prob": 0.744,
+        "pitcher": 0.4883,
+        "batter": 0.396,
+        "park_weather": 0.5233,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2796,
+            "fps": 0.5,
+            "xera": 0.433,
+            "bb_pct": 0.0937,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 58
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2409,
+            "fps": 0.5,
+            "xera": 0.4829,
+            "bb_pct": 0.7768,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 455
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-05",
       "game_pk": 824468,
       "away_pitcher": "Dustin May",
       "home_pitcher": "Andrew Abbott",
@@ -53068,93 +53155,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-05",
-      "game_pk": 824145,
-      "away_pitcher": "Brandon Pfaadt",
-      "home_pitcher": "Ethan Pecko",
-      "nrfi_prob": 0.5269,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4019,
-        "half_prob": 0.7106,
-        "pitcher": 0.3826,
-        "batter": 0.3324,
-        "park_weather": 0.4817,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4708,
-        "half_prob": 0.7415,
-        "pitcher": 0.4883,
-        "batter": 0.396,
-        "park_weather": 0.4817,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2796,
-            "fps": 0.5,
-            "xera": 0.433,
-            "bb_pct": 0.0937,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 58
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2409,
-            "fps": 0.5,
-            "xera": 0.4829,
-            "bb_pct": 0.7768,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 455
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
