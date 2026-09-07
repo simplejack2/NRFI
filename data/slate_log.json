@@ -54470,42 +54470,42 @@
     },
     {
       "date": "2026-09-07",
-      "game_pk": 823902,
-      "away_pitcher": "Chase Burns",
-      "home_pitcher": "Emmet Sheehan",
-      "nrfi_prob": 0.5805,
+      "game_pk": 823254,
+      "away_pitcher": "Jake Irvin",
+      "home_pitcher": "Nick Pivetta",
+      "nrfi_prob": 0.5792,
       "confirmed": true,
       "top": {
-        "composite": 0.5188,
-        "half_prob": 0.7637,
-        "pitcher": 0.5271,
-        "batter": 0.4544,
-        "park_weather": 0.5833,
+        "composite": 0.5423,
+        "half_prob": 0.7745,
+        "pitcher": 0.5395,
+        "batter": 0.5194,
+        "park_weather": 0.582,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5109,
-        "half_prob": 0.7601,
-        "pitcher": 0.5497,
-        "batter": 0.3841,
-        "park_weather": 0.5833,
+        "composite": 0.4844,
+        "half_prob": 0.7478,
+        "pitcher": 0.4575,
+        "batter": 0.454,
+        "park_weather": 0.582,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.695,
+            "k_pct": 0.7585,
             "fps": 0.5,
-            "xera": 0.3961,
-            "bb_pct": 0.6063,
+            "xera": 0.5467,
+            "bb_pct": 0.5768,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 412
+          "bf": 83
         },
         "ds": {
           "dmg": {
@@ -54526,16 +54526,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.809,
+            "k_pct": 0.4164,
             "fps": 0.5,
-            "xera": 0.4694,
-            "bb_pct": 0.5057,
+            "xera": 0.465,
+            "bb_pct": 0.3591,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 592
+          "bf": 406
         },
         "ds": {
           "dmg": {
@@ -54546,7 +54546,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 3,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -54644,42 +54644,42 @@
     },
     {
       "date": "2026-09-07",
-      "game_pk": 823254,
-      "away_pitcher": "Jake Irvin",
-      "home_pitcher": "Nick Pivetta",
-      "nrfi_prob": 0.5781,
+      "game_pk": 823902,
+      "away_pitcher": "Chase Burns",
+      "home_pitcher": "Emmet Sheehan",
+      "nrfi_prob": 0.5777,
       "confirmed": true,
       "top": {
-        "composite": 0.5389,
-        "half_prob": 0.773,
-        "pitcher": 0.534,
-        "batter": 0.5171,
-        "park_weather": 0.582,
+        "composite": 0.5148,
+        "half_prob": 0.7619,
+        "pitcher": 0.5271,
+        "batter": 0.4544,
+        "park_weather": 0.5524,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4848,
-        "half_prob": 0.7479,
-        "pitcher": 0.4581,
-        "batter": 0.4544,
-        "park_weather": 0.582,
+        "composite": 0.5069,
+        "half_prob": 0.7582,
+        "pitcher": 0.5497,
+        "batter": 0.3841,
+        "park_weather": 0.5524,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7609,
+            "k_pct": 0.695,
             "fps": 0.5,
-            "xera": 0.5156,
-            "bb_pct": 0.5768,
+            "xera": 0.3961,
+            "bb_pct": 0.6063,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 83
+          "bf": 412
         },
         "ds": {
           "dmg": {
@@ -54700,16 +54700,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4197,
+            "k_pct": 0.809,
             "fps": 0.5,
-            "xera": 0.465,
-            "bb_pct": 0.3591,
+            "xera": 0.4694,
+            "bb_pct": 0.5057,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 406
+          "bf": 592
         },
         "ds": {
           "dmg": {
@@ -54720,7 +54720,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 2,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -54734,30 +54734,30 @@
       "game_pk": 824958,
       "away_pitcher": "Dylan Cease",
       "home_pitcher": "Jacob Lopez",
-      "nrfi_prob": 0.5719,
-      "confirmed": false,
+      "nrfi_prob": 0.5704,
+      "confirmed": true,
       "top": {
-        "composite": 0.4796,
-        "half_prob": 0.7455,
-        "pitcher": 0.4789,
-        "batter": 0.5,
+        "composite": 0.4618,
+        "half_prob": 0.7373,
+        "pitcher": 0.4777,
+        "batter": 0.3843,
         "park_weather": 0.4767,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5262,
-        "half_prob": 0.7672,
+        "composite": 0.5402,
+        "half_prob": 0.7736,
         "pitcher": 0.5761,
         "batter": 0.4962,
         "park_weather": 0.4767,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4958,
+            "k_pct": 0.4891,
             "fps": 0.5,
             "xera": 0.565,
             "bb_pct": 0.2526,
@@ -54773,7 +54773,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
