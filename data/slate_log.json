@@ -54620,81 +54620,6 @@
     },
     {
       "date": "2026-09-07",
-      "game_pk": 824062,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Noah Cameron",
-      "nrfi_prob": 0.5748,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5087,
-        "half_prob": 0.7591,
-        "pitcher": 0.5083,
-        "batter": 0.5,
-        "park_weather": 0.5898,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5047,
-        "half_prob": 0.7572,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.5898,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4173,
-            "fps": 0.5,
-            "xera": 0.5399,
-            "bb_pct": 0.6028,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 647
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-07",
       "game_pk": 823415,
       "away_pitcher": "Grant Holmes",
       "home_pitcher": "Jes\u00fas Luzardo",
@@ -54762,6 +54687,81 @@
           },
           "bf": 561
         },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-07",
+      "game_pk": 824062,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Noah Cameron",
+      "nrfi_prob": 0.5725,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5056,
+        "half_prob": 0.7576,
+        "pitcher": 0.5083,
+        "batter": 0.5,
+        "park_weather": 0.5658,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5016,
+        "half_prob": 0.7557,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5658,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4173,
+            "fps": 0.5,
+            "xera": 0.5399,
+            "bb_pct": 0.6028,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 647
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
         "ds": {
           "dmg": {
             "pit_hh": null,
