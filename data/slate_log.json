@@ -54470,113 +54470,26 @@
     },
     {
       "date": "2026-09-07",
-      "game_pk": 823254,
-      "away_pitcher": "Jake Irvin",
-      "home_pitcher": "Nick Pivetta",
-      "nrfi_prob": 0.5792,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5368,
-        "half_prob": 0.772,
-        "pitcher": 0.5287,
-        "batter": 0.5181,
-        "park_weather": 0.5832,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4899,
-        "half_prob": 0.7503,
-        "pitcher": 0.468,
-        "batter": 0.4546,
-        "park_weather": 0.5832,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8198,
-            "fps": 0.5,
-            "xera": 0.5105,
-            "bb_pct": 0.4923,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 69
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4442,
-            "fps": 0.5,
-            "xera": 0.4957,
-            "bb_pct": 0.3504,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 381
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-07",
       "game_pk": 824229,
       "away_pitcher": "Joe Ryan",
       "home_pitcher": "Troy Melton",
-      "nrfi_prob": 0.5787,
+      "nrfi_prob": 0.5788,
       "confirmed": true,
       "top": {
         "composite": 0.488,
         "half_prob": 0.7494,
         "pitcher": 0.4801,
-        "batter": 0.4268,
-        "park_weather": 0.5808,
+        "batter": 0.4261,
+        "park_weather": 0.5825,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5371,
-        "half_prob": 0.7722,
+        "composite": 0.5373,
+        "half_prob": 0.7723,
         "pitcher": 0.5597,
         "batter": 0.4641,
-        "park_weather": 0.5808,
+        "park_weather": 0.5825,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -54634,6 +54547,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-07",
+      "game_pk": 823254,
+      "away_pitcher": "Jake Irvin",
+      "home_pitcher": "Nick Pivetta",
+      "nrfi_prob": 0.5783,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5385,
+        "half_prob": 0.7728,
+        "pitcher": 0.5322,
+        "batter": 0.5182,
+        "park_weather": 0.5832,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4856,
+        "half_prob": 0.7483,
+        "pitcher": 0.4597,
+        "batter": 0.4539,
+        "park_weather": 0.5832,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8197,
+            "fps": 0.5,
+            "xera": 0.5125,
+            "bb_pct": 0.513,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 72
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4432,
+            "fps": 0.5,
+            "xera": 0.465,
+            "bb_pct": 0.3403,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 386
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
