@@ -55689,9 +55689,9 @@
     {
       "date": "2026-09-08",
       "game_pk": 823092,
-      "away_pitcher": "TBD",
+      "away_pitcher": "Cal Quantrill",
       "home_pitcher": "TBD",
-      "nrfi_prob": 0.5727,
+      "nrfi_prob": 0.5749,
       "confirmed": false,
       "top": {
         "composite": 0.5038,
@@ -55703,9 +55703,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5038,
-        "half_prob": 0.7568,
-        "pitcher": 0.5,
+        "composite": 0.5098,
+        "half_prob": 0.7596,
+        "pitcher": 0.5123,
         "batter": 0.5,
         "park_weather": 0.5833,
         "damage_speed": 0.5,
@@ -55730,7 +55730,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.273,
+            "fps": 0.5,
+            "xera": 0.6048,
+            "bb_pct": 0.7146,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 393
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -55928,23 +55940,23 @@
       "game_pk": 823174,
       "away_pitcher": "Quinn Mathews",
       "home_pitcher": "Landen Roupp",
-      "nrfi_prob": 0.56,
+      "nrfi_prob": 0.5608,
       "confirmed": false,
       "top": {
-        "composite": 0.4925,
-        "half_prob": 0.7515,
+        "composite": 0.4936,
+        "half_prob": 0.752,
         "pitcher": 0.4746,
         "batter": 0.5,
-        "park_weather": 0.5917,
+        "park_weather": 0.6,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4789,
-        "half_prob": 0.7452,
+        "composite": 0.48,
+        "half_prob": 0.7457,
         "pitcher": 0.4469,
         "batter": 0.5,
-        "park_weather": 0.5917,
+        "park_weather": 0.6,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -55998,6 +56010,93 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-08",
+      "game_pk": 823500,
+      "away_pitcher": "Gabriel Hughes",
+      "home_pitcher": "Cam Schlittler",
+      "nrfi_prob": 0.558,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5273,
+        "half_prob": 0.7677,
+        "pitcher": 0.6146,
+        "batter": 0.4257,
+        "park_weather": 0.3783,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4389,
+        "half_prob": 0.7269,
+        "pitcher": 0.4461,
+        "batter": 0.4044,
+        "park_weather": 0.3783,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8428,
+            "fps": 0.5,
+            "xera": 0.6083,
+            "bb_pct": 0.7077,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 677
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3183,
+            "fps": 0.5,
+            "xera": 0.4404,
+            "bb_pct": 0.4422,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 231
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -56360,113 +56459,26 @@
     },
     {
       "date": "2026-09-08",
-      "game_pk": 823500,
-      "away_pitcher": "Gabriel Hughes",
-      "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.5555,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5341,
-        "half_prob": 0.7708,
-        "pitcher": 0.6162,
-        "batter": 0.5,
-        "park_weather": 0.3783,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4249,
-        "half_prob": 0.7207,
-        "pitcher": 0.4461,
-        "batter": 0.4044,
-        "park_weather": 0.3783,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8514,
-            "fps": 0.5,
-            "xera": 0.6083,
-            "bb_pct": 0.7077,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 677
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3183,
-            "fps": 0.5,
-            "xera": 0.4404,
-            "bb_pct": 0.4422,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 231
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-08",
       "game_pk": 824551,
       "away_pitcher": "Bubba Chandler",
       "home_pitcher": "Sean Burke",
-      "nrfi_prob": 0.5452,
+      "nrfi_prob": 0.5446,
       "confirmed": false,
       "top": {
-        "composite": 0.502,
-        "half_prob": 0.756,
+        "composite": 0.5012,
+        "half_prob": 0.7555,
         "pitcher": 0.5361,
         "batter": 0.5,
-        "park_weather": 0.4333,
+        "park_weather": 0.4267,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.426,
-        "half_prob": 0.7211,
+        "composite": 0.4251,
+        "half_prob": 0.7208,
         "pitcher": 0.4345,
         "batter": 0.4028,
-        "park_weather": 0.4333,
+        "park_weather": 0.4267,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
