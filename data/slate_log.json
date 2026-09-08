@@ -55603,13 +55603,13 @@
       "date": "2026-09-08",
       "game_pk": 823092,
       "away_pitcher": "Cal Quantrill",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5735,
+      "home_pitcher": "Bryce Miller",
+      "nrfi_prob": 0.5776,
       "confirmed": false,
       "top": {
-        "composite": 0.5038,
-        "half_prob": 0.7568,
-        "pitcher": 0.5,
+        "composite": 0.5155,
+        "half_prob": 0.7622,
+        "pitcher": 0.5239,
         "batter": 0.5,
         "park_weather": 0.5833,
         "damage_speed": 0.5,
@@ -55625,7 +55625,19 @@
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.5408,
+            "fps": 0.5,
+            "xera": 0.4396,
+            "bb_pct": 0.7133,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 397
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -56549,23 +56561,23 @@
       "game_pk": 824875,
       "away_pitcher": "Freddy Peralta",
       "home_pitcher": "AJ Smith-Shawver",
-      "nrfi_prob": 0.5392,
+      "nrfi_prob": 0.5394,
       "confirmed": true,
       "top": {
-        "composite": 0.4136,
-        "half_prob": 0.7157,
+        "composite": 0.4138,
+        "half_prob": 0.7158,
         "pitcher": 0.4025,
         "batter": 0.3633,
-        "park_weather": 0.4333,
+        "park_weather": 0.435,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4966,
-        "half_prob": 0.7534,
+        "composite": 0.4968,
+        "half_prob": 0.7535,
         "pitcher": 0.5149,
         "batter": 0.4665,
-        "park_weather": 0.4333,
+        "park_weather": 0.435,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
