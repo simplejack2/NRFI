@@ -55983,7 +55983,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 3,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -56097,180 +56097,6 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-08",
-      "game_pk": 823250,
-      "away_pitcher": "Riley Cornelio",
-      "home_pitcher": "Casey Mize",
-      "nrfi_prob": 0.5573,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5069,
-        "half_prob": 0.7582,
-        "pitcher": 0.5058,
-        "batter": 0.5,
-        "park_weather": 0.585,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4568,
-        "half_prob": 0.735,
-        "pitcher": 0.4035,
-        "batter": 0.5,
-        "park_weather": 0.585,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4095,
-            "fps": 0.5,
-            "xera": 0.4425,
-            "bb_pct": 0.748,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 464
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.448,
-            "fps": 0.5,
-            "xera": 0.4363,
-            "bb_pct": 0.0215,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 107
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-08",
-      "game_pk": 824957,
-      "away_pitcher": "Jos\u00e9 Soriano",
-      "home_pitcher": "Jack Perkins",
-      "nrfi_prob": 0.5567,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4902,
-        "half_prob": 0.7504,
-        "pitcher": 0.4977,
-        "batter": 0.5,
-        "park_weather": 0.4867,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4718,
-        "half_prob": 0.7419,
-        "pitcher": 0.4603,
-        "batter": 0.5,
-        "park_weather": 0.4867,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6383,
-            "fps": 0.5,
-            "xera": 0.5114,
-            "bb_pct": 0.288,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 452
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5077,
-            "fps": 0.5,
-            "xera": 0.4612,
-            "bb_pct": 0.2675,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 654
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
           },
           "spd": {
             "n_spd": 0,
@@ -56459,6 +56285,93 @@
     },
     {
       "date": "2026-09-08",
+      "game_pk": 824957,
+      "away_pitcher": "Jos\u00e9 Soriano",
+      "home_pitcher": "Jack Perkins",
+      "nrfi_prob": 0.5552,
+      "confirmed": false,
+      "top": {
+        "composite": 0.488,
+        "half_prob": 0.7494,
+        "pitcher": 0.4977,
+        "batter": 0.5,
+        "park_weather": 0.47,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4697,
+        "half_prob": 0.7409,
+        "pitcher": 0.4603,
+        "batter": 0.5,
+        "park_weather": 0.47,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6383,
+            "fps": 0.5,
+            "xera": 0.5114,
+            "bb_pct": 0.288,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 452
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5077,
+            "fps": 0.5,
+            "xera": 0.4612,
+            "bb_pct": 0.2675,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 654
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-08",
       "game_pk": 824551,
       "away_pitcher": "Bubba Chandler",
       "home_pitcher": "Sean Burke",
@@ -56525,6 +56438,93 @@
             "gb_pct": 0.5
           },
           "bf": 592
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-08",
+      "game_pk": 823250,
+      "away_pitcher": "Riley Cornelio",
+      "home_pitcher": "Casey Mize",
+      "nrfi_prob": 0.551,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5033,
+        "half_prob": 0.7565,
+        "pitcher": 0.5058,
+        "batter": 0.5,
+        "park_weather": 0.5572,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4422,
+        "half_prob": 0.7284,
+        "pitcher": 0.4066,
+        "batter": 0.454,
+        "park_weather": 0.5572,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4095,
+            "fps": 0.5,
+            "xera": 0.4425,
+            "bb_pct": 0.748,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 464
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4668,
+            "fps": 0.5,
+            "xera": 0.4363,
+            "bb_pct": 0.0215,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 107
         },
         "ds": {
           "dmg": {
