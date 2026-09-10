@@ -57076,7 +57076,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-09-09",
@@ -58126,13 +58126,13 @@
       "date": "2026-09-10",
       "game_pk": 824550,
       "away_pitcher": "Jared Jones",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5687,
+      "home_pitcher": "Hagen Smith",
+      "nrfi_prob": 0.5711,
       "confirmed": false,
       "top": {
-        "composite": 0.4843,
-        "half_prob": 0.7477,
-        "pitcher": 0.5,
+        "composite": 0.4912,
+        "half_prob": 0.7509,
+        "pitcher": 0.514,
         "batter": 0.5,
         "park_weather": 0.4333,
         "damage_speed": 0.5,
@@ -58148,7 +58148,19 @@
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.9127,
+            "fps": 0.5,
+            "xera": 0.6283,
+            "bb_pct": 0.0773,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 62
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -58202,23 +58214,23 @@
       "game_pk": 823413,
       "away_pitcher": "Cristian Javier",
       "home_pitcher": "Zack Wheeler",
-      "nrfi_prob": 0.5676,
+      "nrfi_prob": 0.5679,
       "confirmed": false,
       "top": {
-        "composite": 0.5168,
-        "half_prob": 0.7628,
+        "composite": 0.5172,
+        "half_prob": 0.763,
         "pitcher": 0.5605,
         "batter": 0.5,
-        "park_weather": 0.455,
+        "park_weather": 0.4582,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4765,
-        "half_prob": 0.7441,
+        "composite": 0.4769,
+        "half_prob": 0.7443,
         "pitcher": 0.4783,
         "batter": 0.5,
-        "park_weather": 0.455,
+        "park_weather": 0.4582,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -58289,23 +58301,23 @@
       "game_pk": 824872,
       "away_pitcher": "Nick Martinez",
       "home_pitcher": "Mart\u00edn P\u00e9rez",
-      "nrfi_prob": 0.5543,
+      "nrfi_prob": 0.555,
       "confirmed": false,
       "top": {
-        "composite": 0.462,
-        "half_prob": 0.7374,
+        "composite": 0.4631,
+        "half_prob": 0.7379,
         "pitcher": 0.4467,
         "batter": 0.5,
-        "park_weather": 0.4625,
+        "park_weather": 0.4708,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4929,
-        "half_prob": 0.7517,
+        "composite": 0.4939,
+        "half_prob": 0.7522,
         "pitcher": 0.5097,
         "batter": 0.5,
-        "park_weather": 0.4625,
+        "park_weather": 0.4708,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -58376,23 +58388,23 @@
       "game_pk": 823499,
       "away_pitcher": "Ryan Feltner",
       "home_pitcher": "Max Fried",
-      "nrfi_prob": 0.5473,
+      "nrfi_prob": 0.5467,
       "confirmed": false,
       "top": {
-        "composite": 0.4983,
-        "half_prob": 0.7542,
+        "composite": 0.4973,
+        "half_prob": 0.7537,
         "pitcher": 0.5459,
         "batter": 0.5,
-        "park_weather": 0.3677,
+        "park_weather": 0.3599,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4363,
-        "half_prob": 0.7257,
+        "composite": 0.4353,
+        "half_prob": 0.7253,
         "pitcher": 0.4194,
         "batter": 0.5,
-        "park_weather": 0.3677,
+        "park_weather": 0.3599,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
