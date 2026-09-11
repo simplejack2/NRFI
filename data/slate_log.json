@@ -58562,23 +58562,23 @@
       "game_pk": 824873,
       "away_pitcher": "Aaron Nola",
       "home_pitcher": "Chris Sale",
-      "nrfi_prob": 0.5937,
+      "nrfi_prob": 0.5924,
       "confirmed": false,
       "top": {
-        "composite": 0.5529,
-        "half_prob": 0.7794,
+        "composite": 0.5511,
+        "half_prob": 0.7786,
         "pitcher": 0.6354,
         "batter": 0.5,
-        "park_weather": 0.45,
+        "park_weather": 0.4367,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5144,
-        "half_prob": 0.7617,
+        "composite": 0.5126,
+        "half_prob": 0.7609,
         "pitcher": 0.5569,
         "batter": 0.5,
-        "park_weather": 0.45,
+        "park_weather": 0.4367,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -58649,23 +58649,23 @@
       "game_pk": 823659,
       "away_pitcher": "Parker Messick",
       "home_pitcher": "Taj Bradley",
-      "nrfi_prob": 0.5846,
+      "nrfi_prob": 0.583,
       "confirmed": false,
       "top": {
-        "composite": 0.5066,
-        "half_prob": 0.7581,
+        "composite": 0.5044,
+        "half_prob": 0.757,
         "pitcher": 0.5234,
         "batter": 0.5,
-        "park_weather": 0.5167,
+        "park_weather": 0.4997,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5348,
-        "half_prob": 0.7711,
+        "composite": 0.5326,
+        "half_prob": 0.7701,
         "pitcher": 0.581,
         "batter": 0.5,
-        "park_weather": 0.5167,
+        "park_weather": 0.4997,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -58736,23 +58736,23 @@
       "game_pk": 822684,
       "away_pitcher": "Yusei Kikuchi",
       "home_pitcher": "Cade Cavalli",
-      "nrfi_prob": 0.579,
+      "nrfi_prob": 0.5828,
       "confirmed": false,
       "top": {
-        "composite": 0.5331,
-        "half_prob": 0.7703,
+        "composite": 0.5385,
+        "half_prob": 0.7728,
         "pitcher": 0.5862,
         "batter": 0.5,
-        "park_weather": 0.4833,
+        "park_weather": 0.525,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4928,
-        "half_prob": 0.7516,
+        "composite": 0.4982,
+        "half_prob": 0.7542,
         "pitcher": 0.5039,
         "batter": 0.5,
-        "park_weather": 0.4833,
+        "park_weather": 0.525,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -58823,23 +58823,23 @@
       "game_pk": 823817,
       "away_pitcher": "TBD",
       "home_pitcher": "Ryan Gusto",
-      "nrfi_prob": 0.5719,
+      "nrfi_prob": 0.5724,
       "confirmed": false,
       "top": {
-        "composite": 0.5037,
-        "half_prob": 0.7567,
+        "composite": 0.5045,
+        "half_prob": 0.7571,
         "pitcher": 0.5042,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.5727,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5017,
-        "half_prob": 0.7558,
+        "composite": 0.5024,
+        "half_prob": 0.7561,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.5727,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -58985,30 +58985,30 @@
       "game_pk": 824631,
       "away_pitcher": "Wilber Dotel",
       "home_pitcher": "Shota Imanaga",
-      "nrfi_prob": 0.5674,
-      "confirmed": false,
+      "nrfi_prob": 0.5678,
+      "confirmed": true,
       "top": {
-        "composite": 0.5089,
-        "half_prob": 0.7592,
-        "pitcher": 0.5447,
-        "batter": 0.5,
+        "composite": 0.5234,
+        "half_prob": 0.7658,
+        "pitcher": 0.5437,
+        "batter": 0.5034,
         "park_weather": 0.4542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4835,
-        "half_prob": 0.7474,
-        "pitcher": 0.4929,
-        "batter": 0.5,
+        "composite": 0.4707,
+        "half_prob": 0.7414,
+        "pitcher": 0.4894,
+        "batter": 0.407,
         "park_weather": 0.4542,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5512,
+            "k_pct": 0.5455,
             "fps": 0.5,
             "xera": 0.4591,
             "bb_pct": 0.8178,
@@ -59024,7 +59024,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -59038,7 +59038,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5745,
+            "k_pct": 0.554,
             "fps": 0.5,
             "xera": 0.5446,
             "bb_pct": 0.3577,
@@ -59054,7 +59054,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -59072,23 +59072,23 @@
       "game_pk": 823173,
       "away_pitcher": "Robbie Ray",
       "home_pitcher": "Anthony Molina",
-      "nrfi_prob": 0.566,
+      "nrfi_prob": 0.5663,
       "confirmed": false,
       "top": {
-        "composite": 0.51,
-        "half_prob": 0.7596,
+        "composite": 0.5104,
+        "half_prob": 0.7598,
         "pitcher": 0.5119,
         "batter": 0.5,
-        "park_weather": 0.5859,
+        "park_weather": 0.5887,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4787,
-        "half_prob": 0.7451,
+        "composite": 0.4791,
+        "half_prob": 0.7453,
         "pitcher": 0.448,
         "batter": 0.5,
-        "park_weather": 0.5859,
+        "park_weather": 0.5887,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -59159,23 +59159,23 @@
       "game_pk": 823498,
       "away_pitcher": "Nolan McLean",
       "home_pitcher": "Carlos Rod\u00f3n",
-      "nrfi_prob": 0.5643,
+      "nrfi_prob": 0.5632,
       "confirmed": false,
       "top": {
-        "composite": 0.4832,
-        "half_prob": 0.7472,
+        "composite": 0.4817,
+        "half_prob": 0.7465,
         "pitcher": 0.5109,
         "batter": 0.5,
-        "park_weather": 0.3833,
+        "park_weather": 0.3717,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5004,
-        "half_prob": 0.7552,
+        "composite": 0.4989,
+        "half_prob": 0.7545,
         "pitcher": 0.5461,
         "batter": 0.5,
-        "park_weather": 0.3833,
+        "park_weather": 0.3717,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -59244,25 +59244,25 @@
     {
       "date": "2026-09-11",
       "game_pk": 825036,
-      "away_pitcher": "TBD",
+      "away_pitcher": "MacKenzie Gore",
       "home_pitcher": "TBD",
-      "nrfi_prob": 0.5624,
+      "nrfi_prob": 0.5611,
       "confirmed": false,
       "top": {
-        "composite": 0.489,
-        "half_prob": 0.7499,
+        "composite": 0.4914,
+        "half_prob": 0.751,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.4691,
+        "park_weather": 0.4875,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.489,
-        "half_prob": 0.7499,
-        "pitcher": 0.5,
+        "composite": 0.4832,
+        "half_prob": 0.7472,
+        "pitcher": 0.4834,
         "batter": 0.5,
-        "park_weather": 0.4691,
+        "park_weather": 0.4875,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -59285,7 +59285,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.6105,
+            "fps": 0.5,
+            "xera": 0.3939,
+            "bb_pct": 0.4061,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 684
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -59657,23 +59669,23 @@
       "game_pk": 823736,
       "away_pitcher": "Andrew Abbott",
       "home_pitcher": "Dustin May",
-      "nrfi_prob": 0.5491,
+      "nrfi_prob": 0.5488,
       "confirmed": false,
       "top": {
-        "composite": 0.4856,
-        "half_prob": 0.7483,
+        "composite": 0.4852,
+        "half_prob": 0.7481,
         "pitcher": 0.4893,
         "batter": 0.5,
-        "park_weather": 0.4833,
+        "park_weather": 0.4808,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4541,
-        "half_prob": 0.7338,
+        "composite": 0.4538,
+        "half_prob": 0.7336,
         "pitcher": 0.425,
         "batter": 0.5,
-        "park_weather": 0.4833,
+        "park_weather": 0.4808,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
