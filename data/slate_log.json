@@ -61430,93 +61430,6 @@
     },
     {
       "date": "2026-09-13",
-      "game_pk": 823495,
-      "away_pitcher": "Christian Scott",
-      "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.58,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5415,
-        "half_prob": 0.7742,
-        "pitcher": 0.6213,
-        "batter": 0.5,
-        "park_weather": 0.4156,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4873,
-        "half_prob": 0.7491,
-        "pitcher": 0.5108,
-        "batter": 0.5,
-        "park_weather": 0.4156,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8614,
-            "fps": 0.5,
-            "xera": 0.6115,
-            "bb_pct": 0.7265,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 701
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.717,
-            "fps": 0.5,
-            "xera": 0.4651,
-            "bb_pct": 0.3531,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 431
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-13",
       "game_pk": 823171,
       "away_pitcher": "Nick Pivetta",
       "home_pitcher": "Logan Webb",
@@ -61594,6 +61507,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-13",
+      "game_pk": 823495,
+      "away_pitcher": "Christian Scott",
+      "home_pitcher": "Cam Schlittler",
+      "nrfi_prob": 0.5789,
+      "confirmed": false,
+      "top": {
+        "composite": 0.54,
+        "half_prob": 0.7735,
+        "pitcher": 0.6213,
+        "batter": 0.5,
+        "park_weather": 0.4042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4858,
+        "half_prob": 0.7484,
+        "pitcher": 0.5108,
+        "batter": 0.5,
+        "park_weather": 0.4042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8614,
+            "fps": 0.5,
+            "xera": 0.6115,
+            "bb_pct": 0.7265,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 701
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.717,
+            "fps": 0.5,
+            "xera": 0.4651,
+            "bb_pct": 0.3531,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 431
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
