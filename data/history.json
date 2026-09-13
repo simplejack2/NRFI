@@ -7365,10 +7365,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 1,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-12",
@@ -7381,10 +7381,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 2,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-12",
@@ -7397,10 +7397,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 1,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-09-13",
+      "game_pk": 822764,
+      "away_team": "Baltimore Orioles",
+      "home_team": "Toronto Blue Jays",
+      "away_pitcher": "Trevor Rogers",
+      "home_pitcher": "Dylan Cease",
+      "nrfi_prob": 0.5856,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-13",
+      "game_pk": 822928,
+      "away_team": "Houston Astros",
+      "home_team": "Tampa Bay Rays",
+      "away_pitcher": "Hayden Wesneski",
+      "home_pitcher": "Freddy Peralta",
+      "nrfi_prob": 0.5826,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-13",
+      "game_pk": 823495,
+      "away_team": "New York Mets",
+      "home_team": "New York Yankees",
+      "away_pitcher": "Christian Scott",
+      "home_pitcher": "Cam Schlittler",
+      "nrfi_prob": 0.5801,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
