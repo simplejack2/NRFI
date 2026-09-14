@@ -62648,103 +62648,16 @@
     },
     {
       "date": "2026-09-14",
-      "game_pk": 824465,
-      "away_pitcher": "Tarik Skubal",
-      "home_pitcher": "Nick Lodolo",
-      "nrfi_prob": 0.5665,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4442,
-        "half_prob": 0.7293,
-        "pitcher": 0.4624,
-        "batter": 0.3999,
-        "park_weather": 0.3667,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5472,
-        "half_prob": 0.7768,
-        "pitcher": 0.6305,
-        "batter": 0.4764,
-        "park_weather": 0.3667,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3657,
-            "fps": 0.5,
-            "xera": 0.4538,
-            "bb_pct": 0.4769,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 406
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8173,
-            "fps": 0.5,
-            "xera": 0.6094,
-            "bb_pct": 0.8521,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 548
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-14",
       "game_pk": 824386,
       "away_pitcher": "Sean Newcomb",
       "home_pitcher": "Gavin Williams",
-      "nrfi_prob": 0.5654,
+      "nrfi_prob": 0.5657,
       "confirmed": true,
       "top": {
-        "composite": 0.5307,
-        "half_prob": 0.7692,
-        "pitcher": 0.5757,
-        "batter": 0.4342,
+        "composite": 0.5315,
+        "half_prob": 0.7696,
+        "pitcher": 0.5787,
+        "batter": 0.4318,
         "park_weather": 0.5333,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -62761,16 +62674,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8765,
+            "k_pct": 0.8746,
             "fps": 0.5,
-            "xera": 0.5322,
-            "bb_pct": 0.5061,
+            "xera": 0.5522,
+            "bb_pct": 0.4981,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 681
+          "bf": 686
         },
         "ds": {
           "dmg": {
@@ -62801,6 +62714,93 @@
             "gb_pct": 0.5
           },
           "bf": 345
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-14",
+      "game_pk": 824465,
+      "away_pitcher": "Tarik Skubal",
+      "home_pitcher": "Nick Lodolo",
+      "nrfi_prob": 0.5649,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4462,
+        "half_prob": 0.7302,
+        "pitcher": 0.4661,
+        "batter": 0.4005,
+        "park_weather": 0.3667,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5402,
+        "half_prob": 0.7736,
+        "pitcher": 0.616,
+        "batter": 0.4767,
+        "park_weather": 0.3667,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3608,
+            "fps": 0.5,
+            "xera": 0.4707,
+            "bb_pct": 0.4828,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 409
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8174,
+            "fps": 0.5,
+            "xera": 0.5434,
+            "bb_pct": 0.8522,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 548
         },
         "ds": {
           "dmg": {
@@ -63173,23 +63173,23 @@
       "game_pk": 825034,
       "away_pitcher": "Sandy Alcantara",
       "home_pitcher": "Corbin Burnes",
-      "nrfi_prob": 0.53,
+      "nrfi_prob": 0.5313,
       "confirmed": false,
       "top": {
-        "composite": 0.4524,
-        "half_prob": 0.733,
+        "composite": 0.4543,
+        "half_prob": 0.7339,
         "pitcher": 0.421,
         "batter": 0.5,
-        "park_weather": 0.4858,
+        "park_weather": 0.5,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4304,
-        "half_prob": 0.7231,
+        "composite": 0.4322,
+        "half_prob": 0.7239,
         "pitcher": 0.4654,
         "batter": 0.3377,
-        "park_weather": 0.4858,
+        "park_weather": 0.5,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
