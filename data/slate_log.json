@@ -62390,23 +62390,23 @@
       "game_pk": 823981,
       "away_pitcher": "Kade Anderson",
       "home_pitcher": "Reid Detmers",
-      "nrfi_prob": 0.573,
+      "nrfi_prob": 0.5753,
       "confirmed": false,
       "top": {
-        "composite": 0.5393,
-        "half_prob": 0.7732,
+        "composite": 0.5425,
+        "half_prob": 0.7747,
         "pitcher": 0.5878,
         "batter": 0.5,
-        "park_weather": 0.5252,
+        "park_weather": 0.55,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4701,
-        "half_prob": 0.7411,
+        "composite": 0.4733,
+        "half_prob": 0.7426,
         "pitcher": 0.4466,
         "batter": 0.5,
-        "park_weather": 0.5252,
+        "park_weather": 0.55,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -62464,6 +62464,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-14",
+      "game_pk": 824386,
+      "away_pitcher": "Sean Newcomb",
+      "home_pitcher": "Gavin Williams",
+      "nrfi_prob": 0.572,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5325,
+        "half_prob": 0.7701,
+        "pitcher": 0.5762,
+        "batter": 0.5,
+        "park_weather": 0.5169,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4735,
+        "half_prob": 0.7427,
+        "pitcher": 0.4557,
+        "batter": 0.5,
+        "park_weather": 0.5169,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8791,
+            "fps": 0.5,
+            "xera": 0.5322,
+            "bb_pct": 0.5061,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 681
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4949,
+            "fps": 0.5,
+            "xera": 0.3703,
+            "bb_pct": 0.394,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 345
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -62822,81 +62909,6 @@
     },
     {
       "date": "2026-09-14",
-      "game_pk": 824386,
-      "away_pitcher": "Sean Newcomb",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.557,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4922,
-        "half_prob": 0.7514,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4937,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4705,
-        "half_prob": 0.7413,
-        "pitcher": 0.4557,
-        "batter": 0.5,
-        "park_weather": 0.4937,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4949,
-            "fps": 0.5,
-            "xera": 0.3703,
-            "bb_pct": 0.394,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 345
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-14",
       "game_pk": 823575,
       "away_pitcher": "Brandon Young",
       "home_pitcher": "Jonah Tong",
@@ -63161,23 +63173,23 @@
       "game_pk": 824308,
       "away_pitcher": "Casey Mize",
       "home_pitcher": "Tomoyuki Sugano",
-      "nrfi_prob": 0.5389,
+      "nrfi_prob": 0.5393,
       "confirmed": false,
       "top": {
-        "composite": 0.4404,
-        "half_prob": 0.7276,
+        "composite": 0.4409,
+        "half_prob": 0.7278,
         "pitcher": 0.4546,
         "batter": 0.5,
-        "park_weather": 0.2667,
+        "park_weather": 0.2706,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4693,
-        "half_prob": 0.7407,
+        "composite": 0.4698,
+        "half_prob": 0.741,
         "pitcher": 0.5135,
         "batter": 0.5,
-        "park_weather": 0.2667,
+        "park_weather": 0.2706,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
