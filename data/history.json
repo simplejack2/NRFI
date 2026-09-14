@@ -7413,10 +7413,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-13",
@@ -7429,10 +7429,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-13",
@@ -7445,10 +7445,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-09-14",
+      "game_pk": 823981,
+      "away_team": "Seattle Mariners",
+      "home_team": "Los Angeles Angels",
+      "away_pitcher": "Kade Anderson",
+      "home_pitcher": "Reid Detmers",
+      "nrfi_prob": 0.573,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-14",
+      "game_pk": 824465,
+      "away_team": "Los Angeles Dodgers",
+      "home_team": "Cincinnati Reds",
+      "away_pitcher": "Tarik Skubal",
+      "home_pitcher": "Nick Lodolo",
+      "nrfi_prob": 0.5689,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-14",
+      "game_pk": 823656,
+      "away_team": "New York Yankees",
+      "home_team": "Minnesota Twins",
+      "away_pitcher": "Will Warren",
+      "home_pitcher": "Dean Kremer",
+      "nrfi_prob": 0.5679,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
