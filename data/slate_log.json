@@ -63257,6 +63257,93 @@
     },
     {
       "date": "2026-09-15",
+      "game_pk": 822925,
+      "away_pitcher": "Jack Perkins",
+      "home_pitcher": "Griffin Jax",
+      "nrfi_prob": 0.5686,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5266,
+        "half_prob": 0.7673,
+        "pitcher": 0.5166,
+        "batter": 0.4864,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4699,
+        "half_prob": 0.741,
+        "pitcher": 0.4662,
+        "batter": 0.3678,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6491,
+            "fps": 0.5,
+            "xera": 0.389,
+            "bb_pct": 0.601,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 423
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6119,
+            "fps": 0.5,
+            "xera": 0.351,
+            "bb_pct": 0.3489,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 482
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-15",
       "game_pk": 824143,
       "away_pitcher": "Michael Wacha",
       "home_pitcher": "Hunter Brown",
@@ -63334,93 +63421,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-15",
-      "game_pk": 822925,
-      "away_pitcher": "Jack Perkins",
-      "home_pitcher": "Griffin Jax",
-      "nrfi_prob": 0.5669,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5246,
-        "half_prob": 0.7664,
-        "pitcher": 0.5127,
-        "batter": 0.4859,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.467,
-        "half_prob": 0.7397,
-        "pitcher": 0.4605,
-        "batter": 0.3674,
-        "park_weather": 0.6167,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6493,
-            "fps": 0.5,
-            "xera": 0.3751,
-            "bb_pct": 0.5947,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 419
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6039,
-            "fps": 0.5,
-            "xera": 0.3387,
-            "bb_pct": 0.338,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 477
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
