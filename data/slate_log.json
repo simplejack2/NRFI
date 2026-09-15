@@ -63260,30 +63260,30 @@
       "game_pk": 822925,
       "away_pitcher": "Jack Perkins",
       "home_pitcher": "Griffin Jax",
-      "nrfi_prob": 0.5771,
-      "confirmed": false,
+      "nrfi_prob": 0.5722,
+      "confirmed": true,
       "top": {
-        "composite": 0.5214,
-        "half_prob": 0.7649,
-        "pitcher": 0.527,
-        "batter": 0.5,
+        "composite": 0.5305,
+        "half_prob": 0.7692,
+        "pitcher": 0.5254,
+        "batter": 0.4849,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4989,
-        "half_prob": 0.7545,
-        "pitcher": 0.4811,
-        "batter": 0.5,
+        "composite": 0.476,
+        "half_prob": 0.7439,
+        "pitcher": 0.4791,
+        "batter": 0.3671,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6377,
+            "k_pct": 0.6286,
             "fps": 0.5,
             "xera": 0.4561,
             "bb_pct": 0.5851,
@@ -63299,11 +63299,11 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 3,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -63313,7 +63313,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6151,
+            "k_pct": 0.6039,
             "fps": 0.5,
             "xera": 0.4281,
             "bb_pct": 0.3301,
@@ -63329,7 +63329,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
