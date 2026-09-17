@@ -65087,23 +65087,23 @@
       "game_pk": 822845,
       "away_pitcher": "Sonny Gray",
       "home_pitcher": "Tyler Alexander",
-      "nrfi_prob": 0.568,
+      "nrfi_prob": 0.567,
       "confirmed": false,
       "top": {
-        "composite": 0.4854,
-        "half_prob": 0.7482,
+        "composite": 0.4839,
+        "half_prob": 0.7475,
         "pitcher": 0.4965,
         "batter": 0.5,
-        "park_weather": 0.4548,
+        "park_weather": 0.4433,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5089,
-        "half_prob": 0.7592,
+        "composite": 0.5074,
+        "half_prob": 0.7585,
         "pitcher": 0.5445,
         "batter": 0.5,
-        "park_weather": 0.4548,
+        "park_weather": 0.4433,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -65174,23 +65174,23 @@
       "game_pk": 824141,
       "away_pitcher": "Seth Lugo",
       "home_pitcher": "TBD",
-      "nrfi_prob": 0.5575,
+      "nrfi_prob": 0.5576,
       "confirmed": false,
       "top": {
-        "composite": 0.4919,
-        "half_prob": 0.7512,
+        "composite": 0.4921,
+        "half_prob": 0.7513,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.4917,
+        "park_weather": 0.4933,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4721,
-        "half_prob": 0.7421,
+        "composite": 0.4723,
+        "half_prob": 0.7422,
         "pitcher": 0.4596,
         "batter": 0.5,
-        "park_weather": 0.4917,
+        "park_weather": 0.4933,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -65333,93 +65333,6 @@
     },
     {
       "date": "2026-09-17",
-      "game_pk": 824305,
-      "away_pitcher": "Michael King",
-      "home_pitcher": "Tanner Gordon",
-      "nrfi_prob": 0.5481,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4642,
-        "half_prob": 0.7384,
-        "pitcher": 0.491,
-        "batter": 0.5,
-        "park_weather": 0.3125,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4727,
-        "half_prob": 0.7423,
-        "pitcher": 0.5084,
-        "batter": 0.5,
-        "park_weather": 0.3125,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2938,
-            "fps": 0.5,
-            "xera": 0.3889,
-            "bb_pct": 0.8754,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 428
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4657,
-            "fps": 0.5,
-            "xera": 0.607,
-            "bb_pct": 0.4357,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 711
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-17",
       "game_pk": 824464,
       "away_pitcher": "Justin Wrobleski",
       "home_pitcher": "Brady Singer",
@@ -65486,6 +65399,93 @@
             "gb_pct": 0.5
           },
           "bf": 552
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-17",
+      "game_pk": 824305,
+      "away_pitcher": "Michael King",
+      "home_pitcher": "Tanner Gordon",
+      "nrfi_prob": 0.5444,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4588,
+        "half_prob": 0.7359,
+        "pitcher": 0.491,
+        "batter": 0.5,
+        "park_weather": 0.2708,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4673,
+        "half_prob": 0.7398,
+        "pitcher": 0.5084,
+        "batter": 0.5,
+        "park_weather": 0.2708,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2938,
+            "fps": 0.5,
+            "xera": 0.3889,
+            "bb_pct": 0.8754,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 428
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4657,
+            "fps": 0.5,
+            "xera": 0.607,
+            "bb_pct": 0.4357,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 711
         },
         "ds": {
           "dmg": {
