@@ -64736,93 +64736,6 @@
     },
     {
       "date": "2026-09-17",
-      "game_pk": 823573,
-      "away_pitcher": "Aaron Nola",
-      "home_pitcher": "Nolan McLean",
-      "nrfi_prob": 0.5828,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5194,
-        "half_prob": 0.764,
-        "pitcher": 0.5356,
-        "batter": 0.4513,
-        "park_weather": 0.5625,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5168,
-        "half_prob": 0.7628,
-        "pitcher": 0.5536,
-        "batter": 0.4091,
-        "park_weather": 0.5625,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7013,
-            "fps": 0.5,
-            "xera": 0.5644,
-            "bb_pct": 0.3941,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 695
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6044,
-            "fps": 0.5,
-            "xera": 0.5876,
-            "bb_pct": 0.6107,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 690
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-17",
       "game_pk": 822924,
       "away_pitcher": "Jeffrey Springs",
       "home_pitcher": "Drew Rasmussen",
@@ -65084,6 +64997,93 @@
     },
     {
       "date": "2026-09-17",
+      "game_pk": 823573,
+      "away_pitcher": "Aaron Nola",
+      "home_pitcher": "Nolan McLean",
+      "nrfi_prob": 0.5769,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5029,
+        "half_prob": 0.7563,
+        "pitcher": 0.5018,
+        "batter": 0.4514,
+        "park_weather": 0.5625,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5168,
+        "half_prob": 0.7628,
+        "pitcher": 0.5536,
+        "batter": 0.4091,
+        "park_weather": 0.5625,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6998,
+            "fps": 0.5,
+            "xera": 0.4114,
+            "bb_pct": 0.3955,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 696
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6044,
+            "fps": 0.5,
+            "xera": 0.5876,
+            "bb_pct": 0.6107,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 690
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-17",
       "game_pk": 823978,
       "away_pitcher": "Taj Bradley",
       "home_pitcher": "Walbert Ure\u00f1a",
@@ -65161,93 +65161,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-17",
-      "game_pk": 824141,
-      "away_pitcher": "Seth Lugo",
-      "home_pitcher": "Miguel Ullola",
-      "nrfi_prob": 0.5648,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5251,
-        "half_prob": 0.7667,
-        "pitcher": 0.5618,
-        "batter": 0.4613,
-        "park_weather": 0.4867,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.4602,
-        "half_prob": 0.7366,
-        "pitcher": 0.4593,
-        "batter": 0.407,
-        "park_weather": 0.4867,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8061,
-            "fps": 0.5,
-            "xera": 0.5395,
-            "bb_pct": 0.8338,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 30
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3098,
-            "fps": 0.5,
-            "xera": 0.3833,
-            "bb_pct": 0.637,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 709
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -65422,6 +65335,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-17",
+      "game_pk": 824141,
+      "away_pitcher": "Seth Lugo",
+      "home_pitcher": "Miguel Ullola",
+      "nrfi_prob": 0.5565,
+      "confirmed": true,
+      "top": {
+        "composite": 0.498,
+        "half_prob": 0.7541,
+        "pitcher": 0.5071,
+        "batter": 0.4601,
+        "park_weather": 0.4867,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4633,
+        "half_prob": 0.738,
+        "pitcher": 0.4657,
+        "batter": 0.407,
+        "park_weather": 0.4867,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7346,
+            "fps": 0.5,
+            "xera": 0.4795,
+            "bb_pct": 0.5318,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 34
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3098,
+            "fps": 0.5,
+            "xera": 0.4124,
+            "bb_pct": 0.637,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 709
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
