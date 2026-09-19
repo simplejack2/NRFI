@@ -66992,20 +66992,20 @@
       "nrfi_prob": 0.5835,
       "confirmed": false,
       "top": {
-        "composite": 0.4866,
+        "composite": 0.4867,
         "half_prob": 0.7488,
         "pitcher": 0.4896,
         "batter": 0.5,
-        "park_weather": 0.49,
+        "park_weather": 0.4908,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5525,
-        "half_prob": 0.7792,
+        "composite": 0.5526,
+        "half_prob": 0.7793,
         "pitcher": 0.6241,
         "batter": 0.5,
-        "park_weather": 0.49,
+        "park_weather": 0.4908,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -67148,6 +67148,93 @@
     },
     {
       "date": "2026-09-19",
+      "game_pk": 823571,
+      "away_pitcher": "Andrew Painter",
+      "home_pitcher": "Christian Scott",
+      "nrfi_prob": 0.5746,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5186,
+        "half_prob": 0.7637,
+        "pitcher": 0.5308,
+        "batter": 0.5,
+        "park_weather": 0.5812,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4945,
+        "half_prob": 0.7524,
+        "pitcher": 0.4815,
+        "batter": 0.5,
+        "park_weather": 0.5812,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.7267,
+            "fps": 0.5,
+            "xera": 0.5454,
+            "bb_pct": 0.3569,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 453
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3415,
+            "fps": 0.5,
+            "xera": 0.5444,
+            "bb_pct": 0.5022,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 507
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-19",
       "game_pk": 823249,
       "away_pitcher": "Eury P\u00e9rez",
       "home_pitcher": "Casey Mize",
@@ -67225,93 +67312,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-19",
-      "game_pk": 823571,
-      "away_pitcher": "Andrew Painter",
-      "home_pitcher": "Christian Scott",
-      "nrfi_prob": 0.5744,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5183,
-        "half_prob": 0.7635,
-        "pitcher": 0.5308,
-        "batter": 0.5,
-        "park_weather": 0.5784,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4941,
-        "half_prob": 0.7523,
-        "pitcher": 0.4815,
-        "batter": 0.5,
-        "park_weather": 0.5784,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.7267,
-            "fps": 0.5,
-            "xera": 0.5454,
-            "bb_pct": 0.3569,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 453
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3415,
-            "fps": 0.5,
-            "xera": 0.5444,
-            "bb_pct": 0.5022,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 507
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -67760,23 +67760,23 @@
       "game_pk": 822843,
       "away_pitcher": "Jos\u00e9 Soriano",
       "home_pitcher": "Cal Quantrill",
-      "nrfi_prob": 0.5581,
+      "nrfi_prob": 0.559,
       "confirmed": false,
       "top": {
-        "composite": 0.4931,
-        "half_prob": 0.7518,
+        "composite": 0.4944,
+        "half_prob": 0.7524,
         "pitcher": 0.5161,
         "batter": 0.5,
-        "park_weather": 0.44,
+        "park_weather": 0.4498,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4728,
-        "half_prob": 0.7424,
+        "composite": 0.474,
+        "half_prob": 0.743,
         "pitcher": 0.4746,
         "batter": 0.5,
-        "park_weather": 0.44,
+        "park_weather": 0.4498,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
