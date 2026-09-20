@@ -68125,30 +68125,30 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-09-20",
       "game_pk": 824381,
       "away_pitcher": "Jack Perkins",
       "home_pitcher": "Gavin Williams",
-      "nrfi_prob": 0.5927,
+      "nrfi_prob": 0.5861,
       "confirmed": false,
       "top": {
-        "composite": 0.5535,
-        "half_prob": 0.7797,
+        "composite": 0.5442,
+        "half_prob": 0.7754,
         "pitcher": 0.59,
         "batter": 0.5,
-        "park_weather": 0.6263,
+        "park_weather": 0.5542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5113,
-        "half_prob": 0.7602,
+        "composite": 0.5019,
+        "half_prob": 0.7559,
         "pitcher": 0.5038,
         "batter": 0.5,
-        "park_weather": 0.6263,
+        "park_weather": 0.5542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -68281,93 +68281,6 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-20",
-      "game_pk": 824789,
-      "away_pitcher": "Jacob Misiorowski",
-      "home_pitcher": "Brandon Young",
-      "nrfi_prob": 0.579,
-      "confirmed": false,
-      "top": {
-        "composite": 0.47,
-        "half_prob": 0.7411,
-        "pitcher": 0.4492,
-        "batter": 0.5,
-        "park_weather": 0.5143,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.557,
-        "half_prob": 0.7813,
-        "pitcher": 0.6268,
-        "batter": 0.5,
-        "park_weather": 0.5143,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2948,
-            "fps": 0.5,
-            "xera": 0.4541,
-            "bb_pct": 0.4734,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 629
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.9824,
-            "fps": 0.5,
-            "xera": 0.5787,
-            "bb_pct": 0.6621,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 636
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -68530,6 +68443,93 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-20",
+      "game_pk": 824789,
+      "away_pitcher": "Jacob Misiorowski",
+      "home_pitcher": "Brandon Young",
+      "nrfi_prob": 0.5754,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4648,
+        "half_prob": 0.7387,
+        "pitcher": 0.4492,
+        "batter": 0.5,
+        "park_weather": 0.4741,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5518,
+        "half_prob": 0.7789,
+        "pitcher": 0.6268,
+        "batter": 0.5,
+        "park_weather": 0.4741,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2948,
+            "fps": 0.5,
+            "xera": 0.4541,
+            "bb_pct": 0.4734,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 629
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.9824,
+            "fps": 0.5,
+            "xera": 0.5787,
+            "bb_pct": 0.6621,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 636
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -69289,13 +69289,13 @@
       "date": "2026-09-20",
       "game_pk": 824300,
       "away_pitcher": "Kade Anderson",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5437,
+      "home_pitcher": "Tomoyuki Sugano",
+      "nrfi_prob": 0.5359,
       "confirmed": false,
       "top": {
-        "composite": 0.4724,
-        "half_prob": 0.7422,
-        "pitcher": 0.5,
+        "composite": 0.4493,
+        "half_prob": 0.7316,
+        "pitcher": 0.453,
         "batter": 0.5,
         "park_weather": 0.3412,
         "damage_speed": 0.5,
@@ -69311,7 +69311,19 @@
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.1291,
+            "fps": 0.5,
+            "xera": 0.3992,
+            "bb_pct": 0.7994,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 614
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
