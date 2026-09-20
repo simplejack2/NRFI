@@ -7688,7 +7688,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-09-19",
@@ -7701,10 +7701,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-19",
@@ -7717,10 +7717,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-09-20",
+      "game_pk": 824381,
+      "away_team": "Athletics",
+      "home_team": "Cleveland Guardians",
+      "away_pitcher": "Jack Perkins",
+      "home_pitcher": "Gavin Williams",
+      "nrfi_prob": 0.5927,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-20",
+      "game_pk": 822844,
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Texas Rangers",
+      "away_pitcher": "TBD",
+      "home_pitcher": "Jacob deGrom",
+      "nrfi_prob": 0.5824,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-20",
+      "game_pk": 824789,
+      "away_team": "Milwaukee Brewers",
+      "home_team": "Baltimore Orioles",
+      "away_pitcher": "Jacob Misiorowski",
+      "home_pitcher": "Brandon Young",
+      "nrfi_prob": 0.579,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
