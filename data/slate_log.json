@@ -68129,6 +68129,93 @@
     },
     {
       "date": "2026-09-20",
+      "game_pk": 822844,
+      "away_pitcher": "Spencer Miles",
+      "home_pitcher": "Jacob deGrom",
+      "nrfi_prob": 0.5888,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5381,
+        "half_prob": 0.7726,
+        "pitcher": 0.6059,
+        "batter": 0.4426,
+        "park_weather": 0.4592,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5153,
+        "half_prob": 0.7621,
+        "pitcher": 0.5551,
+        "batter": 0.4503,
+        "park_weather": 0.4592,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8489,
+            "fps": 0.5,
+            "xera": 0.5431,
+            "bb_pct": 0.7401,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 637
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5571,
+            "fps": 0.5,
+            "xera": 0.5567,
+            "bb_pct": 0.7308,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 381
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-20",
       "game_pk": 824381,
       "away_pitcher": "Jack Perkins",
       "home_pitcher": "Gavin Williams",
@@ -68216,97 +68303,10 @@
     },
     {
       "date": "2026-09-20",
-      "game_pk": 822844,
-      "away_pitcher": "Spencer Miles",
-      "home_pitcher": "Jacob deGrom",
-      "nrfi_prob": 0.5883,
-      "confirmed": true,
-      "top": {
-        "composite": 0.5367,
-        "half_prob": 0.772,
-        "pitcher": 0.6059,
-        "batter": 0.4379,
-        "park_weather": 0.4582,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.515,
-        "half_prob": 0.762,
-        "pitcher": 0.5546,
-        "batter": 0.4506,
-        "park_weather": 0.4582,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8489,
-            "fps": 0.5,
-            "xera": 0.5431,
-            "bb_pct": 0.74,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 637
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5594,
-            "fps": 0.5,
-            "xera": 0.5567,
-            "bb_pct": 0.7246,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 377
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-20",
       "game_pk": 823329,
       "away_pitcher": "Michael Wacha",
       "home_pitcher": "Lake Bachar",
-      "nrfi_prob": 0.5842,
+      "nrfi_prob": 0.5833,
       "confirmed": true,
       "top": {
         "composite": 0.5156,
@@ -68318,9 +68318,9 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5247,
-        "half_prob": 0.7665,
-        "pitcher": 0.5049,
+        "composite": 0.5222,
+        "half_prob": 0.7653,
+        "pitcher": 0.4998,
         "batter": 0.4863,
         "park_weather": 0.6458,
         "damage_speed": 0.5,
@@ -68359,16 +68359,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3448,
+            "k_pct": 0.3424,
             "fps": 0.5,
-            "xera": 0.5272,
-            "bb_pct": 0.6919,
+            "xera": 0.5165,
+            "bb_pct": 0.6757,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 783
+          "bf": 786
         },
         "ds": {
           "dmg": {
@@ -68567,21 +68567,21 @@
       "game_pk": 823570,
       "away_pitcher": "Cristopher S\u00e1nchez",
       "home_pitcher": "Jonah Tong",
-      "nrfi_prob": 0.5748,
+      "nrfi_prob": 0.5749,
       "confirmed": true,
       "top": {
         "composite": 0.4821,
         "half_prob": 0.7467,
         "pitcher": 0.449,
-        "batter": 0.4456,
+        "batter": 0.4457,
         "park_weather": 0.6139,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.532,
-        "half_prob": 0.7698,
-        "pitcher": 0.5472,
+        "composite": 0.5321,
+        "half_prob": 0.7699,
+        "pitcher": 0.5476,
         "batter": 0.4519,
         "park_weather": 0.6139,
         "damage_speed": 0.5,
@@ -68620,16 +68620,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6556,
+            "k_pct": 0.6533,
             "fps": 0.5,
-            "xera": 0.3935,
-            "bb_pct": 0.8048,
+            "xera": 0.3965,
+            "bb_pct": 0.8055,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 828
+          "bf": 830
         },
         "ds": {
           "dmg": {
@@ -68654,7 +68654,7 @@
       "game_pk": 822922,
       "away_pitcher": "Patrick Sandoval",
       "home_pitcher": "Griffin Jax",
-      "nrfi_prob": 0.573,
+      "nrfi_prob": 0.5731,
       "confirmed": true,
       "top": {
         "composite": 0.5346,
@@ -68666,9 +68666,9 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4745,
-        "half_prob": 0.7432,
-        "pitcher": 0.4332,
+        "composite": 0.4748,
+        "half_prob": 0.7433,
+        "pitcher": 0.4337,
         "batter": 0.4448,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
@@ -68707,16 +68707,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4865,
+            "k_pct": 0.4843,
             "fps": 0.5,
-            "xera": 0.3319,
-            "bb_pct": 0.3043,
+            "xera": 0.3346,
+            "bb_pct": 0.3067,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 292
+          "bf": 293
         },
         "ds": {
           "dmg": {
@@ -69089,21 +69089,21 @@
       "game_pk": 823001,
       "away_pitcher": "Jake Irvin",
       "home_pitcher": "Quinn Mathews",
-      "nrfi_prob": 0.5531,
+      "nrfi_prob": 0.5545,
       "confirmed": true,
       "top": {
-        "composite": 0.4875,
-        "half_prob": 0.7492,
-        "pitcher": 0.472,
-        "batter": 0.4551,
+        "composite": 0.4896,
+        "half_prob": 0.7502,
+        "pitcher": 0.476,
+        "batter": 0.4554,
         "park_weather": 0.5492,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.464,
-        "half_prob": 0.7383,
-        "pitcher": 0.4498,
+        "composite": 0.4658,
+        "half_prob": 0.7392,
+        "pitcher": 0.4535,
         "batter": 0.4083,
         "park_weather": 0.5492,
         "damage_speed": 0.5,
@@ -69112,16 +69112,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4028,
+            "k_pct": 0.4107,
             "fps": 0.5,
-            "xera": 0.5549,
-            "bb_pct": 0.3591,
+            "xera": 0.5564,
+            "bb_pct": 0.373,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 179
+          "bf": 182
         },
         "ds": {
           "dmg": {
@@ -69142,16 +69142,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.456,
+            "k_pct": 0.4604,
             "fps": 0.5,
-            "xera": 0.4035,
-            "bb_pct": 0.3497,
+            "xera": 0.4141,
+            "bb_pct": 0.3534,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 440
+          "bf": 442
         },
         "ds": {
           "dmg": {
@@ -69179,18 +69179,18 @@
       "nrfi_prob": 0.5513,
       "confirmed": true,
       "top": {
-        "composite": 0.4958,
-        "half_prob": 0.7531,
-        "pitcher": 0.5071,
-        "batter": 0.447,
+        "composite": 0.4968,
+        "half_prob": 0.7535,
+        "pitcher": 0.5089,
+        "batter": 0.4471,
         "park_weather": 0.4975,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4502,
-        "half_prob": 0.732,
-        "pitcher": 0.4354,
+        "composite": 0.4496,
+        "half_prob": 0.7317,
+        "pitcher": 0.4341,
         "batter": 0.4082,
         "park_weather": 0.4975,
         "damage_speed": 0.5,
@@ -69199,16 +69199,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7275,
+            "k_pct": 0.7285,
             "fps": 0.5,
-            "xera": 0.5147,
-            "bb_pct": 0.2348,
+            "xera": 0.5188,
+            "bb_pct": 0.2401,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 423
+          "bf": 426
         },
         "ds": {
           "dmg": {
@@ -69229,16 +69229,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.2164,
+            "k_pct": 0.2171,
             "fps": 0.5,
-            "xera": 0.5237,
-            "bb_pct": 0.3659,
+            "xera": 0.521,
+            "bb_pct": 0.3599,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 587
+          "bf": 592
         },
         "ds": {
           "dmg": {
@@ -69263,7 +69263,7 @@
       "game_pk": 824462,
       "away_pitcher": "David Peterson",
       "home_pitcher": "Rhett Lowder",
-      "nrfi_prob": 0.5327,
+      "nrfi_prob": 0.5328,
       "confirmed": true,
       "top": {
         "composite": 0.4234,
@@ -69275,10 +69275,10 @@
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4675,
-        "half_prob": 0.7399,
-        "pitcher": 0.4666,
-        "batter": 0.4766,
+        "composite": 0.4676,
+        "half_prob": 0.74,
+        "pitcher": 0.4667,
+        "batter": 0.4768,
         "park_weather": 0.3708,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -69316,16 +69316,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3927,
+            "k_pct": 0.3892,
             "fps": 0.5,
-            "xera": 0.53,
-            "bb_pct": 0.3519,
+            "xera": 0.5313,
+            "bb_pct": 0.3555,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 641
+          "bf": 644
         },
         "ds": {
           "dmg": {
@@ -69350,22 +69350,22 @@
       "game_pk": 824300,
       "away_pitcher": "Kade Anderson",
       "home_pitcher": "Tomoyuki Sugano",
-      "nrfi_prob": 0.5324,
+      "nrfi_prob": 0.5328,
       "confirmed": true,
       "top": {
-        "composite": 0.4358,
-        "half_prob": 0.7255,
-        "pitcher": 0.4398,
-        "batter": 0.4498,
+        "composite": 0.436,
+        "half_prob": 0.7256,
+        "pitcher": 0.4401,
+        "batter": 0.4499,
         "park_weather": 0.2834,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4542,
-        "half_prob": 0.7338,
-        "pitcher": 0.4561,
-        "batter": 0.4884,
+        "composite": 0.4552,
+        "half_prob": 0.7343,
+        "pitcher": 0.4578,
+        "batter": 0.489,
         "park_weather": 0.2834,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -69373,10 +69373,10 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.134,
+            "k_pct": 0.1344,
             "fps": 0.5,
-            "xera": 0.334,
-            "bb_pct": 0.8011,
+            "xera": 0.3351,
+            "bb_pct": 0.8013,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
@@ -69403,16 +69403,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3709,
+            "k_pct": 0.3838,
             "fps": 0.5,
-            "xera": 0.4058,
-            "bb_pct": 0.5869,
+            "xera": 0.3906,
+            "bb_pct": 0.6041,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 107
+          "bf": 110
         },
         "ds": {
           "dmg": {
