@@ -7733,10 +7733,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-20",
@@ -7749,10 +7749,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 1,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-20",
@@ -7765,10 +7765,42 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 4,
+      "result": "YRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-09-21",
+      "game_pk": 823169,
+      "away_team": "Minnesota Twins",
+      "home_team": "San Francisco Giants",
+      "away_pitcher": "Zebby Matthews",
+      "home_pitcher": "Blade Tidwell",
+      "nrfi_prob": 0.5599,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-21",
+      "game_pk": 824787,
+      "away_team": "Toronto Blue Jays",
+      "home_team": "Baltimore Orioles",
+      "away_pitcher": "Trey Yesavage",
+      "home_pitcher": "Shane Baz",
+      "nrfi_prob": 0.5539,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
