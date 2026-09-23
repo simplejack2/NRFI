@@ -71573,93 +71573,6 @@
     },
     {
       "date": "2026-09-23",
-      "game_pk": 823168,
-      "away_pitcher": "Connor Prielipp",
-      "home_pitcher": "Cesar Perdomo",
-      "nrfi_prob": 0.5676,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4725,
-        "half_prob": 0.7422,
-        "pitcher": 0.4316,
-        "batter": 0.5,
-        "park_weather": 0.6002,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5208,
-        "half_prob": 0.7647,
-        "pitcher": 0.5301,
-        "batter": 0.5,
-        "park_weather": 0.6002,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2075,
-            "fps": 0.5,
-            "xera": 0.4795,
-            "bb_pct": 0.5055,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 83
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.5809,
-            "fps": 0.5,
-            "xera": 0.5477,
-            "bb_pct": 0.536,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 513
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-23",
       "game_pk": 824625,
       "away_pitcher": "Ryan Gusto",
       "home_pitcher": "Kevin Gausman",
@@ -71726,6 +71639,93 @@
             "gb_pct": 0.5
           },
           "bf": 369
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-23",
+      "game_pk": 823168,
+      "away_pitcher": "Connor Prielipp",
+      "home_pitcher": "Cesar Perdomo",
+      "nrfi_prob": 0.5669,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4716,
+        "half_prob": 0.7418,
+        "pitcher": 0.4316,
+        "batter": 0.5,
+        "park_weather": 0.5936,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5199,
+        "half_prob": 0.7642,
+        "pitcher": 0.5301,
+        "batter": 0.5,
+        "park_weather": 0.5936,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2075,
+            "fps": 0.5,
+            "xera": 0.4795,
+            "bb_pct": 0.5055,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 83
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.5809,
+            "fps": 0.5,
+            "xera": 0.5477,
+            "bb_pct": 0.536,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 513
         },
         "ds": {
           "dmg": {
