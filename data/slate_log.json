@@ -72388,7 +72388,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "YRFI"
     },
     {
       "date": "2026-09-24",
@@ -72653,90 +72653,15 @@
     },
     {
       "date": "2026-09-24",
-      "game_pk": 824059,
-      "away_pitcher": "TBD",
-      "home_pitcher": "Randy Dobnak",
-      "nrfi_prob": 0.5681,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4862,
-        "half_prob": 0.7486,
-        "pitcher": 0.4545,
-        "batter": 0.5,
-        "park_weather": 0.6188,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5084,
-        "half_prob": 0.7589,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.6188,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.179,
-            "fps": 0.5,
-            "xera": 0.5023,
-            "bb_pct": 0.5843,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 308
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-24",
       "game_pk": 823087,
       "away_pitcher": "Grayson Rodriguez",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5671,
+      "home_pitcher": "Bryan Woo",
+      "nrfi_prob": 0.5818,
       "confirmed": false,
       "top": {
-        "composite": 0.5038,
-        "half_prob": 0.7568,
-        "pitcher": 0.5,
+        "composite": 0.5465,
+        "half_prob": 0.7765,
+        "pitcher": 0.5871,
         "batter": 0.5,
         "park_weather": 0.5833,
         "damage_speed": 0.5,
@@ -72752,7 +72677,19 @@
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.592,
+            "fps": 0.5,
+            "xera": 0.6176,
+            "bb_pct": 0.8193,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 684
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -72803,42 +72740,42 @@
     },
     {
       "date": "2026-09-24",
-      "game_pk": 824707,
+      "game_pk": 824059,
       "away_pitcher": "TBD",
-      "home_pitcher": "Ranger Suarez",
-      "nrfi_prob": 0.5654,
+      "home_pitcher": "Randy Dobnak",
+      "nrfi_prob": 0.5653,
       "confirmed": false,
       "top": {
-        "composite": 0.5021,
-        "half_prob": 0.756,
-        "pitcher": 0.5353,
+        "composite": 0.4821,
+        "half_prob": 0.7467,
+        "pitcher": 0.4545,
         "batter": 0.5,
-        "park_weather": 0.4367,
+        "park_weather": 0.5875,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4848,
-        "half_prob": 0.7479,
+        "composite": 0.5044,
+        "half_prob": 0.757,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.4367,
+        "park_weather": 0.5875,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.49,
+            "k_pct": 0.179,
             "fps": 0.5,
-            "xera": 0.6011,
-            "bb_pct": 0.606,
+            "xera": 0.5023,
+            "bb_pct": 0.5843,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 593
+          "bf": 308
         },
         "ds": {
           "dmg": {
@@ -73028,6 +72965,81 @@
     },
     {
       "date": "2026-09-24",
+      "game_pk": 824707,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Ranger Suarez",
+      "nrfi_prob": 0.562,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4973,
+        "half_prob": 0.7537,
+        "pitcher": 0.5353,
+        "batter": 0.5,
+        "park_weather": 0.4,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.48,
+        "half_prob": 0.7457,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.49,
+            "fps": 0.5,
+            "xera": 0.6011,
+            "bb_pct": 0.606,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 593
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-24",
       "game_pk": 824866,
       "away_pitcher": "Brady Singer",
       "home_pitcher": "Tyler Mahle",
@@ -73193,23 +73205,23 @@
       "game_pk": 824623,
       "away_pitcher": "Tyler Phillips",
       "home_pitcher": "Matthew Boyd",
-      "nrfi_prob": 0.554,
+      "nrfi_prob": 0.5513,
       "confirmed": false,
       "top": {
-        "composite": 0.4854,
-        "half_prob": 0.7482,
+        "composite": 0.4814,
+        "half_prob": 0.7464,
         "pitcher": 0.4885,
         "batter": 0.5,
-        "park_weather": 0.4851,
+        "park_weather": 0.4542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4687,
-        "half_prob": 0.7405,
+        "composite": 0.4646,
+        "half_prob": 0.7386,
         "pitcher": 0.4543,
         "batter": 0.5,
-        "park_weather": 0.4851,
+        "park_weather": 0.4542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
