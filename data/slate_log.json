@@ -72656,30 +72656,30 @@
       "game_pk": 823895,
       "away_pitcher": "Nick Pivetta",
       "home_pitcher": "Tyler Glasnow",
-      "nrfi_prob": 0.5785,
-      "confirmed": false,
+      "nrfi_prob": 0.5809,
+      "confirmed": true,
       "top": {
-        "composite": 0.5231,
-        "half_prob": 0.7657,
-        "pitcher": 0.5515,
-        "batter": 0.5,
+        "composite": 0.5158,
+        "half_prob": 0.7623,
+        "pitcher": 0.5522,
+        "batter": 0.4198,
         "park_weather": 0.5375,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.501,
-        "half_prob": 0.7555,
+        "composite": 0.515,
+        "half_prob": 0.762,
         "pitcher": 0.56,
         "batter": 0.4028,
         "park_weather": 0.5375,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8721,
+            "k_pct": 0.876,
             "fps": 0.5,
             "xera": 0.4558,
             "bb_pct": 0.4587,
@@ -72695,7 +72695,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -73007,7 +73007,7 @@
       "nrfi_prob": 0.5538,
       "confirmed": true,
       "top": {
-        "composite": 0.4813,
+        "composite": 0.4814,
         "half_prob": 0.7463,
         "pitcher": 0.5348,
         "batter": 0.3745,
@@ -73027,7 +73027,7 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4874,
+            "k_pct": 0.4873,
             "fps": 0.5,
             "xera": 0.6011,
             "bb_pct": 0.606,
@@ -73091,21 +73091,21 @@
       "game_pk": 823411,
       "away_pitcher": "Shane Drohan",
       "home_pitcher": "Andrew Painter",
-      "nrfi_prob": 0.5532,
+      "nrfi_prob": 0.5533,
       "confirmed": true,
       "top": {
-        "composite": 0.4625,
-        "half_prob": 0.7376,
-        "pitcher": 0.4598,
-        "batter": 0.4193,
+        "composite": 0.4643,
+        "half_prob": 0.7385,
+        "pitcher": 0.4632,
+        "batter": 0.4196,
         "park_weather": 0.477,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4893,
-        "half_prob": 0.75,
-        "pitcher": 0.5013,
+        "composite": 0.4876,
+        "half_prob": 0.7492,
+        "pitcher": 0.4977,
         "batter": 0.4434,
         "park_weather": 0.477,
         "damage_speed": 0.5,
@@ -73114,16 +73114,16 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.3914,
+            "k_pct": 0.4012,
             "fps": 0.5,
-            "xera": 0.4115,
-            "bb_pct": 0.4917,
+            "xera": 0.4174,
+            "bb_pct": 0.4942,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 536
+          "bf": 538
         },
         "ds": {
           "dmg": {
@@ -73144,16 +73144,16 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.5387,
+            "k_pct": 0.5466,
             "fps": 0.5,
             "xera": 0.45,
-            "bb_pct": 0.5379,
+            "bb_pct": 0.5026,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 514
+          "bf": 519
         },
         "ds": {
           "dmg": {
