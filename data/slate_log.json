@@ -73076,6 +73076,93 @@
     },
     {
       "date": "2026-09-24",
+      "game_pk": 822842,
+      "away_pitcher": "Zac Thornton",
+      "home_pitcher": "Kumar Rocker",
+      "nrfi_prob": 0.5594,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4756,
+        "half_prob": 0.7437,
+        "pitcher": 0.4683,
+        "batter": 0.5,
+        "park_weather": 0.4859,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.494,
+        "half_prob": 0.7522,
+        "pitcher": 0.5057,
+        "batter": 0.5,
+        "park_weather": 0.4859,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4197,
+            "fps": 0.5,
+            "xera": 0.4805,
+            "bb_pct": 0.4077,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 627
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.2974,
+            "fps": 0.5,
+            "xera": 0.5045,
+            "bb_pct": 0.7943,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 318
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-24",
       "game_pk": 824059,
       "away_pitcher": "David Sandlin",
       "home_pitcher": "Randy Dobnak",
@@ -73163,113 +73250,26 @@
     },
     {
       "date": "2026-09-24",
-      "game_pk": 822842,
-      "away_pitcher": "Zac Thornton",
-      "home_pitcher": "Kumar Rocker",
-      "nrfi_prob": 0.5581,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4737,
-        "half_prob": 0.7428,
-        "pitcher": 0.4683,
-        "batter": 0.5,
-        "park_weather": 0.4708,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.492,
-        "half_prob": 0.7513,
-        "pitcher": 0.5057,
-        "batter": 0.5,
-        "park_weather": 0.4708,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4197,
-            "fps": 0.5,
-            "xera": 0.4805,
-            "bb_pct": 0.4077,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 627
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.2974,
-            "fps": 0.5,
-            "xera": 0.5045,
-            "bb_pct": 0.7943,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 318
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-24",
       "game_pk": 824623,
       "away_pitcher": "Tyler Phillips",
       "home_pitcher": "Matthew Boyd",
-      "nrfi_prob": 0.5537,
+      "nrfi_prob": 0.5513,
       "confirmed": false,
       "top": {
-        "composite": 0.4849,
-        "half_prob": 0.748,
+        "composite": 0.4814,
+        "half_prob": 0.7464,
         "pitcher": 0.4885,
         "batter": 0.5,
-        "park_weather": 0.481,
+        "park_weather": 0.4542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4681,
-        "half_prob": 0.7402,
+        "composite": 0.4646,
+        "half_prob": 0.7386,
         "pitcher": 0.4543,
         "batter": 0.5,
-        "park_weather": 0.481,
+        "park_weather": 0.4542,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
