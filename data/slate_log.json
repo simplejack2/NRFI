@@ -72569,23 +72569,23 @@
       "game_pk": 823493,
       "away_pitcher": "Ian Seymour",
       "home_pitcher": "Cam Schlittler",
-      "nrfi_prob": 0.589,
+      "nrfi_prob": 0.5888,
       "confirmed": false,
       "top": {
-        "composite": 0.5406,
-        "half_prob": 0.7738,
+        "composite": 0.5403,
+        "half_prob": 0.7736,
         "pitcher": 0.6183,
         "batter": 0.5,
-        "park_weather": 0.4206,
+        "park_weather": 0.418,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5134,
-        "half_prob": 0.7612,
+        "composite": 0.5131,
+        "half_prob": 0.7611,
         "pitcher": 0.5627,
         "batter": 0.5,
-        "park_weather": 0.4206,
+        "park_weather": 0.418,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -72827,101 +72827,26 @@
     },
     {
       "date": "2026-09-24",
-      "game_pk": 824950,
-      "away_pitcher": "Peter Lambert",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5645,
-      "confirmed": false,
-      "top": {
-        "composite": 0.493,
-        "half_prob": 0.7517,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.5,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4911,
-        "half_prob": 0.7509,
-        "pitcher": 0.4961,
-        "batter": 0.5,
-        "park_weather": 0.5,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.444,
-            "fps": 0.5,
-            "xera": 0.5527,
-            "bb_pct": 0.4614,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 641
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-24",
       "game_pk": 823411,
       "away_pitcher": "Bryse Wilson",
       "home_pitcher": "Andrew Painter",
-      "nrfi_prob": 0.5629,
+      "nrfi_prob": 0.5625,
       "confirmed": false,
       "top": {
-        "composite": 0.471,
-        "half_prob": 0.7416,
+        "composite": 0.4704,
+        "half_prob": 0.7413,
         "pitcher": 0.46,
         "batter": 0.5,
-        "park_weather": 0.4819,
+        "park_weather": 0.4768,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5089,
-        "half_prob": 0.7591,
+        "composite": 0.5082,
+        "half_prob": 0.7588,
         "pitcher": 0.5371,
         "batter": 0.5,
-        "park_weather": 0.4819,
+        "park_weather": 0.4768,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -72999,7 +72924,7 @@
         "half_prob": 0.76,
         "pitcher": 0.5398,
         "batter": 0.5,
-        "park_weather": 0.4866,
+        "park_weather": 0.4865,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -73008,7 +72933,7 @@
         "half_prob": 0.7374,
         "pitcher": 0.4403,
         "batter": 0.5,
-        "park_weather": 0.4866,
+        "park_weather": 0.4865,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -73337,26 +73262,113 @@
     },
     {
       "date": "2026-09-24",
-      "game_pk": 824298,
-      "away_pitcher": "Eduardo Rodriguez",
-      "home_pitcher": "Tanner Gordon",
-      "nrfi_prob": 0.5371,
+      "game_pk": 824950,
+      "away_pitcher": "Peter Lambert",
+      "home_pitcher": "Mason Barnett",
+      "nrfi_prob": 0.5479,
       "confirmed": false,
       "top": {
-        "composite": 0.4556,
-        "half_prob": 0.7345,
-        "pitcher": 0.4844,
+        "composite": 0.4451,
+        "half_prob": 0.7297,
+        "pitcher": 0.4023,
         "batter": 0.5,
-        "park_weather": 0.2708,
+        "park_weather": 0.5,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4486,
-        "half_prob": 0.7313,
+        "composite": 0.4911,
+        "half_prob": 0.7509,
+        "pitcher": 0.4961,
+        "batter": 0.5,
+        "park_weather": 0.5,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3869,
+            "fps": 0.5,
+            "xera": 0.3802,
+            "bb_pct": 0.1356,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 205
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.444,
+            "fps": 0.5,
+            "xera": 0.5527,
+            "bb_pct": 0.4614,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 641
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-24",
+      "game_pk": 824298,
+      "away_pitcher": "Eduardo Rodriguez",
+      "home_pitcher": "Tanner Gordon",
+      "nrfi_prob": 0.5407,
+      "confirmed": false,
+      "top": {
+        "composite": 0.461,
+        "half_prob": 0.7369,
+        "pitcher": 0.4844,
+        "batter": 0.5,
+        "park_weather": 0.3125,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.454,
+        "half_prob": 0.7338,
         "pitcher": 0.4702,
         "batter": 0.5,
-        "park_weather": 0.2708,
+        "park_weather": 0.3125,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
