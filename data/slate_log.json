@@ -74021,93 +74021,6 @@
     },
     {
       "date": "2026-09-25",
-      "game_pk": 824706,
-      "away_pitcher": "David Peterson",
-      "home_pitcher": "Brayan Bello",
-      "nrfi_prob": 0.5685,
-      "confirmed": true,
-      "top": {
-        "composite": 0.4821,
-        "half_prob": 0.7467,
-        "pitcher": 0.5052,
-        "batter": 0.4292,
-        "park_weather": 0.436,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "bot": {
-        "composite": 0.5135,
-        "half_prob": 0.7613,
-        "pitcher": 0.4813,
-        "batter": 0.5889,
-        "park_weather": 0.436,
-        "damage_speed": 0.5,
-        "lineup": 0.6
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3156,
-            "fps": 0.5,
-            "xera": 0.6003,
-            "bb_pct": 0.6167,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 488
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3912,
-            "fps": 0.5,
-            "xera": 0.5958,
-            "bb_pct": 0.3555,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 644
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 5
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-25",
       "game_pk": 823816,
       "away_pitcher": "Ray Kerr",
       "home_pitcher": "Eury P\u00e9rez",
@@ -74282,16 +74195,103 @@
     },
     {
       "date": "2026-09-25",
+      "game_pk": 824706,
+      "away_pitcher": "David Peterson",
+      "home_pitcher": "Brayan Bello",
+      "nrfi_prob": 0.5636,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4749,
+        "half_prob": 0.7433,
+        "pitcher": 0.4905,
+        "batter": 0.429,
+        "park_weather": 0.436,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5071,
+        "half_prob": 0.7583,
+        "pitcher": 0.4683,
+        "batter": 0.5889,
+        "park_weather": 0.436,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3183,
+            "fps": 0.5,
+            "xera": 0.5394,
+            "bb_pct": 0.6039,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 491
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3912,
+            "fps": 0.5,
+            "xera": 0.5369,
+            "bb_pct": 0.3555,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 644
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-25",
       "game_pk": 823491,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Brendan Beck",
-      "nrfi_prob": 0.5628,
+      "nrfi_prob": 0.5633,
       "confirmed": true,
       "top": {
-        "composite": 0.45,
-        "half_prob": 0.7319,
-        "pitcher": 0.3926,
-        "batter": 0.5154,
+        "composite": 0.4513,
+        "half_prob": 0.7325,
+        "pitcher": 0.395,
+        "batter": 0.5159,
         "park_weather": 0.4344,
         "damage_speed": 0.5,
         "lineup": 0.6
@@ -74308,10 +74308,10 @@
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4527,
+            "k_pct": 0.4633,
             "fps": 0.5,
             "xera": 0.3114,
-            "bb_pct": 0.1467,
+            "bb_pct": 0.1529,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
