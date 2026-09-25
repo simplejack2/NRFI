@@ -73700,23 +73700,23 @@
       "game_pk": 823167,
       "away_pitcher": "Tarik Skubal",
       "home_pitcher": "Yunior Marte",
-      "nrfi_prob": 0.5771,
+      "nrfi_prob": 0.5762,
       "confirmed": false,
       "top": {
-        "composite": 0.4571,
-        "half_prob": 0.7351,
+        "composite": 0.4557,
+        "half_prob": 0.7345,
         "pitcher": 0.4056,
         "batter": 0.5,
-        "park_weather": 0.5795,
+        "park_weather": 0.5694,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5656,
-        "half_prob": 0.7851,
+        "composite": 0.5643,
+        "half_prob": 0.7845,
         "pitcher": 0.6272,
         "batter": 0.5,
-        "park_weather": 0.5795,
+        "park_weather": 0.5694,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -73949,23 +73949,23 @@
       "game_pk": 823816,
       "away_pitcher": "TBD",
       "home_pitcher": "Eury P\u00e9rez",
-      "nrfi_prob": 0.5675,
+      "nrfi_prob": 0.5669,
       "confirmed": false,
       "top": {
-        "composite": 0.4909,
-        "half_prob": 0.7508,
+        "composite": 0.49,
+        "half_prob": 0.7504,
         "pitcher": 0.4781,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.5599,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5017,
-        "half_prob": 0.7558,
+        "composite": 0.5008,
+        "half_prob": 0.7554,
         "pitcher": 0.5,
         "batter": 0.5,
-        "park_weather": 0.5667,
+        "park_weather": 0.5599,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -74348,23 +74348,23 @@
       "game_pk": 824706,
       "away_pitcher": "David Peterson",
       "home_pitcher": "Brayan Bello",
-      "nrfi_prob": 0.5563,
+      "nrfi_prob": 0.556,
       "confirmed": false,
       "top": {
-        "composite": 0.4845,
-        "half_prob": 0.7478,
+        "composite": 0.484,
+        "half_prob": 0.7476,
         "pitcher": 0.502,
         "batter": 0.5,
-        "park_weather": 0.427,
+        "park_weather": 0.4235,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4762,
-        "half_prob": 0.7439,
+        "composite": 0.4757,
+        "half_prob": 0.7437,
         "pitcher": 0.485,
         "batter": 0.5,
-        "park_weather": 0.427,
+        "park_weather": 0.4235,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -74669,81 +74669,6 @@
     },
     {
       "date": "2026-09-25",
-      "game_pk": 824703,
-      "away_pitcher": "Clay Holmes",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5486,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4862,
-        "half_prob": 0.7486,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4478,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4522,
-        "half_prob": 0.7329,
-        "pitcher": 0.4307,
-        "batter": 0.5,
-        "park_weather": 0.4478,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.3403,
-            "fps": 0.5,
-            "xera": 0.4121,
-            "bb_pct": 0.3482,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 399
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-25",
       "game_pk": 823489,
       "away_pitcher": "Trevor Rogers",
       "home_pitcher": "Brendan Beck",
@@ -74810,6 +74735,93 @@
             "gb_pct": 0.5
           },
           "bf": 682
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-25",
+      "game_pk": 824703,
+      "away_pitcher": "Clay Holmes",
+      "home_pitcher": "Alec Gamboa",
+      "nrfi_prob": 0.5408,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4636,
+        "half_prob": 0.7381,
+        "pitcher": 0.4548,
+        "batter": 0.5,
+        "park_weather": 0.4443,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4518,
+        "half_prob": 0.7327,
+        "pitcher": 0.4307,
+        "batter": 0.5,
+        "park_weather": 0.4443,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3171,
+            "fps": 0.5,
+            "xera": 0.4762,
+            "bb_pct": 0.5205,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 121
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.3403,
+            "fps": 0.5,
+            "xera": 0.4121,
+            "bb_pct": 0.3482,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 399
         },
         "ds": {
           "dmg": {
