@@ -74345,69 +74345,6 @@
     },
     {
       "date": "2026-09-25",
-      "game_pk": 824947,
-      "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5597,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4851,
-        "half_prob": 0.7481,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4392,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.4851,
-        "half_prob": 0.7481,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4392,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-25",
       "game_pk": 822760,
       "away_pitcher": "Nick Lodolo",
       "home_pitcher": "TBD",
@@ -74700,6 +74637,81 @@
           },
           "bf": 631
         },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-25",
+      "game_pk": 824947,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Jacob Lopez",
+      "nrfi_prob": 0.5506,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4553,
+        "half_prob": 0.7343,
+        "pitcher": 0.4314,
+        "batter": 0.5,
+        "park_weather": 0.4686,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4889,
+        "half_prob": 0.7498,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4686,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4153,
+            "fps": 0.5,
+            "xera": 0.3876,
+            "bb_pct": 0.2956,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 529
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
         "ds": {
           "dmg": {
             "pit_hh": null,
