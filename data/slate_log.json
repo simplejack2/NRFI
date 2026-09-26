@@ -75089,6 +75089,81 @@
     },
     {
       "date": "2026-09-26",
+      "game_pk": 823407,
+      "away_pitcher": "Griffin Jax",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5737,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4892,
+        "half_prob": 0.75,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.4711,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5215,
+        "half_prob": 0.765,
+        "pitcher": 0.5659,
+        "batter": 0.5,
+        "park_weather": 0.4711,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6629,
+            "fps": 0.5,
+            "xera": 0.6019,
+            "bb_pct": 0.6012,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 449
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-26",
       "game_pk": 823245,
       "away_pitcher": "TBD",
       "home_pitcher": "Walker Buehler",
@@ -75144,81 +75219,6 @@
       },
       "bot_detail": {
         "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-26",
-      "game_pk": 823407,
-      "away_pitcher": "Griffin Jax",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5733,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4885,
-        "half_prob": 0.7497,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.4655,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5208,
-        "half_prob": 0.7647,
-        "pitcher": 0.5659,
-        "batter": 0.5,
-        "park_weather": 0.4655,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6629,
-            "fps": 0.5,
-            "xera": 0.6019,
-            "bb_pct": 0.6012,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 449
-        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -75798,16 +75798,16 @@
         "half_prob": 0.7509,
         "pitcher": 0.4875,
         "batter": 0.5,
-        "park_weather": 0.5329,
+        "park_weather": 0.5334,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4532,
+        "composite": 0.4533,
         "half_prob": 0.7334,
         "pitcher": 0.4101,
         "batter": 0.5,
-        "park_weather": 0.5329,
+        "park_weather": 0.5334,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
