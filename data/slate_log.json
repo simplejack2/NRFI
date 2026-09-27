@@ -76034,6 +76034,81 @@
     },
     {
       "date": "2026-09-27",
+      "game_pk": 823246,
+      "away_pitcher": "Michael Soroka",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5873,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5109,
+        "half_prob": 0.7601,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.6375,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5383,
+        "half_prob": 0.7727,
+        "pitcher": 0.556,
+        "batter": 0.5,
+        "park_weather": 0.6375,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.549,
+            "fps": 0.5,
+            "xera": 0.5747,
+            "bb_pct": 0.7197,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 454
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-09-27",
       "game_pk": 823408,
       "away_pitcher": "Nick Martinez",
       "home_pitcher": "Zack Wheeler",
@@ -76100,81 +76175,6 @@
             "gb_pct": 0.5
           },
           "bf": 706
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-09-27",
-      "game_pk": 823246,
-      "away_pitcher": "Michael Soroka",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5846,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5071,
-        "half_prob": 0.7583,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.6083,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5345,
-        "half_prob": 0.771,
-        "pitcher": 0.556,
-        "batter": 0.5,
-        "park_weather": 0.6083,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {},
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 3,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.549,
-            "fps": 0.5,
-            "xera": 0.5747,
-            "bb_pct": 0.7197,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 454
         },
         "ds": {
           "dmg": {
@@ -76584,9 +76584,9 @@
     {
       "date": "2026-09-27",
       "game_pk": 823650,
-      "away_pitcher": "TBD",
+      "away_pitcher": "MacKenzie Gore",
       "home_pitcher": "Dean Kremer",
-      "nrfi_prob": 0.5725,
+      "nrfi_prob": 0.5688,
       "confirmed": false,
       "top": {
         "composite": 0.5093,
@@ -76598,9 +76598,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4979,
-        "half_prob": 0.754,
-        "pitcher": 0.5,
+        "composite": 0.4872,
+        "half_prob": 0.7491,
+        "pitcher": 0.4783,
         "batter": 0.5,
         "park_weather": 0.5375,
         "damage_speed": 0.5,
@@ -76637,7 +76637,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.5551,
+            "fps": 0.5,
+            "xera": 0.4285,
+            "bb_pct": 0.3863,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 741
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
