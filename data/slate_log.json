@@ -77601,9 +77601,9 @@
     {
       "date": "2026-09-30",
       "game_pk": 849842,
-      "away_pitcher": "TBD",
+      "away_pitcher": "Kevin Gausman",
       "home_pitcher": "Nick Pivetta",
-      "nrfi_prob": 0.5885,
+      "nrfi_prob": 0.594,
       "confirmed": false,
       "top": {
         "composite": 0.5446,
@@ -77615,9 +77615,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5082,
-        "half_prob": 0.7588,
-        "pitcher": 0.5,
+        "composite": 0.5235,
+        "half_prob": 0.7659,
+        "pitcher": 0.5314,
         "batter": 0.5,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
@@ -77654,7 +77654,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.5918,
+            "fps": 0.5,
+            "xera": 0.4238,
+            "bb_pct": 0.726,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 750
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
