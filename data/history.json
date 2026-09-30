@@ -8101,10 +8101,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 1,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-09-29",
@@ -8120,7 +8120,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-09-29",
@@ -8133,10 +8133,58 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 1,
+      "home_r": 0,
+      "result": "YRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-09-30",
+      "game_pk": 849841,
+      "away_team": "Philadelphia Phillies",
+      "home_team": "Atlanta Braves",
+      "away_pitcher": "Cristopher S\u00e1nchez",
+      "home_pitcher": "Tyler Mahle",
+      "nrfi_prob": 0.5815,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-30",
+      "game_pk": 849842,
+      "away_team": "Chicago Cubs",
+      "home_team": "San Diego Padres",
+      "away_pitcher": "TBD",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5758,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-09-30",
+      "game_pk": 849846,
+      "away_team": "Chicago White Sox",
+      "home_team": "Houston Astros",
+      "away_pitcher": "TBD",
+      "home_pitcher": "Hunter Brown",
+      "nrfi_prob": 0.575,
+      "rank": 3,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }
