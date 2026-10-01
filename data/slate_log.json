@@ -77949,30 +77949,42 @@
     {
       "date": "2026-10-01",
       "game_pk": 849844,
-      "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5606,
+      "away_pitcher": "Aaron Nola",
+      "home_pitcher": "Ray Kerr",
+      "nrfi_prob": 0.5676,
       "confirmed": false,
       "top": {
-        "composite": 0.4865,
-        "half_prob": 0.7487,
-        "pitcher": 0.5,
+        "composite": 0.4912,
+        "half_prob": 0.7509,
+        "pitcher": 0.514,
         "batter": 0.5,
-        "park_weather": 0.45,
+        "park_weather": 0.4333,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4865,
-        "half_prob": 0.7487,
-        "pitcher": 0.5,
+        "composite": 0.5019,
+        "half_prob": 0.7559,
+        "pitcher": 0.5358,
         "batter": 0.5,
-        "park_weather": 0.45,
+        "park_weather": 0.4333,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.3583,
+            "fps": 0.5,
+            "xera": 0.62,
+            "bb_pct": 0.7964,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 66
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -77990,7 +78002,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.5936,
+            "fps": 0.5,
+            "xera": 0.514,
+            "bb_pct": 0.6136,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 744
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
