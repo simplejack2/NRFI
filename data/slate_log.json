@@ -78125,23 +78125,23 @@
       "game_pk": 849828,
       "away_pitcher": "Dylan Dodd",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.5898,
+      "nrfi_prob": 0.5892,
       "confirmed": true,
       "top": {
-        "composite": 0.563,
-        "half_prob": 0.7839,
+        "composite": 0.5621,
+        "half_prob": 0.7835,
         "pitcher": 0.6288,
         "batter": 0.4419,
-        "park_weather": 0.5658,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4943,
-        "half_prob": 0.7524,
+        "composite": 0.4935,
+        "half_prob": 0.752,
         "pitcher": 0.5367,
         "batter": 0.3548,
-        "park_weather": 0.5658,
+        "park_weather": 0.5592,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -78212,23 +78212,23 @@
       "game_pk": 849829,
       "away_pitcher": "Hagen Smith",
       "home_pitcher": "Parker Messick",
-      "nrfi_prob": 0.5774,
+      "nrfi_prob": 0.5776,
       "confirmed": true,
       "top": {
-        "composite": 0.5355,
-        "half_prob": 0.7714,
+        "composite": 0.5357,
+        "half_prob": 0.7716,
         "pitcher": 0.5775,
         "batter": 0.4307,
-        "park_weather": 0.5711,
+        "park_weather": 0.5731,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.486,
-        "half_prob": 0.7485,
+        "composite": 0.4863,
+        "half_prob": 0.7486,
         "pitcher": 0.5103,
         "batter": 0.3695,
-        "park_weather": 0.5711,
+        "park_weather": 0.5731,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -78299,30 +78299,30 @@
       "game_pk": 849830,
       "away_pitcher": "Robbie Ray",
       "home_pitcher": "Jacob Misiorowski",
-      "nrfi_prob": 0.5769,
-      "confirmed": false,
+      "nrfi_prob": 0.5721,
+      "confirmed": true,
       "top": {
-        "composite": 0.5578,
-        "half_prob": 0.7816,
-        "pitcher": 0.6368,
-        "batter": 0.5,
-        "park_weather": 0.4833,
+        "composite": 0.5505,
+        "half_prob": 0.7783,
+        "pitcher": 0.6349,
+        "batter": 0.4213,
+        "park_weather": 0.4896,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4636,
-        "half_prob": 0.7381,
-        "pitcher": 0.4444,
-        "batter": 0.5,
-        "park_weather": 0.4833,
+        "composite": 0.4567,
+        "half_prob": 0.735,
+        "pitcher": 0.4435,
+        "batter": 0.4214,
+        "park_weather": 0.4896,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.9796,
+            "k_pct": 0.9695,
             "fps": 0.5,
             "xera": 0.626,
             "bb_pct": 0.6623,
@@ -78338,7 +78338,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -78352,7 +78352,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4669,
+            "k_pct": 0.462,
             "fps": 0.5,
             "xera": 0.4609,
             "bb_pct": 0.2066,
@@ -78368,7 +78368,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
