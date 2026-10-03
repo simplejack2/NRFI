@@ -78081,7 +78081,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 3,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -78123,25 +78123,25 @@
     {
       "date": "2026-10-03",
       "game_pk": 849828,
-      "away_pitcher": "TBD",
+      "away_pitcher": "Dylan Dodd",
       "home_pitcher": "Tarik Skubal",
-      "nrfi_prob": 0.5952,
+      "nrfi_prob": 0.5855,
       "confirmed": false,
       "top": {
-        "composite": 0.568,
-        "half_prob": 0.7862,
+        "composite": 0.5651,
+        "half_prob": 0.7849,
         "pitcher": 0.6298,
         "batter": 0.5,
-        "park_weather": 0.5875,
+        "park_weather": 0.5658,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5044,
-        "half_prob": 0.757,
-        "pitcher": 0.5,
-        "batter": 0.5,
-        "park_weather": 0.5875,
+        "composite": 0.4803,
+        "half_prob": 0.7459,
+        "pitcher": 0.5367,
+        "batter": 0.3548,
+        "park_weather": 0.5658,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
@@ -78168,7 +78168,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 4,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -78176,13 +78176,25 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.598,
+            "fps": 0.5,
+            "xera": 0.5016,
+            "bb_pct": 0.6422,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 194
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -78200,30 +78212,30 @@
       "game_pk": 849829,
       "away_pitcher": "Hagen Smith",
       "home_pitcher": "Parker Messick",
-      "nrfi_prob": 0.5873,
-      "confirmed": false,
+      "nrfi_prob": 0.5825,
+      "confirmed": true,
       "top": {
-        "composite": 0.5412,
-        "half_prob": 0.774,
-        "pitcher": 0.5767,
-        "batter": 0.5,
-        "park_weather": 0.5814,
+        "composite": 0.5503,
+        "half_prob": 0.7782,
+        "pitcher": 0.5775,
+        "batter": 0.4854,
+        "park_weather": 0.5711,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5082,
-        "half_prob": 0.7588,
-        "pitcher": 0.5095,
-        "batter": 0.5,
-        "park_weather": 0.5814,
+        "composite": 0.486,
+        "half_prob": 0.7485,
+        "pitcher": 0.5103,
+        "batter": 0.3695,
+        "park_weather": 0.5711,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6485,
+            "k_pct": 0.6528,
             "fps": 0.5,
             "xera": 0.5838,
             "bb_pct": 0.7253,
@@ -78239,11 +78251,11 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 3,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
@@ -78253,7 +78265,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.9256,
+            "k_pct": 0.9305,
             "fps": 0.5,
             "xera": 0.5221,
             "bb_pct": 0.1108,
@@ -78269,7 +78281,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -78330,7 +78342,7 @@
           },
           "spd": {
             "n_spd": 0,
-            "n_cat": 4,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
