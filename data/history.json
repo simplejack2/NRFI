@@ -8213,10 +8213,10 @@
       "rank": 1,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-10-03",
@@ -8229,10 +8229,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-10-03",
@@ -8245,10 +8245,42 @@
       "rank": 3,
       "lineups_confirmed": true,
       "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-10-04",
+      "game_pk": 849825,
+      "away_team": "San Diego Padres",
+      "home_team": "Milwaukee Brewers",
+      "away_pitcher": "Michael King",
+      "home_pitcher": "Logan Henderson",
+      "nrfi_prob": 0.5835,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "final"
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-10-04",
+      "game_pk": 849823,
+      "away_team": "Atlanta Braves",
+      "home_team": "Los Angeles Dodgers",
+      "away_pitcher": "TBD",
+      "home_pitcher": "Blake Snell",
+      "nrfi_prob": 0.5772,
+      "rank": 2,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
     }
   ]
 }

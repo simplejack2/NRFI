@@ -78118,7 +78118,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-10-03",
@@ -78205,7 +78205,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-10-03",
@@ -78292,7 +78292,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-10-03",
@@ -78373,6 +78373,168 @@
           "spd": {
             "n_spd": 0,
             "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-10-04",
+      "game_pk": 849825,
+      "away_pitcher": "Michael King",
+      "home_pitcher": "Logan Henderson",
+      "nrfi_prob": 0.5835,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5547,
+        "half_prob": 0.7802,
+        "pitcher": 0.6248,
+        "batter": 0.5,
+        "park_weather": 0.5042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4848,
+        "half_prob": 0.7479,
+        "pitcher": 0.4822,
+        "batter": 0.5,
+        "park_weather": 0.5042,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8196,
+            "fps": 0.5,
+            "xera": 0.6101,
+            "bb_pct": 0.8075,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 371
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.4725,
+            "fps": 0.5,
+            "xera": 0.4806,
+            "bb_pct": 0.4384,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 757
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 3,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-10-04",
+      "game_pk": 849823,
+      "away_pitcher": "TBD",
+      "home_pitcher": "Blake Snell",
+      "nrfi_prob": 0.5772,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5254,
+        "half_prob": 0.7668,
+        "pitcher": 0.5617,
+        "batter": 0.5,
+        "park_weather": 0.5162,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4951,
+        "half_prob": 0.7527,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5162,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8231,
+            "fps": 0.5,
+            "xera": 0.617,
+            "bb_pct": 0.3881,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 173
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
             "n_pop": 0
           },
           "damage": 0.5,
