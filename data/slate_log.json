@@ -78734,30 +78734,30 @@
       "game_pk": 849819,
       "away_pitcher": "Yoshinobu Yamamoto",
       "home_pitcher": "Chris Sale",
-      "nrfi_prob": 0.5994,
-      "confirmed": false,
+      "nrfi_prob": 0.5945,
+      "confirmed": true,
       "top": {
-        "composite": 0.5515,
-        "half_prob": 0.7788,
-        "pitcher": 0.6326,
-        "batter": 0.5,
-        "park_weather": 0.45,
+        "composite": 0.5394,
+        "half_prob": 0.7732,
+        "pitcher": 0.6322,
+        "batter": 0.4051,
+        "park_weather": 0.4483,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5317,
-        "half_prob": 0.7697,
-        "pitcher": 0.5922,
-        "batter": 0.5,
-        "park_weather": 0.45,
+        "composite": 0.5299,
+        "half_prob": 0.7689,
+        "pitcher": 0.5924,
+        "batter": 0.442,
+        "park_weather": 0.4483,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.8574,
+            "k_pct": 0.855,
             "fps": 0.5,
             "xera": 0.601,
             "bb_pct": 0.8293,
@@ -78773,7 +78773,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -78787,7 +78787,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.6794,
+            "k_pct": 0.6805,
             "fps": 0.5,
             "xera": 0.621,
             "bb_pct": 0.7379,
@@ -78803,7 +78803,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -78821,23 +78821,23 @@
       "game_pk": 849826,
       "away_pitcher": "Dustin May",
       "home_pitcher": "Nick Pivetta",
-      "nrfi_prob": 0.5854,
+      "nrfi_prob": 0.5848,
       "confirmed": false,
       "top": {
-        "composite": 0.5446,
-        "half_prob": 0.7756,
+        "composite": 0.5437,
+        "half_prob": 0.7752,
         "pitcher": 0.5744,
         "batter": 0.5,
-        "park_weather": 0.6167,
+        "park_weather": 0.61,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4996,
-        "half_prob": 0.7548,
+        "composite": 0.4987,
+        "half_prob": 0.7544,
         "pitcher": 0.4825,
         "batter": 0.5,
-        "park_weather": 0.6167,
+        "park_weather": 0.61,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
