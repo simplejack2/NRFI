@@ -78734,23 +78734,23 @@
       "game_pk": 849819,
       "away_pitcher": "Yoshinobu Yamamoto",
       "home_pitcher": "Chris Sale",
-      "nrfi_prob": 0.5945,
+      "nrfi_prob": 0.5947,
       "confirmed": true,
       "top": {
-        "composite": 0.5394,
-        "half_prob": 0.7732,
+        "composite": 0.5396,
+        "half_prob": 0.7733,
         "pitcher": 0.6322,
         "batter": 0.4051,
-        "park_weather": 0.4483,
+        "park_weather": 0.45,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
       "bot": {
-        "composite": 0.5299,
-        "half_prob": 0.7689,
+        "composite": 0.5301,
+        "half_prob": 0.769,
         "pitcher": 0.5924,
         "batter": 0.442,
-        "park_weather": 0.4483,
+        "park_weather": 0.45,
         "damage_speed": 0.5,
         "lineup": 0.6
       },
@@ -78821,30 +78821,30 @@
       "game_pk": 849826,
       "away_pitcher": "Dustin May",
       "home_pitcher": "Nick Pivetta",
-      "nrfi_prob": 0.579,
-      "confirmed": false,
+      "nrfi_prob": 0.5814,
+      "confirmed": true,
       "top": {
-        "composite": 0.5396,
-        "half_prob": 0.7733,
-        "pitcher": 0.5744,
-        "batter": 0.5,
+        "composite": 0.5322,
+        "half_prob": 0.7699,
+        "pitcher": 0.5736,
+        "batter": 0.4223,
         "park_weather": 0.5779,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4864,
-        "half_prob": 0.7487,
+        "composite": 0.5004,
+        "half_prob": 0.7552,
         "pitcher": 0.4823,
         "batter": 0.4703,
         "park_weather": 0.5779,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.7378,
+            "k_pct": 0.7331,
             "fps": 0.5,
             "xera": 0.607,
             "bb_pct": 0.6705,
@@ -78860,7 +78860,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
