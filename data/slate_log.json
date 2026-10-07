@@ -78994,13 +78994,13 @@
       "date": "2026-10-07",
       "game_pk": 849827,
       "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5758,
+      "home_pitcher": "Walker Buehler",
+      "nrfi_prob": 0.5731,
       "confirmed": false,
       "top": {
-        "composite": 0.5082,
-        "half_prob": 0.7588,
-        "pitcher": 0.5,
+        "composite": 0.5006,
+        "half_prob": 0.7553,
+        "pitcher": 0.4845,
         "batter": 0.5,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
@@ -79016,7 +79016,19 @@
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.4129,
+            "fps": 0.5,
+            "xera": 0.4909,
+            "bb_pct": 0.5158,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 651
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
