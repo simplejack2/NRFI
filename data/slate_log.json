@@ -78905,93 +78905,6 @@
     },
     {
       "date": "2026-10-07",
-      "game_pk": 849822,
-      "away_pitcher": "Tyler Glasnow",
-      "home_pitcher": "Tyler Mahle",
-      "nrfi_prob": 0.5769,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5003,
-        "half_prob": 0.7551,
-        "pitcher": 0.5281,
-        "batter": 0.5,
-        "park_weather": 0.45,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5193,
-        "half_prob": 0.764,
-        "pitcher": 0.567,
-        "batter": 0.5,
-        "park_weather": 0.45,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.4963,
-            "fps": 0.5,
-            "xera": 0.5755,
-            "bb_pct": 0.5868,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 614
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8951,
-            "fps": 0.5,
-            "xera": 0.5066,
-            "bb_pct": 0.4602,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 288
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-10-07",
       "game_pk": 849827,
       "away_pitcher": "TBD",
       "home_pitcher": "Walker Buehler",
@@ -79067,49 +78980,49 @@
     },
     {
       "date": "2026-10-07",
-      "game_pk": 849833,
-      "away_pitcher": "Daniel Espino",
-      "home_pitcher": "Sean Newcomb",
-      "nrfi_prob": 0.5609,
-      "confirmed": false,
+      "game_pk": 849822,
+      "away_pitcher": "Tyler Glasnow",
+      "home_pitcher": "Tyler Mahle",
+      "nrfi_prob": 0.5698,
+      "confirmed": true,
       "top": {
-        "composite": 0.4763,
-        "half_prob": 0.744,
-        "pitcher": 0.486,
-        "batter": 0.5,
-        "park_weather": 0.4241,
+        "composite": 0.4729,
+        "half_prob": 0.7424,
+        "pitcher": 0.5266,
+        "batter": 0.351,
+        "park_weather": 0.4467,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4977,
-        "half_prob": 0.7539,
-        "pitcher": 0.5297,
-        "batter": 0.5,
-        "park_weather": 0.4241,
+        "composite": 0.5269,
+        "half_prob": 0.7675,
+        "pitcher": 0.5675,
+        "batter": 0.4769,
+        "park_weather": 0.4467,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.4938,
+            "k_pct": 0.4879,
             "fps": 0.5,
-            "xera": 0.5319,
-            "bb_pct": 0.3578,
+            "xera": 0.5755,
+            "bb_pct": 0.5868,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 372
+          "bf": 614
         },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -79123,23 +79036,23 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.9336,
+            "k_pct": 0.8981,
             "fps": 0.5,
-            "xera": 0.5353,
-            "bb_pct": 0.3229,
+            "xera": 0.5066,
+            "bb_pct": 0.4602,
             "chase_rate": 0.5,
             "whiff_pct": 0.5,
             "hard_hit": 0.5,
             "gb_pct": 0.5
           },
-          "bf": 65
+          "bf": 288
         },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -79157,30 +79070,30 @@
       "game_pk": 849838,
       "away_pitcher": "Nick Martinez",
       "home_pitcher": "Max Fried",
-      "nrfi_prob": 0.5605,
-      "confirmed": false,
+      "nrfi_prob": 0.5533,
+      "confirmed": true,
       "top": {
-        "composite": 0.5001,
-        "half_prob": 0.755,
-        "pitcher": 0.5454,
-        "batter": 0.5,
-        "park_weather": 0.3833,
+        "composite": 0.4906,
+        "half_prob": 0.7506,
+        "pitcher": 0.5464,
+        "batter": 0.4136,
+        "park_weather": 0.3785,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "bot": {
-        "composite": 0.4729,
-        "half_prob": 0.7424,
-        "pitcher": 0.4898,
-        "batter": 0.5,
-        "park_weather": 0.3833,
+        "composite": 0.4616,
+        "half_prob": 0.7372,
+        "pitcher": 0.4896,
+        "batter": 0.4092,
+        "park_weather": 0.3785,
         "damage_speed": 0.5,
-        "lineup": 0.4
+        "lineup": 0.6
       },
       "top_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.557,
+            "k_pct": 0.5628,
             "fps": 0.5,
             "xera": 0.5777,
             "bb_pct": 0.6288,
@@ -79196,7 +79109,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
@@ -79210,7 +79123,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.1668,
+            "k_pct": 0.1654,
             "fps": 0.5,
             "xera": 0.4968,
             "bb_pct": 0.8609,
@@ -79226,7 +79139,94 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-10-07",
+      "game_pk": 849833,
+      "away_pitcher": "Daniel Espino",
+      "home_pitcher": "Sean Newcomb",
+      "nrfi_prob": 0.5527,
+      "confirmed": true,
+      "top": {
+        "composite": 0.4592,
+        "half_prob": 0.7361,
+        "pitcher": 0.4866,
+        "batter": 0.3695,
+        "park_weather": 0.4542,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.4913,
+        "half_prob": 0.7509,
+        "pitcher": 0.5298,
+        "batter": 0.4096,
+        "park_weather": 0.4542,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.497,
+            "fps": 0.5,
+            "xera": 0.5319,
+            "bb_pct": 0.3578,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 372
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.9346,
+            "fps": 0.5,
+            "xera": 0.5353,
+            "bb_pct": 0.3229,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 65
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
