@@ -8360,7 +8360,7 @@
       "away_r": null,
       "home_r": null,
       "result": null,
-      "game_status": "pregame"
+      "game_status": "live"
     },
     {
       "date": "2026-10-07",
@@ -8373,10 +8373,10 @@
       "rank": 2,
       "lineups_confirmed": true,
       "odds": null,
-      "away_r": null,
-      "home_r": null,
-      "result": null,
-      "game_status": "final"
+      "away_r": 0,
+      "home_r": 1,
+      "result": "YRFI",
+      "game_status": "F"
     },
     {
       "date": "2026-10-07",
@@ -8388,6 +8388,38 @@
       "nrfi_prob": 0.5538,
       "rank": 3,
       "lineups_confirmed": true,
+      "odds": null,
+      "away_r": 0,
+      "home_r": 0,
+      "result": "NRFI",
+      "game_status": "F"
+    },
+    {
+      "date": "2026-10-08",
+      "game_pk": 849837,
+      "away_team": "Tampa Bay Rays",
+      "home_team": "New York Yankees",
+      "away_pitcher": "Drew Rasmussen",
+      "home_pitcher": "Carlos Rod\u00f3n",
+      "nrfi_prob": 0.575,
+      "rank": 1,
+      "lineups_confirmed": false,
+      "odds": null,
+      "away_r": null,
+      "home_r": null,
+      "result": null,
+      "game_status": "pregame"
+    },
+    {
+      "date": "2026-10-08",
+      "game_pk": 849832,
+      "away_team": "Cleveland Guardians",
+      "home_team": "Chicago White Sox",
+      "away_pitcher": "Parker Messick",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5724,
+      "rank": 2,
+      "lineups_confirmed": false,
       "odds": null,
       "away_r": null,
       "home_r": null,
