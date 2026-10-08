@@ -79253,102 +79253,15 @@
     },
     {
       "date": "2026-10-08",
-      "game_pk": 849837,
-      "away_pitcher": "Drew Rasmussen",
-      "home_pitcher": "Carlos Rod\u00f3n",
-      "nrfi_prob": 0.575,
-      "confirmed": false,
-      "top": {
-        "composite": 0.4912,
-        "half_prob": 0.7509,
-        "pitcher": 0.531,
-        "batter": 0.5,
-        "park_weather": 0.3697,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5231,
-        "half_prob": 0.7657,
-        "pitcher": 0.5959,
-        "batter": 0.5,
-        "park_weather": 0.3697,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.6863,
-            "fps": 0.5,
-            "xera": 0.6197,
-            "bb_pct": 0.2935,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 340
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.636,
-            "fps": 0.5,
-            "xera": 0.619,
-            "bb_pct": 0.8235,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 669
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-10-08",
       "game_pk": 849832,
       "away_pitcher": "Parker Messick",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5724,
+      "home_pitcher": "Hagen Smith",
+      "nrfi_prob": 0.5747,
       "confirmed": false,
       "top": {
-        "composite": 0.4843,
-        "half_prob": 0.7477,
-        "pitcher": 0.5,
+        "composite": 0.4907,
+        "half_prob": 0.7507,
+        "pitcher": 0.5129,
         "batter": 0.5,
         "park_weather": 0.4333,
         "damage_speed": 0.5,
@@ -79364,7 +79277,19 @@
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.9256,
+            "fps": 0.5,
+            "xera": 0.5395,
+            "bb_pct": 0.1108,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 110
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
