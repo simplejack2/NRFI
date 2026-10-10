@@ -79337,6 +79337,93 @@
         }
       },
       "result": "NRFI"
+    },
+    {
+      "date": "2026-10-10",
+      "game_pk": 849831,
+      "away_pitcher": "Sean Burke",
+      "home_pitcher": "Gavin Williams",
+      "nrfi_prob": 0.5896,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5365,
+        "half_prob": 0.7719,
+        "pitcher": 0.5799,
+        "batter": 0.5,
+        "park_weather": 0.5333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5189,
+        "half_prob": 0.7638,
+        "pitcher": 0.544,
+        "batter": 0.5,
+        "park_weather": 0.5333,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8752,
+            "fps": 0.5,
+            "xera": 0.5737,
+            "bb_pct": 0.4721,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 746
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6387,
+            "fps": 0.5,
+            "xera": 0.6175,
+            "bb_pct": 0.4516,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 716
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
     }
   ]
 }
