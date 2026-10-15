@@ -79862,97 +79862,10 @@
     },
     {
       "date": "2026-10-15",
-      "game_pk": 849818,
-      "away_pitcher": "Griffin Jax",
-      "home_pitcher": "Gavin Williams",
-      "nrfi_prob": 0.5984,
-      "confirmed": false,
-      "top": {
-        "composite": 0.5433,
-        "half_prob": 0.775,
-        "pitcher": 0.5799,
-        "batter": 0.5,
-        "park_weather": 0.5861,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "bot": {
-        "composite": 0.5369,
-        "half_prob": 0.7721,
-        "pitcher": 0.5667,
-        "batter": 0.5,
-        "park_weather": 0.5861,
-        "damage_speed": 0.5,
-        "lineup": 0.4
-      },
-      "top_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.8752,
-            "fps": 0.5,
-            "xera": 0.5737,
-            "bb_pct": 0.4721,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 746
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "bot_detail": {
-        "pit": {
-          "components": {
-            "k_pct": 0.65,
-            "fps": 0.5,
-            "xera": 0.6071,
-            "bb_pct": 0.6154,
-            "chase_rate": 0.5,
-            "whiff_pct": 0.5,
-            "hard_hit": 0.5,
-            "gb_pct": 0.5
-          },
-          "bf": 459
-        },
-        "ds": {
-          "dmg": {
-            "pit_hh": null,
-            "n_hh": 0,
-            "n_br": 0,
-            "n_bat": 0
-          },
-          "spd": {
-            "n_spd": 0,
-            "n_cat": 2,
-            "n_pop": 0
-          },
-          "damage": 0.5,
-          "speed": 0.5
-        }
-      },
-      "result": null
-    },
-    {
-      "date": "2026-10-15",
       "game_pk": 849810,
-      "away_pitcher": "TBD",
+      "away_pitcher": "Shane Drohan",
       "home_pitcher": "Tyler Glasnow",
-      "nrfi_prob": 0.5818,
+      "nrfi_prob": 0.5874,
       "confirmed": false,
       "top": {
         "composite": 0.532,
@@ -79964,9 +79877,9 @@
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5017,
-        "half_prob": 0.7558,
-        "pitcher": 0.5,
+        "composite": 0.5174,
+        "half_prob": 0.7631,
+        "pitcher": 0.5322,
         "batter": 0.5,
         "park_weather": 0.5667,
         "damage_speed": 0.5,
@@ -80003,13 +79916,112 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.5483,
+            "fps": 0.5,
+            "xera": 0.5944,
+            "bb_pct": 0.5192,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 528
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-10-15",
+      "game_pk": 849818,
+      "away_pitcher": "Griffin Jax",
+      "home_pitcher": "Gavin Williams",
+      "nrfi_prob": 0.5841,
+      "confirmed": true,
+      "top": {
+        "composite": 0.5294,
+        "half_prob": 0.7687,
+        "pitcher": 0.579,
+        "batter": 0.4136,
+        "park_weather": 0.5542,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "bot": {
+        "composite": 0.5106,
+        "half_prob": 0.7599,
+        "pitcher": 0.5649,
+        "batter": 0.3695,
+        "park_weather": 0.5542,
+        "damage_speed": 0.5,
+        "lineup": 0.6
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8707,
+            "fps": 0.5,
+            "xera": 0.5737,
+            "bb_pct": 0.4721,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 746
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.6401,
+            "fps": 0.5,
+            "xera": 0.6071,
+            "bb_pct": 0.6154,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 459
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
