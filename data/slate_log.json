@@ -79945,7 +79945,7 @@
           "speed": 0.5
         }
       },
-      "result": null
+      "result": "NRFI"
     },
     {
       "date": "2026-10-15",
@@ -80022,6 +80022,144 @@
             "n_hh": 0,
             "n_br": 0,
             "n_bat": 5
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-10-16",
+      "game_pk": 849808,
+      "away_pitcher": "TBD",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5699,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4997,
+        "half_prob": 0.7549,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5517,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4997,
+        "half_prob": 0.7549,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5517,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
+    },
+    {
+      "date": "2026-10-16",
+      "game_pk": 849817,
+      "away_pitcher": "Nick Martinez",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5678,
+      "confirmed": false,
+      "top": {
+        "composite": 0.4993,
+        "half_prob": 0.7547,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.5485,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.4943,
+        "half_prob": 0.7524,
+        "pitcher": 0.4898,
+        "batter": 0.5,
+        "park_weather": 0.5485,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.1668,
+            "fps": 0.5,
+            "xera": 0.4968,
+            "bb_pct": 0.8609,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 722
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
           },
           "spd": {
             "n_spd": 0,
