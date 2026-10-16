@@ -80038,29 +80038,41 @@
       "date": "2026-10-16",
       "game_pk": 849817,
       "away_pitcher": "Nick Martinez",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5693,
+      "home_pitcher": "Shawn Armstrong",
+      "nrfi_prob": 0.5579,
       "confirmed": false,
       "top": {
-        "composite": 0.5016,
-        "half_prob": 0.7557,
-        "pitcher": 0.5,
+        "composite": 0.4747,
+        "half_prob": 0.7433,
+        "pitcher": 0.4575,
         "batter": 0.5,
-        "park_weather": 0.5661,
+        "park_weather": 0.5194,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.4966,
-        "half_prob": 0.7534,
+        "composite": 0.4905,
+        "half_prob": 0.7506,
         "pitcher": 0.4898,
         "batter": 0.5,
-        "park_weather": 0.5661,
+        "park_weather": 0.5194,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.493,
+            "fps": 0.5,
+            "xera": 0.4765,
+            "bb_pct": 0.2833,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 154
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
