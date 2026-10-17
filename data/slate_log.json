@@ -80124,30 +80124,42 @@
     {
       "date": "2026-10-17",
       "game_pk": 849816,
-      "away_pitcher": "TBD",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5717,
+      "away_pitcher": "Nick Martinez",
+      "home_pitcher": "Shawn Armstrong",
+      "nrfi_prob": 0.5626,
       "confirmed": false,
       "top": {
-        "composite": 0.5023,
-        "half_prob": 0.7561,
-        "pitcher": 0.5,
+        "composite": 0.4815,
+        "half_prob": 0.7464,
+        "pitcher": 0.4575,
         "batter": 0.5,
         "park_weather": 0.5713,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5023,
-        "half_prob": 0.7561,
-        "pitcher": 0.5,
+        "composite": 0.4973,
+        "half_prob": 0.7537,
+        "pitcher": 0.4898,
         "batter": 0.5,
         "park_weather": 0.5713,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.493,
+            "fps": 0.5,
+            "xera": 0.4765,
+            "bb_pct": 0.2833,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 154
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -80165,7 +80177,19 @@
         }
       },
       "bot_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.1668,
+            "fps": 0.5,
+            "xera": 0.4968,
+            "bb_pct": 0.8609,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 722
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
