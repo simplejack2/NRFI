@@ -80531,6 +80531,93 @@
         }
       },
       "result": null
+    },
+    {
+      "date": "2026-10-24",
+      "game_pk": 849802,
+      "away_pitcher": "Drew Rasmussen",
+      "home_pitcher": "Logan Henderson",
+      "nrfi_prob": 0.6018,
+      "confirmed": false,
+      "top": {
+        "composite": 0.552,
+        "half_prob": 0.779,
+        "pitcher": 0.6248,
+        "batter": 0.5,
+        "park_weather": 0.4833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5378,
+        "half_prob": 0.7725,
+        "pitcher": 0.5959,
+        "batter": 0.5,
+        "park_weather": 0.4833,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.8196,
+            "fps": 0.5,
+            "xera": 0.6101,
+            "bb_pct": 0.8075,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 371
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {
+          "components": {
+            "k_pct": 0.636,
+            "fps": 0.5,
+            "xera": 0.619,
+            "bb_pct": 0.8235,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 669
+        },
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
     }
   ]
 }
