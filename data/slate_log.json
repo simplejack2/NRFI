@@ -80705,6 +80705,69 @@
         }
       },
       "result": null
+    },
+    {
+      "date": "2026-10-27",
+      "game_pk": 849803,
+      "away_pitcher": "TBD",
+      "home_pitcher": "TBD",
+      "nrfi_prob": 0.5758,
+      "confirmed": false,
+      "top": {
+        "composite": 0.5082,
+        "half_prob": 0.7588,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "bot": {
+        "composite": 0.5082,
+        "half_prob": 0.7588,
+        "pitcher": 0.5,
+        "batter": 0.5,
+        "park_weather": 0.6167,
+        "damage_speed": 0.5,
+        "lineup": 0.4
+      },
+      "top_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "bot_detail": {
+        "pit": {},
+        "ds": {
+          "dmg": {
+            "pit_hh": null,
+            "n_hh": 0,
+            "n_br": 0,
+            "n_bat": 0
+          },
+          "spd": {
+            "n_spd": 0,
+            "n_cat": 2,
+            "n_pop": 0
+          },
+          "damage": 0.5,
+          "speed": 0.5
+        }
+      },
+      "result": null
     }
   ]
 }
