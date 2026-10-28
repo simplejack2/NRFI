@@ -80797,29 +80797,41 @@
       "date": "2026-10-28",
       "game_pk": 849799,
       "away_pitcher": "Jacob Misiorowski",
-      "home_pitcher": "TBD",
-      "nrfi_prob": 0.5989,
+      "home_pitcher": "Drew Rasmussen",
+      "nrfi_prob": 0.6037,
       "confirmed": false,
       "top": {
-        "composite": 0.5082,
-        "half_prob": 0.7588,
-        "pitcher": 0.5,
+        "composite": 0.5548,
+        "half_prob": 0.7802,
+        "pitcher": 0.5951,
         "batter": 0.5,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "bot": {
-        "composite": 0.5749,
-        "half_prob": 0.7893,
-        "pitcher": 0.6362,
-        "batter": 0.5,
+        "composite": 0.5407,
+        "half_prob": 0.7738,
+        "pitcher": 0.6344,
+        "batter": 0.3765,
         "park_weather": 0.6167,
         "damage_speed": 0.5,
         "lineup": 0.4
       },
       "top_detail": {
-        "pit": {},
+        "pit": {
+          "components": {
+            "k_pct": 0.636,
+            "fps": 0.5,
+            "xera": 0.6153,
+            "bb_pct": 0.8235,
+            "chase_rate": 0.5,
+            "whiff_pct": 0.5,
+            "hard_hit": 0.5,
+            "gb_pct": 0.5
+          },
+          "bf": 669
+        },
         "ds": {
           "dmg": {
             "pit_hh": null,
@@ -80839,7 +80851,7 @@
       "bot_detail": {
         "pit": {
           "components": {
-            "k_pct": 0.9796,
+            "k_pct": 0.9695,
             "fps": 0.5,
             "xera": 0.6233,
             "bb_pct": 0.6623,
@@ -80855,7 +80867,7 @@
             "pit_hh": null,
             "n_hh": 0,
             "n_br": 0,
-            "n_bat": 0
+            "n_bat": 5
           },
           "spd": {
             "n_spd": 0,
